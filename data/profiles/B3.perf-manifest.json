@@ -1,0 +1,55 @@
+{
+ "generated_at": "2026-09-25T13:12:53+0800",
+ "host": "LOCAL_HOST",
+ "machine": "x86_64",
+ "loadavg_at_end": [
+  "4.90",
+  "3.29",
+  "2.70"
+ ],
+ "tag": "B3",
+ "target": {
+  "kind": "vllm-rs frontend process",
+  "pid": 3639361
+ },
+ "perf": {
+  "record_cmd_template": "perf record -p <FE_PID> -e {event} -F {freq} --call-graph {cg}",
+  "event": "cpu-clock",
+  "freq_hz": 999,
+  "call_graph": "fp",
+  "attach_sleep_s": 1.0,
+  "perf_window": {
+   "start_epoch": 1790313141.542394,
+   "stop_epoch": 1790313173.8535645,
+   "duration_s": 32.311
+  },
+  "load_window": {
+   "start_epoch": 1790313142.5452015,
+   "stop_epoch": 1790313173.349917,
+   "duration_s": 30.805
+  },
+  "load_rc": 0
+ },
+ "load_cmd": "taskset -c 8-9 python3 REPO_HOME/projects/vllm/vllm-rs-wt/B-profile/harness/profile/raw_load.py --base-url http://127.0.0.1:8199 --model REPO_HOME/models/Qwen3-0.6B --tokenizer REPO_HOME/models/Qwen3-0.6B/tokenizer.json --input-len 1024 --output-len 512 --concurrency 1 --tools none --stream --duration 30 --num-requests 0 --warmup 3 --dump-body runs/b-matrix/bodies/B3.body.json --out data/profiles/B3.load.json",
+ "collapsed": {
+  "stacks": 1046,
+  "samples": 16630,
+  "cpu_ns": 16633633617,
+  "cpu_seconds": 16.6336,
+  "samples_reported_by_perf_record": 16630,
+  "path": "data/profiles/B3.folded",
+  "sha256": "7bdc4e91a1ccc5fbb6f4f497651cd5181da4f2298e7393bbccc11ddbc8b5db42",
+  "period_ns_derived": 1000218
+ },
+ "artifacts": {
+  "perf_data": {
+   "path": "data/profiles/B3.perf.data",
+   "size": 1223580,
+   "in_git": false
+  },
+  "perf_script_txt": {
+   "path": "runs/b-matrix/perf/B3.perf-script.txt",
+   "size": 3560547
+  }
+ }
+}

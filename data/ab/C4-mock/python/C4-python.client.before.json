@@ -1,0 +1,20 @@
+{
+ "taken_at": "2026-09-25T14:10:56+0800",
+ "epoch": 1790316656.8197708,
+ "wall": 1790316656.819771,
+ "pids": {
+  "3848449": {
+   "comm": "vllm-bench",
+   "state": "R",
+   "utime_ticks": 1,
+   "stime_ticks": 2,
+   "cutime_ticks": 0,
+   "cstime_ticks": 0,
+   "self_cpu_ticks": 3,
+   "with_children_cpu_ticks": 3,
+   "rss_kb": 38916,
+   "threads": 5,
+   "ticks_per_sec": 100
+  }
+ }
+}

@@ -1,0 +1,77 @@
+{
+ "generated_at": "2026-09-25T13:36:31+0800",
+ "base_url": "http://127.0.0.1:8199",
+ "path": "/v1/chat/completions",
+ "concurrency": 1,
+ "num_requests_requested": 0,
+ "duration_requested_s": 20.0,
+ "stream": true,
+ "input_len_target": 1024,
+ "output_len_target": 128,
+ "tools": "weather",
+ "warmup": 3,
+ "window": {
+  "open_epoch": 1790314571.7239432,
+  "open_monotonic": 1425675.002684231,
+  "close_monotonic": 1425695.004779108,
+  "wall_seconds": 20.0021,
+  "ok_before_first_request_s": 1.6e-05
+ },
+ "requests_issued_in_window": 5420,
+ "requests_completed_in_window": 5420,
+ "requests_failed_in_window": 0,
+ "window_exhausted_num_requests": false,
+ "throughput_req_s": 270.972,
+ "throughput_out_tok_s": 34684.4,
+ "completion_tokens_total": 693760,
+ "prompt_tokens_total": 6617820,
+ "prompt_tokens_mean": 1221.0,
+ "client_cpu_seconds": 6.6278,
+ "client_cpu_percent_of_one_core": 33.14,
+ "client_cpu_seconds_window_only": 6.6214,
+ "frontend_cpu_seconds": 26.84,
+ "frontend_utime_seconds": 4.44,
+ "frontend_stime_seconds": 22.4,
+ "client_cpu_seconds_procstat": 6.62,
+ "procstat": {
+  "basis": "utime+stime（不含子进程 cutime/cstime）",
+  "script": "REPO_HOME/projects/vllm/vllm-rs-wt/B-profile/harness/common/procstat.sh",
+  "window": "预热之后 / 窗口之前取 before；窗口结束之后取 after",
+  "pids_sampled": [
+   "3707922",
+   "3727375"
+  ],
+  "snapshot_before": "data/profiles/procstat-snapshots/B5stat20.before.json",
+  "snapshot_after": "data/profiles/procstat-snapshots/B5stat20.after.json",
+  "frontend_pid": "3707922",
+  "diff_out": "data/profiles/B5stat20.frontend-cpu.json",
+  "note": "frontend_cpu_seconds 与 client_cpu_* 是两个进程的两个数，绝不相加"
+ },
+ "latency_ms": {
+  "p50": 3.469,
+  "p90": 4.678,
+  "p99": 7.279,
+  "mean": 3.68
+ },
+ "ttft_ms": {
+  "p50": 2.202,
+  "p99": 5.887
+ },
+ "failures": [],
+ "normalized": {
+  "_units": "秒 / 请求、秒 / 千 token；CPU 为 utime+stime",
+  "frontend_cpu_s_per_request": 0.00495203,
+  "frontend_cpu_s_per_1k_input_tokens": 0.004055716,
+  "frontend_cpu_s_per_1k_output_tokens": 0.038687731,
+  "client_cpu_s_per_request": 0.001221661,
+  "client_cpu_s_per_1k_input_tokens": 0.001000541,
+  "client_cpu_s_per_1k_output_tokens": 0.009544223,
+  "frontend_cpu_s_per_window_s": 1.341859448
+ },
+ "body": {
+  "body_bytes": 4460,
+  "body_sha256": "1b92723af2f8fe405effcac6abd3e14a35e8913182f380a6de6dead3a7d9c061",
+  "body_source": "REPO_HOME/projects/vllm/vllm-rs-wt/B-profile/runs/b-cpu/bodies/B1.body.json"
+ },
+ "note": "诊断点：同 B1 负载，但窗口内 perf stat 正在跑（8 个硬件事件多路复用）⇒ 与 B5 是同一负载点的两种观测态"
+}

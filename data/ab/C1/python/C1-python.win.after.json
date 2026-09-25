@@ -1,0 +1,46 @@
+{
+ "taken_at": "2026-09-25T13:41:10+0800",
+ "epoch": 1790314870.7626843,
+ "wall": 1790314870.7626846,
+ "pids": {
+  "3732892": {
+   "comm": "vllm",
+   "state": "S",
+   "utime_ticks": 797,
+   "stime_ticks": 237,
+   "cutime_ticks": 0,
+   "cstime_ticks": 0,
+   "self_cpu_ticks": 1034,
+   "with_children_cpu_ticks": 1034,
+   "rss_kb": 1063496,
+   "threads": 9,
+   "ticks_per_sec": 100
+  },
+  "3733195": {
+   "comm": "VLLM::EngineCor",
+   "state": "S",
+   "utime_ticks": 1410,
+   "stime_ticks": 2511,
+   "cutime_ticks": 0,
+   "cstime_ticks": 0,
+   "self_cpu_ticks": 3921,
+   "with_children_cpu_ticks": 3921,
+   "rss_kb": 750756,
+   "threads": 15,
+   "ticks_per_sec": 100
+  },
+  "3733376": {
+   "comm": "VLLM::Worker",
+   "state": "R",
+   "utime_ticks": 24948,
+   "stime_ticks": 9632,
+   "cutime_ticks": 695,
+   "cstime_ticks": 122,
+   "self_cpu_ticks": 34580,
+   "with_children_cpu_ticks": 35397,
+   "rss_kb": 6474540,
+   "threads": 53,
+   "ticks_per_sec": 100
+  }
+ }
+}

@@ -1,0 +1,17 @@
+# started on Fri Sep 25 16:14:48 2026
+
+
+ Performance counter stats for process id '2000790':
+
+       938,373,368      instructions:u                   #    0.72  insn per cycle            
+     1,295,436,135      cycles:u                                                              
+       192,574,155      branches:u                                                            
+        12,092,168      branch-misses:u                  #    6.28% of all branches           
+        17,666,529      cache-misses:u                   #    4.51% of all cache refs         
+       391,295,878      cache-references:u                                                    
+                 0      syscalls:sys_enter_recvmsg                                            
+                96      syscalls:sys_enter_sendto                                             
+            19,988      syscalls:sys_enter_write                                              
+
+      85.255720770 seconds time elapsed
+

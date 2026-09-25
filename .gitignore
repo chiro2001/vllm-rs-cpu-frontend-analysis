@@ -1,0 +1,35 @@
+# Rust 构建产物
+target/
+**/target/
+
+# 原始采样：perf.data 动辄数十~数百 MB，只提交折叠栈与汇总（见 plan/COORDINATION.md §8）
+# 多写几条是为了兜住各种命名习惯：`perf.data`（裸名）、`B1.perf.data`（前缀名）、
+# `perf.data.old`、`b1-perf-data.bin` 等，避免有人不小心把几十 MB 的原始采样提交进来。
+perf.data*
+*.perf.data
+*.perf.data.*
+**/*[Pp]erf[._-]data*
+
+# 运行态与锁
+.locks/
+runs/
+*.pid
+
+# perf 采样窗口的停止哨兵：0 字节控制文件，不是证据
+*.perf.stop
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# 临时/中间产物
+*.tmp
+*.partial
+.DS_Store
+
+# 发布净化：映射表本身含真实内部标识，**绝不能进仓库**（见 scripts/sanitize_for_publish.sh）
+.sanitize-map.tsv
+
+# docker -c 执行器留下的临时脚本（0 字节遗留物）
+_inline_code.py

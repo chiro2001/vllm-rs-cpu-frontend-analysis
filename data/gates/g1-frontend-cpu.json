@@ -1,0 +1,20 @@
+{
+ "wall_seconds": 2.034,
+ "window": {
+  "from": "2026-09-25T12:39:06+0800",
+  "to": "2026-09-25T12:39:08+0800"
+ },
+ "pids": {
+  "3555335": {
+   "comm": "vllm-rs",
+   "cpu_seconds": 0.28,
+   "cpu_percent_of_one_core": 13.76,
+   "threads_max": 11,
+   "threads_end": 11,
+   "rss_kb_end": 124612,
+   "utime_seconds": 0.21,
+   "stime_seconds": 0.07
+  }
+ },
+ "cpu_seconds_total": 0.28
+}

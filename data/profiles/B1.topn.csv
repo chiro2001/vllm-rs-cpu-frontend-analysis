@@ -1,0 +1,42 @@
+# tag,B1,total_cpu_ns,15738738723,source,run_matrix.sh: ISL~1221 OSL=128 c=1 stream=True tools=weather
+rank,frame,self_ns,self_pct,inclusive_ns,inclusive_pct,segment,basis
+1,[libc.so.6],2392392390,15.2007,2467467465,15.6777,X-copy,code
+2,std::thread::local::LocalKey<T>::with,663663663,4.2168,663663663,4.2168,X-tls,code
+3,futures_util::stream::stream::StreamExt::poll_next_unpin,632632632,4.0196,632632632,4.0196,X-runtime,heuristic
+4,_mi_page_malloc_zero,580580580,3.6889,580580580,3.6889,X-alloc,heuristic
+5,[perf-3639361.map]_[j],457457457,2.9066,457457457,2.9066,P4,code
+6,"<core::iter::adapters::map::Map<I,F> as core::iter::traits::iterator::Iterator>::try_fold",432432432,2.7476,432432432,2.7476,X-rust,heuristic
+7,"rmp_serde::decode::Deserializer<R,C>::any_inner",404404404,2.5695,404404404,2.5695,P7,symbol
+8,mi_free,394394394,2.5059,394394394,2.5059,X-alloc,heuristic
+9,vllm_tokenizer::byte_level_decode::decode_byte_level,330330330,2.0988,364364364,2.3151,P8,symbol
+10,serde_core::ser::SerializeMap::serialize_entry,243243243,1.5455,243243243,1.5455,P10,symbol
+11,<S as futures_core::stream::TryStream>::try_poll_next,222222222,1.4119,222222222,1.4119,X-runtime,heuristic
+12,mi_theap_malloc_aligned,207207207,1.3165,207207207,1.3165,X-alloc,heuristic
+13,"<asynk_strim::stream::AsynkStrim<F,Fut,Yieldr,Item> as futures_core::stream::Stream>::poll_next",201201201,1.2784,201201201,1.2784,X-runtime,heuristic
+14,serde_json::ser::format_escaped_str_contents,189189189,1.2021,189189189,1.2021,P10,symbol
+15,core::hash::BuildHasher::hash_one,179179179,1.1385,179179179,1.1385,X-hash,heuristic
+16,[[vdso]]_[k],166166166,1.0558,166166166,1.0558,X-kernel,code
+17,pcre2::bytes::Regex::find_at,158158158,1.0049,158158158,1.0049,P4,code
+18,rmp::encode::uint::write_uint,136136136,0.865,136136136,0.865,P6,symbol
+19,_mi_theap_malloc_zero,135135135,0.8586,135135135,0.8586,X-alloc,heuristic
+20,vllm_engine_core_client::client::imp::run_output_dispatcher_loop::{{closure}},126126126,0.8014,126126126,0.8014,P7,symbol
+21,<tracing_futures::Instrumented<T> as futures_core::stream::Stream>::poll_next,118118118,0.7505,118118118,0.7505,X-runtime,heuristic
+22,<&mut A as serde_core::de::SeqAccess>::next_element,114114114,0.7251,114114114,0.7251,X-serde,heuristic
+23,mi_theap_umalloc,113113113,0.7187,113113113,0.7187,X-alloc,heuristic
+24,core::str::converts::from_utf8,101101101,0.6424,101101101,0.6424,X-str,heuristic
+25,"sharded_slab::pool::Pool<T,C>::get",98098098,0.6233,98098098,0.6233,X-log,heuristic
+26,asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}},92092092,0.5851,811811811,5.158,X-runtime,heuristic
+27,_mi_malloc_generic,87087087,0.5533,89089089,0.566,X-alloc,heuristic
+28,"<http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame",85085085,0.5406,212212212,1.3483,P1,symbol
+29,mi_malloc_aligned,85085085,0.5406,85085085,0.5406,X-alloc,heuristic
+30,<core::str::pattern::StrSearcher>::new,84084084,0.5342,84084084,0.5342,X-str,heuristic
+31,vllm_engine_core_client::transport::run_output_loop::{{closure}},75075075,0.477,75075075,0.477,P7,symbol
+32,<serde_core::de::impls::<impl serde_core::de::Deserialize for alloc::vec::Vec<T>>::deserialize::VecVisitor<T> as serde_core::de::Visitor>::visit_seq,73073073,0.4643,73073073,0.4643,X-serde,heuristic
+33,__sched_yield,71071071,0.4516,71071071,0.4516,X-park,heuristic
+34,_mi_theap_realloc_zero,70070070,0.4452,70070070,0.4452,X-alloc,heuristic
+35,vllm_parser::reasoning::delimited::DelimitedReasoningParser::push,70070070,0.4452,70070070,0.4452,P9,symbol
+36,alloc::raw_vec::RawVecInner<A>::finish_grow,69069069,0.4388,69069069,0.4388,X-alloc,heuristic
+37,tokio::sync::mpsc::list::Tx<T>::push,69069069,0.4388,69069069,0.4388,X-runtime,heuristic
+38,tokio::sync::mpsc::list::Rx<T>::pop,68068068,0.4325,68068068,0.4325,X-runtime,heuristic
+39,serde_core::de::impls::<impl serde_core::de::Deserialize for core::option::Option<T>>::deserialize,68068068,0.4325,68068068,0.4325,X-serde,heuristic
+40,_mi_page_free_collect,65065065,0.4134,65065065,0.4134,X-alloc,heuristic

@@ -1,0 +1,65 @@
+Loading tokenizer: REPO_HOME/models/Qwen3-0.6B
+Tokenizer: Local (vocab_size=151669)
+Tokenizer loaded successfully.
+Generating 1 random prompts...
+Generated 1 prompts in 0.03s
+Tokenizer verified in previous run (cached), skipping verification.
+Starting main benchmark run...
+Traffic request rate: inf
+Burstiness factor: 1 (Poisson process)
+Maximum request concurrency: 1
+================= Serving Benchmark Result =================
+Successful requests:                     1         
+Failed requests:                         0         
+Maximum request concurrency:             1         
+Benchmark duration (s):                  34.68     
+Total input tokens:                      1024      
+Total generated tokens:                  128       
+Request throughput (req/s):              0.03      
+Output token throughput (tok/s):         3.69      
+Peak output token throughput (tok/s):    5.00      
+Peak concurrent requests:                1.00      
+Total token throughput (tok/s):          33.21     
+--------------------Time to First Token---------------------
+Mean TTFT (ms):                          5670.78   
+Median TTFT (ms):                        5670.78   
+P99 TTFT (ms):                           5670.78   
+P90 TTFT (ms):                           5670.78   
+----------Time per Output Token (excl. 1st token)-----------
+Mean TPOT (ms):                          228.46    
+Median TPOT (ms):                        228.46    
+P99 TPOT (ms):                           228.46    
+P90 TPOT (ms):                           228.46    
+--------------------Inter-token Latency---------------------
+Mean ITL (ms):                           226.67    
+Median ITL (ms):                         227.88    
+P99 ITL (ms):                            237.93    
+P90 ITL (ms):                            235.61    
+---------------------End-to-end Latency---------------------
+Mean E2EL (ms):                          34684.80  
+Median E2EL (ms):                        34684.80  
+P99 E2EL (ms):                           34684.80  
+P90 E2EL (ms):                           34684.80  
+============================================================
+============ Steady-State Metrics =============
+Concurrency threshold:              >= 0.95 * 1 = 1
+Window:                             0.0s -> 34.7s  (34.7s)
+Observed peak concurrency:          1
+Requests started in window:         1 / 1 (100.0%)
+Requests completed in window:       0
+-----------------------------------------------
+Request throughput (req/s):         0.00
+Output token throughput (tok/s):    3.72
+Input token throughput (tok/s):     29.52
+Total token throughput (tok/s):     33.24
+-----------------------------------------------
+Mean TTFT (ms):                     5670.78
+Median TTFT (ms):                   5670.78
+P99 TTFT (ms):                      5670.78
+P90 TTFT (ms):                      5670.78
+-----------------------------------------------
+Mean TPOT (ms):                     228.46
+Median TPOT (ms):                   228.46
+P90 TPOT (ms):                      228.46
+P99 TPOT (ms):                      228.46
+===============================================

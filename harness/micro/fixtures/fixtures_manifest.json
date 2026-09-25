@@ -1,0 +1,109 @@
+{
+  "generated_at": "2026-09-25T12:41:17+0800",
+  "generated_at_epoch": 1790311277,
+  "host": "LOCAL_HOST",
+  "generator_script": "gen_fixtures.py",
+  "generator_script_sha256": "b734163c8caa1a2b79243cf98193cc3dd448f57528d9637ee3794e2d8b72cae1",
+  "tokenizer_json": {
+    "path": "REPO_HOME/models/Qwen3-0.6B/tokenizer.json",
+    "sha256": "aeb13307a71acd8fe81861d94ad54ab689df773318809eed3cbe794b4492dae4",
+    "bytes": 11422654
+  },
+  "tokenizer_config": {
+    "path": "REPO_HOME/models/Qwen3-0.6B/tokenizer_config.json",
+    "sha256": "d5d09f07b48c3086c508b30d1c9114bd1189145b74e982a265350c923acd8101"
+  },
+  "notes": [
+    "chat_template 取自 tokenizer_config.json（Qwen3-0.6B），与 tokenizer 项目基线同一支模型",
+    "语料 unit 与 tools 规格沿用 tokenizer/harness/python/corpora.py",
+    "所有尺寸都用真实 tokenizer 计数，不用字符数折算"
+  ],
+  "fixtures": {
+    "chat_template.jinja": {
+      "bytes": 4168,
+      "sha256": "a55ee1b1660128b7098723e0abcd92caa0788061051c62d51cbe87d9cf1974d8"
+    },
+    "chat_request_1k.json": {
+      "path": "chat_request_1k.json",
+      "bytes": 5326,
+      "sha256": "cd83bcd5f4d892537ff598f92847c25760fb1bd1e057162cda09089d3cdacb95",
+      "lines": 1
+    },
+    "engine_core_request_1k.json": {
+      "path": "engine_core_request_1k.json",
+      "bytes": 5867,
+      "sha256": "3193d15742b5c535386a4e678464391c03cd870dacee5843708ea299a38ec147",
+      "lines": 1
+    },
+    "chat_request_8k.json": {
+      "path": "chat_request_8k.json",
+      "bytes": 37371,
+      "sha256": "dff8f9fcc585ba18d8e77c16d8c61be3d536b2fae9f98d741bd9943809fbf0b0",
+      "lines": 1
+    },
+    "engine_core_request_8k.json": {
+      "path": "engine_core_request_8k.json",
+      "bytes": 43591,
+      "sha256": "5a28458a80f4ec0c5479bc8fc105f64f28f9438fd3408f7a9cac43da1746bbb8",
+      "lines": 1
+    },
+    "response_osl128.json": {
+      "path": "response_osl128.json",
+      "bytes": 855,
+      "sha256": "7e1731344235353657d7a912cfff1b672e75941243ac57ae59aa5b9a56e49f5c",
+      "lines": 1
+    },
+    "stream_chunks_osl128.json": {
+      "path": "stream_chunks_osl128.json",
+      "bytes": 22918,
+      "sha256": "327d5daf192fd574388ac9e686668e239c83f372be585f98d428d1331fbfe046",
+      "lines": 1
+    }
+  },
+  "inputs": {
+    "1k": {
+      "requested_isl_tokens": 1024,
+      "user_content_tokens": 990,
+      "user_content_chars": 3483,
+      "user_content_bytes": 4401,
+      "user_content_tokens_actual": 990,
+      "rendered_prompt_chars": 4685,
+      "rendered_prompt_bytes": 5603,
+      "rendered_prompt_tokens": 1291,
+      "rendered_prompt_sha256": "6692057893b5d4daf7ac95e8422776588419d6ce3648c49fe06fc5de15dfa891",
+      "chat_request_bytes": 5326,
+      "chat_request_sha256": "cd83bcd5f4d892537ff598f92847c25760fb1bd1e057162cda09089d3cdacb95",
+      "engine_core_request_fields": 20,
+      "engine_core_prompt_token_ids": 1024,
+      "engine_core_request_bytes": 5867
+    },
+    "8k": {
+      "requested_isl_tokens": 8192,
+      "user_content_tokens": 8140,
+      "user_content_chars": 28638,
+      "user_content_bytes": 36186,
+      "user_content_tokens_actual": 8140,
+      "rendered_prompt_chars": 29840,
+      "rendered_prompt_bytes": 37388,
+      "rendered_prompt_tokens": 8441,
+      "rendered_prompt_sha256": "0432eb86fcccb37d7a7ff3a1a64810ce51f8056070464c191b6d24a5c44f14de",
+      "chat_request_bytes": 37371,
+      "chat_request_sha256": "dff8f9fcc585ba18d8e77c16d8c61be3d536b2fae9f98d741bd9943809fbf0b0",
+      "engine_core_request_fields": 20,
+      "engine_core_prompt_token_ids": 8192,
+      "engine_core_request_bytes": 43591
+    },
+    "osl": {
+      "osl_tokens": 128,
+      "completion_tokens": 128,
+      "completion_chars": 483,
+      "completion_bytes": 587,
+      "response_bytes": 855,
+      "response_sha256": "7e1731344235353657d7a912cfff1b672e75941243ac57ae59aa5b9a56e49f5c",
+      "stream_chunks": 129,
+      "stream_chunk_file_bytes": 22918,
+      "stream_chunk_file_sha256": "327d5daf192fd574388ac9e686668e239c83f372be585f98d428d1331fbfe046",
+      "stream_chunk_avg_bytes": 177.7
+    }
+  }
+}

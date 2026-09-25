@@ -1,0 +1,27 @@
+# tag,a3-A4-python,total_cpu_ns,4336336332,source,REMOTE_HOST chip4 A4 Python 前端（真引擎）
+rank,frame,self_ns,self_pct,inclusive_ns,inclusive_pct,segment,basis
+1,_PyEval_EvalFrameDefault,793793793,18.3056,12202202190,281.3943,X-py-interp,symbol
+2,[[kernel.kallsyms]]_[k],424424424,9.7876,9486486477,218.7673,X-kernel,code
+3,[_pydantic_core.cpython-312-aarch64-linux-gnu.so],178178178,4.109,5420420415,125.0,P2,symbol
+4,[libc.so.6],149149149,3.4395,5152152147,118.8135,X-copy,code
+5,_PyType_Lookup,116116116,2.6777,162162162,3.7396,X-py-interp,symbol
+6,[libzmq-97580724.so.5.2.5],96096096,2.2161,1450450449,33.4488,P7,symbol
+7,tokenizers::models::bpe::word::Word::merge_all,77077077,1.7775,96096096,2.2161,P4,symbol
+8,_PyObject_Malloc,75075075,1.7313,85085085,1.9621,X-py-interp,symbol
+9,unicodekeys_lookup_unicode,67067067,1.5466,67067067,1.5466,X-py-interp,symbol
+10,_PyObject_Free,59059059,1.362,65065065,1.5005,X-py-interp,symbol
+11,_Py_dict_lookup,59059059,1.362,124124124,2.8624,X-py-interp,symbol
+12,_PyObject_GenericGetAttrWithDict,53053053,1.2235,301301301,6.9483,X-py-interp,symbol
+13,initialize_locals,46046046,1.0619,78078078,1.8006,X-py-interp,symbol
+14,_PyFrame_ClearExceptCode,43043043,0.9926,84084084,1.9391,X-py-interp,symbol
+15,malloc,42042042,0.9695,75075075,1.7313,X-alloc,heuristic
+16,tupledealloc,36036036,0.831,70070070,1.6159,X-py-interp,symbol
+17,PyObject_GetAttr,36036036,0.831,623623623,14.3813,X-py-interp,symbol
+18,[_zmq.abi3.so],34034034,0.7849,870870870,20.0831,P7,symbol
+19,[nf_tables.ko.xz],30030030,0.6925,64064064,1.4774,X-unclassified,none
+20,[ld-linux-aarch64.so.1],29029029,0.6694,29029029,0.6694,X-unclassified,none
+21,"<core::iter::adapters::map::Map<I,F> as core::iter::traits::iterator::Iterator>::fold",28028028,0.6464,114114114,2.6316,X-rust,heuristic
+22,PyObject_GC_Del,27027027,0.6233,28028028,0.6464,X-py-interp,symbol
+23,_PyObject_GetMethod,26026026,0.6002,126126126,2.9086,X-py-interp,symbol
+24,"hashbrown::raw::RawTable<T,A>::reserve_rehash",25025025,0.5771,42042042,0.9695,X-hash,heuristic
+25,PyObject_Vectorcall,23023023,0.5309,5584584579,128.7858,X-py-interp,symbol

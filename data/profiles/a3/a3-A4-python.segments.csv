@@ -1,0 +1,15 @@
+# tag,a3-A4-python,total_cpu_ns,4336336332,source,REMOTE_HOST chip4 A4 Python 前端（真引擎）
+segment,self_ns,self_pct_of_all,self_pct_of_P1_P10,top_frames_in_segment
+P2,178178178,4.109,37.474,[_pydantic_core.cpython-312-aarch64-linux-gnu.so]=178.2ms
+P4,167167167,3.855,35.158,"tokenizers::models::bpe::word::Word::merge_all=77.1ms | tokenizers::models::bpe::model::BPE::merge_word=21.0ms | <tokenizers::models::ModelWrapper as tokenizers::tokenizer::Model>::id_to_token=20.0ms | tokenizers::utils::cache::Cache<K,V>::get=6.0ms"
+P7,130130130,3.0009,27.368,[libzmq-97580724.so.5.2.5]=96.1ms | [_zmq.abi3.so]=34.0ms
+X-py-interp,2049049047,47.253,,_PyEval_EvalFrameDefault=793.8ms | _PyType_Lookup=116.1ms | _PyObject_Malloc=75.1ms | unicodekeys_lookup_unicode=67.1ms
+X-py-venv,61061061,1.4081,,__pyx_f_6uvloop_4loop_4Loop__on_idle=8.0ms | __pyx_f_6uvloop_4loop_6Handle__run=6.0ms | __pyx_f_6uvloop_4loop___on_uvpoll_event=4.0ms | __Pyx_PyObject_FastCallDict=4.0ms
+X-alloc,56056056,1.2927,,malloc=42.0ms | realloc=8.0ms | alloc::raw_vec::RawVecInner<A>::finish_grow=4.0ms | _ZN5alloc7raw_vec20RawVecInner$LT$A$GT$11finish_grow17h794bb6a89c502c7fE.llvm.15234451801708460862=1.0ms
+X-copy,159159159,3.6704,,[libc.so.6]=149.1ms | __memcmpeq=5.0ms | memset@plt=3.0ms | memcpy@plt=1.0ms
+X-hash,53053053,1.2235,,"hashbrown::raw::RawTable<T,A>::reserve_rehash=25.0ms | core::hash::BuildHasher::hash_one=14.0ms | hashbrown::map::HashMap<K,V,S,A>::insert=13.0ms | <hashbrown::map::HashMap<K,V,S,A> as core::iter::traits::collect::Extend<(K,V)>>::extend=1.0ms"
+X-str,11011011,0.2539,,unicode_decode_utf8=9.0ms | ucs2lib_utf8_encoder=1.0ms | unicode_encode_utf8=1.0ms
+X-metrics,10010010,0.2308,,clock_gettime=7.0ms | _PyTime_AsTimespec_clamp=3.0ms
+X-kernel,443443443,10.2262,,[[kernel.kallsyms]]_[k]=424.4ms | [[ip_set]]_[k]=8.0ms | [[vdso]]_[k]=7.0ms | epoll_pwait=4.0ms
+X-rust,101101101,2.3315,,"<core::iter::adapters::map::Map<I,F> as core::iter::traits::iterator::Iterator>::fold=28.0ms | <core::iter::adapters::flatten::FlatMap<I,U,F> as core::iter::traits::iterator::Iterator>::next=20.0ms | core::ops::function::impls::<impl core::ops::function::FnMut<A> for &mut F>::call_mut=15.0ms | <alloc::vec::into_iter::IntoIter<T,A> as core::iter::traits::iterator::Iterator>::fold=6.0ms"
+X-unclassified,916916916,21.145,,[nf_tables.ko.xz]=30.0ms | [ld-linux-aarch64.so.1]=29.0ms | tuple_alloc=18.0ms | insertdict=17.0ms

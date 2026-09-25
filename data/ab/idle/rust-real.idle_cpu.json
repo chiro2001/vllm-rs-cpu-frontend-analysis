@@ -1,0 +1,50 @@
+{
+ "wall_seconds": 60.017,
+ "window": {
+  "from": "2026-09-25T13:32:33+0800",
+  "to": "2026-09-25T13:33:33+0800"
+ },
+ "pids": {
+  "3689385": {
+   "comm": "vllm-rs",
+   "cpu_seconds": 0.0,
+   "cpu_percent_of_one_core": 0.0,
+   "threads_max": 11,
+   "threads_end": 11,
+   "rss_kb_end": 113608,
+   "utime_seconds": 0.0,
+   "stime_seconds": 0.0
+  },
+  "3689384": {
+   "comm": "VLLM::EngineCor",
+   "cpu_seconds": 0.0,
+   "cpu_percent_of_one_core": 0.0,
+   "threads_max": 15,
+   "threads_end": 15,
+   "rss_kb_end": 745120,
+   "utime_seconds": 0.0,
+   "stime_seconds": 0.0
+  },
+  "3689616": {
+   "comm": "VLLM::Worker",
+   "cpu_seconds": 0.33,
+   "cpu_percent_of_one_core": 0.55,
+   "threads_max": 53,
+   "threads_end": 53,
+   "rss_kb_end": 6580824,
+   "utime_seconds": 0.07,
+   "stime_seconds": 0.26
+  },
+  "3689132": {
+   "comm": "vllm",
+   "cpu_seconds": 0.01,
+   "cpu_percent_of_one_core": 0.02,
+   "threads_max": 5,
+   "threads_end": 5,
+   "rss_kb_end": 632048,
+   "utime_seconds": 0.01,
+   "stime_seconds": 0.0
+  }
+ },
+ "cpu_seconds_total": 0.34
+}

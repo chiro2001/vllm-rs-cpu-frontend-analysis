@@ -1,0 +1,30 @@
+# G3 证据：vLLM 官方 CPU wheel 的构建 commit 与计划锁定值完全一致
+#
+# 采集：2026-09-25，命令
+#   curl -sL 'https://wheels.vllm.ai/0.26.0/cpu/vllm/'
+#
+# 关键：wheel 的下载路径里嵌着构建 commit（GitHub release 资产按 commit 归档），
+# 三个 CPU wheel 全部指向 568afb3a13806beb53bb2e6bd518269357b237c0，
+# 与本项目统一身份（plan/COORDINATION.md §3）一字不差。
+#
+# 原样响应：
+
+<!DOCTYPE html>
+<html>
+  <!-- version 0.26.0 -->
+  <meta name="pypi:repository-version" content="1.0">
+  <body>
+    <a href="../../../568afb3a13806beb53bb2e6bd518269357b237c0/vllm-0.26.0%2Bcpu-cp312-cp312-macosx_11_0_arm64.whl">vllm-0.26.0+cpu-cp312-cp312-macosx_11_0_arm64.whl</a><br/>
+    <a href="../../../568afb3a13806beb53bb2e6bd518269357b237c0/vllm-0.26.0%2Bcpu-cp38-abi3-manylinux_2_34_aarch64.whl">vllm-0.26.0+cpu-cp38-abi3-manylinux_2_34_aarch64.whl</a><br/>
+    <a href="../../../568afb3a13806beb53bb2e6bd518269357b237c0/vllm-0.26.0%2Bcpu-cp38-abi3-manylinux_2_34_x86_64.whl">vllm-0.26.0+cpu-cp38-abi3-manylinux_2_34_x86_64.whl</a><br/>
+  </body>
+</html>
+
+# 索引页根（2026-09-25 采集，注意 PyPI 上的 vllm 已发到 0.30.0，
+# 本项目**不跟新版**，全程锁定 0.26.0）：
+#
+#   https://wheels.vllm.ai/0.26.0/
+#     cpu/  cu129/  cu130/  vllm/
+#
+# x86_64 与 aarch64 都有 CPU wheel ⇒ 本机（x86_64）与 REMOTE_HOST（aarch64）
+# 都能跑**纯 CPU**真引擎，无需 NPU。

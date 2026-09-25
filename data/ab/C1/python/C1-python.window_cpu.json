@@ -1,0 +1,40 @@
+{
+ "wall_seconds": 140.077,
+ "window": {
+  "from": "2026-09-25T13:38:50+0800",
+  "to": "2026-09-25T13:41:10+0800"
+ },
+ "pids": {
+  "3732892": {
+   "comm": "vllm",
+   "cpu_seconds": 0.61,
+   "cpu_percent_of_one_core": 0.44,
+   "threads_max": 9,
+   "threads_end": 9,
+   "rss_kb_end": 1063496,
+   "utime_seconds": 0.45,
+   "stime_seconds": 0.16
+  },
+  "3733195": {
+   "comm": "VLLM::EngineCor",
+   "cpu_seconds": 26.65,
+   "cpu_percent_of_one_core": 19.03,
+   "threads_max": 15,
+   "threads_end": 15,
+   "rss_kb_end": 750756,
+   "utime_seconds": 4.67,
+   "stime_seconds": 21.98
+  },
+  "3733376": {
+   "comm": "VLLM::Worker",
+   "cpu_seconds": 251.21,
+   "cpu_percent_of_one_core": 179.34,
+   "threads_max": 53,
+   "threads_end": 53,
+   "rss_kb_end": 6474540,
+   "utime_seconds": 166.26,
+   "stime_seconds": 84.95
+  }
+ },
+ "cpu_seconds_total": 278.47
+}

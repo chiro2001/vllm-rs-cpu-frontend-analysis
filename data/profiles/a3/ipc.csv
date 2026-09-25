@@ -1,0 +1,4 @@
+# perf stat（用户态事件，perf_event_paranoid 限制）,IPC = instructions/cycles（比值，与窗口长度无关）,绝对计数受窗口内的采样开销影响，跨点比较要小心
+tag,side,load,ipc,cycles,instructions,branches,branch_misses,branch_miss_pct,cache_references,cache_misses,cache_miss_pct
+a3-A5-python-python,python,ISL=1024 OSL=128 c=1 n=64,1.1641,7215510418.0,8399785051.0,1738426321.0,96532743.0,5.5529,3625756433.0,118667066.0,3.2729
+a3-A5-rust-rust,rust,ISL=1024 OSL=128 c=1 n=96,0.7244,1295436135.0,938373368.0,192574155.0,12092168.0,6.2792,391295878.0,17666529.0,4.5149

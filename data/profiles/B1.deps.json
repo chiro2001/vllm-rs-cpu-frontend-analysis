@@ -1,0 +1,32 @@
+{
+ "generated_at": "2026-09-25T13:16:20+0800",
+ "host": "LOCAL_HOST",
+ "how": "python3 逐 [[package]] 反查 Cargo.lock 的 dependencies 列表（见 harness/profile/README.md §4）",
+ "cargo_lock": "REPO_HOME/projects/vllm/UPSTREAM_PROJECT/vllm/rust/Cargo.lock",
+ "reverse_deps": {
+  "pcre2": [
+   "fastokens"
+  ],
+  "pcre2-sys": [
+   "pcre2"
+  ],
+  "mimalloc": [
+   "vllm-bench",
+   "vllm-cmd"
+  ],
+  "fastokens": [
+   "vllm-tokenizer"
+  ]
+ },
+ "conclusion_pcre2": "pcre2 的唯一使用者是 fastokens（其余 crate 不用 pcre2）",
+ "tokio": {
+  "version": "1.52.3",
+  "default_thread_name_source": "REPO_HOME/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/tokio-1.52.3/src/runtime/builder.rs",
+  "evidence_lines": [
+   "303:            thread_name: std::sync::Arc::new(|| \"tokio-rt-worker\".into()),",
+   "568:    /// The default name is \"tokio-rt-worker\".",
+   "620:    /// The default name fn is `|| \"tokio-rt-worker\".into()`."
+  ],
+  "conclusion": "tokio 的默认工作线程名是 tokio-rt-worker；vllm 源码只在 server/src/runtime.rs:20 设 'vllm-request'、engine-core-client/src/runtime.rs:62 设 'vllm-zmq-N'，所以 tokio-rt-worker = 未命名的 HTTP/axum runtime"
+ }
+}

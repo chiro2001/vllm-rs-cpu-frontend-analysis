@@ -1,0 +1,7 @@
+# 前端占比 = 前端CPU秒 / (前端CPU秒 + 引擎CPU秒)，均为 procstat 口径,不是「前端占端到端墙钟」；两侧同一把尺子,engine_ms_per_token 用引擎 CPU 秒 / 输出 token 数（含 prefill 摊销，故略大于 TPOT）
+tag,side,load,completed,frontend_cpu_s,engine_cpu_s,engine_ms_per_token,mean_tpot_ms,frontend_share_cpu_pct,engine_over_frontend
+a3-A1-noperf-rust,rust,ISL=1024 OSL=128 c=1,64,0.55,54.25,6.6223,4.810568264023401,1.0036,98.64
+a3-A1-rust,rust,ISL=1024 OSL=128 c=1,192,1.83,161.13,6.5564,4.814142685803425,1.123,88.05
+a3-A4-python,python,ISL=1024 OSL=128 c=1,96,4.16,80.3,6.5348,4.7639058604373545,4.9254,19.3
+a3-A5-python-python,python,ISL=1024 OSL=128 c=1,64,2.8,51.99,6.3464,4.595424472212271,5.1104,18.57
+a3-A5-rust-rust,rust,ISL=1024 OSL=128 c=1,96,0.91,78.79,6.4119,4.683966339435037,1.1418,86.58

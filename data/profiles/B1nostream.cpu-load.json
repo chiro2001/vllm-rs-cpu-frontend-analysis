@@ -1,0 +1,77 @@
+{
+ "generated_at": "2026-09-25T13:36:55+0800",
+ "base_url": "http://127.0.0.1:8199",
+ "path": "/v1/chat/completions",
+ "concurrency": 1,
+ "num_requests_requested": 0,
+ "duration_requested_s": 20.0,
+ "stream": false,
+ "input_len_target": 1024,
+ "output_len_target": 128,
+ "tools": "weather",
+ "warmup": 3,
+ "window": {
+  "open_epoch": 1790314595.678715,
+  "open_monotonic": 1425698.957455827,
+  "close_monotonic": 1425718.958071879,
+  "wall_seconds": 20.0006,
+  "ok_before_first_request_s": 1.2e-05
+ },
+ "requests_issued_in_window": 12751,
+ "requests_completed_in_window": 12751,
+ "requests_failed_in_window": 0,
+ "window_exhausted_num_requests": false,
+ "throughput_req_s": 637.53,
+ "throughput_out_tok_s": 81603.9,
+ "completion_tokens_total": 1632128,
+ "prompt_tokens_total": 15568971,
+ "prompt_tokens_mean": 1221.0,
+ "client_cpu_seconds": 2.4551,
+ "client_cpu_percent_of_one_core": 12.27,
+ "client_cpu_seconds_window_only": 2.4526,
+ "frontend_cpu_seconds": 21.0,
+ "frontend_utime_seconds": 8.56,
+ "frontend_stime_seconds": 12.44,
+ "client_cpu_seconds_procstat": 2.46,
+ "procstat": {
+  "basis": "utime+stime（不含子进程 cutime/cstime）",
+  "script": "REPO_HOME/projects/vllm/vllm-rs-wt/B-profile/harness/common/procstat.sh",
+  "window": "预热之后 / 窗口之前取 before；窗口结束之后取 after",
+  "pids_sampled": [
+   "3707922",
+   "3728697"
+  ],
+  "snapshot_before": "data/profiles/procstat-snapshots/B1nostream.before.json",
+  "snapshot_after": "data/profiles/procstat-snapshots/B1nostream.after.json",
+  "frontend_pid": "3707922",
+  "diff_out": "data/profiles/B1nostream.frontend-cpu.json",
+  "note": "frontend_cpu_seconds 与 client_cpu_* 是两个进程的两个数，绝不相加"
+ },
+ "latency_ms": {
+  "p50": 1.447,
+  "p90": 1.896,
+  "p99": 2.778,
+  "mean": 1.561
+ },
+ "ttft_ms": null,
+ "failures": [],
+ "normalized": {
+  "_units": "秒 / 请求、秒 / 千 token；CPU 为 utime+stime",
+  "frontend_cpu_s_per_request": 0.00164693,
+  "frontend_cpu_s_per_1k_input_tokens": 0.001348837,
+  "frontend_cpu_s_per_1k_output_tokens": 0.012866638,
+  "client_cpu_s_per_request": 0.000192346,
+  "client_cpu_s_per_1k_input_tokens": 0.000157531,
+  "client_cpu_s_per_1k_output_tokens": 0.001502701,
+  "frontend_cpu_s_per_window_s": 1.049967658
+ },
+ "body": {
+  "prompt_text_sha256": "212a580fb9fa37e8e98fb8f0060f385a352b25c9a5f004da0bf2899448510674",
+  "prompt_text_bytes": 3874,
+  "local_token_count": 1024,
+  "body_bytes": 4421,
+  "body_sha256": "47cf577e619b8e837c361395e5fee7679a2a27384610dc622539b2935235c4fd",
+  "body_source": "synthesized"
+ },
+ "note": "诊断点：同 B1 负载但**非流式**（stream=false）⇒ 用于检验\"stime 是否来自 SSE 每 chunk 写\"（结论：不是，见 docs/02 §13.4）"
+}

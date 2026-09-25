@@ -1,0 +1,74 @@
+{
+ "generated_at": "2026-09-25T14:55:29+0800",
+ "device": "REMOTE_HOST chip4 (/dev/davinci4), NPU 2 Chip 0, cpuset 160-199, NUMA 2",
+ "image": "quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler",
+ "design": "同一镜像/同一引擎/同一模型，只换前端：VLLM_USE_RUST_FRONTEND=1 + VLLM_RUST_FRONTEND_PATH=/opt/vllm-rs-bin/vllm-rs（Rust）vs 不设（Python）",
+ "load": {
+  "input_len": 1024,
+  "output_len": 128,
+  "num_prompts": 32,
+  "max_concurrency": 1,
+  "warmup": 2
+ },
+ "client": {
+  "binary": "vllm bench serve（镜像内，两侧同一个）",
+  "cpuset": "200-201",
+  "endpoint": "/v1/chat/completions"
+ },
+ "arms": {
+  "rust": {
+   "frontend_cpu_seconds": 0.34,
+   "frontend_utime_s": 0.17,
+   "frontend_stime_s": 0.17,
+   "engine_cpu_seconds": 27.45,
+   "frontend_cpu_ms_per_request": 10.625,
+   "frontend_cpu_s_per_1k_input_tokens": 0.010802,
+   "frontend_cpu_s_per_1k_output_tokens": 0.083008,
+   "completed": 32,
+   "failed": 0,
+   "throughput_req_s": 1.4646795550823193,
+   "mean_ttft_ms": 83.11130219590268,
+   "mean_tpot_ms": 4.720169035376391,
+   "window_seconds": 38.089,
+   "loadavg": [
+    "47.69",
+    "47.20",
+    "46.69"
+   ]
+  },
+  "python": {
+   "frontend_cpu_seconds": 1.49,
+   "frontend_utime_s": 1.33,
+   "frontend_stime_s": 0.16,
+   "engine_cpu_seconds": 28.46,
+   "frontend_cpu_ms_per_request": 46.562,
+   "frontend_cpu_s_per_1k_input_tokens": 0.044923,
+   "frontend_cpu_s_per_1k_output_tokens": 0.36377,
+   "completed": 32,
+   "failed": 0,
+   "throughput_req_s": 1.346504998961016,
+   "mean_ttft_ms": 96.41480186473927,
+   "mean_tpot_ms": 5.087212052277159,
+   "window_seconds": 40.011,
+   "loadavg": [
+    "47.90",
+    "46.04",
+    "46.26"
+   ]
+  }
+ },
+ "derived": {
+  "frontend_cpu_ratio_rust_over_python": 0.228,
+  "frontend_share_of_server_cpu_pct": {
+   "rust": 1.22,
+   "python": 4.97
+  },
+  "ttft_delta_ms": -13.3,
+  "tpot_delta_ms": -0.367,
+  "caveats": [
+   "两个臂各只跑了一轮（n=32、c=1、无重复），差异里含 run-to-run 波动；正式矩阵需重复 3 次取中位数。",
+   "两侧的引擎是同一个镜像、同一个 commit、同一张卡，但两轮之间隔了容器重启与模型重载；引擎速度本身的漂移（TPOT 4.72 vs 5.09）说明装置有 ±4% 量级波动。",
+   "TTFT 差异（−13.3 ms）**不能全归给前端**：prefill 与排队也在里面，需要单独的分解实验（B 线的火焰图 + C 线的重复实验）。"
+  ]
+ }
+}

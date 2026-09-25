@@ -1,0 +1,42 @@
+# tag,B2,total_cpu_ns,22232232210,source,run_matrix.sh: ISL~8211 OSL=16 c=1 stream=True tools=none
+rank,frame,self_ns,self_pct,inclusive_ns,inclusive_pct,segment,basis
+1,[perf-3639361.map]_[j],4060060056,18.262,4060060056,18.262,P4,code
+2,std::thread::local::LocalKey<T>::with,3843843840,17.2895,3843843840,17.2895,X-tls,code
+3,[libc.so.6],2071071069,9.3156,2124124122,9.5543,X-copy,code
+4,pcre2::bytes::Regex::find_at,1822822821,8.199,1822822821,8.199,P4,code
+5,pcre2_match_8,880880880,3.9622,880880880,3.9622,P4,code
+6,rmp::encode::uint::write_uint,525525525,2.3638,525525525,2.3638,P6,symbol
+7,pcre2_jit_match_8,524524524,2.3593,4510510506,20.2882,P4,code
+8,_mi_page_malloc_zero,506506506,2.2783,506506506,2.2783,X-alloc,heuristic
+9,fastokens::pre_tokenizers::split::Split::find_matches_pcre2_parallel,412412412,1.855,566566566,2.5484,P4,code
+10,"pcre2::pool::inner::Pool<T,F>::get_slow",342342342,1.5398,342342342,1.5398,P4,code
+11,icu_normalizer::ComposingNormalizerBorrowed::normalize,307307307,1.3823,307307307,1.3823,P4,code
+12,fastokens::pre_tokenizers::split::find_matches_pcre2,266266266,1.1977,266266266,1.1977,P4,code
+13,fastokens::pre_tokenizers::split::Split::pre_tokenize,212212212,0.9545,212212212,0.9545,P4,code
+14,fastokens::pre_tokenizers::split::matches_to_segments,190190190,0.8555,190190190,0.8555,P4,code
+15,mi_free,181181181,0.8149,181181181,0.8149,X-alloc,heuristic
+16,futures_util::stream::stream::StreamExt::poll_next_unpin,153153153,0.6889,153153153,0.6889,X-runtime,heuristic
+17,jit_machine_stack_exec,146146146,0.6574,146146146,0.6574,P4,code
+18,"<core::iter::adapters::map::Map<I,F> as core::iter::traits::iterator::Iterator>::try_fold",126126126,0.5673,126126126,0.5673,X-rust,heuristic
+19,vllm_tokenizer::byte_level_decode::decode_byte_level,112112112,0.5043,122122122,0.5493,P8,symbol
+20,mi_theap_malloc_aligned,106106106,0.4773,106106106,0.4773,X-alloc,heuristic
+21,serde_json::read::SliceRead::skip_to_escape,102102102,0.4593,102102102,0.4593,P2,symbol
+22,"rmp_serde::decode::Deserializer<R,C>::any_inner",99099099,0.4457,99099099,0.4457,P7,symbol
+23,minijinja::vm::Vm::eval_impl,91091091,0.4097,108108108,0.4863,P3,symbol
+24,__sched_yield,88088088,0.3962,88088088,0.3962,X-park,heuristic
+25,_mi_page_free_collect,83083083,0.3737,83083083,0.3737,X-alloc,heuristic
+26,_mi_theap_malloc_zero,79079079,0.3557,79079079,0.3557,X-alloc,heuristic
+27,_mi_malloc_generic,76076076,0.3422,76076076,0.3422,X-alloc,heuristic
+28,fastokens::added_tokens::AddedTokens::split,75075075,0.3377,105105105,0.4728,P4,code
+29,<S as futures_core::stream::TryStream>::try_poll_next,74074074,0.3332,74074074,0.3332,X-runtime,heuristic
+30,mi_theap_umalloc,72072072,0.3242,72072072,0.3242,X-alloc,heuristic
+31,rayon_core::registry::WorkerThread::wait_until_cold,62062062,0.2792,62062062,0.2792,X-park,heuristic
+32,core::ops::function::impls::<impl core::ops::function::FnMut<A> for &F>::call_mut,62062062,0.2792,62062062,0.2792,X-rust,heuristic
+33,"<&mut rmp_serde::encode::Serializer<W,C> as serde_core::ser::Serializer>::collect_seq",61061061,0.2747,61061061,0.2747,P6,symbol
+34,"<asynk_strim::stream::AsynkStrim<F,Fut,Yieldr,Item> as futures_core::stream::Stream>::poll_next",55055055,0.2476,55055055,0.2476,X-runtime,heuristic
+35,core::hash::BuildHasher::hash_one,54054054,0.2431,54054054,0.2431,X-hash,heuristic
+36,core::ops::function::FnOnce::call_once,54054054,0.2431,61061061,0.2747,X-rust,heuristic
+37,serde_core::ser::SerializeMap::serialize_entry,52052052,0.2341,52052052,0.2341,P10,symbol
+38,serde_json::ser::format_escaped_str_contents,51051051,0.2296,51051051,0.2296,P10,symbol
+39,[[vdso]]_[k],50050050,0.2251,50050050,0.2251,X-kernel,code
+40,core::str::converts::from_utf8,44044044,0.1981,44044044,0.1981,X-str,heuristic

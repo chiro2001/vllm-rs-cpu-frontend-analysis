@@ -1,0 +1,173 @@
+{
+  "points": {
+    "1k": {
+      "d1_parse_summary": {
+        "rust": {
+          "content_bytes": 4401,
+          "first_role": "user",
+          "first_tool": "get_current_weather",
+          "max_tokens": 128,
+          "messages": 1,
+          "stream": false,
+          "tools": 2
+        },
+        "python": {
+          "content_bytes": 4401,
+          "first_role": "user",
+          "first_tool": "get_current_weather",
+          "max_tokens": 128,
+          "messages": 1,
+          "stream": false,
+          "tools": 2
+        },
+        "identical": true
+      },
+      "d2_rendered_prompt": {
+        "rust_sha256": "6692057893b5d4daf7ac95e8422776588419d6ce3648c49fe06fc5de15dfa891",
+        "python_sha256": "6692057893b5d4daf7ac95e8422776588419d6ce3648c49fe06fc5de15dfa891",
+        "rust_bytes": 5603,
+        "python_bytes": 5603,
+        "identical": true
+      },
+      "d3_payload": {
+        "rust_bytes": 3528,
+        "python_bytes": 3535,
+        "python_minus_rust_bytes": 7,
+        "rust_sha256": "c9ef65403e406f3804bd049d8536f84a661a7eb33d5ff92928d7c69e406e4065",
+        "python_sha256": "e122bb6f7e23216f5b1210e8846b376d58f05ec6b1f13842b038046b7e0a1473",
+        "prompt_token_ids": 1024
+      },
+      "d3_rust_ops": [
+        "rmp_serde_encode",
+        "rmp_serde_decode_rust_payload",
+        "rmp_serde_decode_python_payload",
+        "clock_overhead"
+      ],
+      "d3_python_ops": [
+        "msgspec_encode",
+        "msgspec_decode_python_payload",
+        "msgspec_decode_rust_payload",
+        "msgpack_packb",
+        "clock_overhead"
+      ]
+    },
+    "8k": {
+      "d1_parse_summary": {
+        "rust": {
+          "content_bytes": 36186,
+          "first_role": "user",
+          "first_tool": "get_current_weather",
+          "max_tokens": 128,
+          "messages": 1,
+          "stream": false,
+          "tools": 2
+        },
+        "python": {
+          "content_bytes": 36186,
+          "first_role": "user",
+          "first_tool": "get_current_weather",
+          "max_tokens": 128,
+          "messages": 1,
+          "stream": false,
+          "tools": 2
+        },
+        "identical": true
+      },
+      "d2_rendered_prompt": {
+        "rust_sha256": "0432eb86fcccb37d7a7ff3a1a64810ce51f8056070464c191b6d24a5c44f14de",
+        "python_sha256": "0432eb86fcccb37d7a7ff3a1a64810ce51f8056070464c191b6d24a5c44f14de",
+        "rust_bytes": 37388,
+        "python_bytes": 37388,
+        "identical": true
+      },
+      "d3_payload": {
+        "rust_bytes": 26523,
+        "python_bytes": 26530,
+        "python_minus_rust_bytes": 7,
+        "rust_sha256": "1294a566863356aa164e7130b0ef133eafe4aeae1acdd50aba149828e43e9e9d",
+        "python_sha256": "3f4b17d006c90e39a9c50a9de4289aacc3aac2237724589503e82c9f213c3791",
+        "prompt_token_ids": 8192
+      },
+      "d3_rust_ops": [
+        "rmp_serde_encode",
+        "rmp_serde_decode_rust_payload",
+        "rmp_serde_decode_python_payload",
+        "clock_overhead"
+      ],
+      "d3_python_ops": [
+        "msgspec_encode",
+        "msgspec_decode_python_payload",
+        "msgspec_decode_rust_payload",
+        "msgpack_packb",
+        "clock_overhead"
+      ]
+    },
+    "osl128": {
+      "d4_response_bytes": {
+        "rust_sha256": "7e1731344235353657d7a912cfff1b672e75941243ac57ae59aa5b9a56e49f5c",
+        "python_sha256": "7e1731344235353657d7a912cfff1b672e75941243ac57ae59aa5b9a56e49f5c",
+        "rust_bytes": 855,
+        "python_bytes": 855,
+        "identical": true
+      }
+    }
+  },
+  "verdicts": [
+    {
+      "check": "d1 解析摘要一致 @1k",
+      "ok": true,
+      "detail": "比较字段: ['content_bytes', 'first_role', 'first_tool', 'max_tokens', 'messages', 'stream', 'tools']"
+    },
+    {
+      "check": "d2 渲染结果字节一致 @1k",
+      "ok": true,
+      "detail": "sha256=6692057893b5d4daf7ac95e8422776588419d6ce3648c49fe06fc5de15dfa891 bytes=5603"
+    },
+    {
+      "check": "d3 payload 尺寸可比 @1k",
+      "ok": true,
+      "detail": "rust=3528B python=3535B"
+    },
+    {
+      "check": "d3 rust 解得出两侧 payload @1k",
+      "ok": true,
+      "detail": "ops=['rmp_serde_encode', 'rmp_serde_decode_rust_payload', 'rmp_serde_decode_python_payload', 'clock_overhead']"
+    },
+    {
+      "check": "d3 python 解得出两侧 payload @1k",
+      "ok": true,
+      "detail": "ops=['msgspec_encode', 'msgspec_decode_python_payload', 'msgspec_decode_rust_payload', 'msgpack_packb', 'clock_overhead']"
+    },
+    {
+      "check": "d1 解析摘要一致 @8k",
+      "ok": true,
+      "detail": "比较字段: ['content_bytes', 'first_role', 'first_tool', 'max_tokens', 'messages', 'stream', 'tools']"
+    },
+    {
+      "check": "d2 渲染结果字节一致 @8k",
+      "ok": true,
+      "detail": "sha256=0432eb86fcccb37d7a7ff3a1a64810ce51f8056070464c191b6d24a5c44f14de bytes=37388"
+    },
+    {
+      "check": "d3 payload 尺寸可比 @8k",
+      "ok": true,
+      "detail": "rust=26523B python=26530B"
+    },
+    {
+      "check": "d3 rust 解得出两侧 payload @8k",
+      "ok": true,
+      "detail": "ops=['rmp_serde_encode', 'rmp_serde_decode_rust_payload', 'rmp_serde_decode_python_payload', 'clock_overhead']"
+    },
+    {
+      "check": "d3 python 解得出两侧 payload @8k",
+      "ok": true,
+      "detail": "ops=['msgspec_encode', 'msgspec_decode_python_payload', 'msgspec_decode_rust_payload', 'msgpack_packb', 'clock_overhead']"
+    },
+    {
+      "check": "d4 非流式响应体序列化字节一致",
+      "ok": true,
+      "detail": "sha256=7e1731344235353657d7a912cfff1b672e75941243ac57ae59aa5b9a56e49f5c bytes=855"
+    }
+  ],
+  "all_ok": true
+}

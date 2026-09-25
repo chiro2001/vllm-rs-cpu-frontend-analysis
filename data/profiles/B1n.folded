@@ -1,0 +1,1249 @@
+tokio-rt-worker;<&mut serde_json::ser::Serializer<W,F> as serde_core::ser::Serializer>::collect_str 2002002
+tokio-rt-worker;<&mut serde_json::ser::Serializer<W,F> as serde_core::ser::Serializer>::collect_str;<<&mut serde_json::ser::Serializer<W,F> as serde_core::ser::Serializer>::collect_str::Adapter<W,F> as core::fmt::Write>::write_str 3003003
+tokio-rt-worker;<&mut serde_json::ser::Serializer<W,F> as serde_core::ser::Serializer>::collect_str;core::fmt::write 2002002
+tokio-rt-worker;<S as futures_core::stream::TryStream>::try_poll_next 224224224
+tokio-rt-worker;<T as http::extensions::AnyClone>::as_any 2002002
+tokio-rt-worker;<T as tower::util::boxed_clone_sync::CloneService<R>>::clone_box 34034034
+tokio-rt-worker;<T as tower::util::boxed_clone_sync::CloneService<R>>::clone_box;alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle 1001001
+tokio-rt-worker;<T as tower::util::boxed_clone_sync::CloneService<R>>::clone_box;asynk_strim::try_yielder::TryYielder<Ok,Error>::yield_ok::{{closure}} 2002002
+tokio-rt-worker;<T as tower::util::boxed_clone_sync::CloneService<R>>::clone_box;mi_free 1001001
+tokio-rt-worker;<alloc::collections::vec_deque::iter::Iter<T> as core::iter::traits::iterator::Iterator>::fold 48048048
+tokio-rt-worker;<alloc::raw_vec::RawVec<u8>>::grow_one 7007007
+tokio-rt-worker;<alloc::vec::Vec<T> as alloc::vec::spec_from_iter::SpecFromIter<T,I>>::from_iter 31031031
+tokio-rt-worker;<axum::middleware::from_fn::FromFn<F,S,I,(T1,)> as tower_service::Service<http::request::Request<axum_core::body::Body>>>::call::{{closure}} 12012012
+tokio-rt-worker;<axum::util::MapIntoResponse<S> as tower_service::Service<http::request::Request<B>>>::call 1001001
+tokio-rt-worker;<axum::util::MapIntoResponseFuture<F> as core::future::future::Future>::poll 22022022
+tokio-rt-worker;<bytes::buf::chain::Chain<T,U> as bytes::buf::buf_impl::Buf>::advance 8008008
+tokio-rt-worker;<char as core::str::pattern::Pattern>::is_contained_in 1001001
+tokio-rt-worker;<core::hash::sip::Hasher<S> as core::hash::Hasher>::write 2002002
+tokio-rt-worker;<core::iter::adapters::map::Map<I,F> as core::iter::traits::iterator::Iterator>::try_fold 9009009
+tokio-rt-worker;<core::str::iter::CharIndices as core::iter::traits::iterator::Iterator>::next 10010010
+tokio-rt-worker;<http::header::map::Drain<T> as core::ops::drop::Drop>::drop 5005005
+tokio-rt-worker;<http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame 92092092
+tokio-rt-worker;<http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame;<std::time::Instant>::elapsed 11011011
+tokio-rt-worker;<http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame;<std::time::Instant>::elapsed;<std::sys::pal::unix::time::Timespec>::now 1001001
+tokio-rt-worker;<http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame;<std::time::Instant>::elapsed;<std::sys::pal::unix::time::Timespec>::now;__vdso_clock_gettime_[k] 1001001
+tokio-rt-worker;<http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame;<std::time::Instant>::elapsed;<std::sys::pal::unix::time::Timespec>::now;clock_gettime 2002002
+tokio-rt-worker;<http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame;<std::time::Instant>::elapsed;<std::sys::pal::unix::time::Timespec>::now;clock_gettime;[[vdso]]_[k] 41041041
+tokio-rt-worker;<http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame;<std::time::Instant>::elapsed;<std::sys::pal::unix::time::Timespec>::now;clock_gettime;__vdso_clock_gettime_[k] 10010010
+tokio-rt-worker;<http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame;<std::time::Instant>::elapsed;<std::sys::pal::unix::time::Timespec>::sub_timespec 3003003
+tokio-rt-worker;<http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame;<std::time::Instant>::elapsed;clock_gettime 12012012
+tokio-rt-worker;<http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame;clock_gettime;[[vdso]]_[k] 43043043
+tokio-rt-worker;<http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame;clock_gettime;__vdso_clock_gettime_[k] 5005005
+tokio-rt-worker;<hyper::common::buf::BufList<T> as bytes::buf::buf_impl::Buf>::advance 18018018
+tokio-rt-worker;<hyper::proto::h1::encode::EncodedBuf<B> as bytes::buf::buf_impl::Buf>::advance 1001001
+tokio-rt-worker;<hyper::proto::h1::role::Server as hyper::proto::h1::Http1Transaction>::encode 12012012
+tokio-rt-worker;<hyper_util::rt::tokio::TokioTimer as hyper::rt::timer::Timer>::now 1001001
+tokio-rt-worker;<hyper_util::rt::tokio::TokioTimer as hyper::rt::timer::Timer>::sleep_until 2002002
+tokio-rt-worker;<matchit::params::ParamsIter as core::iter::traits::iterator::Iterator>::next 1001001
+tokio-rt-worker;<pin_project_lite::__private::UnsafeDropInPlaceGuard<T> as core::ops::drop::Drop>::drop 3003003
+tokio-rt-worker;<std::time::Instant>::elapsed 4004004
+tokio-rt-worker;<tokio::runtime::task::join::JoinHandle<T> as core::future::future::Future>::poll 3003003
+tokio-rt-worker;<tokio::time::sleep::Sleep as core::future::future::Future>::poll 1001001
+tokio-rt-worker;<tower::util::map_future::MapFuture<S,F> as tower_service::Service<R>>::call 8008008
+tokio-rt-worker;<tower::util::map_future::MapFuture<S,F> as tower_service::Service<R>>::poll_ready 4004004
+tokio-rt-worker;<tower::util::oneshot::Oneshot<S,Req> as core::future::future::Future>::poll 10010010
+tokio-rt-worker;<tower_http::cors::Cors<S> as tower_service::Service<http::request::Request<ReqBody>>>::call 1001001
+tokio-rt-worker;<tower_http::cors::CorsLayer as core::clone::Clone>::clone 12012012
+tokio-rt-worker;<tower_http::trace::future::ResponseFuture<Fut,C,OnResponseT,OnBodyChunkT,OnEosT,OnFailureT> as core::future::future::Future>::poll 2002002
+tokio-rt-worker;<tower_http::trace::future::ResponseFuture<Fut,C,OnResponseT,OnBodyChunkT,OnEosT,OnFailureT> as core::future::future::Future>::poll;<std::sys::pal::unix::time::Timespec>::sub_timespec 1001001
+tokio-rt-worker;<tower_http::trace::future::ResponseFuture<Fut,C,OnResponseT,OnBodyChunkT,OnEosT,OnFailureT> as core::future::future::Future>::poll;<std::time::Instant>::elapsed;<std::sys::pal::unix::time::Timespec>::now 1001001
+tokio-rt-worker;<tower_http::trace::on_eos::DefaultOnEos as tower_http::trace::on_eos::OnEos>::on_eos 6006006
+tokio-rt-worker;<tower_http::trace::on_response::DefaultOnResponse as tower_http::trace::on_response::OnResponse<B>>::on_response 4004004
+tokio-rt-worker;<tower_http::trace::service::Trace<S,M,MakeSpanT,OnRequestT,OnResponseT,OnBodyChunkT,OnEosT,OnFailureT> as tower_service::Service<http::request::Request<ReqBody>>>::call 5005005
+tokio-rt-worker;<tracing_futures::Instrumented<T> as futures_core::stream::Stream>::poll_next 37037037
+tokio-rt-worker;<tracing_subscriber::fmt::fmt_layer::Layer<S,N,E,W> as tracing_subscriber::layer::Layer<S>>::on_close 1001001
+tokio-rt-worker;<tracing_subscriber::fmt::fmt_layer::Layer<S,N,E,W> as tracing_subscriber::layer::Layer<S>>::on_enter 4004004
+tokio-rt-worker;<tracing_subscriber::layer::layered::Layered<L,S> as tracing_core::subscriber::Subscriber>::enter 11011011
+tokio-rt-worker;<tracing_subscriber::registry::sharded::DataInner as sharded_slab::clear::Clear>::clear 1001001
+tokio-rt-worker;<tracing_subscriber::registry::sharded::Registry as tracing_core::subscriber::Subscriber>::enter 30030030
+tokio-rt-worker;<tracing_subscriber::registry::sharded::Registry as tracing_core::subscriber::Subscriber>::try_close 3003003
+tokio-rt-worker;<u32 as itoa::Unsigned>::fmt 12012012
+tokio-rt-worker;<vllm_engine_core_client::client::stream::EngineCoreOutputStream as futures_core::stream::Stream>::poll_next 16016016
+tokio-rt-worker;<vllm_llm::inflight::RequestGuard as core::ops::drop::Drop>::drop 1001001
+tokio-rt-worker;<vllm_llm::output::GenerateOutputStream as futures_core::stream::Stream>::poll_next 41041041
+tokio-rt-worker;<vllm_parser::reasoning::qwen3::Qwen3ReasoningParser as vllm_parser::reasoning::ReasoningParser>::initialize 1001001
+tokio-rt-worker;<vllm_server::middleware::offload::RequestRuntimeService<S> as tower_service::Service<http::request::Request<B>>>::call::{{closure}} 2002002
+tokio-rt-worker;<vllm_tokenizer::hf::HuggingFaceTokenizer as vllm_tokenizer::Tokenizer>::decode 13013013
+tokio-rt-worker;<vllm_tokenizer::hf::HuggingFaceTokenizer as vllm_tokenizer::Tokenizer>::is_special_id 2002002
+tokio-rt-worker;<vllm_tokenizer::incremental::DecodeStream<T> as vllm_tokenizer::incremental::IncrementalDecoder>::next_chunk 6006006
+tokio-rt-worker;<vllm_tokenizer::incremental::DecodeStream<T> as vllm_tokenizer::incremental::IncrementalDecoder>::push_token 18018018
+tokio-rt-worker;[libc.so.6] 311311311
+tokio-rt-worker;[unknown];<S as futures_core::stream::TryStream>::try_poll_next 1001001
+tokio-rt-worker;[unknown];<T as http::extensions::AnyClone>::as_any 1001001
+tokio-rt-worker;[unknown];<T as tower::util::boxed_clone_sync::CloneService<R>>::clone_box 4004004
+tokio-rt-worker;[unknown];<alloc::vec::Vec<T,A> as core::clone::Clone>::clone 2002002
+tokio-rt-worker;[unknown];<alloc::vec::Vec<T,A> as core::ops::drop::Drop>::drop 9009009
+tokio-rt-worker;[unknown];<alloc::vec::Vec<T> as alloc::vec::spec_from_iter::SpecFromIter<T,I>>::from_iter 26026026
+tokio-rt-worker;[unknown];<asynk_strim::stream::AsynkStrim<F,Fut,Yieldr,Item> as futures_core::stream::Stream>::poll_next 175175175
+tokio-rt-worker;[unknown];<axum::middleware::from_fn::FromFn<F,S,I,(T1,)> as tower_service::Service<http::request::Request<axum_core::body::Body>>>::call::{{closure}} 27027027
+tokio-rt-worker;[unknown];<axum::middleware::from_fn::FromFn<F,S,I,(T1,)> as tower_service::Service<http::request::Request<axum_core::body::Body>>>::call::{{closure}};<std::time::Instant>::elapsed;<std::sys::pal::unix::time::Timespec>::now;clock_gettime;[[vdso]]_[k] 1001001
+tokio-rt-worker;[unknown];<axum::middleware::from_fn::FromFn<F,S,I,(T1,)> as tower_service::Service<http::request::Request<axum_core::body::Body>>>::call::{{closure}};<std::time::Instant>::elapsed;clock_gettime 1001001
+tokio-rt-worker;[unknown];<axum::middleware::from_fn::FromFn<F,S,I,(T1,T2)> as tower_service::Service<http::request::Request<axum_core::body::Body>>>::call::{{closure}} 2002002
+tokio-rt-worker;[unknown];<axum::routing::route::RouteFuture<E> as core::future::future::Future>::poll 3003003
+tokio-rt-worker;[unknown];<axum::util::MapIntoResponseFuture<F> as core::future::future::Future>::poll 2002002
+tokio-rt-worker;[unknown];<core::hash::sip::Hasher<S> as core::hash::Hasher>::write 24024024
+tokio-rt-worker;[unknown];<core::iter::adapters::map::Map<I,F> as core::iter::traits::iterator::Iterator>::try_fold 481481481
+tokio-rt-worker;[unknown];<core::pin::Pin<P> as futures_core::stream::Stream>::poll_next 43043043
+tokio-rt-worker;[unknown];<core::str::pattern::StrSearcher>::new 9009009
+tokio-rt-worker;[unknown];<http::header::map::HeaderMap<T> as core::iter::traits::collect::Extend<(http::header::name::HeaderName,T)>>::extend 1001001
+tokio-rt-worker;[unknown];<http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::is_end_stream 26026026
+tokio-rt-worker;[unknown];<http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::size_hint 4004004
+tokio-rt-worker;[unknown];<hyper::proto::h1::io::WriteBuf<B> as bytes::buf::buf_impl::Buf>::chunks_vectored 13013013
+tokio-rt-worker;[unknown];<hyper::proto::h1::role::Server as hyper::proto::h1::Http1Transaction>::encode 12012012
+tokio-rt-worker;[unknown];<hyper::proto::h1::role::Server as hyper::proto::h1::Http1Transaction>::parse 4004004
+tokio-rt-worker;[unknown];<hyper_util::rt::tokio::TokioIo<T> as hyper::rt::io::Read>::poll_read 1001001
+tokio-rt-worker;[unknown];<serde_json::ser::Compound<W,F> as serde_core::ser::SerializeStruct>::serialize_field 3003003
+tokio-rt-worker;[unknown];<std::time::Instant>::elapsed 2002002
+tokio-rt-worker;[unknown];<tokio::time::sleep::Sleep as core::future::future::Future>::poll 3003003
+tokio-rt-worker;[unknown];<tower::util::oneshot::Oneshot<S,Req> as core::future::future::Future>::poll 4004004
+tokio-rt-worker;[unknown];<tower_http::cors::Cors<S> as tower_service::Service<http::request::Request<ReqBody>>>::call 1001001
+tokio-rt-worker;[unknown];<tower_http::cors::ResponseFuture<F> as core::future::future::Future>::poll 3003003
+tokio-rt-worker;[unknown];<tower_http::trace::future::ResponseFuture<Fut,C,OnResponseT,OnBodyChunkT,OnEosT,OnFailureT> as core::future::future::Future>::poll 2002002
+tokio-rt-worker;[unknown];<tower_http::trace::future::ResponseFuture<Fut,C,OnResponseT,OnBodyChunkT,OnEosT,OnFailureT> as core::future::future::Future>::poll;clock_gettime;[[vdso]]_[k] 2002002
+tokio-rt-worker;[unknown];<tower_http::trace::on_request::DefaultOnRequest as tower_http::trace::on_request::OnRequest<B>>::on_request 6006006
+tokio-rt-worker;[unknown];<tower_http::trace::service::Trace<S,M,MakeSpanT,OnRequestT,OnResponseT,OnBodyChunkT,OnEosT,OnFailureT> as tower_service::Service<http::request::Request<ReqBody>>>::call 5005005
+tokio-rt-worker;[unknown];<tracing_futures::Instrumented<T> as futures_core::stream::Stream>::poll_next 20020020
+tokio-rt-worker;[unknown];<tracing_subscriber::fmt::fmt_layer::Layer<S,N,E,W> as tracing_subscriber::layer::Layer<S>>::on_exit 1001001
+tokio-rt-worker;[unknown];<tracing_subscriber::layer::layered::Layered<L,S> as tracing_core::subscriber::Subscriber>::exit 6006006
+tokio-rt-worker;[unknown];<tracing_subscriber::registry::sharded::Registry as tracing_core::subscriber::Subscriber>::exit 8008008
+tokio-rt-worker;[unknown];<u64 as itoa::Unsigned>::fmt 12012012
+tokio-rt-worker;[unknown];<vllm_engine_core_client::client::stream::EngineCoreOutputStream as futures_core::stream::Stream>::poll_next 8008008
+tokio-rt-worker;[unknown];<vllm_llm::inflight::RequestGuard as core::ops::drop::Drop>::drop 2002002
+tokio-rt-worker;[unknown];<vllm_parser::reasoning::qwen3::Qwen3ReasoningParser as vllm_parser::reasoning::ReasoningParser>::push 19019019
+tokio-rt-worker;[unknown];<vllm_parser::unified::combined::CombinedParser as vllm_parser::unified::UnifiedParser>::finish 2002002
+tokio-rt-worker;[unknown];<vllm_parser::unified::combined::CombinedParser as vllm_parser::unified::UnifiedParser>::parse_into 9009009
+tokio-rt-worker;[unknown];<vllm_tokenizer::hf::HuggingFaceTokenizer as vllm_tokenizer::Tokenizer>::decode 13013013
+tokio-rt-worker;[unknown];<vllm_tokenizer::incremental::DecodeStream<T> as vllm_tokenizer::incremental::IncrementalDecoder>::next_chunk 4004004
+tokio-rt-worker;[unknown];<vllm_tokenizer::incremental::DecodeStream<T> as vllm_tokenizer::incremental::IncrementalDecoder>::push_token 24024024
+tokio-rt-worker;[unknown];[libc.so.6] 794794794
+tokio-rt-worker;[unknown];[unknown];<T as core::any::Any>::type_id 2002002
+tokio-rt-worker;[unknown];[unknown];<axum::middleware::from_fn::FromFn<F,S,I,(T1,T2)> as tower_service::Service<http::request::Request<axum_core::body::Body>>>::call::{{closure}} 2002002
+tokio-rt-worker;[unknown];[unknown];<axum::routing::route::RouteFuture<E> as core::future::future::Future>::poll 1001001
+tokio-rt-worker;[unknown];[unknown];<axum::util::MapIntoResponse<S> as tower_service::Service<http::request::Request<B>>>::call 1001001
+tokio-rt-worker;[unknown];[unknown];<core::hash::sip::Hasher<S> as core::hash::Hasher>::write 1001001
+tokio-rt-worker;[unknown];[unknown];<http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame 7007007
+tokio-rt-worker;[unknown];[unknown];<hyper::proto::h1::role::Server as hyper::proto::h1::Http1Transaction>::parse 1001001
+tokio-rt-worker;[unknown];[unknown];<hyper_util::server::graceful::GracefulConnectionFuture<C,F> as core::future::future::Future>::poll 6006006
+tokio-rt-worker;[unknown];[unknown];<tokio::sync::mpsc::chan::Rx<T,S> as core::ops::drop::Drop>::drop 1001001
+tokio-rt-worker;[unknown];[unknown];<tokio::task::coop::Coop<F> as core::future::future::Future>::poll 1001001
+tokio-rt-worker;[unknown];[unknown];<tower::util::map_future::MapFuture<S,F> as tower_service::Service<R>>::call 1001001
+tokio-rt-worker;[unknown];[unknown];<vllm_engine_core_client::client::stream::EngineCoreOutputStream as core::ops::drop::Drop>::drop 2002002
+tokio-rt-worker;[unknown];[unknown];<vllm_llm::inflight::RequestGuard as core::ops::drop::Drop>::drop 3003003
+tokio-rt-worker;[unknown];[unknown];<vllm_llm::output::GenerateOutputStream as futures_core::stream::Stream>::poll_next 7007007
+tokio-rt-worker;[unknown];[unknown];[libc.so.6] 26026026
+tokio-rt-worker;[unknown];[unknown];[unknown];<S as futures_core::stream::TryStream>::try_poll_next 7007007
+tokio-rt-worker;[unknown];[unknown];[unknown];<alloc::collections::vec_deque::iter::Iter<T> as core::iter::traits::iterator::Iterator>::fold 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];<futures_util::stream::try_stream::MapErr<St,F> as futures_core::stream::Stream>::poll_next 33033033
+tokio-rt-worker;[unknown];[unknown];[unknown];<hyper::proto::h1::io::WriteBuf<B> as bytes::buf::buf_impl::Buf>::chunks_vectored 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];<vllm_parser::unified::combined::CombinedParser as vllm_parser::unified::UnifiedParser>::initialize 2002002
+tokio-rt-worker;[unknown];[unknown];[unknown];<vllm_parser::unified::combined::CombinedParser as vllm_parser::unified::UnifiedParser>::parse_into 15015015
+tokio-rt-worker;[unknown];[unknown];[unknown];[libc.so.6] 224224224
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[libc.so.6] 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];<hyper_util::rt::tokio::TokioIo<T> as hyper::rt::io::Read>::poll_read 2002002
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];<alloc::collections::vec_deque::iter::Iter<T> as core::iter::traits::iterator::Iterator>::fold 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];<alloc::collections::vec_deque::iter::Iter<T> as core::iter::traits::iterator::Iterator>::fold 2002002
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];<alloc::collections::vec_deque::iter::Iter<T> as core::iter::traits::iterator::Iterator>::fold 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[libc.so.6] 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];<alloc::collections::vec_deque::iter::Iter<T> as core::iter::traits::iterator::Iterator>::fold 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];<hyper::proto::h1::io::WriteBuf<B> as bytes::buf::buf_impl::Buf>::chunks_vectored 2002002
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];<T as tower::util::boxed_clone_sync::CloneService<R>>::clone_box 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];<axum::middleware::from_fn::FromFn<F,S,I,(T1,)> as tower_service::Service<http::request::Request<axum_core::body::Body>>>::call::{{closure}} 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];__mi_stat_increase 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];_mi_arenas_page_free 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];mi_arenas_page_regular_alloc 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];mi_bitmap_setN 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];_mi_theap_realloc_zero 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_catch 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_catch 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];hyper::proto::h1::conn::Conn<I,B,T>::poll_flush 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_catch 2002002
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];hyper::proto::h1::conn::Conn<I,B,T>::poll_flush 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_write 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];tokio::net::tcp::stream::TcpStream::poll_read_priv 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];tokio::runtime::io::registration::Registration::poll_io 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_catch 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];_mi_theap_realloc_zero 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];hyper::proto::h1::conn::Conn<I,B,T>::poll_flush 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_catch 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];tokio::net::tcp::stream::TcpStream::poll_read_priv 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_catch 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];hyper::proto::h1::conn::Conn<I,B,T>::poll_flush 2002002
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_catch 3003003
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];tokio::runtime::io::registration::Registration::poll_ready 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_catch 2002002
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];hyper::proto::h1::io::Buffered<T,B>::poll_read_from_io 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_catch 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];hyper::proto::h1::conn::Conn<I,B,T>::poll_flush 2002002
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_catch 2002002
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];tokio::runtime::io::registration::Registration::poll_io 2002002
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];hyper::proto::h1::conn::Conn<I,B,T>::poll_flush 3003003
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_catch 2002002
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];mi_free 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];[unknown];tokio::net::tcp::stream::TcpStream::poll_read_priv 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];hyper::proto::h1::conn::Conn<I,B,T>::poll_flush 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];hyper::proto::h1::conn::State::try_keep_alive 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];[unknown];tokio::runtime::io::registration::Registration::poll_io 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];_mi_page_retire 12012012
+tokio-rt-worker;[unknown];[unknown];[unknown];asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}} 22022022
+tokio-rt-worker;[unknown];[unknown];[unknown];futures_util::stream::stream::StreamExt::poll_next_unpin 238238238
+tokio-rt-worker;[unknown];[unknown];[unknown];hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_catch 4004004
+tokio-rt-worker;[unknown];[unknown];[unknown];mi_bin 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];mi_free 13013013
+tokio-rt-worker;[unknown];[unknown];[unknown];tokio::runtime::io::registration::Registration::poll_io 1001001
+tokio-rt-worker;[unknown];[unknown];[unknown];vllm_chat::output::default::unified::UnifiedParserState::initialize 2002002
+tokio-rt-worker;[unknown];[unknown];[unknown];vllm_chat::output::default::unified::UnifiedParserState::process_delta 21021021
+tokio-rt-worker;[unknown];[unknown];[unknown];vllm_chat::output::default::unified::UnifiedParserState::process_parser_output 6006006
+tokio-rt-worker;[unknown];[unknown];_mi_page_malloc_zero 5005005
+tokio-rt-worker;[unknown];[unknown];bytes::bytes_mut::BytesMut::reserve_inner 1001001
+tokio-rt-worker;[unknown];[unknown];bytes::bytes_mut::shared_v_clone 1001001
+tokio-rt-worker;[unknown];[unknown];clock_gettime 9009009
+tokio-rt-worker;[unknown];[unknown];core::ptr::drop_in_place<asynk_strim::stream::AsynkStrim<asynk_strim::try_stream_fn<vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}},vllm_chat::output::AssistantEvent,vllm_chat::error::Error,vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}}::{{closure}}>::{{closure}},asynk_strim::try_stream_fn<vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}},vllm_chat::output::AssistantEvent,vllm_chat::error::Error,vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}}::{{closure}}>::{{closure}}::{{closure}},asynk_strim::try_yielder::TryYielder<vllm_chat::output::AssistantEvent,vllm_chat::error::Error>,core::result::Result<vllm_chat::output::AssistantEvent,vllm_chat::error::Error>>> 3003003
+tokio-rt-worker;[unknown];[unknown];core::ptr::drop_in_place<asynk_strim::stream::AsynkStrim<asynk_strim::try_stream_fn<vllm_chat::output::structured::structured_chat_event_stream<asynk_strim::stream::AsynkStrim<asynk_strim::try_stream_fn<vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}},vllm_chat::output::AssistantEvent,vllm_chat::error::Error,vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}}::{{closure}}>::{{closure}},asynk_strim::try_stream_fn<vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}},vllm_chat::output::AssistantEvent,vllm_chat::error::Error,vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}}::{{closure}}>::{{closure}}::{{closure}},asynk_strim::try_yielder::TryYielder<vllm_chat::output::AssistantEvent,vllm_chat::error::Error>,core::result::Result<vllm_chat::output::AssistantEvent,vllm_chat::error::Error>>>::{{closure}},vllm_chat::event::ChatEvent,vllm_chat::error::Error,vllm_chat::output::structured::structured_chat_event_stream<asynk_strim::stream::AsynkStrim<asynk_strim::try_stream_fn<vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}},vllm_chat::output::AssistantEvent,vllm_chat::error::Error,vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}}::{{closure}}>::{{closure}},asynk_strim::try_stream_fn<vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}},vllm_chat::output::AssistantEvent,vllm_chat::error::Error,vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}}::{{closure}}>::{{closure}}::{{closure}},asynk_strim::try_yielder::TryYielder<vllm_chat::output::AssistantEvent,vllm_chat::error::Error>,core::result::Result<vllm_chat::output::AssistantEvent,vllm_chat::error::Error>>>::{{closure}}::{{closure}}>::{{closure}},asynk_strim::try_stream_fn<vllm_chat::output::structured::structured_chat_event_stream<asynk_strim::stream::AsynkStrim<asynk_strim::try_stream_fn<vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}},vllm_chat::output::AssistantEvent,vllm_chat::error::Error,vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}}::{{closure}}>::{{closure}},asynk_strim::try_stream_fn<vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}},vllm_chat::output::AssistantEvent,vllm_chat::error::Error,vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}}::{{closure}}>::{{closure}}::{{closure}},asynk_strim::try_yielder::TryYielder<vllm_chat::output::AssistantEvent,vllm_chat::error::Error>,core::result::Result<vllm_chat::output::AssistantEvent,vllm_chat::error::Error>>>::{{closure}},vllm_chat::event::ChatEvent,vllm_chat::error::Error,vllm_chat::output::structured::structured_chat_event_stream<asynk_strim::stream::AsynkStrim<asynk_strim::try_stream_fn<vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}},vllm_chat::output::AssistantEvent,vllm_chat::error::Error,vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}}::{{closure}}>::{{closure}},asynk_strim::try_stream_fn<vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}},vllm_chat::output::AssistantEvent,vllm_chat::error::Error,vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}}::{{closure}}>::{{closure}}::{{closure}},asynk_strim::try_yielder::TryYielder<vllm_chat::output::AssistantEvent,vllm_chat::error::Error>,core::result::Result<vllm_chat::output::AssistantEvent,vllm_chat::error::Error>>>::{{closure}}::{{closure}}>::{{closure}}::{{closure}},asynk_strim::try_yielder::TryYielder<vllm_chat::event::ChatEvent,vllm_chat::error::Error>,core::result::Result<vllm_chat::event::ChatEvent,vllm_chat::error::Error>>> 2002002
+tokio-rt-worker;[unknown];[unknown];core::ptr::drop_in_place<asynk_strim::stream::AsynkStrim<asynk_strim::try_stream_fn<vllm_text::output::decoded::decoded_text_event_stream<vllm_llm::output::GenerateOutputStream>::{{closure}},vllm_text::output::decoded::DecodedTextEvent,vllm_text::error::Error,vllm_text::output::decoded::decoded_text_event_stream<vllm_llm::output::GenerateOutputStream>::{{closure}}::{{closure}}>::{{closure}},asynk_strim::try_stream_fn<vllm_text::output::decoded::decoded_text_event_stream<vllm_llm::output::GenerateOutputStream>::{{closure}},vllm_text::output::decoded::DecodedTextEvent,vllm_text::error::Error,vllm_text::output::decoded::decoded_text_event_stream<vllm_llm::output::GenerateOutputStream>::{{closure}}::{{closure}}>::{{closure}}::{{closure}},asynk_strim::try_yielder::TryYielder<vllm_text::output::decoded::DecodedTextEvent,vllm_text::error::Error>,core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_text::error::Error>>> 3003003
+tokio-rt-worker;[unknown];[unknown];core::ptr::drop_in_place<hyper::body::incoming::Sender> 2002002
+tokio-rt-worker;[unknown];[unknown];core::ptr::drop_in_place<hyper_util::service::oneshot::Oneshot<tower::util::map_request::MapRequest<axum::routing::Router,vllm_server::serve_connections<vllm_server::listener::MaybeTlsListener,tokio_util::sync::cancellation_token::WaitForCancellationFutureOwned>::{{closure}}::{{closure}}>,http::request::Request<hyper::body::incoming::Incoming>>> 1001001
+tokio-rt-worker;[unknown];[unknown];core::ptr::drop_in_place<tracing_subscriber::fmt::fmt_layer::FormattedFields<tracing_subscriber::fmt::format::DefaultFields>> 2002002
+tokio-rt-worker;[unknown];[unknown];core::ptr::drop_in_place<vllm_chat::output::structured::structured_chat_event_stream<asynk_strim::stream::AsynkStrim<asynk_strim::try_stream_fn<vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}},vllm_chat::output::AssistantEvent,vllm_chat::error::Error,vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}}::{{closure}}>::{{closure}},asynk_strim::try_stream_fn<vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}},vllm_chat::output::AssistantEvent,vllm_chat::error::Error,vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}}::{{closure}}>::{{closure}}::{{closure}},asynk_strim::try_yielder::TryYielder<vllm_chat::output::AssistantEvent,vllm_chat::error::Error>,core::result::Result<vllm_chat::output::AssistantEvent,vllm_chat::error::Error>>>::{{closure}}::{{closure}}::{{closure}}> 3003003
+tokio-rt-worker;[unknown];[unknown];core::ptr::drop_in_place<vllm_llm::output::GenerateOutputStream> 4004004
+tokio-rt-worker;[unknown];[unknown];core::ptr::drop_in_place<vllm_parser::unified::combined::CombinedParser> 1001001
+tokio-rt-worker;[unknown];[unknown];core::ptr::drop_in_place<vllm_text::output::decoded::decoded_text_event_stream<vllm_llm::output::GenerateOutputStream>::{{closure}}::{{closure}}::{{closure}}> 1001001
+tokio-rt-worker;[unknown];[unknown];futures_channel::mpsc::BoundedSenderInner<T>::poll_unparked 2002002
+tokio-rt-worker;[unknown];[unknown];hashbrown::raw::RawTable<T,A>::clear 1001001
+tokio-rt-worker;[unknown];[unknown];hashbrown::raw::RawTable<T,A>::remove_entry 1001001
+tokio-rt-worker;[unknown];[unknown];http::header::map::HeaderMap<T>::get2 1001001
+tokio-rt-worker;[unknown];[unknown];http::header::map::hash_elem_using 1001001
+tokio-rt-worker;[unknown];[unknown];http::header::name::HeaderName::from_bytes 2002002
+tokio-rt-worker;[unknown];[unknown];http::header::name::StandardHeader::from_bytes 5005005
+tokio-rt-worker;[unknown];[unknown];http::header::name::parse_hdr 3003003
+tokio-rt-worker;[unknown];[unknown];hyper::body::incoming::Sender::poll_ready 1001001
+tokio-rt-worker;[unknown];[unknown];hyper::proto::h1::conn::Conn<I,B,T>::poll_flush 3003003
+tokio-rt-worker;[unknown];[unknown];hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_catch 14014014
+tokio-rt-worker;[unknown];[unknown];mi_arenas_try_alloc 1001001
+tokio-rt-worker;[unknown];[unknown];mi_bin 1001001
+tokio-rt-worker;[unknown];[unknown];mi_free 9009009
+tokio-rt-worker;[unknown];[unknown];mi_malloc_aligned 1001001
+tokio-rt-worker;[unknown];[unknown];tokio::runtime::scheduler::multi_thread::stats::Stats::start_processing_scheduled_tasks;<std::sys::pal::unix::time::Timespec>::now;clock_gettime;[[vdso]]_[k] 1001001
+tokio-rt-worker;[unknown];[unknown];tokio::runtime::scheduler::multi_thread::worker::<impl tokio::runtime::scheduler::multi_thread::handle::Handle>::notify_parked_local 1001001
+tokio-rt-worker;[unknown];[unknown];tokio::runtime::scheduler::multi_thread::worker::Context::park_internal 1001001
+tokio-rt-worker;[unknown];[unknown];tokio::runtime::scheduler::multi_thread::worker::Context::run 19019019
+tokio-rt-worker;[unknown];[unknown];tokio::runtime::scheduler::multi_thread::worker::Context::run_task 20020020
+tokio-rt-worker;[unknown];[unknown];tokio::runtime::task::core::Core<T,S>::poll 10010010
+tokio-rt-worker;[unknown];[unknown];tokio::runtime::task::harness::Harness<T,S>::poll 7007007
+tokio-rt-worker;[unknown];[unknown];vllm_llm::request_metrics::RequestMetricsTracker::observe_output 36036036
+tokio-rt-worker;[unknown];[unknown];vllm_llm::request_metrics::current_unix_timestamp_secs 22022022
+tokio-rt-worker;[unknown];[unknown];vllm_llm::request_metrics::current_unix_timestamp_secs;<std::sys::pal::unix::time::Timespec>::sub_timespec 3003003
+tokio-rt-worker;[unknown];[unknown];vllm_llm::request_metrics::current_unix_timestamp_secs;clock_gettime;[[vdso]]_[k] 35035035
+tokio-rt-worker;[unknown];[unknown];vllm_llm::request_metrics::current_unix_timestamp_secs;clock_gettime;__vdso_clock_gettime_[k] 3003003
+tokio-rt-worker;[unknown];_mi_malloc_generic 7007007
+tokio-rt-worker;[unknown];_mi_page_malloc_zero 109109109
+tokio-rt-worker;[unknown];_mi_page_retire 4004004
+tokio-rt-worker;[unknown];_mi_subproc 5005005
+tokio-rt-worker;[unknown];_mi_subproc_heap_main 7007007
+tokio-rt-worker;[unknown];_mi_theap_realloc_zero 66066066
+tokio-rt-worker;[unknown];alloc::raw_vec::RawVec<T,A>::grow_one 13013013
+tokio-rt-worker;[unknown];alloc::raw_vec::RawVecInner<A>::finish_grow 13013013
+tokio-rt-worker;[unknown];alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle 19019019
+tokio-rt-worker;[unknown];asynk_strim::try_yielder::TryYielder<Ok,Error>::yield_ok::{{closure}} 7007007
+tokio-rt-worker;[unknown];asynk_strim::waker::waker_wake;[unknown];[libc.so.6] 6006006
+tokio-rt-worker;[unknown];asynk_strim::waker::waker_wake;[unknown];asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}} 1001001
+tokio-rt-worker;[unknown];asynk_strim::waker::waker_wake;[unknown];core::ptr::drop_in_place<asynk_strim::stream::AsynkStrim<asynk_strim::try_stream_fn<vllm_chat::output::structured::structured_chat_event_stream<asynk_strim::stream::AsynkStrim<asynk_strim::try_stream_fn<vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}},vllm_chat::output::AssistantEvent,vllm_chat::error::Error,vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}}::{{closure}}>::{{closure}},asynk_strim::try_stream_fn<vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}},vllm_chat::output::AssistantEvent,vllm_chat::error::Error,vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}}::{{closure}}>::{{closure}}::{{closure}},asynk_strim::try_yielder::TryYielder<vllm_chat::output::AssistantEvent,vllm_chat::error::Error>,core::result::Result<vllm_chat::output::AssistantEvent,vllm_chat::error::Error>>>::{{closure}},vllm_chat::event::ChatEvent,vllm_chat::error::Error,vllm_chat::output::structured::structured_chat_event_stream<asynk_strim::stream::AsynkStrim<asynk_strim::try_stream_fn<vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}},vllm_chat::output::AssistantEvent,vllm_chat::error::Error,vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}}::{{closure}}>::{{closure}},asynk_strim::try_stream_fn<vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}},vllm_chat::output::AssistantEvent,vllm_chat::error::Error,vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}}::{{closure}}>::{{closure}}::{{closure}},asynk_strim::try_yielder::TryYielder<vllm_chat::output::AssistantEvent,vllm_chat::error::Error>,core::result::Result<vllm_chat::output::AssistantEvent,vllm_chat::error::Error>>>::{{closure}}::{{closure}}>::{{closure}},asynk_strim::try_stream_fn<vllm_chat::output::structured::structured_chat_event_stream<asynk_strim::stream::AsynkStrim<asynk_strim::try_stream_fn<vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}},vllm_chat::output::AssistantEvent,vllm_chat::error::Error,vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}}::{{closure}}>::{{closure}},asynk_strim::try_stream_fn<vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}},vllm_chat::output::AssistantEvent,vllm_chat::error::Error,vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}}::{{closure}}>::{{closure}}::{{closure}},asynk_strim::try_yielder::TryYielder<vllm_chat::output::AssistantEvent,vllm_chat::error::Error>,core::result::Result<vllm_chat::output::AssistantEvent,vllm_chat::error::Error>>>::{{closure}},vllm_chat::event::ChatEvent,vllm_chat::error::Error,vllm_chat::output::structured::structured_chat_event_stream<asynk_strim::stream::AsynkStrim<asynk_strim::try_stream_fn<vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}},vllm_chat::output::AssistantEvent,vllm_chat::error::Error,vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}}::{{closure}}>::{{closure}},asynk_strim::try_stream_fn<vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}},vllm_chat::output::AssistantEvent,vllm_chat::error::Error,vllm_chat::output::default::unified::unified_event_stream<core::pin::Pin<alloc::boxed::Box<dyn futures_core::stream::Stream+Item = core::result::Result<vllm_text::output::decoded::DecodedTextEvent,vllm_chat::error::Error>+core::marker::Send>>>::{{closure}}::{{closure}}>::{{closure}}::{{closure}},asynk_strim::try_yielder::TryYielder<vllm_chat::output::AssistantEvent,vllm_chat::error::Error>,core::result::Result<vllm_chat::output::AssistantEvent,vllm_chat::error::Error>>>::{{closure}}::{{closure}}>::{{closure}}::{{closure}},asynk_strim::try_yielder::TryYielder<vllm_chat::event::ChatEvent,vllm_chat::error::Error>,core::result::Result<vllm_chat::event::ChatEvent,vllm_chat::error::Error>>> 1001001
+tokio-rt-worker;[unknown];asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}} 57057057
+tokio-rt-worker;[unknown];axum::middleware::from_fn::Next::run::{{closure}} 4004004
+tokio-rt-worker;[unknown];axum::response::sse::Event::data 5005005
+tokio-rt-worker;[unknown];axum::response::sse::EventDataWriter::write_buf 3003003
+tokio-rt-worker;[unknown];axum::response::sse::EventDataWriter::write_buf;memchr::arch::x86_64::avx2::memchr::Two::find_raw 4004004
+tokio-rt-worker;[unknown];axum::routing::route::set_allow_header 1001001
+tokio-rt-worker;[unknown];axum::routing::route::set_content_length 2002002
+tokio-rt-worker;[unknown];bytes::bytes::Bytes::slice_ref 2002002
+tokio-rt-worker;[unknown];bytes::bytes::shared_drop 5005005
+tokio-rt-worker;[unknown];bytes::bytes::shared_to_vec;[unknown];_mi_page_malloc_zero 3003003
+tokio-rt-worker;[unknown];bytes::bytes::shared_to_vec;[unknown];axum::response::sse::Event::finalize 8008008
+tokio-rt-worker;[unknown];bytes::bytes::shared_to_vec;[unknown];mi_malloc_aligned 1001001
+tokio-rt-worker;[unknown];bytes::bytes::shared_to_vec;[unknown];mi_theap_malloc_aligned 3003003
+tokio-rt-worker;[unknown];bytes::bytes::static_drop 1001001
+tokio-rt-worker;[unknown];bytes::bytes_mut::BytesMut::reserve_inner 1001001
+tokio-rt-worker;[unknown];core::fmt::write 1001001
+tokio-rt-worker;[unknown];core::hash::BuildHasher::hash_one 99099099
+tokio-rt-worker;[unknown];core::ptr::drop_in_place<asynk_strim::stream::AsynkStrim<asynk_strim::try_stream_fn<vllm_server::routes::openai::chat_completions::chat_completion_chunk_stream<vllm_chat::stream::ChatEventStream>::{{closure}},vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError,vllm_server::routes::openai::chat_completions::chat_completion_chunk_stream<vllm_chat::stream::ChatEventStream>::{{closure}}::{{closure}}>::{{closure}},asynk_strim::try_stream_fn<vllm_server::routes::openai::chat_completions::chat_completion_chunk_stream<vllm_chat::stream::ChatEventStream>::{{closure}},vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError,vllm_server::routes::openai::chat_completions::chat_completion_chunk_stream<vllm_chat::stream::ChatEventStream>::{{closure}}::{{closure}}>::{{closure}}::{{closure}},asynk_strim::try_yielder::TryYielder<vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError>,core::result::Result<vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError>>> 3003003
+tokio-rt-worker;[unknown];core::ptr::drop_in_place<asynk_strim::try_yielder::TryYielder<axum::response::sse::Event,core::convert::Infallible>::yield_ok::{{closure}}> 1001001
+tokio-rt-worker;[unknown];core::ptr::drop_in_place<asynk_strim::yielder::Yielder<core::result::Result<vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError>>::yield_item::{{closure}}> 5005005
+tokio-rt-worker;[unknown];core::ptr::drop_in_place<axum::middleware::from_fn::Next::run::{{closure}}> 4004004
+tokio-rt-worker;[unknown];core::ptr::drop_in_place<hyper_util::rt::tokio::TokioSleep> 4004004
+tokio-rt-worker;[unknown];core::ptr::drop_in_place<hyper_util::service::oneshot::Oneshot<tower::util::map_request::MapRequest<axum::routing::Router,vllm_server::serve_connections<vllm_server::listener::MaybeTlsListener,tokio_util::sync::cancellation_token::WaitForCancellationFutureOwned>::{{closure}}::{{closure}}>,http::request::Request<hyper::body::incoming::Incoming>>> 4004004
+tokio-rt-worker;[unknown];core::ptr::drop_in_place<tower::util::map_future::MapFuture<axum::util::MapIntoResponse<axum::handler::service::HandlerService<vllm_server::routes::sleep::wake_up,(axum_core::extract::private::ViaParts,axum::extract::state::State<alloc::sync::Arc<vllm_server::state::AppState>>,axum::extract::query::Query<vllm_server::routes::sleep::WakeUpParams>),alloc::sync::Arc<vllm_server::state::AppState>>>,tower::util::boxed_clone_sync::BoxCloneSyncService<http::request::Request<axum_core::body::Body>,http::response::Response<axum_core::body::Body>,core::convert::Infallible>::new<axum::util::MapIntoResponse<axum::handler::service::HandlerService<vllm_server::routes::sleep::wake_up,(axum_core::extract::private::ViaParts,axum::extract::state::State<alloc::sync::Arc<vllm_server::state::AppState>>,axum::extract::query::Query<vllm_server::routes::sleep::WakeUpParams>),alloc::sync::Arc<vllm_server::state::AppState>>>>::{{closure}}>> 4004004
+tokio-rt-worker;[unknown];core::ptr::drop_in_place<tower::util::map_future::MapFuture<axum::util::MapIntoResponse<axum::routing::route::Route>,tower::util::boxed_clone_sync::BoxCloneSyncService<http::request::Request<axum_core::body::Body>,http::response::Response<axum_core::body::Body>,core::convert::Infallible>::new<axum::util::MapIntoResponse<axum::routing::route::Route>>::{{closure}}>> 3003003
+tokio-rt-worker;[unknown];core::ptr::drop_in_place<tower::util::map_future::MapFuture<axum::util::MapIntoResponse<tower::util::map_err::MapErr<axum::middleware::from_fn::FromFn<vllm_server::middleware::load::track_server_load,alloc::sync::Arc<vllm_server::state::AppState>,axum::routing::route::Route,(axum::extract::state::State<alloc::sync::Arc<vllm_server::state::AppState>>,http::request::Request<axum_core::body::Body>)>,<core::convert::Infallible as core::convert::Into<core::convert::Infallible>>::into>>,tower::util::boxed_clone_sync::BoxCloneSyncService<http::request::Request<axum_core::body::Body>,http::response::Response<axum_core::body::Body>,core::convert::Infallible>::new<axum::util::MapIntoResponse<tower::util::map_err::MapErr<axum::middleware::from_fn::FromFn<vllm_server::middleware::load::track_server_load,alloc::sync::Arc<vllm_server::state::AppState>,axum::routing::route::Route,(axum::extract::state::State<alloc::sync::Arc<vllm_server::state::AppState>>,http::request::Request<axum_core::body::Body>)>,<core::convert::Infallible as core::convert::Into<core::convert::Infallible>>::into>>>::{{closure}}>> 1001001
+tokio-rt-worker;[unknown];core::ptr::drop_in_place<tower::util::map_future::MapFuture<axum::util::MapIntoResponse<tower::util::map_err::MapErr<axum::middleware::from_fn::FromFn<vllm_server::middleware::metrics::track_http_metrics,(),axum::routing::route::Route,(http::request::Request<axum_core::body::Body>,)>,<core::convert::Infallible as core::convert::Into<core::convert::Infallible>>::into>>,tower::util::boxed_clone_sync::BoxCloneSyncService<http::request::Request<axum_core::body::Body>,http::response::Response<axum_core::body::Body>,core::convert::Infallible>::new<axum::util::MapIntoResponse<tower::util::map_err::MapErr<axum::middleware::from_fn::FromFn<vllm_server::middleware::metrics::track_http_metrics,(),axum::routing::route::Route,(http::request::Request<axum_core::body::Body>,)>,<core::convert::Infallible as core::convert::Into<core::convert::Infallible>>::into>>>::{{closure}}>> 2002002
+tokio-rt-worker;[unknown];core::ptr::drop_in_place<tower::util::map_future::MapFuture<axum::util::MapIntoResponse<tower::util::map_err::MapErr<tower_http::cors::Cors<axum::routing::route::Route>,<core::convert::Infallible as core::convert::Into<core::convert::Infallible>>::into>>,tower::util::boxed_clone_sync::BoxCloneSyncService<http::request::Request<axum_core::body::Body>,http::response::Response<axum_core::body::Body>,core::convert::Infallible>::new<axum::util::MapIntoResponse<tower::util::map_err::MapErr<tower_http::cors::Cors<axum::routing::route::Route>,<core::convert::Infallible as core::convert::Into<core::convert::Infallible>>::into>>>::{{closure}}>> 4004004
+tokio-rt-worker;[unknown];core::ptr::drop_in_place<vllm_chat::event::ChatEvent> 7007007
+tokio-rt-worker;[unknown];core::ptr::drop_in_place<vllm_server::routes::openai::chat_completions::chat_completion_sse_stream<asynk_strim::stream::AsynkStrim<asynk_strim::try_stream_fn<vllm_server::routes::openai::chat_completions::chat_completion_chunk_stream<vllm_chat::stream::ChatEventStream>::{{closure}},vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError,vllm_server::routes::openai::chat_completions::chat_completion_chunk_stream<vllm_chat::stream::ChatEventStream>::{{closure}}::{{closure}}>::{{closure}},asynk_strim::try_stream_fn<vllm_server::routes::openai::chat_completions::chat_completion_chunk_stream<vllm_chat::stream::ChatEventStream>::{{closure}},vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError,vllm_server::routes::openai::chat_completions::chat_completion_chunk_stream<vllm_chat::stream::ChatEventStream>::{{closure}}::{{closure}}>::{{closure}}::{{closure}},asynk_strim::try_yielder::TryYielder<vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError>,core::result::Result<vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError>>>::{{closure}}::{{closure}}::{{closure}}> 2002002
+tokio-rt-worker;[unknown];core::ptr::drop_in_place<vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse> 2002002
+tokio-rt-worker;[unknown];core::str::<impl str>::find 7007007
+tokio-rt-worker;[unknown];core::str::<impl str>::find;<core::str::pattern::StrSearcher>::new 46046046
+tokio-rt-worker;[unknown];core::str::<impl str>::find;[libc.so.6] 12012012
+tokio-rt-worker;[unknown];futures_channel::mpsc::BoundedSenderInner<T>::try_send 1001001
+tokio-rt-worker;[unknown];futures_util::stream::stream::StreamExt::poll_next_unpin 224224224
+tokio-rt-worker;[unknown];hashbrown::map::HashMap<K,V,S,A>::get 4004004
+tokio-rt-worker;[unknown];hashbrown::raw::RawTable<T,A>::remove_entry 6006006
+tokio-rt-worker;[unknown];http::header::map::HeaderMap<T>::remove 1001001
+tokio-rt-worker;[unknown];http::header::map::HeaderMap<T>::try_append2 4004004
+tokio-rt-worker;[unknown];http::header::map::HeaderMap<T>::try_reserve 1001001
+tokio-rt-worker;[unknown];http::header::map::HeaderMap<T>::try_reserve_one 1001001
+tokio-rt-worker;[unknown];http::header::map::VacantEntry<T>::try_insert_entry 1001001
+tokio-rt-worker;[unknown];http::header::map::hash_elem_using 4004004
+tokio-rt-worker;[unknown];http::method::Method::from_bytes 4004004
+tokio-rt-worker;[unknown];http::uri::Uri::from_shared 1001001
+tokio-rt-worker;[unknown];http::uri::path::PathAndQuery::from_shared 5005005
+tokio-rt-worker;[unknown];httparse::Request::parse_with_config_and_uninit_headers 5005005
+tokio-rt-worker;[unknown];httparse::parse_headers_iter_uninit 1001001
+tokio-rt-worker;[unknown];hyper::proto::h1::conn::Conn<I,B,T>::poll_read_head 4004004
+tokio-rt-worker;[unknown];hyper::proto::h1::conn::Conn<I,B,T>::write_body 14014014
+tokio-rt-worker;[unknown];hyper::proto::h1::conn::Conn<I,B,T>::write_body;<hyper::proto::h1::encode::ChunkSize as core::fmt::Write>::write_str 7007007
+tokio-rt-worker;[unknown];hyper::proto::h1::conn::Conn<I,B,T>::write_body;<usize as core::fmt::UpperHex>::fmt 4004004
+tokio-rt-worker;[unknown];hyper::proto::h1::conn::Conn<I,B,T>::write_body;[libc.so.6] 5005005
+tokio-rt-worker;[unknown];hyper::proto::h1::conn::Conn<I,B,T>::write_body;core::fmt::write 15015015
+tokio-rt-worker;[unknown];hyper::proto::h1::conn::Conn<I,B,T>::write_body;core::fmt::write;<core::fmt::Formatter>::pad_integral 3003003
+tokio-rt-worker;[unknown];hyper::proto::h1::conn::Conn<I,B,T>::write_body;core::fmt::write;<hyper::proto::h1::encode::ChunkSize as core::fmt::Write>::write_str 6006006
+tokio-rt-worker;[unknown];hyper::proto::h1::conn::Conn<I,B,T>::write_body;core::fmt::write;<usize as core::fmt::UpperHex>::fmt 9009009
+tokio-rt-worker;[unknown];hyper::proto::h1::conn::Conn<I,B,T>::write_body;core::fmt::write;<usize as core::fmt::UpperHex>::fmt;<core::fmt::Formatter>::pad_integral 8008008
+tokio-rt-worker;[unknown];hyper::proto::h1::conn::Conn<I,B,T>::write_body;core::fmt::write;<usize as core::fmt::UpperHex>::fmt;<core::fmt::Formatter>::pad_integral::write_prefix 3003003
+tokio-rt-worker;[unknown];hyper::proto::h1::conn::Conn<I,B,T>::write_body;core::fmt::write;<usize as core::fmt::UpperHex>::fmt;<core::fmt::Formatter>::pad_integral;<core::fmt::Formatter>::pad_integral::write_prefix 3003003
+tokio-rt-worker;[unknown];hyper::proto::h1::conn::Conn<I,B,T>::write_body;core::fmt::write;[libc.so.6] 8008008
+tokio-rt-worker;[unknown];hyper::proto::h1::conn::Conn<I,B,T>::write_head 2002002
+tokio-rt-worker;[unknown];hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_write 11011011
+tokio-rt-worker;[unknown];hyper::proto::h1::io::WriteBuf<B>::buffer 30030030
+tokio-rt-worker;[unknown];matchit::tree::Node<T>::at 3003003
+tokio-rt-worker;[unknown];memchr::arch::x86_64::memchr::memchr2_raw::find_avx2 1001001
+tokio-rt-worker;[unknown];mi_bitmap_clearN 1001001
+tokio-rt-worker;[unknown];mi_free 114114114
+tokio-rt-worker;[unknown];mi_heap_main 4004004
+tokio-rt-worker;[unknown];mi_malloc_aligned 19019019
+tokio-rt-worker;[unknown];mi_realloc_aligned 2002002
+tokio-rt-worker;[unknown];mi_theap_malloc_aligned 45045045
+tokio-rt-worker;[unknown];mi_theap_malloc_zero_aligned_at_generic 5005005
+tokio-rt-worker;[unknown];mi_theap_malloc_zero_aligned_at_overalloc 2002002
+tokio-rt-worker;[unknown];mi_theap_umalloc 106106106
+tokio-rt-worker;[unknown];prometheus_client::metrics::family::Family<S,M,C>::get_or_create 7007007
+tokio-rt-worker;[unknown];serde_core::ser::SerializeMap::serialize_entry 9009009
+tokio-rt-worker;[unknown];serde_json::ser::format_escaped_str_contents 189189189
+tokio-rt-worker;[unknown];sharded_slab::pool::Pool<T,C>::get 3003003
+tokio-rt-worker;[unknown];tokio::runtime::scheduler::multi_thread::queue::Steal<T>::steal_into 4004004
+tokio-rt-worker;[unknown];tokio::runtime::scheduler::multi_thread::worker::Context::run 1001001
+tokio-rt-worker;[unknown];tokio::runtime::task::waker::wake_by_val;[unknown];[unknown];<axum::middleware::from_fn::FromFn<F,S,I,(T1,)> as tower_service::Service<http::request::Request<axum_core::body::Body>>>::call::{{closure}} 3003003
+tokio-rt-worker;[unknown];tokio::runtime::task::waker::wake_by_val;[unknown];[unknown];bytes::bytes_mut::BytesMut::split_to 1001001
+tokio-rt-worker;[unknown];tokio::runtime::task::waker::wake_by_val;[unknown];[unknown];hyper::proto::h1::conn::Conn<I,B,T>::maybe_notify 1001001
+tokio-rt-worker;[unknown];tokio::runtime::task::waker::wake_by_val;[unknown];[unknown];hyper::proto::h1::conn::Conn<I,B,T>::poll_read_body 2002002
+tokio-rt-worker;[unknown];tokio::runtime::task::waker::wake_by_val;[unknown];[unknown];hyper::proto::h1::decode::Decoder::decode 3003003
+tokio-rt-worker;[unknown];tokio::runtime::task::waker::wake_by_val;[unknown];[unknown];tokio::net::tcp::stream::TcpStream::poll_read_priv 1001001
+tokio-rt-worker;[unknown];tokio::runtime::task::waker::wake_by_val;[unknown];[unknown];tokio::net::tcp::stream::TcpStream::poll_read_priv;recv;[libc.so.6];[libc.so.6] 3003003
+tokio-rt-worker;[unknown];tokio::runtime::task::waker::wake_by_val;[unknown];[unknown];tokio::runtime::io::registration::Registration::poll_ready 1001001
+tokio-rt-worker;[unknown];tokio::runtime::time::<impl tokio::runtime::time::handle::Handle>::clear_entry 1001001
+tokio-rt-worker;[unknown];tokio::sync::notify::NotifiedProject::poll_notified 3003003
+tokio-rt-worker;[unknown];tower_http::cors::allow_origin::AllowOrigin::to_future 1001001
+tokio-rt-worker;[unknown];tower_http::cors::allow_private_network::AllowPrivateNetwork::to_header 1001001
+tokio-rt-worker;[unknown];tracing_subscriber::layer::context::Context<S>::if_enabled_for 2002002
+tokio-rt-worker;[unknown];vllm_chat::output::structured::StructuredEventState::process_text_delta 4004004
+tokio-rt-worker;[unknown];vllm_parser::reasoning::delimited::DelimitedReasoningParser::parse_stable_text 23023023
+tokio-rt-worker;[unknown];vllm_parser::reasoning::delimited::DelimitedReasoningParser::push 36036036
+tokio-rt-worker;[unknown];vllm_parser::unified::UnifiedParserOutput::append 4004004
+tokio-rt-worker;[unknown];vllm_parser::unified::UnifiedParserOutput::push_text 8008008
+tokio-rt-worker;[unknown];vllm_server::routes::openai::chat_completions::block_delta_chunk 16016016
+tokio-rt-worker;[unknown];vllm_server::routes::openai::chat_completions::start_chunk 1001001
+tokio-rt-worker;[unknown];vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse::new 14014014
+tokio-rt-worker;[unknown];vllm_server::routes::openai::chat_completions::types::_::<impl serde_core::ser::Serialize for vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse>::serialize 1001001
+tokio-rt-worker;[unknown];vllm_server::serve_connections::{{closure}}::{{closure}} 5005005
+tokio-rt-worker;[unknown];vllm_tokenizer::byte_level_decode::decode_byte_level 8008008
+tokio-rt-worker;__floattidf 5005005
+tokio-rt-worker;__mi_stat_counter_increase 3003003
+tokio-rt-worker;_mi_bin 3003003
+tokio-rt-worker;_mi_bin_size 26026026
+tokio-rt-worker;_mi_malloc_generic 65065065
+tokio-rt-worker;_mi_malloc_generic;<tracing_futures::Instrumented<T> as futures_core::stream::Stream>::poll_next 1001001
+tokio-rt-worker;_mi_malloc_generic;sharded_slab::pool::Pool<T,C>::get 1001001
+tokio-rt-worker;_mi_option_get_fast 1001001
+tokio-rt-worker;_mi_page_free_collect 23023023
+tokio-rt-worker;_mi_page_malloc_zero 135135135
+tokio-rt-worker;_mi_page_retire 4004004
+tokio-rt-worker;_mi_prim_clock_now;clock_gettime;__vdso_clock_gettime_[k] 1001001
+tokio-rt-worker;_mi_theap_malloc_zero 39039039
+tokio-rt-worker;_mi_theap_realloc_zero 2002002
+tokio-rt-worker;alloc::raw_vec::RawVec<T,A>::grow_one 27027027
+tokio-rt-worker;alloc::raw_vec::RawVec<T,A>::grow_one;_mi_page_malloc_zero 1001001
+tokio-rt-worker;alloc::raw_vec::RawVec<T,A>::grow_one;mi_free 1001001
+tokio-rt-worker;alloc::raw_vec::RawVecInner<A>::finish_grow 24024024
+tokio-rt-worker;alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle 9009009
+tokio-rt-worker;alloc::sync::Arc<T,A>::drop_slow 1001001
+tokio-rt-worker;alloc::vec::Vec<T,A>::extend_from_slice 9009009
+tokio-rt-worker;asynk_strim::waker::waker_clone 3003003
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}} 14014014
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};<alloc::vec::Vec<T,A> as core::ops::drop::Drop>::drop 5005005
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};<serde_json::ser::Compound<W,F> as serde_core::ser::SerializeStruct>::serialize_field 6006006
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};<tracing_futures::Instrumented<T> as futures_core::stream::Stream>::poll_next 46046046
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};<tracing_subscriber::fmt::fmt_layer::Layer<S,N,E,W> as tracing_subscriber::layer::Layer<S>>::on_exit 6006006
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};<tracing_subscriber::layer::layered::Layered<L,S> as tracing_core::subscriber::Subscriber>::exit 15015015
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};<tracing_subscriber::registry::sharded::Registry as tracing_core::subscriber::Subscriber>::exit 33033033
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};<u64 as itoa::Unsigned>::fmt 36036036
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};[libc.so.6] 23023023
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};_mi_page_malloc_zero 20020020
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};_mi_page_retire 8008008
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};_mi_theap_realloc_zero 3003003
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};alloc::raw_vec::RawVecInner<A>::finish_grow 27027027
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle 32032032
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};alloc::vec::Vec<T,A>::extend_from_slice 3003003
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};asynk_strim::try_yielder::TryYielder<Ok,Error>::yield_ok::{{closure}} 35035035
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};axum::response::sse::Event::data 35035035
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};axum::response::sse::EventDataWriter::write_buf 27027027
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};axum::response::sse::EventDataWriter::write_buf;memchr::arch::x86_64::avx2::memchr::Two::find_raw 7007007
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};axum::response::sse::EventDataWriter::write_buf;memchr::arch::x86_64::avx2::memchr::Two::find_raw_avx2 15015015
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};axum::response::sse::EventDataWriter::write_buf;memchr::arch::x86_64::memchr::memchr2_raw::find_avx2 2002002
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};bytes::bytes_mut::BytesMut::reserve_inner 27027027
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};core::ptr::drop_in_place<asynk_strim::try_yielder::TryYielder<axum::response::sse::Event,core::convert::Infallible>::yield_ok::{{closure}}> 1001001
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};core::ptr::drop_in_place<vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse> 9009009
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};memchr::arch::x86_64::memchr::memchr2_raw::find_avx2 1001001
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};mi_free 36036036
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};mi_malloc_aligned 8008008
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};mi_realloc_aligned 10010010
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};mi_theap_malloc_aligned 18018018
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};serde_core::ser::SerializeMap::serialize_entry 126126126
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};serde_json::ser::format_escaped_str_contents 15015015
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};sharded_slab::pool::Pool<T,C>::get 38038038
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};tracing_subscriber::layer::context::Context<S>::if_enabled_for 10010010
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};vllm_server::routes::openai::chat_completions::to_sse_event 23023023
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};vllm_server::routes::openai::chat_completions::types::_::<impl serde_core::ser::Serialize for vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamChoice>::serialize 4004004
+tokio-rt-worker;asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}};vllm_server::routes::openai::chat_completions::types::_::<impl serde_core::ser::Serialize for vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse>::serialize 24024024
+tokio-rt-worker;axum::extract::matched_path::set_matched_path_for_request 10010010
+tokio-rt-worker;axum::response::sse::Event::finalize 12012012
+tokio-rt-worker;axum::response::sse::EventDataWriter::write_buf 11011011
+tokio-rt-worker;axum::routing::method_routing::MethodRouter<S,E>::call_with_state 3003003
+tokio-rt-worker;axum::routing::path_router::PathRouter<S,_>::call_with_state 8008008
+tokio-rt-worker;axum::routing::url_params::insert_url_params 1001001
+tokio-rt-worker;bytes::bytes::shared_clone 3003003
+tokio-rt-worker;bytes::bytes::shared_drop 16016016
+tokio-rt-worker;bytes::bytes::static_clone 4004004
+tokio-rt-worker;bytes::bytes_mut::BytesMut::reserve_inner 7007007
+tokio-rt-worker;bytes::bytes_mut::shared_v_clone 1001001
+tokio-rt-worker;clock_gettime 2002002
+tokio-rt-worker;core::fmt::write 2002002
+tokio-rt-worker;core::hash::BuildHasher::hash_one 4004004
+tokio-rt-worker;core::iter::traits::iterator::Iterator::try_fold 6006006
+tokio-rt-worker;core::ops::function::FnOnce::call_once 2002002
+tokio-rt-worker;core::ptr::drop_in_place<<axum::middleware::from_fn::FromFn<vllm_server::middleware::load::track_server_load,alloc::sync::Arc<vllm_server::state::AppState>,axum::routing::route::Route,(axum::extract::state::State<alloc::sync::Arc<vllm_server::state::AppState>>,http::request::Request<axum_core::body::Body>)> as tower_service::Service<http::request::Request<axum_core::body::Body>>>::call::{{closure}}> 1001001
+tokio-rt-worker;core::ptr::drop_in_place<<axum::middleware::from_fn::FromFn<vllm_server::middleware::metrics::track_http_metrics,(),axum::routing::route::Route,(http::request::Request<axum_core::body::Body>,)> as tower_service::Service<http::request::Request<axum_core::body::Body>>>::call::{{closure}}> 2002002
+tokio-rt-worker;core::ptr::drop_in_place<<vllm_server::middleware::offload::RequestRuntimeService<axum::routing::route::Route> as tower_service::Service<http::request::Request<axum_core::body::Body>>>::call::{{closure}}> 2002002
+tokio-rt-worker;core::ptr::drop_in_place<axum::util::MapIntoResponseFuture<tower::util::map_err::MapErrFuture<axum::middleware::from_fn::ResponseFuture,<core::convert::Infallible as core::convert::Into<core::convert::Infallible>>::into>>> 1001001
+tokio-rt-worker;core::ptr::drop_in_place<axum::util::MapIntoResponseFuture<tower::util::map_err::MapErrFuture<tower_http::cors::ResponseFuture<axum::routing::route::RouteFuture<core::convert::Infallible>>,<core::convert::Infallible as core::convert::Into<core::convert::Infallible>>::into>>> 2002002
+tokio-rt-worker;core::ptr::drop_in_place<core::option::Option<http::method::Method>> 2002002
+tokio-rt-worker;core::ptr::drop_in_place<core::option::Option<rmpv::Value>> 3003003
+tokio-rt-worker;core::ptr::drop_in_place<http_body_util::combinators::map_err::MapErr<axum::response::sse::SseBody<tracing_futures::Instrumented<asynk_strim::stream::AsynkStrim<asynk_strim::try_stream_fn<vllm_server::routes::openai::chat_completions::chat_completion_sse_stream<asynk_strim::stream::AsynkStrim<asynk_strim::try_stream_fn<vllm_server::routes::openai::chat_completions::chat_completion_chunk_stream<vllm_chat::stream::ChatEventStream>::{{closure}},vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError,vllm_server::routes::openai::chat_completions::chat_completion_chunk_stream<vllm_chat::stream::ChatEventStream>::{{closure}}::{{closure}}>::{{closure}},asynk_strim::try_stream_fn<vllm_server::routes::openai::chat_completions::chat_completion_chunk_stream<vllm_chat::stream::ChatEventStream>::{{closure}},vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError,vllm_server::routes::openai::chat_completions::chat_completion_chunk_stream<vllm_chat::stream::ChatEventStream>::{{closure}}::{{closure}}>::{{closure}}::{{closure}},asynk_strim::try_yielder::TryYielder<vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError>,core::result::Result<vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError>>>::{{closure}},axum::response::sse::Event,core::convert::Infallible,vllm_server::routes::openai::chat_completions::chat_completion_sse_stream<asynk_strim::stream::AsynkStrim<asynk_strim::try_stream_fn<vllm_server::routes::openai::chat_completions::chat_completion_chunk_stream<vllm_chat::stream::ChatEventStream>::{{closure}},vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError,vllm_server::routes::openai::chat_completions::chat_completion_chunk_stream<vllm_chat::stream::ChatEventStream>::{{closure}}::{{closure}}>::{{closure}},asynk_strim::try_stream_fn<vllm_server::routes::openai::chat_completions::chat_completion_chunk_stream<vllm_chat::stream::ChatEventStream>::{{closure}},vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError,vllm_server::routes::openai::chat_completions::chat_completion_chunk_stream<vllm_chat::stream::ChatEventStream>::{{closure}}::{{closure}}>::{{closure}}::{{closure}},asynk_strim::try_yielder::TryYielder<vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError>,core::result::Result<vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError>>>::{{closure}}::{{closure}}>::{{closure}},asynk_strim::try_stream_fn<vllm_server::routes::openai::chat_completions::chat_completion_sse_stream<asynk_strim::stream::AsynkStrim<asynk_strim::try_stream_fn<vllm_server::routes::openai::chat_completions::chat_completion_chunk_stream<vllm_chat::stream::ChatEventStream>::{{closure}},vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError,vllm_server::routes::openai::chat_completions::chat_completion_chunk_stream<vllm_chat::stream::ChatEventStream>::{{closure}}::{{closure}}>::{{closure}},asynk_strim::try_stream_fn<vllm_server::routes::openai::chat_completions::chat_completion_chunk_stream<vllm_chat::stream::ChatEventStream>::{{closure}},vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError,vllm_server::routes::openai::chat_completions::chat_completion_chunk_stream<vllm_chat::stream::ChatEventStream>::{{closure}}::{{closure}}>::{{closure}}::{{closure}},asynk_strim::try_yielder::TryYielder<vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError>,core::result::Result<vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError>>>::{{closure}},axum::response::sse::Event,core::convert::Infallible,vllm_server::routes::openai::chat_completions::chat_completion_sse_stream<asynk_strim::stream::AsynkStrim<asynk_strim::try_stream_fn<vllm_server::routes::openai::chat_completions::chat_completion_chunk_stream<vllm_chat::stream::ChatEventStream>::{{closure}},vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError,vllm_server::routes::openai::chat_completions::chat_completion_chunk_stream<vllm_chat::stream::ChatEventStream>::{{closure}}::{{closure}}>::{{closure}},asynk_strim::try_stream_fn<vllm_server::routes::openai::chat_completions::chat_completion_chunk_stream<vllm_chat::stream::ChatEventStream>::{{closure}},vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError,vllm_server::routes::openai::chat_completions::chat_completion_chunk_stream<vllm_chat::stream::ChatEventStream>::{{closure}}::{{closure}}>::{{closure}}::{{closure}},asynk_strim::try_yielder::TryYielder<vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError>,core::result::Result<vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse,vllm_server::error::ApiError>>>::{{closure}}::{{closure}}>::{{closure}}::{{closure}},asynk_strim::try_yielder::TryYielder<axum::response::sse::Event,core::convert::Infallible>,core::result::Result<axum::response::sse::Event,core::convert::Infallible>>>>,axum_core::error::Error::new<core::convert::Infallible>>> 1001001
+tokio-rt-worker;core::ptr::drop_in_place<http_body_util::combinators::map_err::MapErr<tower_http::trace::body::ResponseBody<axum_core::body::Body,tower_http::classify::NeverClassifyEos<tower_http::classify::ServerErrorsFailureClass>>,axum_core::error::Error::new<axum_core::error::Error>>> 2002002
+tokio-rt-worker;core::ptr::drop_in_place<tower::util::map_future::MapFuture<axum::util::MapIntoResponse<tower::util::map_err::MapErr<axum::middleware::from_fn::FromFn<vllm_server::middleware::load::track_server_load,alloc::sync::Arc<vllm_server::state::AppState>,axum::routing::route::Route,(axum::extract::state::State<alloc::sync::Arc<vllm_server::state::AppState>>,http::request::Request<axum_core::body::Body>)>,<core::convert::Infallible as core::convert::Into<core::convert::Infallible>>::into>>,tower::util::boxed_clone_sync::BoxCloneSyncService<http::request::Request<axum_core::body::Body>,http::response::Response<axum_core::body::Body>,core::convert::Infallible>::new<axum::util::MapIntoResponse<tower::util::map_err::MapErr<axum::middleware::from_fn::FromFn<vllm_server::middleware::load::track_server_load,alloc::sync::Arc<vllm_server::state::AppState>,axum::routing::route::Route,(axum::extract::state::State<alloc::sync::Arc<vllm_server::state::AppState>>,http::request::Request<axum_core::body::Body>)>,<core::convert::Infallible as core::convert::Into<core::convert::Infallible>>::into>>>::{{closure}}>> 4004004
+tokio-rt-worker;core::ptr::drop_in_place<tower::util::map_future::MapFuture<axum::util::MapIntoResponse<tower::util::map_err::MapErr<axum::middleware::from_fn::FromFn<vllm_server::middleware::metrics::track_http_metrics,(),axum::routing::route::Route,(http::request::Request<axum_core::body::Body>,)>,<core::convert::Infallible as core::convert::Into<core::convert::Infallible>>::into>>,tower::util::boxed_clone_sync::BoxCloneSyncService<http::request::Request<axum_core::body::Body>,http::response::Response<axum_core::body::Body>,core::convert::Infallible>::new<axum::util::MapIntoResponse<tower::util::map_err::MapErr<axum::middleware::from_fn::FromFn<vllm_server::middleware::metrics::track_http_metrics,(),axum::routing::route::Route,(http::request::Request<axum_core::body::Body>,)>,<core::convert::Infallible as core::convert::Into<core::convert::Infallible>>::into>>>::{{closure}}>>;<hyper::proto::h1::role::Server as hyper::proto::h1::Http1Transaction>::parse 2002002
+tokio-rt-worker;core::ptr::drop_in_place<tower::util::map_future::MapFuture<axum::util::MapIntoResponse<tower::util::map_err::MapErr<axum::middleware::from_fn::FromFn<vllm_server::middleware::metrics::track_http_metrics,(),axum::routing::route::Route,(http::request::Request<axum_core::body::Body>,)>,<core::convert::Infallible as core::convert::Into<core::convert::Infallible>>::into>>,tower::util::boxed_clone_sync::BoxCloneSyncService<http::request::Request<axum_core::body::Body>,http::response::Response<axum_core::body::Body>,core::convert::Infallible>::new<axum::util::MapIntoResponse<tower::util::map_err::MapErr<axum::middleware::from_fn::FromFn<vllm_server::middleware::metrics::track_http_metrics,(),axum::routing::route::Route,(http::request::Request<axum_core::body::Body>,)>,<core::convert::Infallible as core::convert::Into<core::convert::Infallible>>::into>>>::{{closure}}>>;http::header::map::hash_elem_using 1001001
+tokio-rt-worker;core::ptr::drop_in_place<tower::util::map_future::MapFuture<axum::util::MapIntoResponse<tower::util::map_err::MapErr<axum::middleware::from_fn::FromFn<vllm_server::middleware::metrics::track_http_metrics,(),axum::routing::route::Route,(http::request::Request<axum_core::body::Body>,)>,<core::convert::Infallible as core::convert::Into<core::convert::Infallible>>::into>>,tower::util::boxed_clone_sync::BoxCloneSyncService<http::request::Request<axum_core::body::Body>,http::response::Response<axum_core::body::Body>,core::convert::Infallible>::new<axum::util::MapIntoResponse<tower::util::map_err::MapErr<axum::middleware::from_fn::FromFn<vllm_server::middleware::metrics::track_http_metrics,(),axum::routing::route::Route,(http::request::Request<axum_core::body::Body>,)>,<core::convert::Infallible as core::convert::Into<core::convert::Infallible>>::into>>>::{{closure}}>>;http::header::name::StandardHeader::from_bytes 4004004
+tokio-rt-worker;core::ptr::drop_in_place<tower::util::map_future::MapFuture<axum::util::MapIntoResponse<tower::util::map_err::MapErr<axum::middleware::from_fn::FromFn<vllm_server::middleware::metrics::track_http_metrics,(),axum::routing::route::Route,(http::request::Request<axum_core::body::Body>,)>,<core::convert::Infallible as core::convert::Into<core::convert::Infallible>>::into>>,tower::util::boxed_clone_sync::BoxCloneSyncService<http::request::Request<axum_core::body::Body>,http::response::Response<axum_core::body::Body>,core::convert::Infallible>::new<axum::util::MapIntoResponse<tower::util::map_err::MapErr<axum::middleware::from_fn::FromFn<vllm_server::middleware::metrics::track_http_metrics,(),axum::routing::route::Route,(http::request::Request<axum_core::body::Body>,)>,<core::convert::Infallible as core::convert::Into<core::convert::Infallible>>::into>>>::{{closure}}>>;http::header::name::parse_hdr 3003003
+tokio-rt-worker;core::ptr::drop_in_place<tower::util::map_future::MapFuture<axum::util::MapIntoResponse<tower::util::map_err::MapErr<axum_core::extract::default_body_limit::private::DefaultBodyLimitService<axum::routing::route::Route>,<core::convert::Infallible as core::convert::Into<core::convert::Infallible>>::into>>,tower::util::boxed_clone_sync::BoxCloneSyncService<http::request::Request<axum_core::body::Body>,http::response::Response<axum_core::body::Body>,core::convert::Infallible>::new<axum::util::MapIntoResponse<tower::util::map_err::MapErr<axum_core::extract::default_body_limit::private::DefaultBodyLimitService<axum::routing::route::Route>,<core::convert::Infallible as core::convert::Into<core::convert::Infallible>>::into>>>::{{closure}}>> 1001001
+tokio-rt-worker;core::ptr::drop_in_place<tower::util::map_future::MapFuture<axum::util::MapIntoResponse<tower::util::map_err::MapErr<tower_http::cors::Cors<axum::routing::route::Route>,<core::convert::Infallible as core::convert::Into<core::convert::Infallible>>::into>>,tower::util::boxed_clone_sync::BoxCloneSyncService<http::request::Request<axum_core::body::Body>,http::response::Response<axum_core::body::Body>,core::convert::Infallible>::new<axum::util::MapIntoResponse<tower::util::map_err::MapErr<tower_http::cors::Cors<axum::routing::route::Route>,<core::convert::Infallible as core::convert::Into<core::convert::Infallible>>::into>>>::{{closure}}>> 3003003
+tokio-rt-worker;core::ptr::drop_in_place<tower::util::oneshot::State<tower::util::boxed_clone_sync::BoxCloneSyncService<http::request::Request<axum_core::body::Body>,http::response::Response<axum_core::body::Body>,core::convert::Infallible>,http::request::Request<axum_core::body::Body>>> 4004004
+tokio-rt-worker;core::ptr::drop_in_place<vllm_llm::output::GenerateOutputStream>;<tracing_subscriber::fmt::fmt_layer::Layer<S,N,E,W> as tracing_subscriber::layer::Layer<S>>::on_exit 1001001
+tokio-rt-worker;core::str::<impl str>::find 10010010
+tokio-rt-worker;core::str::converts::from_utf8 47047047
+tokio-rt-worker;evp_md_init_internal;mi_free 1001001
+tokio-rt-worker;futures_task::arc_wake::ArcWake::wake 3003003
+tokio-rt-worker;futures_util::stream::stream::StreamExt::poll_next_unpin 1001001
+tokio-rt-worker;hashbrown::map::HashMap<K,V,S,A>::get 7007007
+tokio-rt-worker;hashbrown::map::HashMap<K,V,S,A>::insert 2002002
+tokio-rt-worker;hashbrown::raw::RawTable<T,A>::clear 3003003
+tokio-rt-worker;http::extensions::Extensions::insert 1001001
+tokio-rt-worker;http::header::map::HeaderMap<T>::contains_key 1001001
+tokio-rt-worker;http::header::map::HeaderMap<T>::remove 5005005
+tokio-rt-worker;http::header::map::HeaderMap<T>::try_append2 2002002
+tokio-rt-worker;http::header::map::HeaderMap<T>::try_entry2 2002002
+tokio-rt-worker;http::header::map::HeaderMap<T>::try_reserve 4004004
+tokio-rt-worker;http::header::map::VacantEntry<T>::try_insert_entry 3003003
+tokio-rt-worker;http::header::map::hash_elem_using 1001001
+tokio-rt-worker;http::header::name::StandardHeader::as_str 4004004
+tokio-rt-worker;httparse::Request::parse_with_config_and_uninit_headers 1001001
+tokio-rt-worker;httparse::parse_headers_iter_uninit 2002002
+tokio-rt-worker;httparse::simd::avx2::match_uri_vectored 2002002
+tokio-rt-worker;httparse::simd::runtime::match_uri_vectored 2002002
+tokio-rt-worker;hyper::body::incoming::Incoming::new_channel 1001001
+tokio-rt-worker;hyper::common::time::Time::now 3003003
+tokio-rt-worker;hyper::proto::h1::conn::Conn<I,B,T>::end_body 1001001
+tokio-rt-worker;hyper::proto::h1::conn::Conn<I,B,T>::maybe_notify 7007007
+tokio-rt-worker;hyper::proto::h1::conn::Conn<I,B,T>::poll_flush 19019019
+tokio-rt-worker;hyper::proto::h1::conn::Conn<I,B,T>::poll_read_head;<std::sys::pal::unix::time::Timespec>::now;clock_gettime;[[vdso]]_[k] 1001001
+tokio-rt-worker;hyper::proto::h1::conn::Conn<I,B,T>::poll_read_head;clock_gettime 2002002
+tokio-rt-worker;hyper::proto::h1::conn::Conn<I,B,T>::write_head 3003003
+tokio-rt-worker;hyper::proto::h1::conn::State::try_keep_alive 9009009
+tokio-rt-worker;hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_catch 4004004
+tokio-rt-worker;hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_catch;<std::sys::pal::unix::time::Timespec>::now;clock_gettime;[[vdso]]_[k] 2002002
+tokio-rt-worker;hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_write 22022022
+tokio-rt-worker;hyper::proto::h1::io::WriteBuf<B>::can_buffer 15015015
+tokio-rt-worker;matchit::tree::Node<T>::at 1001001
+tokio-rt-worker;mi_bin 17017017
+tokio-rt-worker;mi_bitmap_setN 1001001
+tokio-rt-worker;mi_free 93093093
+tokio-rt-worker;mi_good_size 8008008
+tokio-rt-worker;mi_malloc_aligned 21021021
+tokio-rt-worker;mi_page_free_list_extend 1001001
+tokio-rt-worker;mi_page_queue_find_free_ex 5005005
+tokio-rt-worker;mi_realloc_aligned 6006006
+tokio-rt-worker;mi_theap_collect_ex 1001001
+tokio-rt-worker;mi_theap_malloc_aligned 71071071
+tokio-rt-worker;mi_theap_malloc_zero_aligned_at_generic 8008008
+tokio-rt-worker;mi_theap_malloc_zero_aligned_at_overalloc 4004004
+tokio-rt-worker;mi_zalloc_aligned 1001001
+tokio-rt-worker;mio::sys::unix::waker::Waker::wake 1001001
+tokio-rt-worker;mio::sys::unix::waker::Waker::wake;write;[libc.so.6];[libc.so.6] 1001001
+tokio-rt-worker;parking_lot::condvar::Condvar::notify_one_slow 2002002
+tokio-rt-worker;parking_lot::condvar::Condvar::notify_one_slow;<std::sys::pal::unix::time::Timespec>::now;clock_gettime;__vdso_clock_gettime_[k] 1001001
+tokio-rt-worker;parking_lot::condvar::Condvar::wait_until_internal 9009009
+tokio-rt-worker;parking_lot_core::parking_lot::lock_bucket_pair 2002002
+tokio-rt-worker;pow 3003003
+tokio-rt-worker;prometheus_client::metrics::family::Family<S,M,C>::get_or_create 5005005
+tokio-rt-worker;serde_core::ser::SerializeMap::serialize_entry 88088088
+tokio-rt-worker;serde_json::ser::format_escaped_str_contents 4004004
+tokio-rt-worker;sharded_slab::pool::Pool<T,C>::clear 1001001
+tokio-rt-worker;sharded_slab::pool::Pool<T,C>::get 42042042
+tokio-rt-worker;tokio::process::imp::orphan::OrphanQueueImpl<T>::reap_orphans 2002002
+tokio-rt-worker;tokio::runtime::context::with_scheduler 2002002
+tokio-rt-worker;tokio::runtime::driver::Driver::park 1001001
+tokio-rt-worker;tokio::runtime::io::driver::Driver::turn 6006006
+tokio-rt-worker;tokio::runtime::io::driver::Driver::turn;epoll_wait;[libc.so.6];[libc.so.6] 9009009
+tokio-rt-worker;tokio::runtime::io::registration::Registration::poll_io 3003003
+tokio-rt-worker;tokio::runtime::io::registration::Registration::poll_io;writev;[libc.so.6] 3003003
+tokio-rt-worker;tokio::runtime::io::registration::Registration::poll_io;writev;[libc.so.6];[libc.so.6] 17017017
+tokio-rt-worker;tokio::runtime::io::registration::Registration::poll_ready 6006006
+tokio-rt-worker;tokio::runtime::io::scheduled_io::ScheduledIo::poll_readiness 6006006
+tokio-rt-worker;tokio::runtime::io::scheduled_io::ScheduledIo::wake 4004004
+tokio-rt-worker;tokio::runtime::scheduler::Handle::current 3003003
+tokio-rt-worker;tokio::runtime::scheduler::multi_thread::park::Parker::park 11011011
+tokio-rt-worker;tokio::runtime::scheduler::multi_thread::stats::Stats::end_processing_scheduled_tasks 7007007
+tokio-rt-worker;tokio::runtime::scheduler::multi_thread::stats::Stats::end_processing_scheduled_tasks;<std::sys::pal::unix::time::Timespec>::now;clock_gettime;[[vdso]]_[k] 17017017
+tokio-rt-worker;tokio::runtime::scheduler::multi_thread::stats::Stats::end_processing_scheduled_tasks;<std::sys::pal::unix::time::Timespec>::sub_timespec 1001001
+tokio-rt-worker;tokio::runtime::scheduler::multi_thread::stats::Stats::end_processing_scheduled_tasks;[libm.so.6] 10010010
+tokio-rt-worker;tokio::runtime::scheduler::multi_thread::stats::Stats::end_processing_scheduled_tasks;clock_gettime 2002002
+tokio-rt-worker;tokio::runtime::scheduler::multi_thread::worker::Context::park_internal 3003003
+tokio-rt-worker;tokio::runtime::scheduler::multi_thread::worker::Context::run 3003003
+tokio-rt-worker;tokio::runtime::signal::Driver::process 3003003
+tokio-rt-worker;tokio::runtime::task::harness::can_read_output 4004004
+tokio-rt-worker;tokio::runtime::task::waker::clone_waker 4004004
+tokio-rt-worker;tokio::runtime::task::waker::drop_waker 2002002
+tokio-rt-worker;tokio::runtime::task::waker::wake_by_val 1001001
+tokio-rt-worker;tokio::runtime::time::<impl tokio::runtime::time::handle::Handle>::process_at_time 4004004
+tokio-rt-worker;tokio::runtime::time::<impl tokio::runtime::time::handle::Handle>::reregister 1001001
+tokio-rt-worker;tokio::runtime::time::Driver::park_internal 2002002
+tokio-rt-worker;tokio::runtime::time::source::TimeSource::now 1001001
+tokio-rt-worker;tokio::runtime::time::source::TimeSource::now;clock_gettime;[[vdso]]_[k] 9009009
+tokio-rt-worker;tokio::runtime::time::source::TimeSource::now;clock_gettime;__vdso_clock_gettime_[k] 1001001
+tokio-rt-worker;tokio::runtime::time::wheel::Wheel::next_expiration 3003003
+tokio-rt-worker;tokio::runtime::time::wheel::level::Level::next_expiration 1001001
+tokio-rt-worker;tokio::sync::mpsc::list::Rx<T>::pop 41041041
+tokio-rt-worker;tokio::sync::notify::NotifyGuard::notify_waiters 2002002
+tokio-rt-worker;tower_http::cors::ensure_usable_cors_rules 2002002
+tokio-rt-worker;tracing_subscriber::layer::context::Context<S>::if_enabled_for 11011011
+tokio-rt-worker;vllm_chat::output::default::unified::UnifiedParserState::process_parser_output 9009009
+tokio-rt-worker;vllm_chat::output::structured::StructuredEventState::close_open_text_block 1001001
+tokio-rt-worker;vllm_chat::output::structured::StructuredEventState::close_open_tool_call 3003003
+tokio-rt-worker;vllm_chat::output::structured::StructuredEventState::process_text_delta 25025025
+tokio-rt-worker;vllm_llm::request_metrics::RequestMetricsTracker::record_finished 9009009
+tokio-rt-worker;vllm_parser::reasoning::delimited::DelimitedReasoningParser::push 46046046
+tokio-rt-worker;vllm_parser::unified::UnifiedParserOutput::push_text 9009009
+tokio-rt-worker;vllm_server::routes::openai::chat_completions::final_chunk 2002002
+tokio-rt-worker;vllm_server::routes::openai::chat_completions::types::_::<impl serde_core::ser::Serialize for vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamChoice>::serialize 11011011
+tokio-rt-worker;vllm_server::routes::openai::chat_completions::types::_::<impl serde_core::ser::Serialize for vllm_server::routes::openai::chat_completions::types::ChatMessageDelta>::serialize 39039039
+tokio-rt-worker;vllm_tokenizer::Tokenizer::create_decode_stream 1001001
+tokio-rt-worker;vllm_tokenizer::byte_level_decode::decode_byte_level 365365365
+tokio-rt-worker;vllm_tokenizer::byte_level_decode::decode_byte_level;<alloc::raw_vec::RawVec<u8>>::grow_one 18018018
+tokio-rt-worker;vllm_tokenizer::byte_level_decode::decode_byte_level;<alloc::raw_vec::RawVec<u8>>::grow_one;<alloc::raw_vec::RawVecInner>::finish_grow 6006006
+tokio-rt-worker;vllm_tokenizer::byte_level_decode::decode_byte_level;<alloc::raw_vec::RawVec<u8>>::grow_one;_mi_theap_realloc_zero 2002002
+tokio-rt-worker;vllm_tokenizer::byte_level_decode::decode_byte_level;<alloc::raw_vec::RawVec<u8>>::grow_one;mi_realloc_aligned 7007007
+tokio-rt-worker;vllm_tokenizer::byte_level_decode::decode_byte_level;<alloc::raw_vec::RawVecInner<_>>::reserve::do_reserve_and_handle::<alloc::alloc::Global> 1001001
+tokio-rt-worker;vllm_tokenizer::byte_level_decode::decode_byte_level;<alloc::raw_vec::RawVecInner>::finish_grow 1001001
+tokio-rt-worker;vllm_tokenizer::byte_level_decode::decode_byte_level;<alloc::string::String>::from_utf8_lossy 2002002
+tokio-rt-worker;vllm_tokenizer::byte_level_decode::decode_byte_level;<alloc::string::String>::from_utf8_lossy;<alloc::raw_vec::RawVecInner>::finish_grow 1001001
+tokio-rt-worker;vllm_tokenizer::byte_level_decode::decode_byte_level;<core::str::lossy::Utf8Chunks as core::iter::traits::iterator::Iterator>::next 4004004
+tokio-rt-worker;vllm_tokenizer::byte_level_decode::decode_byte_level;[libc.so.6] 4004004
+tokio-rt-worker;vllm_tokenizer::byte_level_decode::decode_byte_level;_mi_page_malloc_zero 1001001
+tokio-rt-worker;vllm_tokenizer::byte_level_decode::decode_byte_level;mi_malloc_aligned 2002002
+tokio-rt-worker;vllm_tokenizer::byte_level_decode::decode_byte_level;mi_theap_malloc_aligned 1001001
+tokio-rt-worker;vllm_tokenizer::incremental::DecodeStream<T>::decode_prompt_context 3003003
+tokio-rt-worker;writev 3003003
+vllm-request;<&T as tracing_core::field::Value>::record 4004004
+vllm-request;<&mut rmp_serde::encode::Serializer<W,C> as serde_core::ser::Serializer>::collect_seq 3003003
+vllm-request;<&mut rmp_serde::encode::Serializer<W,C> as serde_core::ser::Serializer>::serialize_bool 1001001
+vllm-request;<&mut rmp_serde::encode::Serializer<W,C> as serde_core::ser::Serializer>::serialize_none 2002002
+vllm-request;<&mut serde_json::de::Deserializer<R> as serde_core::de::Deserializer>::deserialize_bool 2002002
+vllm-request;<&mut serde_json::de::Deserializer<R> as serde_core::de::Deserializer>::deserialize_f32 1001001
+vllm-request;<&mut serde_json::de::Deserializer<R> as serde_core::de::Deserializer>::deserialize_identifier 1001001
+vllm-request;<&mut serde_json::de::Deserializer<R> as serde_core::de::Deserializer>::deserialize_struct 22022022
+vllm-request;<&str as core::str::pattern::Pattern>::is_contained_in 4004004
+vllm-request;<(A,) as minijinja::value::argtypes::FunctionArgs>::from_values 2002002
+vllm-request;<(T1,R) as axum_core::response::into_response::IntoResponse>::into_response 4004004
+vllm-request;<F as axum::handler::Handler<(M,T1,T2,T3),S>>::call::{{closure}} 5005005
+vllm-request;<T as core::any::Any>::type_id 3003003
+vllm-request;<T as tower::util::boxed_clone_sync::CloneService<R>>::clone_box 1001001
+vllm-request;<alloc::collections::btree::map::BTreeMap<K,V,A> as core::ops::drop::Drop>::drop 2002002
+vllm-request;<alloc::collections::btree::map::Iter<K,V> as core::iter::traits::iterator::Iterator>::next 1001001
+vllm-request;<alloc::vec::Vec<T,A> as alloc::vec::spec_extend::SpecExtend<T,I>>::spec_extend 1001001
+vllm-request;<alloc::vec::Vec<T,A> as core::clone::Clone>::clone 1001001
+vllm-request;<alloc::vec::Vec<T> as alloc::vec::spec_from_iter_nested::SpecFromIterNested<T,I>>::from_iter 1001001
+vllm-request;<alloc::vec::into_iter::IntoIter<T,A> as core::iter::traits::iterator::Iterator>::try_fold 6006006
+vllm-request;<axum::routing::route::RouteFuture<E> as core::future::future::Future>::poll 4004004
+vllm-request;<axum::util::MapIntoResponseFuture<F> as core::future::future::Future>::poll 3003003
+vllm-request;<core::hash::sip::Hasher<S> as core::hash::Hasher>::write 6006006
+vllm-request;<core::iter::adapters::map::Map<I,F> as core::iter::traits::iterator::Iterator>::next 1001001
+vllm-request;<futures_channel::mpsc::Receiver<T> as core::ops::drop::Drop>::drop 1001001
+vllm-request;<hashbrown::raw::RawTable<T,A> as core::ops::drop::Drop>::drop 1001001
+vllm-request;<http::request::Request<axum_core::body::Body> as axum_core::ext_traits::request::RequestExt>::into_limited_body 2002002
+vllm-request;<http_body_util::util::BufList<T> as bytes::buf::buf_impl::Buf>::copy_to_bytes 3003003
+vllm-request;<minijinja::value::Value as core::clone::Clone>::clone 5005005
+vllm-request;<minijinja::value::Value as core::cmp::PartialEq>::eq 1001001
+vllm-request;<minijinja::value::Value as core::hash::Hash>::hash 1001001
+vllm-request;<minijinja::value::Value as minijinja::value::argtypes::ArgType>::from_value 2002002
+vllm-request;<minijinja::value::Value::make_object_iterable::Iterable<T,F> as minijinja::value::object::Object>::enumerate 1001001
+vllm-request;<minijinja::value::ValueIter as core::iter::traits::iterator::Iterator>::next 1001001
+vllm-request;<minijinja::value::argtypes::KwargsValues as minijinja::value::object::Object>::get_value 3003003
+vllm-request;<minijinja::value::mapped_enumerator::Iter as core::iter::traits::iterator::Iterator>::next 1001001
+vllm-request;<minijinja::value::mapped_enumerator::Iter as core::iter::traits::iterator::Iterator>::size_hint 1001001
+vllm-request;<minijinja::value::namespace_object::Namespace as minijinja::value::object::Object>::get_value 2002002
+vllm-request;<minijinja::value::serialize::SerializeMap as serde_core::ser::SerializeMap>::end 1001001
+vllm-request;<minijinja::value::serialize::SerializeMap as serde_core::ser::SerializeMap>::serialize_entry 1001001
+vllm-request;<minijinja::vm::closure_object::ClosureTracker as core::ops::drop::Drop>::drop 2002002
+vllm-request;<rayon_core::job::StackJob<L,F,R> as rayon_core::job::Job>::execute 1001001
+vllm-request;<rayon_core::job::StackJob<L,F,R> as rayon_core::job::Job>::execute;crossbeam_deque::deque::Worker<T>::pop 1001001
+vllm-request;<rayon_core::job::StackJob<L,F,R> as rayon_core::job::Job>::execute;rayon_core::registry::WorkerThread::wait_until_cold 4004004
+vllm-request;<rmp_serde::encode::Compound<W,C> as serde_core::ser::SerializeStruct>::serialize_field 3003003
+vllm-request;<rmp_serde::encode::Compound<W,C> as serde_core::ser::SerializeTupleStruct>::serialize_field 2002002
+vllm-request;<serde::private::de::content::ContentDeserializer<E> as serde_core::de::Deserializer>::deserialize_any 2002002
+vllm-request;<serde::private::de::content::TaggedContentVisitor<T> as serde_core::de::Visitor>::visit_map 1001001
+vllm-request;<serde_json::de::MapAccess<R> as serde_core::de::MapAccess>::next_key_seed::has_next_key 2002002
+vllm-request;<serde_json::read::SliceRead as serde_json::read::Read>::parse_str 9009009
+vllm-request;<serde_path_to_error::de::CaptureKey<X> as serde_core::de::DeserializeSeed>::deserialize 3003003
+vllm-request;<serde_path_to_error::de::Deserializer<D> as serde_core::de::Deserializer>::deserialize_any 7007007
+vllm-request;<serde_path_to_error::de::Deserializer<D> as serde_core::de::Deserializer>::deserialize_option 2002002
+vllm-request;<serde_path_to_error::de::MapAccess<X> as serde_core::de::MapAccess>::next_key_seed 5005005
+vllm-request;<serde_path_to_error::de::TrackedSeed<X> as serde_core::de::DeserializeSeed>::deserialize 14014014
+vllm-request;<str>::to_lowercase 2002002
+vllm-request;<tokio::runtime::task::join::JoinHandle<T> as core::future::future::Future>::poll 1001001
+vllm-request;<tokio::sync::batch_semaphore::Acquire as core::ops::drop::Drop>::drop 1001001
+vllm-request;<tower::util::map_future::MapFuture<S,F> as tower_service::Service<R>>::call 2002002
+vllm-request;<tower::util::oneshot::Oneshot<S,Req> as core::future::future::Future>::poll 3003003
+vllm-request;<tracing_subscriber::fmt::fmt_layer::Layer<S,N,E,W> as tracing_subscriber::layer::Layer<S>>::on_new_span 1001001
+vllm-request;<tracing_subscriber::fmt::fmt_layer::Layer<S,N,E,W> as tracing_subscriber::layer::Layer<S>>::on_record 3003003
+vllm-request;<tracing_subscriber::fmt::format::DefaultVisitor as tracing_core::field::Visit>::record_debug 2002002
+vllm-request;<tracing_subscriber::fmt::format::DefaultVisitor as tracing_core::field::Visit>::record_debug;<&T as core::fmt::Debug>::fmt 7007007
+vllm-request;<tracing_subscriber::fmt::format::DefaultVisitor as tracing_core::field::Visit>::record_debug;<alloc::string::String as core::fmt::Write>::write_str 1001001
+vllm-request;<tracing_subscriber::fmt::format::DefaultVisitor as tracing_core::field::Visit>::record_debug;<nu_ansi_term::display::AnsiGenericString<str> as core::fmt::Display>::fmt;core::fmt::write 2002002
+vllm-request;<tracing_subscriber::fmt::format::DefaultVisitor as tracing_core::field::Visit>::record_debug;<str as core::fmt::Debug>::fmt 3003003
+vllm-request;<tracing_subscriber::fmt::format::DefaultVisitor as tracing_core::field::Visit>::record_debug;<tracing_core::field::DisplayValue<T> as core::fmt::Debug>::fmt 3003003
+vllm-request;<tracing_subscriber::fmt::format::DefaultVisitor as tracing_core::field::Visit>::record_debug;core::fmt::write 1001001
+vllm-request;<tracing_subscriber::fmt::format::DefaultVisitor as tracing_core::field::Visit>::record_debug;core::fmt::write;<alloc::string::String as core::fmt::Write>::write_char 3003003
+vllm-request;<tracing_subscriber::fmt::format::DefaultVisitor as tracing_core::field::Visit>::record_debug;mi_realloc_aligned 1001001
+vllm-request;<tracing_subscriber::fmt::format::DefaultVisitor as tracing_core::field::Visit>::record_str 1001001
+vllm-request;<tracing_subscriber::registry::sharded::Registry as tracing_core::subscriber::Subscriber>::enter 1001001
+vllm-request;<tracing_subscriber::registry::sharded::Registry as tracing_core::subscriber::Subscriber>::new_span 2002002
+vllm-request;<vllm_chat::output::default::DefaultChatOutputProcessor as vllm_chat::output::ChatOutputProcessor>::process 1001001
+vllm-request;<vllm_engine_core_client::protocol::request::EngineCoreRequest as serde_core::ser::Serialize>::serialize 2002002
+vllm-request;<vllm_parser::unified::combined::CombinedParser as vllm_parser::unified::UnifiedParser>::structural_tag_model 1001001
+vllm-request;<vllm_server::routes::openai::chat_completions::types::ChatCompletionRequest as validator::traits::ValidateArgs>::validate_with_args 7007007
+vllm-request;<vllm_server::routes::openai::chat_completions::types::_::<impl serde_core::de::Deserialize for vllm_server::routes::openai::chat_completions::types::ChatCompletionRequest>::deserialize::__FieldVisitor as serde_core::de::Visitor>::visit_str 1001001
+vllm-request;[libc.so.6] 140140140
+vllm-request;[unknown];<&mut rmp_serde::encode::Serializer<W,C> as serde_core::ser::Serializer>::collect_seq 19019019
+vllm-request;[unknown];<&mut serde_json::de::Deserializer<R> as serde_core::de::Deserializer>::deserialize_identifier 2002002
+vllm-request;[unknown];<&mut serde_json::de::Deserializer<R> as serde_core::de::Deserializer>::deserialize_seq 1001001
+vllm-request;[unknown];<&mut serde_json::de::Deserializer<R> as serde_core::de::Deserializer>::deserialize_u32 2002002
+vllm-request;[unknown];<&str as core::str::pattern::Pattern>::is_contained_in 2002002
+vllm-request;[unknown];<(A,) as minijinja::value::argtypes::FunctionArgs>::from_values 1001001
+vllm-request;[unknown];<F as axum::handler::Handler<(M,T1,T2,T3),S>>::call::{{closure}} 5005005
+vllm-request;[unknown];<Func as minijinja::functions::Function<Rv,(A,)>>::invoke 1001001
+vllm-request;[unknown];<T as http::extensions::AnyClone>::as_any 5005005
+vllm-request;[unknown];<alloc::collections::btree::map::BTreeMap<K,V,A> as core::ops::drop::Drop>::drop 5005005
+vllm-request;[unknown];<alloc::string::String as core::fmt::Write>::write_str 1001001
+vllm-request;[unknown];<alloc::vec::Vec<T,A> as core::ops::drop::Drop>::drop 6006006
+vllm-request;[unknown];<alloc::vec::into_iter::IntoIter<T,A> as core::ops::drop::Drop>::drop 3003003
+vllm-request;[unknown];<core::hash::sip::Hasher<S> as core::hash::Hasher>::write 6006006
+vllm-request;[unknown];<core::iter::adapters::map::Map<I,F> as core::iter::traits::iterator::Iterator>::fold 1001001
+vllm-request;[unknown];<core::iter::adapters::map::Map<I,F> as core::iter::traits::iterator::Iterator>::next 1001001
+vllm-request;[unknown];<futures_channel::mpsc::Receiver<T> as futures_core::stream::Stream>::poll_next 2002002
+vllm-request;[unknown];<hashbrown::map::HashMap<K,V,S,A> as core::iter::traits::collect::Extend<(K,V)>>::extend 1001001
+vllm-request;[unknown];<hashbrown::raw::RawTable<T,A> as core::clone::Clone>::clone 5005005
+vllm-request;[unknown];<http::request::Request<axum_core::body::Body> as axum_core::ext_traits::request::RequestExt>::into_limited_body 7007007
+vllm-request;[unknown];<http::request::Request<axum_core::body::Body> as axum_core::ext_traits::request::RequestExt>::with_limited_body 3003003
+vllm-request;[unknown];<http_body_util::combinators::collect::Collect<T> as core::future::future::Future>::poll 1001001
+vllm-request;[unknown];<http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame 5005005
+vllm-request;[unknown];<http_body_util::limited::Limited<B> as http_body::Body>::poll_frame 2002002
+vllm-request;[unknown];<http_body_util::util::BufList<T> as bytes::buf::buf_impl::Buf>::copy_to_bytes 1001001
+vllm-request;[unknown];<hyper::body::incoming::Incoming as http_body::Body>::poll_frame 7007007
+vllm-request;[unknown];<minijinja::value::Value as core::clone::Clone>::clone 2002002
+vllm-request;[unknown];<minijinja::value::Value as core::hash::Hash>::hash 1001001
+vllm-request;[unknown];<minijinja::value::argtypes::KwargsValues as minijinja::value::object::Object>::get_value 1001001
+vllm-request;[unknown];<minijinja::value::namespace_object::Namespace as minijinja::value::object::Object>::get_value 1001001
+vllm-request;[unknown];<minijinja::value::serialize::SerializeMap as serde_core::ser::SerializeMap>::serialize_entry 1001001
+vllm-request;[unknown];<minijinja::value::serialize::StaticKeyMap as minijinja::value::object::Object>::get_value_by_str 4004004
+vllm-request;[unknown];<minijinja::vm::loop_object::Loop as minijinja::value::object::Object>::get_value_by_str 1001001
+vllm-request;[unknown];<nu_ansi_term::display::AnsiGenericString<str> as core::fmt::Display>::fmt;core::fmt::write 1001001
+vllm-request;[unknown];<rmp_serde::encode::MaybeUnknownLengthCompound<W,C> as serde_core::ser::SerializeSeq>::end 5005005
+vllm-request;[unknown];<serde::private::de::content::ContentDeserializer<E> as serde_core::de::Deserializer>::deserialize_any 5005005
+vllm-request;[unknown];<serde::private::de::content::ContentRefDeserializer<E> as serde_core::de::Deserializer>::deserialize_str 2002002
+vllm-request;[unknown];<serde::private::de::content::TaggedContentVisitor<T> as serde_core::de::Visitor>::visit_map 1001001
+vllm-request;[unknown];<serde_json::de::MapAccess<R> as serde_core::de::MapAccess>::next_value_seed 4004004
+vllm-request;[unknown];<serde_json::read::SliceRead as serde_json::read::Read>::parse_str 2002002
+vllm-request;[unknown];<serde_path_to_error::de::CaptureKey<X> as serde_core::de::DeserializeSeed>::deserialize 2002002
+vllm-request;[unknown];<serde_path_to_error::de::MapAccess<X> as serde_core::de::MapAccess>::next_key_seed 2002002
+vllm-request;[unknown];<serde_path_to_error::de::TrackedSeed<X> as serde_core::de::DeserializeSeed>::deserialize 7007007
+vllm-request;[unknown];<tokio::runtime::task::join::JoinHandle<T> as core::future::future::Future>::poll 1001001
+vllm-request;[unknown];<tokio::sync::batch_semaphore::Acquire as core::future::future::Future>::poll 1001001
+vllm-request;[unknown];<tower::util::map_future::MapFuture<S,F> as tower_service::Service<R>>::call 1001001
+vllm-request;[unknown];<tracing_subscriber::fmt::fmt_layer::Layer<S,N,E,W> as tracing_subscriber::layer::Layer<S>>::on_exit 1001001
+vllm-request;[unknown];<tracing_subscriber::fmt::fmt_layer::Layer<S,N,E,W> as tracing_subscriber::layer::Layer<S>>::on_record 1001001
+vllm-request;[unknown];<tracing_subscriber::layer::layered::Layered<L,S> as tracing_core::subscriber::Subscriber>::clone_span 1001001
+vllm-request;[unknown];<tracing_subscriber::layer::layered::Layered<L,S> as tracing_core::subscriber::Subscriber>::exit 1001001
+vllm-request;[unknown];<tracing_subscriber::layer::layered::Layered<L,S> as tracing_core::subscriber::Subscriber>::new_span 1001001
+vllm-request;[unknown];<tracing_subscriber::layer::layered::Layered<L,S> as tracing_core::subscriber::Subscriber>::record 1001001
+vllm-request;[unknown];<tracing_subscriber::layer::layered::Layered<L,S> as tracing_core::subscriber::Subscriber>::try_close 1001001
+vllm-request;[unknown];<tracing_subscriber::registry::sharded::Registry as tracing_core::subscriber::Subscriber>::current_span 5005005
+vllm-request;[unknown];<tracing_subscriber::registry::sharded::Registry as tracing_core::subscriber::Subscriber>::exit 4004004
+vllm-request;[unknown];<tracing_subscriber::registry::sharded::Registry as tracing_core::subscriber::Subscriber>::new_span 5005005
+vllm-request;[unknown];<tracing_subscriber::registry::sharded::Registry as tracing_core::subscriber::Subscriber>::try_close 2002002
+vllm-request;[unknown];<uuid::rng::imp::RngImp as uuid::rng::Rng>::u128 3003003
+vllm-request;[unknown];<uuid::rng::imp::RngImp as uuid::rng::Rng>::u128;[libc.so.6] 2002002
+vllm-request;[unknown];<uuid::rng::imp::RngImp as uuid::rng::Rng>::u128;[libc.so.6];[[vdso]]_[k] 1001001
+vllm-request;[unknown];<vllm_chat::backend::hf::HfChatBackend as vllm_chat::backend::ChatBackend>::chat_renderer 3003003
+vllm-request;[unknown];<vllm_chat::backend::hf::HfChatBackend as vllm_chat::backend::ChatBackend>::new_chat_output_processor 4004004
+vllm-request;[unknown];<vllm_chat::output::default::DefaultChatOutputProcessor as vllm_chat::output::ChatOutputProcessor>::process 2002002
+vllm-request;[unknown];<vllm_chat::renderer::hf::HfChatRenderer as vllm_chat::renderer::ChatRenderer>::render 5005005
+vllm-request;[unknown];<vllm_engine_core_client::protocol::request::EngineCoreRequest as serde_core::ser::Serialize>::serialize 2002002
+vllm-request;[unknown];<vllm_server::routes::openai::utils::types::_::<impl serde_core::de::Deserialize for vllm_server::routes::openai::utils::types::ChatMessage>::deserialize::__FieldVisitor as serde_core::de::Visitor>::visit_str 2002002
+vllm-request;[unknown];<vllm_text::backend::hf::HfTextBackend as vllm_text::backend::TextBackend>::tokenizer 1001001
+vllm-request;[unknown];[libc.so.6] 80080080
+vllm-request;[unknown];[perf-3639361.map]_[j] 7007007
+vllm-request;[unknown];[unknown];<alloc::collections::btree::map::BTreeMap<K,V,A> as core::ops::drop::Drop>::drop 2002002
+vllm-request;[unknown];[unknown];<core::hash::sip::Hasher<S> as core::hash::Hasher>::write 3003003
+vllm-request;[unknown];[unknown];<vllm_tokenizer::hf::HuggingFaceTokenizer as vllm_tokenizer::Tokenizer>::token_to_id 3003003
+vllm-request;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];<T as tower::util::boxed_clone_sync::CloneService<R>>::clone_box 1001001
+vllm-request;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];_mi_theap_collect_retired 1001001
+vllm-request;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];tokio::runtime::scheduler::multi_thread::park::Unparker::unpark 3003003
+vllm-request;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];tokio::runtime::task::harness::Harness<T,S>::complete 5005005
+vllm-request;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];tokio::runtime::task::raw::schedule 1001001
+vllm-request;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];tokio::runtime::task::waker::wake_by_ref 3003003
+vllm-request;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];tokio::util::sharded_list::ShardedList<L,<L as tokio::util::linked_list::Link>::Target>::remove 2002002
+vllm-request;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];fastokens::pre_tokenizers::split::Split::pre_tokenize 1001001
+vllm-request;[unknown];[unknown];[unknown];[unknown];mi_free 1001001
+vllm-request;[unknown];[unknown];[unknown];crossbeam_epoch::internal::Global::try_advance 1001001
+vllm-request;[unknown];[unknown];_mi_page_malloc_zero 1001001
+vllm-request;[unknown];[unknown];core::hash::BuildHasher::hash_one 2002002
+vllm-request;[unknown];[unknown];core::ptr::drop_in_place<alloc::collections::btree::node::Handle<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Dying,K,V,NodeType>,alloc::collections::btree::node::marker::KV>::drop_key_val::Dropper<minijinja::value::Value>> 2002002
+vllm-request;[unknown];[unknown];core::ptr::drop_in_place<minijinja::value::Value> 1001001
+vllm-request;[unknown];[unknown];fastokens::Tokenizer::token_to_id 4004004
+vllm-request;[unknown];[unknown];http::header::map::hash_elem_using 2002002
+vllm-request;[unknown];[unknown];http::header::name::HdrName::from_bytes 1001001
+vllm-request;[unknown];[unknown];http::header::name::StandardHeader::from_bytes 1001001
+vllm-request;[unknown];[unknown];http::header::name::parse_hdr 10010010
+vllm-request;[unknown];[unknown];memo_map::MemoMap<K,V,S>::get_or_try_insert 2002002
+vllm-request;[unknown];[unknown];mi_free 1001001
+vllm-request;[unknown];[unknown];tokio::runtime::scheduler::multi_thread::worker::Context::run 1001001
+vllm-request;[unknown];[unknown];tokio::runtime::scheduler::multi_thread::worker::Context::run_task 3003003
+vllm-request;[unknown];[unknown];tokio::runtime::task::harness::Harness<T,S>::poll 4004004
+vllm-request;[unknown];_mi_arenas_collect 1001001
+vllm-request;[unknown];_mi_page_malloc_zero 26026026
+vllm-request;[unknown];_mi_page_retire 1001001
+vllm-request;[unknown];_mi_subproc 4004004
+vllm-request;[unknown];_mi_subproc_heap_main 2002002
+vllm-request;[unknown];_mi_theap_collect_retired 2002002
+vllm-request;[unknown];_mi_theap_realloc_zero 7007007
+vllm-request;[unknown];alloc::collections::btree::map::BTreeMap<K,V,A>::insert 1001001
+vllm-request;[unknown];alloc::collections::btree::node::Handle<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Mut,K,V,alloc::collections::btree::node::marker::Leaf>,alloc::collections::btree::node::marker::Edge>::insert_recursing 5005005
+vllm-request;[unknown];alloc::collections::vec_deque::VecDeque<T,A>::grow 2002002
+vllm-request;[unknown];alloc::raw_vec::RawVec<T,A>::grow_one 4004004
+vllm-request;[unknown];alloc::raw_vec::RawVecInner<A>::finish_grow 3003003
+vllm-request;[unknown];alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle 4004004
+vllm-request;[unknown];alloc::sync::Arc<T,A>::drop_slow 4004004
+vllm-request;[unknown];axum::json::json_content_type 3003003
+vllm-request;[unknown];axum_core::extract::request_parts::<impl axum_core::extract::FromRequest<S> for bytes::bytes::Bytes>::from_request::{{closure}} 1001001
+vllm-request;[unknown];bytes::bytes::static_drop 1001001
+vllm-request;[unknown];bytes::bytes_mut::shared_v_clone 6006006
+vllm-request;[unknown];bytes::bytes_mut::shared_v_drop 2002002
+vllm-request;[unknown];bytes::bytes_mut::shared_v_to_vec;<&mut serde_json::de::Deserializer<R> as serde_core::de::Deserializer>::deserialize_struct 2002002
+vllm-request;[unknown];bytes::bytes_mut::shared_v_to_vec;<F as axum::handler::Handler<(M,T1,T2,T3),S>>::call::{{closure}} 1001001
+vllm-request;[unknown];bytes::bytes_mut::shared_v_to_vec;<vllm_server::routes::openai::chat_completions::types::ChatCompletionRequest as validator::traits::ValidateArgs>::validate_with_args 5005005
+vllm-request;[unknown];bytes::bytes_mut::shared_v_to_vec;[libc.so.6] 6006006
+vllm-request;[unknown];bytes::bytes_mut::shared_v_to_vec;axum::json::Json<T>::from_bytes 1001001
+vllm-request;[unknown];bytes::bytes_mut::shared_v_to_vec;serde_path_to_error::de::deserialize 1001001
+vllm-request;[unknown];clock_gettime 3003003
+vllm-request;[unknown];core::hash::BuildHasher::hash_one 2002002
+vllm-request;[unknown];core::ops::function::FnOnce::call_once 14014014
+vllm-request;[unknown];core::ops::function::FnOnce::call_once;<minijinja::value::mapped_enumerator::Iter as core::iter::traits::iterator::Iterator>::next 1001001
+vllm-request;[unknown];core::ptr::drop_in_place<core::iter::adapters::map::Map<core::iter::adapters::take::Take<core::iter::adapters::step_by::StepBy<core::iter::adapters::rev::Rev<core::ops::range::RangeInclusive<usize>>>>,minijinja::value::ops::slice::{{closure}}::{{closure}}>> 2002002
+vllm-request;[unknown];core::ptr::drop_in_place<core::option::Option<vllm_engine_core_client::protocol::structured_outputs::StructuredOutputsParams>> 1001001
+vllm-request;[unknown];core::ptr::drop_in_place<core::option::Option<vllm_server::routes::openai::utils::structured_outputs::ResponseFormat>> 1001001
+vllm-request;[unknown];core::ptr::drop_in_place<http_body_util::collected::Collected<bytes::bytes::Bytes>> 1001001
+vllm-request;[unknown];core::ptr::drop_in_place<minijinja::value::Value> 5005005
+vllm-request;[unknown];core::ptr::drop_in_place<minijinja::value::ValueRepr> 1001001
+vllm-request;[unknown];core::ptr::drop_in_place<minijinja::value::mapped_enumerator::Iter> 3003003
+vllm-request;[unknown];core::ptr::drop_in_place<serde_core::private::content::Content> 3003003
+vllm-request;[unknown];core::ptr::drop_in_place<tracing_futures::Instrumented<vllm_chat::ChatLlm::chat::{{closure}}>> 1001001
+vllm-request;[unknown];core::ptr::drop_in_place<vllm_chat::error::Error> 7007007
+vllm-request;[unknown];core::ptr::drop_in_place<vllm_chat::multimodal::finalize_rendered_prompt::{{closure}}> 1001001
+vllm-request;[unknown];core::ptr::drop_in_place<vllm_server::routes::openai::chat_completions::chat_completions::{{closure}}> 3003003
+vllm-request;[unknown];core::ptr::drop_in_place<vllm_text::request::SamplingParams> 2002002
+vllm-request;[unknown];core::str::converts::from_utf8 1001001
+vllm-request;[unknown];crossbeam_deque::deque::Stealer<T>::steal 1001001
+vllm-request;[unknown];crossbeam_epoch::internal::Global::collect 1001001
+vllm-request;[unknown];fastokens::added_tokens::AddedTokens::split 20020020
+vllm-request;[unknown];fastokens::pre_tokenizers::split::Split::pre_tokenize 22022022
+vllm-request;[unknown];futures_channel::mpsc::Receiver<T>::next_message 1001001
+vllm-request;[unknown];futures_channel::mpsc::queue::Queue<T>::pop_spin 11011011
+vllm-request;[unknown];hashbrown::raw::RawTable<T,A>::reserve_rehash 1001001
+vllm-request;[unknown];hashbrown::table::HashTable<T,A>::entry 1001001
+vllm-request;[unknown];http::header::map::HeaderMap<T>::get2 2002002
+vllm-request;[unknown];http::header::map::HeaderMap<T>::try_insert2 1001001
+vllm-request;[unknown];http::header::map::HeaderMap<T>::try_reserve_one 2002002
+vllm-request;[unknown];http::header::map::hash_elem_using 8008008
+vllm-request;[unknown];http::header::name::parse_hdr 1001001
+vllm-request;[unknown];icu_normalizer::ComposingNormalizerBorrowed::normalize 21021021
+vllm-request;[unknown];indexmap::inner::Core<K,V>::insert_full 2002002
+vllm-request;[unknown];jit_machine_stack_exec 12012012
+vllm-request;[unknown];memchr::arch::x86_64::memchr::memrchr_raw::detect;_mi_page_malloc_zero 1001001
+vllm-request;[unknown];memchr::arch::x86_64::memchr::memrchr_raw::detect;alloc::raw_vec::RawVec<T,A>::grow_one 1001001
+vllm-request;[unknown];memchr::arch::x86_64::memchr::memrchr_raw::detect;fastokens::added_tokens::AddedTokens::split 5005005
+vllm-request;[unknown];memchr::arch::x86_64::memchr::memrchr_raw::detect;fastokens::added_tokens::AddedTokens::split;memchr::arch::x86_64::avx2::memchr::One::find_raw_avx2 7007007
+vllm-request;[unknown];memchr::arch::x86_64::memchr::memrchr_raw::detect;memchr::arch::x86_64::memchr::memchr_raw::find_avx2 1001001
+vllm-request;[unknown];mi_free 11011011
+vllm-request;[unknown];mi_heap_main 1001001
+vllm-request;[unknown];mi_malloc_aligned 5005005
+vllm-request;[unknown];mi_realloc_aligned 1001001
+vllm-request;[unknown];mi_theap_malloc_aligned 9009009
+vllm-request;[unknown];mi_theap_umalloc 25025025
+vllm-request;[unknown];mime::parse::parse 11011011
+vllm-request;[unknown];minijinja::environment::Environment::get_global 3003003
+vllm-request;[unknown];minijinja::functions::BoxedFunction::new::{{closure}} 2002002
+vllm-request;[unknown];minijinja::functions::builtins::namespace 2002002
+vllm-request;[unknown];minijinja::loader::LoaderStore::get 1001001
+vllm-request;[unknown];minijinja::template::Template::_render 1001001
+vllm-request;[unknown];minijinja::value::Value::as_i64 2002002
+vllm-request;[unknown];minijinja::value::Value::call 3003003
+vllm-request;[unknown];minijinja::value::Value::call_method 1001001
+vllm-request;[unknown];minijinja::value::Value::get_item_opt 1001001
+vllm-request;[unknown];minijinja::value::Value::len 1001001
+vllm-request;[unknown];minijinja::value::namespace_object::Namespace::set_value 2002002
+vllm-request;[unknown];minijinja::value::ops::add 3003003
+vllm-request;[unknown];minijinja::value::ops::slice 2002002
+vllm-request;[unknown];minijinja::value::ops::sub 1001001
+vllm-request;[unknown];minijinja::vm::Vm::eval_impl 53053053
+vllm-request;[unknown];minijinja::vm::Vm::eval_impl;<minijinja::value::Value as core::fmt::Display>::fmt;<&T as core::fmt::Display>::fmt 2002002
+vllm-request;[unknown];minijinja::vm::Vm::eval_impl;<minijinja::value::Value as core::fmt::Display>::fmt;<alloc::string::String as core::fmt::Write>::write_str 1001001
+vllm-request;[unknown];minijinja::vm::Vm::eval_impl;<minijinja::value::Value as core::fmt::Display>::fmt;[libc.so.6] 1001001
+vllm-request;[unknown];minijinja::vm::Vm::eval_impl;<minijinja::value::Value as core::fmt::Display>::fmt;alloc::raw_vec::RawVecInner<A>::finish_grow 1001001
+vllm-request;[unknown];minijinja::vm::Vm::eval_impl;<minijinja::value::Value as core::fmt::Display>::fmt;alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle 2002002
+vllm-request;[unknown];minijinja::vm::Vm::eval_impl;<minijinja::value::Value as core::fmt::Display>::fmt;core::fmt::write;<core::fmt::Formatter>::pad 1001001
+vllm-request;[unknown];minijinja::vm::Vm::eval_impl;core::fmt::write 1001001
+vllm-request;[unknown];minijinja::vm::context::Context::load 2002002
+vllm-request;[unknown];minijinja::vm::state::State::new 2002002
+vllm-request;[unknown];minijinja_contrib::pycompat::unknown_method_callback 5005005
+vllm-request;[unknown];parking_lot::condvar::Condvar::notify_one_slow 1001001
+vllm-request;[unknown];pcre2_jit_match_8 30030030
+vllm-request;[unknown];prometheus_client::metrics::family::Family<S,M,C>::get_or_create_owned 8008008
+vllm-request;[unknown];rayon_core::join::join_context::{{closure}} 1001001
+vllm-request;[unknown];rayon_core::registry::WorkerThread::wait_until_cold 1001001
+vllm-request;[unknown];rmp::encode::uint::write_uint 135135135
+vllm-request;[unknown];serde_json::de::Deserializer<R>::parse_number 2002002
+vllm-request;[unknown];serde_json::read::SliceRead::skip_to_escape 1001001
+vllm-request;[unknown];sharded_slab::pool::Pool<T,C>::get 6006006
+vllm-request;[unknown];syscall 1001001
+vllm-request;[unknown];tokio::runtime::context::scoped::Scoped<T>::with 1001001
+vllm-request;[unknown];tokio::runtime::handle::Handle::spawn 1001001
+vllm-request;[unknown];tokio::runtime::scheduler::multi_thread::park::Unparker::unpark 2002002
+vllm-request;[unknown];tokio::runtime::scheduler::multi_thread::queue::Steal<T>::steal_into 1001001
+vllm-request;[unknown];tokio::runtime::scheduler::multi_thread::worker::<impl tokio::runtime::scheduler::multi_thread::handle::Handle>::notify_parked_remote 1001001
+vllm-request;[unknown];tokio::runtime::task::list::OwnedTasks<S>::bind_inner 2002002
+vllm-request;[unknown];tokio::sync::mpsc::chan::channel 1001001
+vllm-request;[unknown];tracing::__macro_support::__is_enabled 1001001
+vllm-request;[unknown];tracing::span::Span::make_with 1001001
+vllm-request;[unknown];tracing_subscriber::layer::context::Context<S>::if_enabled_for 1001001
+vllm-request;[unknown];vllm_chat::parser::reasoning::<impl vllm_chat::parser::ParserFactory<alloc::sync::Arc<dyn core::ops::function::Fn<(alloc::sync::Arc<dyn vllm_tokenizer::Tokenizer>,)>+Output = core::result::Result<alloc::boxed::Box<dyn vllm_parser::reasoning::ReasoningParser>,vllm_parser::reasoning::ReasoningError>+core::marker::Sync+core::marker::Send>>>::create 4004004
+vllm-request;[unknown];vllm_chat::renderer::effective_template_kwargs 2002002
+vllm-request;[unknown];vllm_chat::renderer::hf::template::CompiledChatTemplate::apply 1001001
+vllm-request;[unknown];vllm_chat::renderer::hf::to_template_message 6006006
+vllm-request;[unknown];vllm_engine_core_client::client::imp::ClientInner::register_request 6006006
+vllm-request;[unknown];vllm_engine_core_client::client::state::RequestRegistry::register 3003003
+vllm-request;[unknown];vllm_llm::inflight::InflightRequests::track 1001001
+vllm-request;[unknown];vllm_llm::request::GenerateRequest::prepare 1001001
+vllm-request;[unknown];vllm_llm::request_metrics::current_unix_timestamp_secs 5005005
+vllm-request;[unknown];vllm_llm::request_metrics::current_unix_timestamp_secs;clock_gettime;[[vdso]]_[k] 1001001
+vllm-request;[unknown];vllm_parser::reasoning::delimited::DelimitedReasoningParser::new 1001001
+vllm-request;[unknown];vllm_server::routes::openai::chat_completions::chat_completions::{{closure}} 26026026
+vllm-request;[unknown];vllm_server::routes::openai::chat_completions::convert::prepare_chat_request 5005005
+vllm-request;[unknown];vllm_server::routes::openai::chat_completions::convert::prepare_chat_request;alloc::fmt::format::format_inner 6006006
+vllm-request;[unknown];vllm_server::routes::openai::chat_completions::convert::prepare_chat_request;alloc::fmt::format::format_inner;<alloc::string::String as core::fmt::Display>::fmt 1001001
+vllm-request;[unknown];vllm_server::routes::openai::chat_completions::convert::prepare_chat_request;alloc::fmt::format::format_inner;<core::fmt::Formatter>::pad 1001001
+vllm-request;[unknown];vllm_server::routes::openai::chat_completions::convert::prepare_chat_request;alloc::fmt::format::format_inner;core::fmt::write 2002002
+vllm-request;[unknown];vllm_server::routes::openai::chat_completions::convert::prepare_chat_request;core::fmt::write 1001001
+vllm-request;[unknown];vllm_server::routes::openai::utils::types::_::<impl serde_core::de::Deserialize for vllm_server::routes::openai::utils::types::MessageContent>::deserialize 1001001
+vllm-request;[unknown];vllm_server::state::AppState::resolve_model_with_loras::{{closure}} 3003003
+vllm-request;[unknown];vllm_server::utils::merge_kv_transfer_params 1001001
+vllm-request;[unknown];vllm_server::utils::resolve_request_context 3003003
+vllm-request;[unknown];vllm_text::TextLlm::generate::{{closure}} 1001001
+vllm-request;[unknown];vllm_text::TextLlm::generate_inner::{{closure}} 14014014
+vllm-request;__floattidf 1001001
+vllm-request;__sched_yield 21021021
+vllm-request;_mi_bin_size 3003003
+vllm-request;_mi_malloc_generic 22022022
+vllm-request;_mi_option_get_fast 2002002
+vllm-request;_mi_page_free_collect 20020020
+vllm-request;_mi_page_malloc_zero 80080080
+vllm-request;_mi_theap_malloc_zero 8008008
+vllm-request;alloc::collections::btree::map::BTreeMap<K,V,A>::insert 2002002
+vllm-request;alloc::collections::btree::node::Handle<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Mut,K,V,alloc::collections::btree::node::marker::Leaf>,alloc::collections::btree::node::marker::Edge>::insert_recursing 1001001
+vllm-request;alloc::fmt::format::format_inner 1001001
+vllm-request;alloc::raw_vec::RawVec<T,A>::grow_one 4004004
+vllm-request;alloc::raw_vec::RawVecInner<A>::finish_grow 8008008
+vllm-request;alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle 2002002
+vllm-request;alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle;<&mut serde_json::de::Deserializer<R> as serde_core::de::Deserializer>::deserialize_struct 1001001
+vllm-request;alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle;<serde_core::de::impls::<impl serde_core::de::Deserialize for alloc::vec::Vec<T>>::deserialize::VecVisitor<T> as serde_core::de::Visitor>::visit_seq 1001001
+vllm-request;alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle;<serde_json::de::MapAccess<R> as serde_core::de::MapAccess>::next_key_seed::has_next_key 2002002
+vllm-request;alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle;<serde_json::de::MapAccess<R> as serde_core::de::MapAccess>::next_value_seed 2002002
+vllm-request;alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle;<serde_json::de::SeqAccess<R> as serde_core::de::SeqAccess>::next_element_seed 2002002
+vllm-request;alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle;<serde_json::de::SeqAccess<R> as serde_core::de::SeqAccess>::next_element_seed::has_next_element 3003003
+vllm-request;alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle;<serde_path_to_error::de::TrackedSeed<X> as serde_core::de::DeserializeSeed>::deserialize 3003003
+vllm-request;alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle;core::str::converts::from_utf8 2002002
+vllm-request;alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle;mi_theap_malloc_aligned 1001001
+vllm-request;alloc::str::join_generic_copy 2002002
+vllm-request;alloc::sync::Arc<T,A>::drop_slow 2002002
+vllm-request;axum::json::json_content_type 1001001
+vllm-request;axum_core::extract::request_parts::<impl axum_core::extract::FromRequest<S> for bytes::bytes::Bytes>::from_request::{{closure}} 3003003
+vllm-request;bytes::bytes::Bytes::copy_from_slice 1001001
+vllm-request;bytes::bytes_mut::shared_v_clone 1001001
+vllm-request;core::fmt::Write::write_fmt 1001001
+vllm-request;core::hash::BuildHasher::hash_one 3003003
+vllm-request;core::ops::function::FnOnce::call_once 19019019
+vllm-request;core::ops::function::impls::<impl core::ops::function::FnMut<A> for &F>::call_mut 1001001
+vllm-request;core::ptr::drop_in_place<axum::extract::matched_path::MatchedNestedPath> 1001001
+vllm-request;core::ptr::drop_in_place<axum::extract::original_uri::OriginalUri> 3003003
+vllm-request;core::ptr::drop_in_place<axum::routing::route::RouteFuture<core::convert::Infallible>> 8008008
+vllm-request;core::ptr::drop_in_place<axum::routing::url_params::UrlParams> 2002002
+vllm-request;core::ptr::drop_in_place<axum::util::MapIntoResponseFuture<axum::handler::future::IntoServiceFuture<core::pin::Pin<alloc::boxed::Box<dyn core::future::future::Future+Output = http::response::Response<axum_core::body::Body>+core::marker::Send>>>>> 4004004
+vllm-request;core::ptr::drop_in_place<minijinja::value::Value> 6006006
+vllm-request;core::ptr::drop_in_place<minijinja::value::ValueRepr> 1001001
+vllm-request;core::ptr::drop_in_place<tower::util::map_future::MapFuture<axum::util::MapIntoResponse<axum::handler::service::HandlerService<vllm_server::routes::sleep::wake_up,(axum_core::extract::private::ViaParts,axum::extract::state::State<alloc::sync::Arc<vllm_server::state::AppState>>,axum::extract::query::Query<vllm_server::routes::sleep::WakeUpParams>),alloc::sync::Arc<vllm_server::state::AppState>>>,tower::util::boxed_clone_sync::BoxCloneSyncService<http::request::Request<axum_core::body::Body>,http::response::Response<axum_core::body::Body>,core::convert::Infallible>::new<axum::util::MapIntoResponse<axum::handler::service::HandlerService<vllm_server::routes::sleep::wake_up,(axum_core::extract::private::ViaParts,axum::extract::state::State<alloc::sync::Arc<vllm_server::state::AppState>>,axum::extract::query::Query<vllm_server::routes::sleep::WakeUpParams>),alloc::sync::Arc<vllm_server::state::AppState>>>>::{{closure}}>> 1001001
+vllm-request;core::ptr::drop_in_place<tower::util::oneshot::State<tower::util::boxed_clone_sync::BoxCloneSyncService<http::request::Request<axum_core::body::Body>,http::response::Response<axum_core::body::Body>,core::convert::Infallible>,http::request::Request<axum_core::body::Body>>> 4004004
+vllm-request;core::ptr::drop_in_place<vllm_llm::Llm::generate::{{closure}}> 1001001
+vllm-request;core::result::Result<T,E>::and 2002002
+vllm-request;core::slice::sort::shared::smallsort::insertion_sort_shift_left 3003003
+vllm-request;core::str::converts::from_utf8 5005005
+vllm-request;core::str::pattern::simd_contains::{{closure}} 1001001
+vllm-request;crossbeam_deque::deque::Injector<T>::push 1001001
+vllm-request;crossbeam_deque::deque::Injector<T>::steal 5005005
+vllm-request;crossbeam_deque::deque::Stealer<T>::steal 4004004
+vllm-request;crossbeam_epoch::internal::Global::collect 1001001
+vllm-request;crossbeam_epoch::internal::Global::try_advance 3003003
+vllm-request;fastokens::Tokenizer::build_pre_tokenized 4004004
+vllm-request;fastokens::Tokenizer::token_to_id 1001001
+vllm-request;fastokens::normalizers::Normalizer::normalize 1001001
+vllm-request;fastokens::pre_tokenizers::split::Split::pre_tokenize 17017017
+vllm-request;fastokens::pre_tokenizers::split::find_matches_pcre2 26026026
+vllm-request;fastokens::pre_tokenizers::split::matches_to_segments 15015015
+vllm-request;hashbrown::map::HashMap<K,V,S,A>::insert 3003003
+vllm-request;hashbrown::raw::RawTable<T,A>::reserve_rehash 6006006
+vllm-request;hashbrown::rustc_entry::<impl hashbrown::map::HashMap<K,V,S,A>>::rustc_entry 2002002
+vllm-request;http::extensions::Extensions::insert 4004004
+vllm-request;http::header::map::HeaderMap<T>::try_insert2 1001001
+vllm-request;http::header::name::HdrName::from_bytes 1001001
+vllm-request;icu_normalizer::ComposingNormalizerBorrowed::normalize 9009009
+vllm-request;icu_normalizer::Decomposition<I>::gather_and_sort_combining 1001001
+vllm-request;indexmap::inner::Core<K,V>::insert_full 6006006
+vllm-request;indexmap::map::IndexMap<K,V,S>::get 1001001
+vllm-request;indexmap::map::IndexMap<K,V>::with_capacity 6006006
+vllm-request;memo_map::MemoMap<K,V,S>::get_or_try_insert 3003003
+vllm-request;mi_bin 4004004
+vllm-request;mi_free 20020020
+vllm-request;mi_good_size 3003003
+vllm-request;mi_malloc_aligned 4004004
+vllm-request;mi_page_queue_find_free_ex 2002002
+vllm-request;mi_theap_collect_ex 1001001
+vllm-request;mi_theap_malloc_aligned 6006006
+vllm-request;mi_theap_malloc_zero_aligned_at_generic 3003003
+vllm-request;mi_theap_malloc_zero_aligned_at_overalloc;<alloc::collections::btree::map::BTreeMap<K,V> as core::iter::traits::collect::FromIterator<(K,V)>>::from_iter 3003003
+vllm-request;mi_theap_malloc_zero_aligned_at_overalloc;<core::iter::adapters::map::Map<I,F> as core::iter::traits::iterator::Iterator>::fold 1001001
+vllm-request;mi_theap_malloc_zero_aligned_at_overalloc;[libc.so.6] 1001001
+vllm-request;mi_theap_malloc_zero_aligned_at_overalloc;mi_theap_malloc_aligned 1001001
+vllm-request;mi_theap_malloc_zero_aligned_at_overalloc;minijinja::vm::Vm::eval 2002002
+vllm-request;mi_theap_malloc_zero_aligned_at_overalloc;minijinja::vm::state::State::new 2002002
+vllm-request;mime::eq_ascii 7007007
+vllm-request;minijinja::environment::Environment::get_global 4004004
+vllm-request;minijinja::functions::BoxedFunction::new::{{closure}} 2002002
+vllm-request;minijinja::functions::builtins::namespace 4004004
+vllm-request;minijinja::loader::LoaderStore::get 2002002
+vllm-request;minijinja::template::Template::_render 6006006
+vllm-request;minijinja::value::Value::as_i64 1001001
+vllm-request;minijinja::value::Value::call_method 1001001
+vllm-request;minijinja::value::Value::try_iter 1001001
+vllm-request;minijinja::value::argtypes::<impl core::convert::TryFrom<minijinja::value::Value> for i128>::try_from 2002002
+vllm-request;minijinja::value::argtypes::<impl core::convert::TryFrom<minijinja::value::Value> for i64>::try_from 2002002
+vllm-request;minijinja::value::ops::add 1001001
+vllm-request;minijinja::value::ops::coerce 4004004
+vllm-request;minijinja::value::ops::slice 1001001
+vllm-request;minijinja::value::ops::slice;alloc::fmt::format::format_inner 4004004
+vllm-request;minijinja::value::ops::slice;alloc::fmt::format::format_inner;<minijinja::value::ValueKind as core::fmt::Display>::fmt 2002002
+vllm-request;minijinja::value::ops::slice;alloc::fmt::format::format_inner;core::fmt::write 1001001
+vllm-request;minijinja::vm::Vm::eval_impl 18018018
+vllm-request;minijinja::vm::context::Context::load 4004004
+vllm-request;minijinja::vm::context::Context::store 1001001
+vllm-request;minijinja::vm::loop_object::LoopState::next 4004004
+vllm-request;mio::sys::unix::waker::Waker::wake;write 1001001
+vllm-request;mio::sys::unix::waker::Waker::wake;write;[libc.so.6];[libc.so.6] 1001001
+vllm-request;nu_ansi_term::ansi::<impl nu_ansi_term::style::Style>::write_prefix 1001001
+vllm-request;parking_lot::condvar::Condvar::notify_one_slow 3003003
+vllm-request;parking_lot::condvar::Condvar::wait_until_internal 1001001
+vllm-request;pcre2::bytes::Regex::find_at 138138138
+vllm-request;pcre2::pool::inner::Pool<T,F>::get_slow 35035035
+vllm-request;pcre2_jit_match_8 9009009
+vllm-request;pcre2_jit_match_8;[unknown];[unknown];[perf-3639361.map]_[j] 357357357
+vllm-request;pcre2_match_8 58058058
+vllm-request;prometheus_client::metrics::family::Family<S,M,C>::get_or_create_owned 9009009
+vllm-request;rayon::iter::from_par_iter::<impl rayon::iter::FromParallelIterator<T> for alloc::vec::Vec<T>>::from_par_iter 1001001
+vllm-request;rayon::iter::plumbing::bridge_producer_consumer::helper 2002002
+vllm-request;rayon_core::registry::Registry::current_num_threads 1001001
+vllm-request;rayon_core::registry::WorkerThread::wait_until_cold 8008008
+vllm-request;rmp::encode::dec::write_f32 3003003
+vllm-request;rmp::encode::sint::write_sint 3003003
+vllm-request;rmp::encode::str::write_str 6006006
+vllm-request;rmp::encode::uint::write_uint 2002002
+vllm-request;rmp::encode::write_array_len 3003003
+vllm-request;rmp::encode::write_map_len 2002002
+vllm-request;rmp::encode::write_marker 1001001
+vllm-request;rmp::marker::Marker::to_u8 3003003
+vllm-request;serde_core::de::Deserializer::__deserialize_content_v1 3003003
+vllm-request;serde_core::ser::Serializer::collect_map 2002002
+vllm-request;serde_core::ser::impls::<impl serde_core::ser::Serialize for &T>::serialize 3003003
+vllm-request;serde_json::de::Deserializer<R>::end_map 2002002
+vllm-request;serde_json::de::Deserializer<R>::parse_number 1001001
+vllm-request;serde_json::read::SliceRead::skip_to_escape 13013013
+vllm-request;serde_json::read::parse_escape 1001001
+vllm-request;serde_json::read::parse_escape;<alloc::raw_vec::RawVec<u8>>::grow_one;<alloc::raw_vec::RawVecInner>::finish_grow 1001001
+vllm-request;serde_json::read::parse_escape;<alloc::raw_vec::RawVec<u8>>::grow_one;_mi_theap_realloc_zero 1001001
+vllm-request;std::thread::local::LocalKey<T>::with 612612612
+vllm-request;syscall 1001001
+vllm-request;tokio::runtime::context::scoped::Scoped<T>::with 1001001
+vllm-request;tokio::runtime::scheduler::multi_thread::park::Parker::park 2002002
+vllm-request;tokio::runtime::scheduler::multi_thread::park::Unparker::unpark 1001001
+vllm-request;tokio::runtime::scheduler::multi_thread::worker::<impl tokio::runtime::scheduler::multi_thread::handle::Handle>::notify_parked_remote 1001001
+vllm-request;tokio::runtime::task::core::Core<T,S>::poll 2002002
+vllm-request;tokio::runtime::task::harness::Harness<T,S>::try_read_output 4004004
+vllm-request;tokio::runtime::task::raw::schedule 2002002
+vllm-request;tokio::runtime::task::state::State::transition_to_notified_by_val 1001001
+vllm-request;tokio::runtime::task::waker::wake_by_val 1001001
+vllm-request;tokio::sync::batch_semaphore::Semaphore::add_permits_locked 1001001
+vllm-request;tracing_core::field::ValueSet::record 3003003
+vllm-request;tracing_subscriber::registry::extensions::ExtensionsMut::insert 1001001
+vllm-request;uuid::fmt::encode_simple 1001001
+vllm-request;vllm_chat::output::default::DefaultChatOutputProcessor::new 6006006
+vllm-request;vllm_chat::output::default::DefaultChatOutputProcessor::new;<str>::to_lowercase 4004004
+vllm-request;vllm_chat::output::default::DefaultChatOutputProcessor::new;_mi_page_malloc_zero 1001001
+vllm-request;vllm_chat::parser::reasoning::<impl vllm_chat::parser::ParserFactory<alloc::sync::Arc<dyn core::ops::function::Fn<(alloc::sync::Arc<dyn vllm_tokenizer::Tokenizer>,)>+Output = core::result::Result<alloc::boxed::Box<dyn vllm_parser::reasoning::ReasoningParser>,vllm_parser::reasoning::ReasoningError>+core::marker::Sync+core::marker::Send>>>::create 3003003
+vllm-request;vllm_chat::renderer::hf::_::<impl serde_core::ser::Serialize for vllm_chat::renderer::hf::TemplateContent>::serialize 1001001
+vllm-request;vllm_chat::renderer::hf::_::<impl serde_core::ser::Serialize for vllm_chat::renderer::hf::TemplateMessage>::serialize 6006006
+vllm-request;vllm_chat::renderer::hf::template::_::<impl serde_core::ser::Serialize for vllm_chat::renderer::hf::template::TemplateContext>::serialize 2002002
+vllm-request;vllm_engine_core_client::client::state::RequestRegistry::register 1001001
+vllm-request;vllm_engine_core_client::protocol::sampling::_::<impl serde_core::ser::Serialize for vllm_engine_core_client::protocol::sampling::EngineCoreSamplingParams>::serialize 5005005
+vllm-request;vllm_llm::inflight::InflightRequests::track 5005005
+vllm-request;vllm_llm::request::GenerateRequest::prepare;alloc::fmt::format::format_inner 2002002
+vllm-request;vllm_llm::request::GenerateRequest::prepare;alloc::fmt::format::format_inner;<&T as core::fmt::Display>::fmt 1001001
+vllm-request;vllm_llm::request::GenerateRequest::prepare;alloc::fmt::format::format_inner;<alloc::string::String as core::fmt::Display>::fmt 1001001
+vllm-request;vllm_llm::request::GenerateRequest::prepare;alloc::fmt::format::format_inner;<core::fmt::Formatter>::pad 1001001
+vllm-request;vllm_llm::request::GenerateRequest::prepare;alloc::fmt::format::format_inner;core::fmt::write 1001001
+vllm-request;vllm_llm::request::GenerateRequest::prepare;core::fmt::write 1001001
+vllm-request;vllm_parser::reasoning::ReasoningParser::preserve_special_tokens 2002002
+vllm-request;vllm_server::routes::openai::chat_completions::chat_completions::{{closure}} 1001001
+vllm-request;vllm_server::routes::openai::chat_completions::validate::validate_request_compat 2002002
+vllm-request;vllm_server::routes::openai::utils::types::_::<impl serde_core::de::Deserialize for vllm_server::routes::openai::utils::types::ChatMessage>::deserialize 1001001
+vllm-request;vllm_server::state::AppState::resolve_model_with_loras::{{closure}} 2002002
+vllm-request;vllm_text::TextLlm::generate::{{closure}} 1001001
+vllm-request;vllm_text::TextLlm::generate_inner::{{closure}} 2002002
+vllm-request;vllm_text::lower::lower_sampling_params 1001001
+vllm-request;vllm_text::lower::lower_text_request 1001001
+vllm-request;write 1001001
+vllm-zmq-0;<&mut A as serde_core::de::SeqAccess>::next_element 107107107
+vllm-zmq-0;<&mut rmp_serde::decode::Deserializer<R,C> as serde_core::de::Deserializer>::deserialize_option 42042042
+vllm-zmq-0;<alloc::collections::btree::map::BTreeMap<K,V,A> as core::ops::drop::Drop>::drop 1001001
+vllm-zmq-0;<asynchronous_codec::framed_read::FramedRead<T,D> as futures_core::stream::Stream>::poll_next 46046046
+vllm-zmq-0;<asynchronous_codec::framed_write::FramedWrite<T,E> as futures_sink::Sink<<E as asynchronous_codec::encoder::Encoder>::Item>>::poll_flush 1001001
+vllm-zmq-0;<core::hash::sip::Hasher<S> as core::hash::Hasher>::write 17017017
+vllm-zmq-0;<serde_core::de::impls::<impl serde_core::de::Deserialize for alloc::vec::Vec<T>>::deserialize::VecVisitor<T> as serde_core::de::Visitor>::visit_seq 25025025
+vllm-zmq-0;<std::hash::random::DefaultHasher as core::hash::Hasher>::write 51051051
+vllm-zmq-0;<std::sys::pal::unix::time::Timespec>::sub_timespec 1001001
+vllm-zmq-0;<tokio::sync::batch_semaphore::Acquire as core::future::future::Future>::poll 13013013
+vllm-zmq-0;<tokio::sync::batch_semaphore::Acquire as core::ops::drop::Drop>::drop 8008008
+vllm-zmq-0;<tokio_util::compat::Compat<T> as futures_io::if_std::AsyncRead>::poll_read 24024024
+vllm-zmq-0;<vllm_engine_core_client::protocol::output::EngineCoreOutputs as core::convert::TryFrom<vllm_engine_core_client::protocol::output::WireEngineCoreOutputs>>::try_from 32032032
+vllm-zmq-0;<vllm_engine_core_client::protocol::output::EngineCoreOutputs as serde_core::de::Deserialize>::deserialize 20020020
+vllm-zmq-0;<zeromq::codec::zmq_codec::ZmqCodec as asynchronous_codec::decoder::Decoder>::decode 36036036
+vllm-zmq-0;<zeromq::codec::zmq_codec::ZmqCodec as asynchronous_codec::encoder::Encoder>::encode 1001001
+vllm-zmq-0;<zeromq::pull::PullSocket as zeromq::SocketRecv>::recv::{{closure}} 8008008
+vllm-zmq-0;[libc.so.6] 355355355
+vllm-zmq-0;[unknown];<alloc::vec::Vec<T> as alloc::vec::spec_from_iter::SpecFromIter<T,I>>::from_iter 2002002
+vllm-zmq-0;[unknown];<alloc::vec::into_iter::IntoIter<T,A> as core::ops::drop::Drop>::drop 4004004
+vllm-zmq-0;[unknown];<futures_util::sink::send::Send<Si,Item> as core::future::future::Future>::poll 2002002
+vllm-zmq-0;[unknown];<prometheus_client::metrics::gauge::Gauge<N,A> as core::default::Default>::default;<alloc::collections::btree::map::BTreeMap<K,V,A> as core::ops::drop::Drop>::drop 9009009
+vllm-zmq-0;[unknown];<prometheus_client::metrics::gauge::Gauge<N,A> as core::default::Default>::default;vllm_engine_core_client::metrics::LoraInfoExporter::update 10010010
+vllm-zmq-0;[unknown];<serde_core::de::impls::<impl serde_core::de::Deserialize for alloc::vec::Vec<T>>::deserialize::VecVisitor<T> as serde_core::de::Visitor>::visit_seq 50050050
+vllm-zmq-0;[unknown];<serde_core::de::impls::StringVisitor as serde_core::de::Visitor>::visit_str 13013013
+vllm-zmq-0;[unknown];<std::hash::random::DefaultHasher as core::hash::Hasher>::write 1001001
+vllm-zmq-0;[unknown];<tokio_util::compat::Compat<T> as futures_io::if_std::AsyncWrite>::poll_flush 1001001
+vllm-zmq-0;[unknown];<tokio_util::compat::Compat<T> as futures_io::if_std::AsyncWrite>::poll_write 3003003
+vllm-zmq-0;[unknown];<vllm_engine_core_client::protocol::output::EngineCoreFinishReason as serde_core::de::Deserialize>::deserialize 3003003
+vllm-zmq-0;[unknown];<vllm_engine_core_client::protocol::output::EngineCoreOutputs as serde_core::de::Deserialize>::deserialize 6006006
+vllm-zmq-0;[unknown];<zeromq::codec::zmq_codec::ZmqCodec as asynchronous_codec::decoder::Decoder>::decode 15015015
+vllm-zmq-0;[unknown];<zeromq::router::RouterSendHalf as zeromq::SocketSend>::send::{{closure}} 4004004
+vllm-zmq-0;[unknown];[libc.so.6] 166166166
+vllm-zmq-0;[unknown];[unknown];<alloc::collections::btree::map::BTreeMap<K,V,A> as core::ops::drop::Drop>::drop 3003003
+vllm-zmq-0;[unknown];[unknown];<alloc::collections::btree::map::Iter<K,V> as core::iter::traits::iterator::Iterator>::next 1001001
+vllm-zmq-0;[unknown];[unknown];<alloc::vec::Vec<T> as alloc::vec::spec_from_iter::SpecFromIter<T,I>>::from_iter 3003003
+vllm-zmq-0;[unknown];[unknown];<zeromq::pull::PullSocket as zeromq::SocketRecv>::recv::{{closure}} 24024024
+vllm-zmq-0;[unknown];[unknown];[libc.so.6] 11011011
+vllm-zmq-0;[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];[unknown];__mi_stat_decrease 1001001
+vllm-zmq-0;[unknown];[unknown];[unknown];futures_task::waker::clone_arc_raw 4004004
+vllm-zmq-0;[unknown];[unknown];[unknown];tokio::runtime::io::scheduled_io::ScheduledIo::poll_readiness 1001001
+vllm-zmq-0;[unknown];[unknown];bytes::bytes::shared_drop 4004004
+vllm-zmq-0;[unknown];[unknown];core::ptr::drop_in_place<core::option::Option<alloc::boxed::Box<vllm_engine_core_client::protocol::stats::SchedulerStats>>> 5005005
+vllm-zmq-0;[unknown];[unknown];mi_free 3003003
+vllm-zmq-0;[unknown];[unknown];parking_lot::condvar::Condvar::notify_one_slow 1001001
+vllm-zmq-0;[unknown];[unknown];tokio::runtime::scheduler::multi_thread::park::Unparker::unpark 4004004
+vllm-zmq-0;[unknown];[unknown];tokio::runtime::scheduler::multi_thread::stats::Stats::end_processing_scheduled_tasks 1001001
+vllm-zmq-0;[unknown];[unknown];tokio::runtime::scheduler::multi_thread::stats::Stats::start_processing_scheduled_tasks;<std::sys::pal::unix::time::Timespec>::now;clock_gettime;[[vdso]]_[k] 1001001
+vllm-zmq-0;[unknown];[unknown];tokio::runtime::scheduler::multi_thread::worker::Context::run 17017017
+vllm-zmq-0;[unknown];[unknown];tokio::runtime::scheduler::multi_thread::worker::Context::run_task 10010010
+vllm-zmq-0;[unknown];[unknown];tokio::runtime::task::harness::Harness<T,S>::complete 2002002
+vllm-zmq-0;[unknown];[unknown];tokio::runtime::task::harness::Harness<T,S>::poll 10010010
+vllm-zmq-0;[unknown];[unknown];tokio::runtime::task::raw::schedule 2002002
+vllm-zmq-0;[unknown];[unknown];tokio::sync::mpsc::chan::Rx<T,S>::recv 4004004
+vllm-zmq-0;[unknown];[unknown];tokio::util::sharded_list::ShardedList<L,<L as tokio::util::linked_list::Link>::Target>::remove 1001001
+vllm-zmq-0;[unknown];[unknown];vllm_engine_core_client::client::imp::run_output_dispatcher_loop::{{closure}} 41041041
+vllm-zmq-0;[unknown];[unknown];vllm_engine_core_client::client::state::RequestRegistry::lora_adapter_states 5005005
+vllm-zmq-0;[unknown];[unknown];vllm_engine_core_client::metrics::LoraInfoExporter::update 2002002
+vllm-zmq-0;[unknown];_mi_page_malloc_zero 20020020
+vllm-zmq-0;[unknown];bytes::bytes::shared_drop 8008008
+vllm-zmq-0;[unknown];bytes::bytes::static_to_vec;[unknown];<zeromq::codec::zmq_codec::ZmqCodec as asynchronous_codec::encoder::Encoder>::encode 1001001
+vllm-zmq-0;[unknown];bytes::bytes_mut::shared_v_to_vec;<zeromq::codec::zmq_codec::ZmqCodec as asynchronous_codec::decoder::Decoder>::decode 6006006
+vllm-zmq-0;[unknown];bytes::bytes_mut::shared_v_to_vec;[unknown];<zeromq::codec::zmq_codec::ZmqCodec as asynchronous_codec::encoder::Encoder>::encode 1001001
+vllm-zmq-0;[unknown];bytes::bytes_mut::shared_v_to_vec;[unknown];bytes::bytes::static_drop 1001001
+vllm-zmq-0;[unknown];bytes::bytes_mut::shared_v_to_vec;[unknown];mi_free 2002002
+vllm-zmq-0;[unknown];bytes::bytes_mut::shared_v_to_vec;_mi_page_malloc_zero 34034034
+vllm-zmq-0;[unknown];bytes::bytes_mut::shared_v_to_vec;mi_malloc_aligned 5005005
+vllm-zmq-0;[unknown];bytes::bytes_mut::shared_v_to_vec;mi_theap_malloc_aligned 5005005
+vllm-zmq-0;[unknown];core::option::Option<T>::get_or_insert_with 2002002
+vllm-zmq-0;[unknown];core::str::converts::from_utf8 43043043
+vllm-zmq-0;[unknown];futures_task::waker::wake_arc_raw;[unknown];[unknown];<std::io::error::Error>::kind 1001001
+vllm-zmq-0;[unknown];futures_task::waker::wake_arc_raw;[unknown];[unknown];recv 7007007
+vllm-zmq-0;[unknown];futures_task::waker::wake_arc_raw;[unknown];[unknown];tokio::net::tcp::stream::TcpStream::poll_read_priv 17017017
+vllm-zmq-0;[unknown];futures_task::waker::wake_arc_raw;[unknown];[unknown];tokio::net::tcp::stream::TcpStream::poll_read_priv;[libc.so.6] 1001001
+vllm-zmq-0;[unknown];futures_task::waker::wake_arc_raw;[unknown];[unknown];tokio::net::tcp::stream::TcpStream::poll_read_priv;recv;[libc.so.6] 2002002
+vllm-zmq-0;[unknown];futures_task::waker::wake_arc_raw;[unknown];[unknown];tokio::net::tcp::stream::TcpStream::poll_read_priv;recv;[libc.so.6];[libc.so.6] 38038038
+vllm-zmq-0;[unknown];futures_task::waker::wake_arc_raw;[unknown];[unknown];tokio::runtime::io::registration::Registration::poll_ready 1001001
+vllm-zmq-0;[unknown];hashbrown::map::HashMap<K,V,S,A>::insert 19019019
+vllm-zmq-0;[unknown];mi_free 2002002
+vllm-zmq-0;[unknown];mi_malloc_aligned 3003003
+vllm-zmq-0;[unknown];mi_theap_malloc_aligned 6006006
+vllm-zmq-0;[unknown];rmp_serde::decode::Deserializer<R,C>::any_inner 63063063
+vllm-zmq-0;[unknown];rmp_serde::decode::any_num 3003003
+vllm-zmq-0;[unknown];serde_core::de::impls::<impl serde_core::de::Deserialize for core::option::Option<T>>::deserialize 17017017
+vllm-zmq-0;[unknown];tokio::runtime::scheduler::multi_thread::queue::Steal<T>::steal_into 4004004
+vllm-zmq-0;[unknown];tokio::runtime::scheduler::multi_thread::worker::Context::run 8008008
+vllm-zmq-0;[unknown];tokio::runtime::task::waker::wake_by_val;[unknown];[unknown];<tokio::sync::batch_semaphore::Acquire as core::future::future::Future>::poll 19019019
+vllm-zmq-0;[unknown];tokio::runtime::task::waker::wake_by_val;[unknown];[unknown];[libc.so.6] 31031031
+vllm-zmq-0;[unknown];tokio::runtime::task::waker::wake_by_val;[unknown];[unknown];tokio::sync::mpsc::bounded::Sender<T>::send::{{closure}} 31031031
+vllm-zmq-0;[unknown];vllm_engine_core_client::client::imp::run_output_dispatcher_loop::{{closure}} 4004004
+vllm-zmq-0;[unknown];vllm_engine_core_client::protocol::decode_msgpack 20020020
+vllm-zmq-0;[unknown];vllm_engine_core_client::protocol::output::decode_engine_core_outputs 28028028
+vllm-zmq-0;[unknown];vllm_engine_core_client::transport::run_output_loop::{{closure}} 11011011
+vllm-zmq-0;[unknown];vllm_engine_core_client::transport::send_message::{{closure}} 1001001
+vllm-zmq-0;__floattidf 4004004
+vllm-zmq-0;__mi_stat_counter_increase 1001001
+vllm-zmq-0;__sched_yield 2002002
+vllm-zmq-0;_mi_bin 1001001
+vllm-zmq-0;_mi_bin_size 9009009
+vllm-zmq-0;_mi_malloc_generic 21021021
+vllm-zmq-0;_mi_option_get_fast 1001001
+vllm-zmq-0;_mi_page_free_collect 34034034
+vllm-zmq-0;_mi_page_malloc_zero 146146146
+vllm-zmq-0;_mi_theap_malloc_zero 79079079
+vllm-zmq-0;alloc::collections::binary_heap::BinaryHeap<T,A>::pop 8008008
+vllm-zmq-0;alloc::collections::btree::map::BTreeMap<K,V,A>::insert 1001001
+vllm-zmq-0;alloc::collections::vec_deque::VecDeque<T,A>::make_contiguous 16016016
+vllm-zmq-0;alloc::sync::Arc<T,A>::drop_slow 14014014
+vllm-zmq-0;bytes::bytes::shared_clone 33033033
+vllm-zmq-0;bytes::bytes::shared_drop 6006006
+vllm-zmq-0;bytes::bytes_mut::BytesMut::reserve_inner 2002002
+vllm-zmq-0;bytes::bytes_mut::BytesMut::split_to 27027027
+vllm-zmq-0;bytes::bytes_mut::shared_v_drop 12012012
+vllm-zmq-0;core::hash::BuildHasher::hash_one 62062062
+vllm-zmq-0;core::ptr::drop_in_place<core::option::Option<vllm_engine_core_client::protocol::logprobs::MaybeWireLogprobs>> 7007007
+vllm-zmq-0;core::ptr::drop_in_place<tokio::sync::mpsc::bounded::Sender<core::result::Result<vllm_engine_core_client::protocol::output::EngineCoreOutputs,vllm_engine_core_client::error::Error>>::send::{{closure}}> 1001001
+vllm-zmq-0;core::ptr::drop_in_place<vllm_engine_core_client::client::imp::ClientInner::send_to_engine<vllm_engine_core_client::protocol::utility::EngineCoreUtilityRequest>::{{closure}}::{{closure}}> 1001001
+vllm-zmq-0;futures_util::stream::stream::StreamExt::poll_next_unpin 101101101
+vllm-zmq-0;hashbrown::map::HashMap<K,V,S,A>::insert 6006006
+vllm-zmq-0;hashbrown::map::HashMap<K,V,S,A>::remove 31031031
+vllm-zmq-0;mi_bin 4004004
+vllm-zmq-0;mi_free 48048048
+vllm-zmq-0;mi_good_size 2002002
+vllm-zmq-0;mi_malloc_aligned 18018018
+vllm-zmq-0;mi_page_queue_find_free_ex 4004004
+vllm-zmq-0;mi_theap_malloc_aligned 35035035
+vllm-zmq-0;mi_theap_malloc_zero_aligned_at_generic 6006006
+vllm-zmq-0;mi_theap_malloc_zero_aligned_at_overalloc 5005005
+vllm-zmq-0;mio::sys::unix::waker::Waker::wake 1001001
+vllm-zmq-0;mio::sys::unix::waker::Waker::wake;write;[libc.so.6];[libc.so.6] 2002002
+vllm-zmq-0;parking_lot::condvar::Condvar::notify_one_slow 5005005
+vllm-zmq-0;parking_lot::condvar::Condvar::notify_one_slow;<std::sys::pal::unix::time::Timespec>::now 1001001
+vllm-zmq-0;parking_lot::condvar::Condvar::notify_one_slow;<std::sys::pal::unix::time::Timespec>::now;clock_gettime;[[vdso]]_[k] 1001001
+vllm-zmq-0;parking_lot::condvar::Condvar::notify_one_slow;<std::sys::pal::unix::time::Timespec>::now;clock_gettime;__vdso_clock_gettime_[k] 1001001
+vllm-zmq-0;parking_lot::condvar::Condvar::wait_until_internal 6006006
+vllm-zmq-0;parking_lot::raw_mutex::RawMutex::lock_slow 2002002
+vllm-zmq-0;parking_lot_core::parking_lot::lock_bucket_pair 5005005
+vllm-zmq-0;rmp_serde::decode::Deserializer<R,C>::any_inner 375375375
+vllm-zmq-0;rmp_serde::decode::any_num 50050050
+vllm-zmq-0;scc::hash_map::HashMap<K,V,H>::get_async::{{closure}} 2002002
+vllm-zmq-0;send 1001001
+vllm-zmq-0;serde_core::de::impls::<impl serde_core::de::Deserialize for core::option::Option<T>>::deserialize 68068068
+vllm-zmq-0;syscall 5005005
+vllm-zmq-0;tokio::net::tcp::stream::TcpStream::poll_write_priv 1001001
+vllm-zmq-0;tokio::net::tcp::stream::TcpStream::poll_write_priv;send;[libc.so.6];[libc.so.6] 1001001
+vllm-zmq-0;tokio::runtime::context::scoped::Scoped<T>::with 17017017
+vllm-zmq-0;tokio::runtime::context::with_scheduler 8008008
+vllm-zmq-0;tokio::runtime::io::registration::Registration::poll_ready 7007007
+vllm-zmq-0;tokio::runtime::io::scheduled_io::ScheduledIo::poll_readiness 15015015
+vllm-zmq-0;tokio::runtime::scheduler::multi_thread::park::Inner::park_condvar 4004004
+vllm-zmq-0;tokio::runtime::scheduler::multi_thread::park::Parker::park 5005005
+vllm-zmq-0;tokio::runtime::scheduler::multi_thread::park::Unparker::unpark 8008008
+vllm-zmq-0;tokio::runtime::scheduler::multi_thread::stats::Stats::end_processing_scheduled_tasks 10010010
+vllm-zmq-0;tokio::runtime::scheduler::multi_thread::stats::Stats::end_processing_scheduled_tasks;<std::sys::pal::unix::time::Timespec>::now 1001001
+vllm-zmq-0;tokio::runtime::scheduler::multi_thread::stats::Stats::end_processing_scheduled_tasks;<std::sys::pal::unix::time::Timespec>::now;clock_gettime 1001001
+vllm-zmq-0;tokio::runtime::scheduler::multi_thread::stats::Stats::end_processing_scheduled_tasks;<std::sys::pal::unix::time::Timespec>::now;clock_gettime;[[vdso]]_[k] 13013013
+vllm-zmq-0;tokio::runtime::scheduler::multi_thread::stats::Stats::end_processing_scheduled_tasks;<std::sys::pal::unix::time::Timespec>::now;clock_gettime;__vdso_clock_gettime_[k] 2002002
+vllm-zmq-0;tokio::runtime::scheduler::multi_thread::stats::Stats::end_processing_scheduled_tasks;<std::sys::pal::unix::time::Timespec>::sub_timespec 1001001
+vllm-zmq-0;tokio::runtime::scheduler::multi_thread::stats::Stats::end_processing_scheduled_tasks;[libm.so.6] 11011011
+vllm-zmq-0;tokio::runtime::scheduler::multi_thread::stats::Stats::end_processing_scheduled_tasks;clock_gettime 2002002
+vllm-zmq-0;tokio::runtime::scheduler::multi_thread::worker::<impl tokio::runtime::scheduler::multi_thread::handle::Handle>::notify_parked_remote 3003003
+vllm-zmq-0;tokio::runtime::scheduler::multi_thread::worker::Context::run 4004004
+vllm-zmq-0;tokio::runtime::scheduler::multi_thread::worker::Context::run_task 10010010
+vllm-zmq-0;tokio::runtime::task::core::Core<T,S>::poll 17017017
+vllm-zmq-0;tokio::runtime::task::core::Core<T,S>::set_stage 2002002
+vllm-zmq-0;tokio::runtime::task::harness::Harness<T,S>::poll 8008008
+vllm-zmq-0;tokio::runtime::task::raw::poll 1001001
+vllm-zmq-0;tokio::runtime::task::raw::schedule 9009009
+vllm-zmq-0;tokio::runtime::task::state::State::transition_to_notified_by_val 10010010
+vllm-zmq-0;tokio::runtime::task::waker::clone_waker 17017017
+vllm-zmq-0;tokio::runtime::task::waker::drop_waker 8008008
+vllm-zmq-0;tokio::runtime::task::waker::wake_by_val 4004004
+vllm-zmq-0;tokio::sync::batch_semaphore::Semaphore::add_permits_locked 16016016
+vllm-zmq-0;tokio::sync::mpsc::bounded::Sender<T>::send::{{closure}} 44044044
+vllm-zmq-0;tokio::sync::mpsc::chan::Rx<T,S>::recv 17017017
+vllm-zmq-0;tokio::sync::mpsc::list::Rx<T>::pop 17017017
+vllm-zmq-0;tokio::sync::mpsc::list::Tx<T>::push 63063063
+vllm-zmq-0;vllm_engine_core_client::client::imp::run_output_dispatcher_loop::{{closure}} 87087087
+vllm-zmq-0;vllm_engine_core_client::client::state::RequestRegistry::remove 1001001
+vllm-zmq-0;vllm_engine_core_client::client::state::RequestRegistry::sender_for_output 52052052
+vllm-zmq-0;vllm_engine_core_client::protocol::output::decode_engine_core_outputs 16016016
+vllm-zmq-0;vllm_engine_core_client::transport::run_output_loop::{{closure}} 71071071
+vllm-zmq-0;write 1001001

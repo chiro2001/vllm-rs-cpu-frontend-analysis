@@ -1,0 +1,77 @@
+{
+ "generated_at": "2026-09-25T13:34:24+0800",
+ "base_url": "http://127.0.0.1:8199",
+ "path": "/v1/chat/completions",
+ "concurrency": 1,
+ "num_requests_requested": 0,
+ "duration_requested_s": 20.0,
+ "stream": true,
+ "input_len_target": 1024,
+ "output_len_target": 128,
+ "tools": "none",
+ "warmup": 3,
+ "window": {
+  "open_epoch": 1790314444.33469,
+  "open_monotonic": 1425547.613431037,
+  "close_monotonic": 1425567.614802607,
+  "wall_seconds": 20.0014,
+  "ok_before_first_request_s": 1.3e-05
+ },
+ "requests_issued_in_window": 11918,
+ "requests_completed_in_window": 11918,
+ "requests_failed_in_window": 0,
+ "window_exhausted_num_requests": false,
+ "throughput_req_s": 595.859,
+ "throughput_out_tok_s": 76270.0,
+ "completion_tokens_total": 1525504,
+ "prompt_tokens_total": 12430474,
+ "prompt_tokens_mean": 1043.0,
+ "client_cpu_seconds": 15.2966,
+ "client_cpu_percent_of_one_core": 76.48,
+ "client_cpu_seconds_window_only": 15.2915,
+ "frontend_cpu_seconds": 20.1,
+ "frontend_utime_seconds": 9.81,
+ "frontend_stime_seconds": 10.29,
+ "client_cpu_seconds_procstat": 15.29,
+ "procstat": {
+  "basis": "utime+stime（不含子进程 cutime/cstime）",
+  "script": "REPO_HOME/projects/vllm/vllm-rs-wt/B-profile/harness/common/procstat.sh",
+  "window": "预热之后 / 窗口之前取 before；窗口结束之后取 after",
+  "pids_sampled": [
+   "3707922",
+   "3723038"
+  ],
+  "snapshot_before": "data/profiles/procstat-snapshots/B1n.before.json",
+  "snapshot_after": "data/profiles/procstat-snapshots/B1n.after.json",
+  "frontend_pid": "3707922",
+  "diff_out": "data/profiles/B1n.frontend-cpu.json",
+  "note": "frontend_cpu_seconds 与 client_cpu_* 是两个进程的两个数，绝不相加"
+ },
+ "latency_ms": {
+  "p50": 1.618,
+  "p90": 2.002,
+  "p99": 2.882,
+  "mean": 1.67
+ },
+ "ttft_ms": {
+  "p50": 0.496,
+  "p99": 1.074
+ },
+ "failures": [],
+ "normalized": {
+  "_units": "秒 / 请求、秒 / 千 token；CPU 为 utime+stime",
+  "frontend_cpu_s_per_request": 0.001686525,
+  "frontend_cpu_s_per_1k_input_tokens": 0.001616994,
+  "frontend_cpu_s_per_1k_output_tokens": 0.013175973,
+  "client_cpu_s_per_request": 0.001283059,
+  "client_cpu_s_per_1k_input_tokens": 0.001230162,
+  "client_cpu_s_per_1k_output_tokens": 0.0100239,
+  "frontend_cpu_s_per_window_s": 1.004931083
+ },
+ "body": {
+  "body_bytes": 4113,
+  "body_sha256": "face2eda66781b9b2fac29fe290b9c536d040b7e28397d87aaa70388f37d7429",
+  "body_source": "REPO_HOME/projects/vllm/vllm-rs-wt/B-profile/runs/b-cpu/bodies/B1n.body.json"
+ },
+ "note": "同 B1 但请求体不含 tools（隔离 tools 这一轴）"
+}

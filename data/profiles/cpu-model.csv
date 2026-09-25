@@ -1,0 +1,5 @@
+# 前端 CPU = utime+stime（procstat 口径，不含子进程）,拟合点=B1n/B2/B3,留一点验证=B1
+quantity,C_ns,per_isl_token_ns,per_osl_token_ns,validate_tag,validate_observed_ns,validate_predicted_ns,validate_error_pct
+total,406519.6,83.0189,9323.565,B1,1828556.0,1701301.9,-6.96
+utime,193897.9,75.2386,4302.7575,B1,925509.9,836517.2,-9.62
+stime,212621.7,7.7803,5020.8075,B1,903046.1,864784.8,-4.24

@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "REPO_HOME/projects/vllm/vllm-rs-wt/C-ab/harness/ab/ab_ctl.py", line 594, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "REPO_HOME/projects/vllm/vllm-rs-wt/C-ab/harness/ab/ab_ctl.py", line 590, in main
+    return args.func(args)
+           ^^^^^^^^^^^^^^^
+  File "REPO_HOME/projects/vllm/vllm-rs-wt/C-ab/harness/ab/ab_ctl.py", line 353, in cmd_perfstat
+    _sigint(child)
+  File "REPO_HOME/projects/vllm/vllm-rs-wt/C-ab/harness/ab/ab_ctl.py", line 359, in _sigint
+    os.kill(pid, signal.SIGINT)
+                 ^^^^^^
+NameError: name 'signal' is not defined. Did you forget to import 'signal'?

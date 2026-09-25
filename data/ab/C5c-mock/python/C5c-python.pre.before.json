@@ -1,0 +1,33 @@
+{
+ "taken_at": "2026-09-25T14:12:34+0800",
+ "epoch": 1790316754.3222148,
+ "wall": 1790316754.322215,
+ "pids": {
+  "3842411": {
+   "comm": "vllm",
+   "state": "S",
+   "utime_ticks": 20381,
+   "stime_ticks": 2598,
+   "cutime_ticks": 0,
+   "cstime_ticks": 0,
+   "self_cpu_ticks": 22979,
+   "with_children_cpu_ticks": 22979,
+   "rss_kb": 1037352,
+   "threads": 8,
+   "ticks_per_sec": 100
+  },
+  "3842979": {
+   "comm": "vllm-mock-engin",
+   "state": "S",
+   "utime_ticks": 461,
+   "stime_ticks": 1804,
+   "cutime_ticks": 0,
+   "cstime_ticks": 0,
+   "self_cpu_ticks": 2265,
+   "with_children_cpu_ticks": 2265,
+   "rss_kb": 6552,
+   "threads": 3,
+   "ticks_per_sec": 100
+  }
+ }
+}

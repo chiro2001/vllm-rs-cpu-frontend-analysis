@@ -1,0 +1,99 @@
+{
+ "run": "b-t4",
+ "side": "python",
+ "tag": "A4",
+ "measured_at": "2026-09-25T17:29:59+0800",
+ "image": "quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler",
+ "chip": "4",
+ "port": "18301",
+ "vllm_rs_bin_sha256_16": "cae05321227ed3c7",
+ "load": {
+  "input_len": 1024,
+  "output_len": 128,
+  "num_prompts": 96,
+  "max_concurrency": 1,
+  "warmup": 4
+ },
+ "window": {
+  "start_epoch": 1790328509.5620232,
+  "end_epoch": 1790328593.088701,
+  "seconds": 83.527
+ },
+ "cores": {
+  "server_cpuset": "160-199",
+  "client_cpuset": "200-201"
+ },
+ "pids": {
+  "frontend": 2435624,
+  "engine": 2441265
+ },
+ "perf_record": {
+  "event": "cpu-clock",
+  "freq_hz": 999,
+  "call_graph": "fp",
+  "target": "frontend 宿主 pid（容器内进程）",
+  "perf_data_kept": true,
+  "script_gz": "perf-script.txt.gz"
+ },
+ "container_cpu_buckets": {
+  "frontend": 4.16,
+  "engine": 80.3,
+  "other": 0.0
+ },
+ "container_cpu_detail": {
+  "2435624": {
+   "comm": "vllm",
+   "cpu_seconds": 4.16,
+   "utime_seconds": 3.67,
+   "stime_seconds": 0.49,
+   "bucket": "frontend"
+  },
+  "2441264": {
+   "comm": "python3",
+   "cpu_seconds": 0,
+   "utime_seconds": 0.0,
+   "stime_seconds": 0.0,
+   "bucket": "other"
+  },
+  "2441265": {
+   "comm": "VLLM::EngineCor",
+   "cpu_seconds": 80.3,
+   "utime_seconds": 72.42,
+   "stime_seconds": 7.88,
+   "bucket": "engine"
+  }
+ },
+ "e2e": {
+  "completed": 96,
+  "failed": 0,
+  "duration": 66.676084190025,
+  "request_throughput": 1.439796610226879,
+  "output_throughput": 184.29396610904053,
+  "total_input_tokens": 99493,
+  "total_output_tokens": 12288,
+  "mean_ttft_ms": 89.36680520734323,
+  "p99_ttft_ms": 94.8195569566451,
+  "mean_tpot_ms": 4.7639058604373545,
+  "p99_tpot_ms": 5.017423771200775,
+  "mean_itl_ms": 4.726623041998816,
+  "mean_e2el_ms": null,
+  "_file": "openai-chat-infqps-concurrency1-Qwen3.5-0.8B-20260925-092952.json"
+ },
+ "loadavg": [
+  "49.18",
+  "48.57",
+  "48.12"
+ ],
+ "frontend_cpu": {
+  "cpu_seconds": 4.16,
+  "utime_seconds": 3.67,
+  "stime_seconds": 0.49
+ },
+ "normalized": {
+  "frontend_cpu_s_per_request": 0.043333,
+  "frontend_cpu_s_per_1k_input_tokens": 0.041812,
+  "frontend_cpu_s_per_1k_output_tokens": 0.338542,
+  "frontend_cpu_over_window": 0.0624,
+  "engine_cpu_over_window": 1.2043
+ }
+}

@@ -1,0 +1,75 @@
+{
+ "pid": "3842411",
+ "wall_seconds": 53.857,
+ "window": {
+  "from": "2026-09-25T14:09:43+0800",
+  "to": "2026-09-25T14:10:37+0800"
+ },
+ "cpu_seconds_total": 72.61,
+ "threads": [
+  {
+   "tid": 3842411,
+   "comm": "vllm",
+   "state_end": "S",
+   "utime_seconds": 43.44,
+   "stime_seconds": 2.35,
+   "cpu_seconds": 45.79
+  },
+  {
+   "tid": 3842987,
+   "comm": "vllm",
+   "state_end": "S",
+   "utime_seconds": 21.27,
+   "stime_seconds": 2.48,
+   "cpu_seconds": 23.75
+  },
+  {
+   "tid": 3842708,
+   "comm": "ZMQbg/IO/0",
+   "state_end": "S",
+   "utime_seconds": 0.33,
+   "stime_seconds": 2.4,
+   "cpu_seconds": 2.73
+  },
+  {
+   "tid": 3842709,
+   "comm": "ZMQbg/IO/1",
+   "state_end": "S",
+   "utime_seconds": 0.03,
+   "stime_seconds": 0.3,
+   "cpu_seconds": 0.33
+  },
+  {
+   "tid": 3843143,
+   "comm": "vllm",
+   "state_end": "S",
+   "utime_seconds": 0.01,
+   "stime_seconds": 0.0,
+   "cpu_seconds": 0.01
+  },
+  {
+   "tid": 3842424,
+   "comm": "vllm",
+   "state_end": "S",
+   "utime_seconds": 0.0,
+   "stime_seconds": 0.0,
+   "cpu_seconds": 0.0
+  },
+  {
+   "tid": 3842632,
+   "comm": "vllm",
+   "state_end": "S",
+   "utime_seconds": 0.0,
+   "stime_seconds": 0.0,
+   "cpu_seconds": 0.0
+  },
+  {
+   "tid": 3842707,
+   "comm": "ZMQbg/Reaper",
+   "state_end": "S",
+   "utime_seconds": 0.0,
+   "stime_seconds": 0.0,
+   "cpu_seconds": 0.0
+  }
+ ]
+}

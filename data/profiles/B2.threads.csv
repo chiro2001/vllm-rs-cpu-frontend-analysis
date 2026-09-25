@@ -1,0 +1,5 @@
+# tag,B2,total_cpu_ns,22232232210
+thread,cpu_ns,pct,samples
+vllm-request,17867867850,80.3692,17850
+tokio-rt-worker,3282282279,14.7636,3279
+vllm-zmq-0,1082082081,4.8672,1081

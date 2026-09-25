@@ -1,0 +1,2 @@
+# Samples: 4K of event 'cpu-clock'
+# Event count (approx.): 4336336332

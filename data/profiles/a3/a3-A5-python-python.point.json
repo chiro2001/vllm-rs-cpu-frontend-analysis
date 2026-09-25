@@ -1,0 +1,92 @@
+{
+ "run": "b-t4",
+ "side": "python",
+ "tag": "A5-python",
+ "measured_at": "2026-09-25T17:31:21+0800",
+ "image": "quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler",
+ "chip": "4",
+ "port": "18301",
+ "vllm_rs_bin_sha256_16": "cae05321227ed3c7",
+ "load": {
+  "input_len": 1024,
+  "output_len": 128,
+  "num_prompts": 64,
+  "max_concurrency": 1,
+  "warmup": 4
+ },
+ "window": {
+  "start_epoch": 1790328621.5801203,
+  "end_epoch": 1790328680.9729424,
+  "seconds": 59.393
+ },
+ "cores": {
+  "server_cpuset": "160-199",
+  "client_cpuset": "200-201"
+ },
+ "pids": {
+  "frontend": 2435624,
+  "engine": 2441265
+ },
+ "perf_record": null,
+ "container_cpu_buckets": {
+  "frontend": 2.8,
+  "engine": 51.99,
+  "other": 0.0
+ },
+ "container_cpu_detail": {
+  "2435624": {
+   "comm": "vllm",
+   "cpu_seconds": 2.8,
+   "utime_seconds": 2.38,
+   "stime_seconds": 0.42,
+   "bucket": "frontend"
+  },
+  "2441264": {
+   "comm": "python3",
+   "cpu_seconds": 0,
+   "utime_seconds": 0.0,
+   "stime_seconds": 0.0,
+   "bucket": "other"
+  },
+  "2441265": {
+   "comm": "VLLM::EngineCor",
+   "cpu_seconds": 51.99,
+   "utime_seconds": 46.94,
+   "stime_seconds": 5.05,
+   "bucket": "engine"
+  }
+ },
+ "e2e": {
+  "completed": 64,
+  "failed": 0,
+  "duration": 42.874271039967425,
+  "request_throughput": 1.492736749747632,
+  "output_throughput": 191.0703039676969,
+  "total_input_tokens": 66328,
+  "total_output_tokens": 8192,
+  "mean_ttft_ms": 86.12758328126802,
+  "p99_ttft_ms": 93.18009450566024,
+  "mean_tpot_ms": 4.595424472212271,
+  "p99_tpot_ms": 4.949249310774626,
+  "mean_itl_ms": 4.559456879874801,
+  "mean_e2el_ms": null,
+  "_file": "openai-chat-infqps-concurrency1-Qwen3.5-0.8B-20260925-093120.json"
+ },
+ "loadavg": [
+  "50.19",
+  "48.97",
+  "48.29"
+ ],
+ "frontend_cpu": {
+  "cpu_seconds": 2.8,
+  "utime_seconds": 2.38,
+  "stime_seconds": 0.42
+ },
+ "normalized": {
+  "frontend_cpu_s_per_request": 0.04375,
+  "frontend_cpu_s_per_1k_input_tokens": 0.042214,
+  "frontend_cpu_s_per_1k_output_tokens": 0.341797,
+  "frontend_cpu_over_window": 0.0653,
+  "engine_cpu_over_window": 1.2126
+ }
+}

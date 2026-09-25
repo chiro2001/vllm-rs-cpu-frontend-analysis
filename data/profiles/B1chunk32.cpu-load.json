@@ -1,0 +1,79 @@
+{
+ "generated_at": "2026-09-25T13:46:28+0800",
+ "base_url": "http://127.0.0.1:8199",
+ "path": "/v1/chat/completions",
+ "concurrency": 1,
+ "num_requests_requested": 0,
+ "duration_requested_s": 20.0,
+ "stream": true,
+ "input_len_target": 1024,
+ "output_len_target": 128,
+ "tools": "weather",
+ "warmup": 3,
+ "window": {
+  "open_epoch": 1790315168.8364232,
+  "open_monotonic": 1426272.115164049,
+  "close_monotonic": 1426292.115529084,
+  "wall_seconds": 20.0004,
+  "ok_before_first_request_s": 1.1e-05
+ },
+ "requests_issued_in_window": 29881,
+ "requests_completed_in_window": 29881,
+ "requests_failed_in_window": 0,
+ "window_exhausted_num_requests": false,
+ "throughput_req_s": 1494.023,
+ "throughput_out_tok_s": 191234.9,
+ "completion_tokens_total": 3824768,
+ "prompt_tokens_total": 36484701,
+ "prompt_tokens_mean": 1221.0,
+ "client_cpu_seconds": 8.5704,
+ "client_cpu_percent_of_one_core": 42.85,
+ "client_cpu_seconds_window_only": 8.5669,
+ "frontend_cpu_seconds": 15.24,
+ "frontend_utime_seconds": 9.68,
+ "frontend_stime_seconds": 5.56,
+ "client_cpu_seconds_procstat": 8.56,
+ "procstat": {
+  "basis": "utime+stime（不含子进程 cutime/cstime）",
+  "script": "REPO_HOME/projects/vllm/vllm-rs-wt/B-profile/harness/common/procstat.sh",
+  "window": "预热之后 / 窗口之前取 before；窗口结束之后取 after",
+  "pids_sampled": [
+   "3731987",
+   "3764042"
+  ],
+  "snapshot_before": "data/profiles/procstat-snapshots/B1chunk32.before.json",
+  "snapshot_after": "data/profiles/procstat-snapshots/B1chunk32.after.json",
+  "frontend_pid": "3731987",
+  "diff_out": "data/profiles/B1chunk32.frontend-cpu.json",
+  "note": "frontend_cpu_seconds 与 client_cpu_* 是两个进程的两个数，绝不相加；本点由 --tag-suffix chunk32 的命名修复产出（原文件名与 B1 冲突）",
+  "engine_chunk_size": 32
+ },
+ "latency_ms": {
+  "p50": 0.629,
+  "p90": 0.786,
+  "p99": 1.142,
+  "mean": 0.663
+ },
+ "ttft_ms": {
+  "p50": 0.547,
+  "p99": 1.009
+ },
+ "failures": [],
+ "normalized": {
+  "_units": "秒 / 请求、秒 / 千 token；CPU 为 utime+stime",
+  "frontend_cpu_s_per_request": 0.000510023,
+  "frontend_cpu_s_per_1k_input_tokens": 0.000417709,
+  "frontend_cpu_s_per_1k_output_tokens": 0.003984555,
+  "client_cpu_s_per_request": 0.000286701,
+  "client_cpu_s_per_1k_input_tokens": 0.000234808,
+  "client_cpu_s_per_1k_output_tokens": 0.002239848,
+  "frontend_cpu_s_per_window_s": 0.761986092
+ },
+ "body": {
+  "body_bytes": 4460,
+  "body_sha256": "1b92723af2f8fe405effcac6abd3e14a35e8913182f380a6de6dead3a7d9c061",
+  "body_source": "REPO_HOME/projects/vllm/vllm-rs-wt/B-profile/runs/b-chunk32/bodies/B1.body.json"
+ },
+ "_provenance": "由 runs/b-chunk32（mock engine --output-token-chunk-size 32）单点采集；命名修复见 harness/profile/cpu_windows.sh --tag-suffix",
+ "note": "诊断点：同 B1 负载，但 mock engine 用 --output-token-chunk-size 32 （每 tick 32 个 token ⇒ ZMQ 收包次数降 32×）⇒ 量化 mock engine chunk=1 的放大"
+}

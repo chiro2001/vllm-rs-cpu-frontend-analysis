@@ -1,0 +1,42 @@
+# tag,B1n,total_cpu_ns,15179179164,source,run_matrix.sh: ISL~1043 OSL=128 c=1 stream=True tools=none
+rank,frame,self_ns,self_pct,inclusive_ns,inclusive_pct,segment,basis
+1,[libc.so.6],2288288286,15.0752,2361361359,15.5566,X-copy,code
+2,std::thread::local::LocalKey<T>::with,612612612,4.0359,612612612,4.0359,X-tls,code
+3,_mi_page_malloc_zero,583583583,3.8446,583583583,3.8446,X-alloc,heuristic
+4,futures_util::stream::stream::StreamExt::poll_next_unpin,564564564,3.7193,564564564,3.7193,X-runtime,heuristic
+5,"<core::iter::adapters::map::Map<I,F> as core::iter::traits::iterator::Iterator>::try_fold",490490490,3.2313,490490490,3.2313,X-rust,heuristic
+6,"rmp_serde::decode::Deserializer<R,C>::any_inner",438438438,2.8884,438438438,2.8884,P7,symbol
+7,vllm_tokenizer::byte_level_decode::decode_byte_level,373373373,2.4598,423423423,2.7895,P8,symbol
+8,[perf-3639361.map]_[j],364364364,2.4004,364364364,2.4004,P4,code
+9,mi_free,357357357,2.3543,357357357,2.3543,X-alloc,heuristic
+10,<S as futures_core::stream::TryStream>::try_poll_next,232232232,1.5299,232232232,1.5299,X-runtime,heuristic
+11,serde_core::ser::SerializeMap::serialize_entry,223223223,1.4706,223223223,1.4706,P10,symbol
+12,serde_json::ser::format_escaped_str_contents,208208208,1.3717,208208208,1.3717,P10,symbol
+13,mi_theap_malloc_aligned,201201201,1.3255,201201201,1.3255,X-alloc,heuristic
+14,"<asynk_strim::stream::AsynkStrim<F,Fut,Yieldr,Item> as futures_core::stream::Stream>::poll_next",175175175,1.154,175175175,1.154,X-runtime,heuristic
+15,core::hash::BuildHasher::hash_one,172172172,1.1343,172172172,1.1343,X-hash,heuristic
+16,[[vdso]]_[k],169169169,1.1145,169169169,1.1145,X-kernel,code
+17,pcre2::bytes::Regex::find_at,138138138,0.9101,138138138,0.9101,P4,code
+18,rmp::encode::uint::write_uint,137137137,0.9035,137137137,0.9035,P6,symbol
+19,vllm_engine_core_client::client::imp::run_output_dispatcher_loop::{{closure}},132132132,0.8705,132132132,0.8705,P7,symbol
+20,mi_theap_umalloc,131131131,0.8639,131131131,0.8639,X-alloc,heuristic
+21,_mi_theap_malloc_zero,126126126,0.8309,126126126,0.8309,X-alloc,heuristic
+22,_mi_malloc_generic,115115115,0.7584,117117117,0.7716,X-alloc,heuristic
+23,<&mut A as serde_core::de::SeqAccess>::next_element,107107107,0.7056,107107107,0.7056,X-serde,heuristic
+24,"<http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame",104104104,0.6858,233233233,1.5365,P1,symbol
+25,<tracing_futures::Instrumented<T> as futures_core::stream::Stream>::poll_next,104104104,0.6858,104104104,0.6858,X-runtime,heuristic
+26,core::str::converts::from_utf8,98098098,0.6463,98098098,0.6463,X-str,heuristic
+27,asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}},94094094,0.6199,828828828,5.4603,X-runtime,heuristic
+28,"sharded_slab::pool::Pool<T,C>::get",90090090,0.5935,90090090,0.5935,X-log,heuristic
+29,mi_malloc_aligned,87087087,0.5737,87087087,0.5737,X-alloc,heuristic
+30,serde_core::de::impls::<impl serde_core::de::Deserialize for core::option::Option<T>>::deserialize,85085085,0.5605,85085085,0.5605,X-serde,heuristic
+31,_mi_theap_realloc_zero,83083083,0.5473,83083083,0.5473,X-alloc,heuristic
+32,vllm_parser::reasoning::delimited::DelimitedReasoningParser::push,82082082,0.5408,82082082,0.5408,P9,symbol
+33,vllm_engine_core_client::transport::run_output_loop::{{closure}},82082082,0.5408,82082082,0.5408,P7,symbol
+34,_mi_page_free_collect,77077077,0.5078,77077077,0.5078,X-alloc,heuristic
+35,alloc::raw_vec::RawVecInner<A>::finish_grow,76076076,0.5012,76076076,0.5012,X-alloc,heuristic
+36,<serde_core::de::impls::<impl serde_core::de::Deserialize for alloc::vec::Vec<T>>::deserialize::VecVisitor<T> as serde_core::de::Visitor>::visit_seq,76076076,0.5012,76076076,0.5012,X-serde,heuristic
+37,tokio::sync::mpsc::bounded::Sender<T>::send::{{closure}},75075075,0.4946,75075075,0.4946,X-runtime,heuristic
+38,minijinja::vm::Vm::eval_impl,71071071,0.4682,80080080,0.5276,P3,symbol
+39,alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle,69069069,0.455,86086086,0.5671,X-alloc,heuristic
+40,tokio::sync::mpsc::list::Tx<T>::push,63063063,0.4155,63063063,0.4155,X-runtime,heuristic

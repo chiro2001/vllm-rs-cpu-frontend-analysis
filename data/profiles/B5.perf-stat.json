@@ -1,0 +1,58 @@
+{
+ "generated_at": "2026-09-25T13:14:01+0800",
+ "host": "LOCAL_HOST",
+ "machine": "x86_64",
+ "tag": "B5",
+ "load_cmd": "taskset -c 8-9 python3 REPO_HOME/projects/vllm/vllm-rs-wt/B-profile/harness/profile/raw_load.py --base-url http://127.0.0.1:8199 --model REPO_HOME/models/Qwen3-0.6B --tokenizer REPO_HOME/models/Qwen3-0.6B/tokenizer.json --input-len 1024 --output-len 128 --concurrency 1 --tools weather --stream --duration 30 --num-requests 0 --warmup 3 --dump-body runs/b-matrix/bodies/B5.body.json --out data/profiles/B5.load.json",
+ "load_window": {
+  "start_epoch": 1790313207.7035275,
+  "stop_epoch": 1790313238.534308,
+  "duration_s": 30.831
+ },
+ "load_rc": 0,
+ "events_requested": "cycles:u,instructions:u,branches:u,branch-misses:u,L1-dcache-loads:u,L1-dcache-load-misses:u,cache-references:u,cache-misses:u",
+ "raw_path": "runs/b-matrix/perf/B5.perf-stat.txt",
+ "raw_text": "\n Performance counter stats for process id '3639361':\n\n       28106409361      cycles:u                                                                (75.04%)\n       31480307245      instructions:u                                                          (75.27%)\n        5789270588      branches:u                                                              (75.17%)\n         122082583      branch-misses:u                                                         (74.99%)\n       14130720203      L1-dcache-loads:u                                                       (74.90%)\n         649268479      L1-dcache-load-misses:u                                                 (74.88%)\n        2186045084      cache-references:u                                                      (74.89%)\n         435010573      cache-misses:u                                                          (74.86%)\n\n      34.016211539 seconds time elapsed\n\n",
+ "counters": {
+  "cycles:u": {
+   "count_int": 28106409361
+  },
+  "instructions:u": {
+   "count_int": 31480307245
+  },
+  "branches:u": {
+   "count_int": 5789270588
+  },
+  "branch-misses:u": {
+   "count_int": 122082583
+  },
+  "L1-dcache-loads:u": {
+   "count_int": 14130720203
+  },
+  "L1-dcache-load-misses:u": {
+   "count_int": 649268479
+  },
+  "cache-references:u": {
+   "count_int": 2186045084
+  },
+  "cache-misses:u": {
+   "count_int": 435010573
+  },
+  "time": {
+   "elapsed": 34.016211539
+  }
+ },
+ "not_counted_events": [],
+ "ipc": 1.12,
+ "ipc_basis": "instructions/cycles（用户态，perf_event_paranoid=2）",
+ "cycles_per_second_of_window": 911634700.8,
+ "branches": 5789270588,
+ "branch_misses": 122082583,
+ "cache_references": 2186045084,
+ "cache_misses": 435010573,
+ "l1_dcache_loads": 14130720203,
+ "l1_dcache_load_misses": 649268479,
+ "branch_miss_rate_pct": 2.1088,
+ "l1d_load_miss_rate_pct": 4.5947,
+ "cache_miss_rate_pct": 19.8994
+}

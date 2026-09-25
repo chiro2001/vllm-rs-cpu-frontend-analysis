@@ -1,0 +1,46 @@
+{
+ "taken_at": "2026-09-25T14:12:34+0800",
+ "window_seconds_requested": 3600.0,
+ "window_seconds_wall": 34.264,
+ "stopped_by": "stop-file",
+ "events": "instructions:u,cycles:u,cache-misses:u,branches:u",
+ "sudo": true,
+ "perf_version": "perf version 7.1.6-1",
+ "pids": {
+  "3842411": {
+   "label": "frontend",
+   "counters": {
+    "instructions:u": 311825469076.0,
+    "instructions": 311825469076.0,
+    "cycles:u": 173003846453.0,
+    "cycles": 173003846453.0,
+    "cache-misses:u": 948157490.0,
+    "cache-misses": 948157490.0,
+    "branches:u": 56899754320.0,
+    "branches": 56899754320.0
+   },
+   "window_seconds": 34.264,
+   "ipc": 1.8024,
+   "exit_code": 130,
+   "counters_source": "REPO_HOME/projects/vllm/vllm-rs-wt/C-ab/data/ab/C5c-mock/python/perf-raw/perf.3842411.txt"
+  },
+  "3842979": {
+   "label": "engine",
+   "counters": {
+    "instructions:u": 6077025355.0,
+    "instructions": 6077025355.0,
+    "cycles:u": 4717412911.0,
+    "cycles": 4717412911.0,
+    "cache-misses:u": 32479992.0,
+    "cache-misses": 32479992.0,
+    "branches:u": 1165732818.0,
+    "branches": 1165732818.0
+   },
+   "window_seconds": 34.264,
+   "ipc": 1.2882,
+   "exit_code": 130,
+   "counters_source": "REPO_HOME/projects/vllm/vllm-rs-wt/C-ab/data/ab/C5c-mock/python/perf-raw/perf.3842979.txt"
+  }
+ },
+ "reparsed_at": "2026-09-25T14:13:08+0800"
+}

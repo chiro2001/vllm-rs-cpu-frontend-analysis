@@ -1,0 +1,49 @@
+{
+ "generated_at": "2026-09-25T13:13:25+0800",
+ "base_url": "http://127.0.0.1:8199",
+ "path": "/v1/chat/completions",
+ "concurrency": 64,
+ "num_requests_requested": 0,
+ "duration_requested_s": 30.0,
+ "stream": true,
+ "input_len_target": 1024,
+ "output_len_target": 128,
+ "tools": "none",
+ "warmup": 3,
+ "window": {
+  "open_epoch": 1790313175.8299303,
+  "open_monotonic": 1424279.108670893,
+  "close_monotonic": 1424309.15394034,
+  "wall_seconds": 30.0453,
+  "ok_before_first_request_s": 8e-06
+ },
+ "requests_issued_in_window": 35472,
+ "requests_completed_in_window": 35472,
+ "requests_failed_in_window": 0,
+ "window_exhausted_num_requests": false,
+ "throughput_req_s": 1180.618,
+ "throughput_out_tok_s": 151119.2,
+ "completion_tokens_total": 4540416,
+ "prompt_tokens_mean": 1043.0,
+ "client_cpu_seconds": 29.6728,
+ "client_cpu_percent_of_one_core": 98.76,
+ "latency_ms": {
+  "p50": 51.46,
+  "p90": 65.747,
+  "p99": 78.41,
+  "mean": 54.154
+ },
+ "ttft_ms": {
+  "p50": 50.827,
+  "p99": 77.484
+ },
+ "failures": [],
+ "body": {
+  "prompt_text_sha256": "212a580fb9fa37e8e98fb8f0060f385a352b25c9a5f004da0bf2899448510674",
+  "prompt_text_bytes": 3874,
+  "local_token_count": 1024,
+  "body_bytes": 4113,
+  "body_sha256": "face2eda66781b9b2fac29fe290b9c536d040b7e28397d87aaa70388f37d7429",
+  "body_source": "synthesized"
+ }
+}

@@ -1,0 +1,23 @@
+# started on Fri Sep 25 17:30:18 2026
+
+
+ Performance counter stats for process id '2435624':
+
+     8,399,785,051      instructions:u                   #    1.16  insn per cycle            
+     7,215,510,418      cycles:u                                                              
+     1,738,426,321      branches:u                                                            
+        96,532,743      branch-misses:u                  #    5.55% of all branches           
+       118,667,066      cache-misses:u                   #    3.27% of all cache refs         
+     3,625,756,433      cache-references:u                                                    
+                 0      syscalls:sys_enter_recvmsg                                            
+             8,318      syscalls:sys_enter_recvfrom                                           
+             8,536      syscalls:sys_enter_read                                               
+                 0      syscalls:sys_enter_readv                                              
+                64      syscalls:sys_enter_sendto                                             
+            16,740      syscalls:sys_enter_write                                              
+               133      syscalls:sys_enter_writev                                             
+            35,599      syscalls:sys_enter_epoll_pwait                                        
+               679      syscalls:sys_enter_futex                                              
+
+      62.609534750 seconds time elapsed
+

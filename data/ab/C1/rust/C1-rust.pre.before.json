@@ -1,0 +1,59 @@
+{
+ "taken_at": "2026-09-25T14:14:20+0800",
+ "epoch": 1790316860.5288215,
+ "wall": 1790316860.5288217,
+ "pids": {
+  "3855548": {
+   "comm": "vllm-rs",
+   "state": "S",
+   "utime_ticks": 50,
+   "stime_ticks": 12,
+   "cutime_ticks": 0,
+   "cstime_ticks": 0,
+   "self_cpu_ticks": 62,
+   "with_children_cpu_ticks": 62,
+   "rss_kb": 110452,
+   "threads": 11,
+   "ticks_per_sec": 100
+  },
+  "3855547": {
+   "comm": "VLLM::EngineCor",
+   "state": "S",
+   "utime_ticks": 745,
+   "stime_ticks": 194,
+   "cutime_ticks": 0,
+   "cstime_ticks": 0,
+   "self_cpu_ticks": 939,
+   "with_children_cpu_ticks": 939,
+   "rss_kb": 746868,
+   "threads": 15,
+   "ticks_per_sec": 100
+  },
+  "3855818": {
+   "comm": "VLLM::Worker",
+   "state": "R",
+   "utime_ticks": 6220,
+   "stime_ticks": 1323,
+   "cutime_ticks": 650,
+   "cstime_ticks": 108,
+   "self_cpu_ticks": 7543,
+   "with_children_cpu_ticks": 8301,
+   "rss_kb": 6470844,
+   "threads": 52,
+   "ticks_per_sec": 100
+  },
+  "3855338": {
+   "comm": "vllm",
+   "state": "S",
+   "utime_ticks": 458,
+   "stime_ticks": 117,
+   "cutime_ticks": 0,
+   "cstime_ticks": 0,
+   "self_cpu_ticks": 575,
+   "with_children_cpu_ticks": 575,
+   "rss_kb": 627248,
+   "threads": 5,
+   "ticks_per_sec": 100
+  }
+ }
+}

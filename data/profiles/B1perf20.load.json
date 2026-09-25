@@ -1,0 +1,77 @@
+{
+ "generated_at": "2026-09-25T13:36:06+0800",
+ "base_url": "http://127.0.0.1:8199",
+ "path": "/v1/chat/completions",
+ "concurrency": 1,
+ "num_requests_requested": 0,
+ "duration_requested_s": 20.0,
+ "stream": true,
+ "input_len_target": 1024,
+ "output_len_target": 128,
+ "tools": "weather",
+ "warmup": 3,
+ "window": {
+  "open_epoch": 1790314546.4806092,
+  "open_monotonic": 1425649.759350162,
+  "close_monotonic": 1425669.760383723,
+  "wall_seconds": 20.001,
+  "ok_before_first_request_s": 1.1e-05
+ },
+ "requests_issued_in_window": 11141,
+ "requests_completed_in_window": 11141,
+ "requests_failed_in_window": 0,
+ "window_exhausted_num_requests": false,
+ "throughput_req_s": 557.021,
+ "throughput_out_tok_s": 71298.7,
+ "completion_tokens_total": 1426048,
+ "prompt_tokens_total": 13603161,
+ "prompt_tokens_mean": 1221.0,
+ "client_cpu_seconds": 14.0004,
+ "client_cpu_percent_of_one_core": 70.0,
+ "client_cpu_seconds_window_only": 13.9948,
+ "frontend_cpu_seconds": 21.71,
+ "frontend_utime_seconds": 10.31,
+ "frontend_stime_seconds": 11.4,
+ "client_cpu_seconds_procstat": 14.0,
+ "procstat": {
+  "basis": "utime+stime（不含子进程 cutime/cstime）",
+  "script": "REPO_HOME/projects/vllm/vllm-rs-wt/B-profile/harness/common/procstat.sh",
+  "window": "预热之后 / 窗口之前取 before；窗口结束之后取 after",
+  "pids_sampled": [
+   "3707922",
+   "3726460"
+  ],
+  "snapshot_before": "data/profiles/procstat-snapshots/B1perf20.before.json",
+  "snapshot_after": "data/profiles/procstat-snapshots/B1perf20.after.json",
+  "frontend_pid": "3707922",
+  "diff_out": "data/profiles/B1perf20.frontend-cpu.json",
+  "note": "frontend_cpu_seconds 与 client_cpu_* 是两个进程的两个数，绝不相加"
+ },
+ "latency_ms": {
+  "p50": 1.746,
+  "p90": 2.102,
+  "p99": 2.818,
+  "mean": 1.787
+ },
+ "ttft_ms": {
+  "p50": 0.595,
+  "p99": 1.297
+ },
+ "failures": [],
+ "normalized": {
+  "_units": "秒 / 请求、秒 / 千 token；CPU 为 utime+stime",
+  "frontend_cpu_s_per_request": 0.001948658,
+  "frontend_cpu_s_per_1k_input_tokens": 0.001595953,
+  "frontend_cpu_s_per_1k_output_tokens": 0.015223891,
+  "client_cpu_s_per_request": 0.001256153,
+  "client_cpu_s_per_1k_input_tokens": 0.00102879,
+  "client_cpu_s_per_1k_output_tokens": 0.009813695,
+  "frontend_cpu_s_per_window_s": 1.085443906
+ },
+ "body": {
+  "body_bytes": 4460,
+  "body_sha256": "1b92723af2f8fe405effcac6abd3e14a35e8913182f380a6de6dead3a7d9c061",
+  "body_source": "REPO_HOME/projects/vllm/vllm-rs-wt/B-profile/runs/b-cpu/bodies/B1.body.json"
+ },
+ "note": "诊断点：同 B1 负载，但窗口内 perf record -F 999 正在跑 ⇒ 量化采样对前端 CPU/请求的影响"
+}

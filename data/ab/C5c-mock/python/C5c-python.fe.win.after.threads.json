@@ -1,0 +1,56 @@
+{
+ "taken_at": "2026-09-25T14:13:08+0800",
+ "epoch": 1790316788.5304317,
+ "pid": "3842411",
+ "ticks_per_sec": 100,
+ "threads": {
+  "3842411": {
+   "comm": "vllm",
+   "state": "S",
+   "utime_ticks": 16587,
+   "stime_ticks": 1142
+  },
+  "3842424": {
+   "comm": "vllm",
+   "state": "S",
+   "utime_ticks": 6,
+   "stime_ticks": 0
+  },
+  "3842632": {
+   "comm": "vllm",
+   "state": "S",
+   "utime_ticks": 0,
+   "stime_ticks": 6
+  },
+  "3842707": {
+   "comm": "ZMQbg/Reaper",
+   "state": "S",
+   "utime_ticks": 0,
+   "stime_ticks": 0
+  },
+  "3842708": {
+   "comm": "ZMQbg/IO/0",
+   "state": "S",
+   "utime_ticks": 125,
+   "stime_ticks": 1093
+  },
+  "3842709": {
+   "comm": "ZMQbg/IO/1",
+   "state": "S",
+   "utime_ticks": 13,
+   "stime_ticks": 87
+  },
+  "3842987": {
+   "comm": "vllm",
+   "state": "S",
+   "utime_ticks": 7420,
+   "stime_ticks": 807
+  },
+  "3843143": {
+   "comm": "vllm",
+   "state": "S",
+   "utime_ticks": 7,
+   "stime_ticks": 0
+  }
+ }
+}

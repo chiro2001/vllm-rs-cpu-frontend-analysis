@@ -1,0 +1,1657 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 4K of event 'cpu-clock'
+# Event count (approx.): 4336336332
+#
+# Overhead       Samples  Command          Shared Object                                    Symbol                                                                                                                                                                                                                                                                                                                                        
+# ........  ............  ...............  ...............................................  ..............................................................................................................................................................................................................................................................................................................................................
+#
+    18.31%           793  vllm             libpython3.12.so.1.0                             [.] _PyEval_EvalFrameDefault
+            |
+            ---_PyEval_EvalFrameDefault
+               |          
+               |--10.76%--PyGen_am_send
+               |          task_step_impl
+               |          task_step
+               |          |          
+               |           --10.39%--cfunction_vectorcall_O
+               |                     __pyx_f_6uvloop_4loop_6Handle__run
+               |                     __pyx_f_6uvloop_4loop_4Loop__on_idle
+               |                     __pyx_f_6uvloop_4loop_6Handle__run
+               |                     __pyx_f_6uvloop_4loop_cb_idle_callback
+               |                     uv__run_idle
+               |                     uv_run
+               |                     __pyx_f_6uvloop_4loop_4Loop__Loop__run
+               |                     __pyx_f_6uvloop_4loop_4Loop__run
+               |                     __pyx_pw_6uvloop_4loop_4Loop_25run_forever
+               |                     PyObject_VectorcallMethod
+               |                     __pyx_pf_6uvloop_4loop_4Loop_44run_until_complete
+               |                     __pyx_pw_6uvloop_4loop_4Loop_45run_until_complete
+               |                     PyObject_Vectorcall
+               |                     _PyEval_EvalFrameDefault
+               |                     PyEval_EvalCode
+               |                     run_eval_code_obj
+               |                     run_mod
+               |                     _PyRun_SimpleFileObject
+               |                     _PyRun_AnyFileObject
+               |                     Py_RunMain
+               |                     Py_BytesMain
+               |                     0xffff867076c4
+               |                     __libc_start_main
+               |                     _start
+               |          
+               |--1.52%--vectorcall_maybe.constprop.0
+               |          |          
+               |           --1.32%--slot_nb_and
+               |                     PyNumber_And
+               |                     _PyEval_EvalFrameDefault
+               |                     |          
+               |                      --0.88%--__pyx_f_6uvloop_4loop_6Handle__run
+               |                                __pyx_f_6uvloop_4loop___on_uvpoll_event
+               |                                uv__io_poll
+               |                                uv_run
+               |                                __pyx_f_6uvloop_4loop_4Loop__Loop__run
+               |                                __pyx_f_6uvloop_4loop_4Loop__run
+               |                                __pyx_pw_6uvloop_4loop_4Loop_25run_forever
+               |                                PyObject_VectorcallMethod
+               |                                __pyx_pf_6uvloop_4loop_4Loop_44run_until_complete
+               |                                __pyx_pw_6uvloop_4loop_4Loop_45run_until_complete
+               |                                PyObject_Vectorcall
+               |                                _PyEval_EvalFrameDefault
+               |                                PyEval_EvalCode
+               |                                run_eval_code_obj
+               |                                run_mod
+               |                                _PyRun_SimpleFileObject
+               |                                _PyRun_AnyFileObject
+               |                                Py_RunMain
+               |                                Py_BytesMain
+               |                                0xffff867076c4
+               |                                __libc_start_main
+               |                                _start
+               |          
+               |--1.43%--async_gen_asend_iternext
+               |          _PyEval_EvalFrameDefault
+               |          |          
+               |           --1.32%--async_gen_asend_iternext
+               |                     _PyEval_EvalFrameDefault
+               |                     |          
+               |                     |--0.74%--PyGen_am_send
+               |                     |          task_step_impl
+               |                     |          task_step
+               |                     |          cfunction_vectorcall_O
+               |                     |          __pyx_f_6uvloop_4loop_6Handle__run
+               |                     |          __pyx_f_6uvloop_4loop_4Loop__on_idle
+               |                     |          __pyx_f_6uvloop_4loop_6Handle__run
+               |                     |          __pyx_f_6uvloop_4loop_cb_idle_callback
+               |                     |          uv__run_idle
+               |                     |          uv_run
+               |                     |          __pyx_f_6uvloop_4loop_4Loop__Loop__run
+               |                     |          __pyx_f_6uvloop_4loop_4Loop__run
+               |                     |          __pyx_pw_6uvloop_4loop_4Loop_25run_forever
+               |                     |          PyObject_VectorcallMethod
+               |                     |          __pyx_pf_6uvloop_4loop_4Loop_44run_until_complete
+               |                     |          __pyx_pw_6uvloop_4loop_4Loop_45run_until_complete
+               |                     |          PyObject_Vectorcall
+               |                     |          _PyEval_EvalFrameDefault
+               |                     |          PyEval_EvalCode
+               |                     |          run_eval_code_obj
+               |                     |          run_mod
+               |                     |          _PyRun_SimpleFileObject
+               |                     |          _PyRun_AnyFileObject
+               |                     |          Py_RunMain
+               |                     |          Py_BytesMain
+               |                     |          0xffff867076c4
+               |                     |          __libc_start_main
+               |                     |          _start
+               |                     |          
+               |                      --0.58%--async_gen_asend_iternext
+               |                                _PyEval_EvalFrameDefault
+               |                                PyGen_am_send
+               |                                task_step_impl
+               |                                task_step
+               |                                |          
+               |                                 --0.53%--cfunction_vectorcall_O
+               |                                           __pyx_f_6uvloop_4loop_6Handle__run
+               |                                           __pyx_f_6uvloop_4loop_4Loop__on_idle
+               |                                           __pyx_f_6uvloop_4loop_6Handle__run
+               |                                           __pyx_f_6uvloop_4loop_cb_idle_callback
+               |                                           uv__run_idle
+               |                                           uv_run
+               |                                           __pyx_f_6uvloop_4loop_4Loop__Loop__run
+               |                                           __pyx_f_6uvloop_4loop_4Loop__run
+               |                                           __pyx_pw_6uvloop_4loop_4Loop_25run_forever
+               |                                           PyObject_VectorcallMethod
+               |                                           __pyx_pf_6uvloop_4loop_4Loop_44run_until_complete
+               |                                           __pyx_pw_6uvloop_4loop_4Loop_45run_until_complete
+               |                                           PyObject_Vectorcall
+               |                                           _PyEval_EvalFrameDefault
+               |                                           PyEval_EvalCode
+               |                                           run_eval_code_obj
+               |                                           run_mod
+               |                                           _PyRun_SimpleFileObject
+               |                                           _PyRun_AnyFileObject
+               |                                           Py_RunMain
+               |                                           Py_BytesMain
+               |                                           0xffff867076c4
+               |                                           __libc_start_main
+               |                                           _start
+               |          
+               |--1.04%--_PyObject_FastCallDictTstate
+               |          _PyObject_Call_Prepend
+               |          |          
+               |           --0.51%--slot_tp_init
+               |                     type_call
+               |                     _PyObject_MakeTpCall
+               |                     _PyEval_EvalFrameDefault
+               |          
+               |--0.78%--__pyx_f_6uvloop_4loop_6Handle__run
+               |          |          
+               |           --0.76%--__pyx_f_6uvloop_4loop___on_uvpoll_event
+               |                     uv__io_poll
+               |                     uv_run
+               |                     __pyx_f_6uvloop_4loop_4Loop__Loop__run
+               |                     __pyx_f_6uvloop_4loop_4Loop__run
+               |                     __pyx_pw_6uvloop_4loop_4Loop_25run_forever
+               |                     PyObject_VectorcallMethod
+               |                     __pyx_pf_6uvloop_4loop_4Loop_44run_until_complete
+               |                     __pyx_pw_6uvloop_4loop_4Loop_45run_until_complete
+               |                     PyObject_Vectorcall
+               |                     _PyEval_EvalFrameDefault
+               |                     PyEval_EvalCode
+               |                     run_eval_code_obj
+               |                     run_mod
+               |                     _PyRun_SimpleFileObject
+               |                     _PyRun_AnyFileObject
+               |                     Py_RunMain
+               |                     Py_BytesMain
+               |                     0xffff867076c4
+               |                     __libc_start_main
+               |                     _start
+               |          
+               |--0.72%--PyObject_CallOneArg
+               |          |          
+               |           --0.58%--PyObject_GetAttr
+               |                     _PyEval_EvalFrameDefault
+               |                     |          
+               |                      --0.53%--PyGen_am_send
+               |                                task_step_impl
+               |                                task_step
+               |                                cfunction_vectorcall_O
+               |                                __pyx_f_6uvloop_4loop_6Handle__run
+               |                                __pyx_f_6uvloop_4loop_4Loop__on_idle
+               |                                __pyx_f_6uvloop_4loop_6Handle__run
+               |                                __pyx_f_6uvloop_4loop_cb_idle_callback
+               |                                uv__run_idle
+               |                                uv_run
+               |                                __pyx_f_6uvloop_4loop_4Loop__Loop__run
+               |                                __pyx_f_6uvloop_4loop_4Loop__run
+               |                                __pyx_pw_6uvloop_4loop_4Loop_25run_forever
+               |                                PyObject_VectorcallMethod
+               |                                __pyx_pf_6uvloop_4loop_4Loop_44run_until_complete
+               |                                __pyx_pw_6uvloop_4loop_4Loop_45run_until_complete
+               |                                PyObject_Vectorcall
+               |                                _PyEval_EvalFrameDefault
+               |                                PyEval_EvalCode
+               |                                run_eval_code_obj
+               |                                run_mod
+               |                                _PyRun_SimpleFileObject
+               |                                _PyRun_AnyFileObject
+               |                                Py_RunMain
+               |                                Py_BytesMain
+               |                                0xffff867076c4
+               |                                __libc_start_main
+               |                                _start
+               |          
+                --0.60%--method_vectorcall
+
+     2.68%           116  vllm             libpython3.12.so.1.0                             [.] _PyType_Lookup
+            |
+            ---_PyType_Lookup
+               |          
+                --1.20%--_PyObject_GenericGetAttrWithDict
+                          |          
+                           --0.58%--_Py_slot_tp_getattr_hook
+                                     |          
+                                      --0.53%--PyObject_GetAttr
+
+     1.78%            77  vllm             tokenizers.abi3.so                               [.] tokenizers::models::bpe::word::Word::merge_all
+            |
+            ---tokenizers::models::bpe::word::Word::merge_all
+               tokenizers::models::bpe::model::BPE::merge_word
+               <tokenizers::models::bpe::model::BPE as tokenizers::tokenizer::Model>::tokenize
+               <tokenizers::models::PyModel as tokenizers::tokenizer::Model>::tokenize
+               tokenizers::tokenizer::pre_tokenizer::PreTokenizedString::tokenize
+               tokenizers::tokenizer::TokenizerImpl<M,N,PT,PP,D>::encode_single_sequence
+               tokenizers::tokenizer::TokenizerImpl<M,N,PT,PP,D>::encode_char_offsets
+               <alloc::vec::Vec<T,A> as alloc::vec::spec_extend::SpecExtend<T,I>>::spec_extend
+               rayon::iter::plumbing::bridge_producer_consumer::helper
+               <rayon::vec::IntoIter<T> as rayon::iter::ParallelIterator>::drive_unindexed
+               rayon::iter::extend::<impl rayon::iter::ParallelExtend<T> for alloc::vec::Vec<T>>::par_extend
+               rayon::result::<impl rayon::iter::FromParallelIterator<core::result::Result<T,E>> for core::result::Result<C,E>>::from_par_iter
+               tokenizers::tokenizer::TokenizerImpl<M,N,PT,PP,D>::encode_batch_char_offsets
+               pyo3::marker::Python::detach
+               tokenizers::tokenizer::PyTokenizer::__pymethod_encode_batch__
+               pyo3::impl_::trampoline::trampoline
+               _ZN10tokenizers9tokenizer188_$LT$impl$u20$pyo3..impl_..pyclass..PyMethods$LT$tokenizers..tokenizer..PyTokenizer$GT$$u20$for$u20$pyo3..impl_..pyclass..PyClassImplCollector$LT$tokenizers..tokenizer..PyTokenizer$GT$$GT$10py_methods5ITEMS10trampoline17hb539d995adbf8487E.llvm.9511245339874145604
+               method_vectorcall_VARARGS_KEYWORDS
+               PyObject_Vectorcall
+               _PyEval_EvalFrameDefault
+               method_vectorcall
+               _PyObject_Call
+               _PyEval_EvalFrameDefault
+               _PyObject_FastCallDictTstate
+               _PyObject_Call_Prepend
+               slot_tp_call
+               _PyObject_Call
+               _PyEval_EvalFrameDefault
+               _PyObject_FastCallDictTstate
+               _PyObject_Call_Prepend
+               slot_tp_call
+               _PyObject_Call
+               _PyEval_EvalFrameDefault
+               method_vectorcall
+               partial_vectorcall
+               _PyEval_EvalFrameDefault
+               method_vectorcall
+               thread_run
+               pythread_wrapper
+               0xffff8675f8d4
+               0xffff867c7dcc
+
+     1.73%            75  vllm             libpython3.12.so.1.0                             [.] _PyObject_Malloc
+            |
+            ---_PyObject_Malloc
+               |          
+                --0.85%--_PyObject_GC_New
+
+     1.55%            67  vllm             libpython3.12.so.1.0                             [.] unicodekeys_lookup_unicode
+            |
+            ---unicodekeys_lookup_unicode
+               |          
+                --1.48%--_Py_dict_lookup
+                          |          
+                           --0.97%--PyDict_GetItemWithError
+
+     1.36%            59  vllm             libpython3.12.so.1.0                             [.] _PyObject_Free
+            |
+            ---_PyObject_Free
+
+     1.36%            59  vllm             libpython3.12.so.1.0                             [.] _Py_dict_lookup
+            |
+            ---_Py_dict_lookup
+               |          
+                --0.76%--PyDict_GetItemWithError
+
+     1.22%            53  vllm             libpython3.12.so.1.0                             [.] _PyObject_GenericGetAttrWithDict
+            |
+            ---_PyObject_GenericGetAttrWithDict
+
+     1.06%            46  vllm             libpython3.12.so.1.0                             [.] initialize_locals
+            |
+            ---initialize_locals
+               |          
+                --1.02%--_PyEvalFramePushAndInit
+                          |          
+                           --0.74%--_PyEval_Vector
+
+     0.99%            43  vllm             libpython3.12.so.1.0                             [.] _PyFrame_ClearExceptCode
+            |
+            ---_PyFrame_ClearExceptCode
+               _PyEvalFrameClearAndPop
+               _PyEval_EvalFrameDefault
+
+     0.88%            38  vllm             libc.so.6                                        [.] malloc
+            |
+            ---malloc
+
+     0.83%            36  vllm             libpython3.12.so.1.0                             [.] PyObject_GetAttr
+            |
+            ---PyObject_GetAttr
+               |          
+                --0.58%--_PyEval_EvalFrameDefault
+
+     0.83%            36  vllm             libpython3.12.so.1.0                             [.] tupledealloc
+            |
+            ---tupledealloc
+
+     0.67%            29  vllm             [kernel.kallsyms]                                [k] 0xffffb39566e3274c
+            |
+            ---0xffffb39566e3274c
+               0xffffb39566e32a00
+               0xffffb395678ebbb8
+               0xffffb39567a01594
+               0xffffb39567a01b2c
+               0xffffb39567a01eec
+               0xffffb39567a135c4
+               0xffffb39567a16498
+               0xffffb395679d7dec
+               0xffffb395679d8090
+               0xffffb395679d8148
+               0xffffb395679d7b38
+               0xffffb395679d824c
+               0xffffb39567920164
+               0xffffb395679201f0
+               0xffffb395679204fc
+               0xffffb395679211c8
+               0xffffb39567921720
+               0xffffb39567921840
+               0xffffb39566da6cc8
+               0xffffb39566ce04e4
+               0xffffb39566ce8080
+               0xffffb39566ce7c40
+               0xffffb39566ce815c
+               0xffffb39566da6798
+               0xffffb39566da7024
+               0xffffb3956791d654
+               0xffffb395679db598
+               0xffffb395679ddf78
+               0xffffb395679de0ac
+               0xffffb395679de1fc
+               0xffffb395679de7ec
+               0xffffb395679dec0c
+               0xffffb39567a092a4
+               0xffffb39567a0a918
+               0xffffb39567a0af8c
+               0xffffb395679f0380
+               0xffffb395679f1660
+               0xffffb395679f17b8
+               0xffffb39567a35b0c
+               0xffffb395678e5b14
+               0xffffb395678e5c24
+               |          
+                --0.65%--0xffffb395671ad010
+                          0xffffb395671b0224
+                          0xffffb395671b05e4
+                          0xffffb395671b062c
+                          0xffffb39566cfc8a0
+                          0xffffb39566cfca40
+                          0xffffb39566cfcb28
+                          0xffffb39567bb8724
+                          0xffffb39567bb8d18
+                          0xffffb39566ce1e38
+                          write
+                          __pyx_f_6uvloop_4loop_8UVStream__try_write
+                          __pyx_f_6uvloop_4loop_8UVStream__exec_write
+                          __pyx_f_6uvloop_4loop_4Loop__exec_queued_writes
+                          __pyx_f_6uvloop_4loop_4Loop__on_idle
+                          __pyx_f_6uvloop_4loop_6Handle__run
+                          __pyx_f_6uvloop_4loop_cb_idle_callback
+                          uv__run_idle
+                          uv_run
+                          __pyx_f_6uvloop_4loop_4Loop__Loop__run
+                          __pyx_f_6uvloop_4loop_4Loop__run
+                          __pyx_pw_6uvloop_4loop_4Loop_25run_forever
+                          PyObject_VectorcallMethod
+                          __pyx_pf_6uvloop_4loop_4Loop_44run_until_complete
+                          __pyx_pw_6uvloop_4loop_4Loop_45run_until_complete
+                          PyObject_Vectorcall
+                          _PyEval_EvalFrameDefault
+                          PyEval_EvalCode
+                          run_eval_code_obj
+                          run_mod
+                          _PyRun_SimpleFileObject
+                          _PyRun_AnyFileObject
+                          Py_RunMain
+                          Py_BytesMain
+                          0xffff867076c4
+                          __libc_start_main
+                          _start
+
+     0.62%            27  vllm             libpython3.12.so.1.0                             [.] PyObject_GC_Del
+            |
+            ---PyObject_GC_Del
+
+     0.60%            26  vllm             libpython3.12.so.1.0                             [.] _PyObject_GetMethod
+            |
+            ---_PyObject_GetMethod
+
+     0.58%            25  vllm             [kernel.kallsyms]                                [k] 0xffffb39567bb8714
+            |
+            ---0xffffb39567bb8714
+               0xffffb39567bb8d18
+               0xffffb39566ce1e38
+
+     0.58%            25  vllm             tokenizers.abi3.so                               [.] hashbrown::raw::RawTable<T,A>::reserve_rehash
+            |
+            ---hashbrown::raw::RawTable<T,A>::reserve_rehash
+               hashbrown::map::HashMap<K,V,S,A>::insert
+               <core::iter::adapters::map::Map<I,F> as core::iter::traits::iterator::Iterator>::fold
+               <hashbrown::map::HashMap<K,V,S,A> as core::iter::traits::collect::Extend<(K,V)>>::extend
+               tokenizers::tokenizer::pre_tokenizer::PreTokenizedString::into_encoding
+               tokenizers::tokenizer::TokenizerImpl<M,N,PT,PP,D>::encode_single_sequence
+               tokenizers::tokenizer::TokenizerImpl<M,N,PT,PP,D>::encode_char_offsets
+               <alloc::vec::Vec<T,A> as alloc::vec::spec_extend::SpecExtend<T,I>>::spec_extend
+               rayon::iter::plumbing::bridge_producer_consumer::helper
+               <rayon::vec::IntoIter<T> as rayon::iter::ParallelIterator>::drive_unindexed
+               rayon::iter::extend::<impl rayon::iter::ParallelExtend<T> for alloc::vec::Vec<T>>::par_extend
+               rayon::result::<impl rayon::iter::FromParallelIterator<core::result::Result<T,E>> for core::result::Result<C,E>>::from_par_iter
+               tokenizers::tokenizer::TokenizerImpl<M,N,PT,PP,D>::encode_batch_char_offsets
+               pyo3::marker::Python::detach
+               tokenizers::tokenizer::PyTokenizer::__pymethod_encode_batch__
+               pyo3::impl_::trampoline::trampoline
+               _ZN10tokenizers9tokenizer188_$LT$impl$u20$pyo3..impl_..pyclass..PyMethods$LT$tokenizers..tokenizer..PyTokenizer$GT$$u20$for$u20$pyo3..impl_..pyclass..PyClassImplCollector$LT$tokenizers..tokenizer..PyTokenizer$GT$$GT$10py_methods5ITEMS10trampoline17hb539d995adbf8487E.llvm.9511245339874145604
+               method_vectorcall_VARARGS_KEYWORDS
+               PyObject_Vectorcall
+               _PyEval_EvalFrameDefault
+               method_vectorcall
+               _PyObject_Call
+               _PyEval_EvalFrameDefault
+               _PyObject_FastCallDictTstate
+               _PyObject_Call_Prepend
+               slot_tp_call
+               _PyObject_Call
+               _PyEval_EvalFrameDefault
+               _PyObject_FastCallDictTstate
+               _PyObject_Call_Prepend
+               slot_tp_call
+               _PyObject_Call
+               _PyEval_EvalFrameDefault
+               method_vectorcall
+               partial_vectorcall
+               _PyEval_EvalFrameDefault
+               method_vectorcall
+               thread_run
+               pythread_wrapper
+               0xffff8675f8d4
+               0xffff867c7dcc
+
+     0.53%            23  vllm             libpython3.12.so.1.0                             [.] PyObject_Vectorcall
+            |
+            ---PyObject_Vectorcall
+
+     0.51%            22  vllm             ld-linux-aarch64.so.1                            [.] 0x00000000000127a0
+            |
+            ---0xffff86fe67a0
+
+     0.51%            22  vllm             libpython3.12.so.1.0                             [.] PyObject_GC_UnTrack
+            |
+            ---PyObject_GC_UnTrack
+
+     0.48%            21  vllm             libpython3.12.so.1.0                             [.] PyDict_GetItemWithError
+     0.48%            21  vllm             tokenizers.abi3.so                               [.] tokenizers::models::bpe::model::BPE::merge_word
+     0.46%            20  vllm             libpython3.12.so.1.0                             [.] dict_dealloc
+     0.46%            20  vllm             tokenizers.abi3.so                               [.] <core::iter::adapters::flatten::FlatMap<I,U,F> as core::iter::traits::iterator::Iterator>::next
+     0.46%            20  vllm             tokenizers.abi3.so                               [.] <tokenizers::models::ModelWrapper as tokenizers::tokenizer::Model>::id_to_token
+     0.44%            19  vllm             libpython3.12.so.1.0                             [.] PyType_IsSubtype
+     0.44%            19  vllm             libpython3.12.so.1.0                             [.] _PyFunction_Vectorcall
+     0.42%            18  vllm             libpython3.12.so.1.0                             [.] tuple_alloc
+     0.39%            17  vllm             libc.so.6                                        [.] sem_trywait
+     0.39%            17  vllm             libpython3.12.so.1.0                             [.] insertdict
+     0.39%            17  vllm             tokenizers.abi3.so                               [.] <core::iter::adapters::map::Map<I,F> as core::iter::traits::iterator::Iterator>::fold
+     0.37%            16  vllm             libpython3.12.so.1.0                             [.] PyObject_IsTrue
+     0.37%            16  vllm             libpython3.12.so.1.0                             [.] _PyObject_GC_New
+     0.35%            15  vllm             libc.so.6                                        [.] 0x000000000008d384
+     0.35%            15  vllm             libpython3.12.so.1.0                             [.] _PyEvalFramePushAndInit
+     0.35%            15  vllm             libpython3.12.so.1.0                             [.] _PyObject_GenericSetAttrWithDict
+     0.35%            15  vllm             libpython3.12.so.1.0                             [.] _PyThreadState_UncheckedGet
+     0.35%            15  vllm             libpython3.12.so.1.0                             [.] _Py_type_getattro
+     0.35%            15  vllm             tokenizers.abi3.so                               [.] core::ops::function::impls::<impl core::ops::function::FnMut<A> for &mut F>::call_mut
+     0.32%            14  vllm             libpython3.12.so.1.0                             [.] _PyObject_GetInstanceAttribute
+     0.30%            13  vllm             _core.cpython-312-aarch64-linux-gnu.so           [.] mpack_decode
+     0.30%            13  vllm             libc.so.6                                        [.] 0x0000000000099a80
+     0.30%            13  vllm             libpython3.12.so.1.0                             [.] PyObject_IsInstance
+     0.30%            13  vllm             libpython3.12.so.1.0                             [.] PyType_GenericAlloc
+     0.30%            13  vllm             libpython3.12.so.1.0                             [.] _PyObject_MakeTpCall
+     0.30%            13  vllm             libpython3.12.so.1.0                             [.] find_name_in_mro
+     0.30%            13  vllm             tokenizers.abi3.so                               [.] hashbrown::map::HashMap<K,V,S,A>::insert
+     0.28%            12  vllm             libpython3.12.so.1.0                             [.] _Py_slot_tp_getattr_hook
+     0.25%            11  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb3956722b7ec
+     0.25%            11  vllm             libc.so.6                                        [.] cfree
+     0.25%            11  vllm             libpython3.12.so.1.0                             [.] _PyTrash_begin
+     0.25%            11  vllm             tokenizers.abi3.so                               [.] core::hash::BuildHasher::hash_one
+     0.23%            10  vllm             libpython3.12.so.1.0                             [.] PyCMethod_New
+     0.23%            10  vllm             libpython3.12.so.1.0                             [.] PyObject_CallOneArg
+     0.23%            10  vllm             libpython3.12.so.1.0                             [.] insert_to_emptydict
+     0.23%            10  vllm             libpython3.12.so.1.0                             [.] subtype_dealloc
+     0.21%             9  vllm             libpython3.12.so.1.0                             [.] PyDict_SetItem
+     0.21%             9  vllm             libpython3.12.so.1.0                             [.] PyList_New
+     0.21%             9  vllm             libpython3.12.so.1.0                             [.] PyUnicode_AsUTF8AndSize
+     0.21%             9  vllm             libpython3.12.so.1.0                             [.] _Py_Dealloc
+     0.21%             9  vllm             libpython3.12.so.1.0                             [.] find_empty_slot.constprop.0
+     0.21%             9  vllm             libpython3.12.so.1.0                             [.] unicode_decode_utf8
+     0.18%             8  vllm             [kernel.kallsyms]                                [k] 0xffffb395671b1b48
+     0.18%             8  vllm             [nf_tables]                                      [k] 0x00000000000001e4
+     0.18%             8  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001c0438
+     0.18%             8  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001ccbdc
+     0.18%             8  vllm             libc.so.6                                        [.] realloc
+     0.18%             8  vllm             libc.so.6                                        [.] 0x000000000008d334
+     0.18%             8  vllm             libpython3.12.so.1.0                             [.] PyDict_New
+     0.18%             8  vllm             libpython3.12.so.1.0                             [.] PyObject_Free
+     0.18%             8  vllm             libpython3.12.so.1.0                             [.] _PyDict_GetItem_KnownHash
+     0.18%             8  vllm             libpython3.12.so.1.0                             [.] _PyEvalFrameClearAndPop
+     0.18%             8  vllm             libpython3.12.so.1.0                             [.] _PyObject_FastCallDictTstate
+     0.18%             8  vllm             libpython3.12.so.1.0                             [.] _PyObject_InitializeDict
+     0.18%             8  vllm             libpython3.12.so.1.0                             [.] _Py_CheckFunctionResult
+     0.18%             8  vllm             libpython3.12.so.1.0                             [.] convertitem
+     0.18%             8  vllm             libpython3.12.so.1.0                             [.] free_keys_object
+     0.18%             8  vllm             libpython3.12.so.1.0                             [.] list_dealloc
+     0.18%             8  vllm             libpython3.12.so.1.0                             [.] vgetargskeywords
+     0.18%             8  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_f_6uvloop_4loop_4Loop__on_idle
+     0.16%             7  vllm             [kernel.kallsyms]                                [k] 0xffffb395670288a8
+     0.16%             7  vllm             [kernel.kallsyms]                                [k] 0xffffb3956722b4ac
+     0.16%             7  vllm             libc.so.6                                        [.] clock_gettime
+     0.16%             7  vllm             libc.so.6                                        [.] sem_post
+     0.16%             7  vllm             libc.so.6                                        [.] 0x000000000008bbf8
+     0.16%             7  vllm             libc.so.6                                        [.] 0x0000000000099a98
+     0.16%             7  vllm             libpython3.12.so.1.0                             [.] PyObject_Malloc
+     0.16%             7  vllm             libpython3.12.so.1.0                             [.] PyTuple_New
+     0.16%             7  vllm             libpython3.12.so.1.0                             [.] _PyThreadState_PushFrame
+     0.16%             7  vllm             libpython3.12.so.1.0                             [.] _PyTrash_end
+     0.16%             7  vllm             libpython3.12.so.1.0                             [.] _PyTuple_FromArray
+     0.16%             7  vllm             libpython3.12.so.1.0                             [.] _PyType_GetDict
+     0.16%             7  vllm             libpython3.12.so.1.0                             [.] set_lookkey
+     0.16%             7  vllm             libpython3.12.so.1.0                             [.] slot_tp_init
+     0.16%             7  vllm             libpython3.12.so.1.0                             [.] type_call
+     0.14%             6  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb39566e3274c
+     0.14%             6  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb395678f3154
+     0.14%             6  vllm             _core.cpython-312-aarch64-linux-gnu.so           [.] mpack_decode_struct_array_inner
+     0.14%             6  vllm             ld-linux-aarch64.so.1                            [.] 0x00000000000127a4
+     0.14%             6  vllm             libc.so.6                                        [.] strchr
+     0.14%             6  vllm             libc.so.6                                        [.] 0x0000000000099a68
+     0.14%             6  vllm             libpython3.12.so.1.0                             [.] PyObject_GetIter
+     0.14%             6  vllm             libpython3.12.so.1.0                             [.] PyType_GetModuleByDef
+     0.14%             6  vllm             libpython3.12.so.1.0                             [.] _PyDict_Next
+     0.14%             6  vllm             libpython3.12.so.1.0                             [.] _PyObject_FreeInstanceAttributes
+     0.14%             6  vllm             libpython3.12.so.1.0                             [.] _PyObject_Realloc
+     0.14%             6  vllm             libpython3.12.so.1.0                             [.] _PyThreadState_PopFrame
+     0.14%             6  vllm             libpython3.12.so.1.0                             [.] float_dealloc
+     0.14%             6  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_f_6uvloop_4loop_6Handle__run
+     0.14%             6  vllm             tokenizers.abi3.so                               [.] <core::iter::adapters::map::Map<I,F> as core::iter::traits::iterator::Iterator>::fold
+     0.14%             6  vllm             tokenizers.abi3.so                               [.] _ZN71_$LT$core..hash..sip..Hasher$LT$S$GT$$u20$as$u20$core..hash..Hasher$GT$5write17hb5fc67f65a007d0bE.llvm.5308459427574238109
+     0.14%             6  vllm             tokenizers.abi3.so                               [.] tokenizers::utils::cache::Cache<K,V>::get
+     0.12%             5  vllm             [kernel.kallsyms]                                [k] 0xffffb39567224f30
+     0.12%             5  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000022ceec
+     0.12%             5  vllm             libc.so.6                                        [.] __memcmpeq
+     0.12%             5  vllm             libc.so.6                                        [.] 0x000000000008bd00
+     0.12%             5  vllm             libc.so.6                                        [.] 0x000000000008dffc
+     0.12%             5  vllm             libc.so.6                                        [.] 0x000000000008e4ac
+     0.12%             5  vllm             libpython3.12.so.1.0                             [.] PyErr_SetRaisedException
+     0.12%             5  vllm             libpython3.12.so.1.0                             [.] PyFloat_FromDouble
+     0.12%             5  vllm             libpython3.12.so.1.0                             [.] PyLong_FromString
+     0.12%             5  vllm             libpython3.12.so.1.0                             [.] PyObject_SetAttr
+     0.12%             5  vllm             libpython3.12.so.1.0                             [.] _PyDict_FromItems
+     0.12%             5  vllm             libpython3.12.so.1.0                             [.] _PyObject_Calloc
+     0.12%             5  vllm             libpython3.12.so.1.0                             [.] _PyObject_GC_Link
+     0.12%             5  vllm             libpython3.12.so.1.0                             [.] _PyStack_UnpackDict
+     0.12%             5  vllm             libpython3.12.so.1.0                             [.] _PyUnicode_Equal
+     0.12%             5  vllm             libpython3.12.so.1.0                             [.] _Py_DecRef
+     0.12%             5  vllm             libpython3.12.so.1.0                             [.] _Py_NewReference
+     0.12%             5  vllm             libpython3.12.so.1.0                             [.] meth_dealloc
+     0.12%             5  vllm             libpython3.12.so.1.0                             [.] method_get
+     0.12%             5  vllm             libpython3.12.so.1.0                             [.] set_add_entry
+     0.12%             5  vllm             tokenizers.abi3.so                               [.] <alloc::vec::into_iter::IntoIter<T,A> as core::iter::traits::iterator::Iterator>::fold
+     0.12%             5  vllm             tokenizers.abi3.so                               [.] <core::iter::adapters::map::Map<I,F> as core::iter::traits::iterator::Iterator>::fold
+     0.12%             5  vllm             tokenizers.abi3.so                               [.] <tokenizers::models::PyModel as tokenizers::tokenizer::Model>::id_to_token
+     0.12%             5  vllm             tokenizers.abi3.so                               [.] match_at
+     0.12%             5  vllm             tokenizers.abi3.so                               [.] tokenizers::tokenizer::pre_tokenizer::BytesToCharOffsetConverter::convert
+     0.09%             4  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb395678ee174
+     0.09%             4  ZMQbg/IO/1       libc.so.6                                        [.] malloc
+     0.09%             4  vllm             [kernel.kallsyms]                                [k] 0xffffb39567028898
+     0.09%             4  vllm             [kernel.kallsyms]                                [k] 0xffffb395671de3f0
+     0.09%             4  vllm             [kernel.kallsyms]                                [k] 0xffffb395671de414
+     0.09%             4  vllm             [kernel.kallsyms]                                [k] 0xffffb395672e6048
+     0.09%             4  vllm             [kernel.kallsyms]                                [k] 0xffffb39567913964
+     0.09%             4  vllm             [nf_tables]                                      [k] 0x0000000000000258
+     0.09%             4  vllm             [nf_tables]                                      [k] 0x00000000000002d0
+     0.09%             4  vllm             _asyncio.cpython-312-aarch64-linux-gnu.so        [.] FutureIter_dealloc
+     0.09%             4  vllm             _asyncio.cpython-312-aarch64-linux-gnu.so        [.] task_step_impl
+     0.09%             4  vllm             _asyncio.cpython-312-aarch64-linux-gnu.so        [.] task_wakeup
+     0.09%             4  vllm             _core.cpython-312-aarch64-linux-gnu.so           [.] Struct_dealloc_nogc
+     0.09%             4  vllm             _core.cpython-312-aarch64-linux-gnu.so           [.] mpack_decode_map
+     0.09%             4  vllm             _json.cpython-312-aarch64-linux-gnu.so           [.] scanstring_unicode
+     0.09%             4  vllm             _zmq.abi3.so                                     [.] 0x0000000000018fe0
+     0.09%             4  vllm             libc.so.6                                        [.] __errno_location
+     0.09%             4  vllm             libc.so.6                                        [.] __poll
+     0.09%             4  vllm             libc.so.6                                        [.] pthread_getspecific
+     0.09%             4  vllm             libc.so.6                                        [.] pthread_mutex_lock
+     0.09%             4  vllm             libc.so.6                                        [.] 0x000000000008d1ec
+     0.09%             4  vllm             libpython3.12.so.1.0                             [.] BaseException_new
+     0.09%             4  vllm             libpython3.12.so.1.0                             [.] PyErr_Occurred
+     0.09%             4  vllm             libpython3.12.so.1.0                             [.] PyFunction_NewWithQualName
+     0.09%             4  vllm             libpython3.12.so.1.0                             [.] PyObject_CallFinalizer
+     0.09%             4  vllm             libpython3.12.so.1.0                             [.] PyObject_GC_Track
+     0.09%             4  vllm             libpython3.12.so.1.0                             [.] PyObject_RichCompare
+     0.09%             4  vllm             libpython3.12.so.1.0                             [.] PySequence_Contains
+     0.09%             4  vllm             libpython3.12.so.1.0                             [.] _PyErr_GetTopmostException
+     0.09%             4  vllm             libpython3.12.so.1.0                             [.] _PyErr_SetObject
+     0.09%             4  vllm             libpython3.12.so.1.0                             [.] _PyObject_GC_NewVar
+     0.09%             4  vllm             libpython3.12.so.1.0                             [.] _PyObject_LookupAttr
+     0.09%             4  vllm             libpython3.12.so.1.0                             [.] _PyObject_LookupSpecial
+     0.09%             4  vllm             libpython3.12.so.1.0                             [.] _PyUnicode_InternMortal
+     0.09%             4  vllm             libpython3.12.so.1.0                             [.] _copy_characters
+     0.09%             4  vllm             libpython3.12.so.1.0                             [.] check_except_type_valid
+     0.09%             4  vllm             libpython3.12.so.1.0                             [.] frame_dealloc
+     0.09%             4  vllm             libpython3.12.so.1.0                             [.] list_iter
+     0.09%             4  vllm             libpython3.12.so.1.0                             [.] lock_PyThread_acquire_lock
+     0.09%             4  vllm             libpython3.12.so.1.0                             [.] method_vectorcall_FASTCALL_KEYWORDS
+     0.09%             4  vllm             libpython3.12.so.1.0                             [.] method_vectorcall_VARARGS_KEYWORDS
+     0.09%             4  vllm             libpython3.12.so.1.0                             [.] object_isinstance
+     0.09%             4  vllm             libpython3.12.so.1.0                             [.] slot_tp_call
+     0.09%             4  vllm             libpython3.12.so.1.0                             [.] wrapperdescr_call
+     0.09%             4  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __Pyx_PyObject_FastCallDict
+     0.09%             4  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_f_6uvloop_4loop___on_uvpoll_event
+     0.09%             4  vllm             tokenizers.abi3.so                               [.] <alloc::vec::Vec<T> as alloc::vec::spec_from_iter_nested::SpecFromIterNested<T,I>>::from_iter
+     0.09%             4  vllm             tokenizers.abi3.so                               [.] <unicode_normalization_alignments::decompose::Decompositions<I> as core::iter::traits::iterator::Iterator>::next
+     0.09%             4  vllm             tokenizers.abi3.so                               [.] alloc::raw_vec::RawVecInner<A>::finish_grow
+     0.09%             4  vllm             tokenizers.abi3.so                               [.] pyo3::impl_::extract_argument::FunctionDescription::extract_arguments_tuple_dict
+     0.09%             4  vllm             tokenizers.abi3.so                               [.] tokenizers::tokenizer::added_vocabulary::AddedVocabulary::simple_id_to_token
+     0.09%             4  vllm             tokenizers.abi3.so                               [.] tokenizers::tokenizer::normalizer::NormalizedString::convert_offsets
+     0.09%             4  vllm             tokenizers.abi3.so                               [.] tokenizers::utils::cache::Cache<K,V>::set_values
+     0.07%             3  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb395671de3f0
+     0.07%             3  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb39567b6e484
+     0.07%             3  ZMQbg/IO/1       libc.so.6                                        [.] epoll_pwait
+     0.07%             3  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x00000000000aba40
+     0.07%             3  vllm             [kernel.kallsyms]                                [k] 0xffffb39566cef1f4
+     0.07%             3  vllm             [kernel.kallsyms]                                [k] 0xffffb39566e0cdc0
+     0.07%             3  vllm             [kernel.kallsyms]                                [k] 0xffffb39566eb711c
+     0.07%             3  vllm             [kernel.kallsyms]                                [k] 0xffffb395671b1adc
+     0.07%             3  vllm             [kernel.kallsyms]                                [k] 0xffffb395671d0218
+     0.07%             3  vllm             [kernel.kallsyms]                                [k] 0xffffb39567226258
+     0.07%             3  vllm             [nf_tables]                                      [k] 0x00000000000001f8
+     0.07%             3  vllm             [vdso]                                           [.] 0x0000000000000498
+     0.07%             3  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000000980c0
+     0.07%             3  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001ba918
+     0.07%             3  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001cc200
+     0.07%             3  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000021a3d0
+     0.07%             3  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000022cebc
+     0.07%             3  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000259b1c
+     0.07%             3  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000259b68
+     0.07%             3  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000028ec34
+     0.07%             3  vllm             _zmq.abi3.so                                     [.] 0x0000000000019000
+     0.07%             3  vllm             libc.so.6                                        [.] __getpid
+     0.07%             3  vllm             libc.so.6                                        [.] 0x0000000000099b48
+     0.07%             3  vllm             libc.so.6                                        [.] 0x0000000000099b4c
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] BaseException_clear
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] PyBool_FromLong
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] PyBytes_FromStringAndSize
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] PyContext_Enter
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] PyDict_Copy
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] PyErr_GetExcInfo
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] PyEval_RestoreThread
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] PyException_GetContext
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] PyException_SetContext
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] PyException_SetTraceback
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] PyLong_AsLong
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] PyLong_AsLongAndOverflow
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] PyLong_FromLong
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] PyMem_Free
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] PyMethod_New
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] PyNumber_And
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] PyObject_IS_GC
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] PyObject_VectorcallMethod
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] PyThread_get_thread_ident
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] PyTuple_GetSlice
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] PyUnicode_AsEncodedString
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] PyUnicode_Concat
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] PyUnicode_FromFormatV
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] Py_EnterRecursiveCall
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] _PyArg_CheckPositional
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] _PyErr_CheckSignalsTstate
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] _PyErr_Restore
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] _PyEval_Vector
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] _PyGen_Finalize
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] _PyGen_yf
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] _PyLong_Add
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] _PyObjectDict_SetItem
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] _PyThreadState_MustExit
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] _PyTime_AsTimespec_clamp
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] _PyType_Lookup@plt
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] _PyUnicodeWriter_WriteASCIIString
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] assign_version_tag
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] cfunction_call
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] cfunction_vectorcall_O
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] clone_combined_dict_keys
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] context_tp_dealloc
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] delitem_common
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] float_richcompare
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] getset_get
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] long_dealloc
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] member_get
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] memset@plt
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] method_vectorcall_VARARGS
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] slot_tp_setattro
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] take_gil
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] tb_dealloc
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] tuple_iter
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] unicode_dealloc
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] unicode_subscript
+     0.07%             3  vllm             libpython3.12.so.1.0                             [.] vectorcall_method
+     0.07%             3  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __Pyx_CyFunction_Vectorcall_FASTCALL_KEYWORDS
+     0.07%             3  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_tp_dealloc_6uvloop_4loop_Handle
+     0.07%             3  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] uv__io_poll
+     0.07%             3  vllm             tokenizers.abi3.so                               [.] <alloc::borrow::Cow<B> as core::fmt::Display>::fmt
+     0.07%             3  vllm             tokenizers.abi3.so                               [.] <alloc::string::String as core::fmt::Write>::write_str
+     0.07%             3  vllm             tokenizers.abi3.so                               [.] <core::str::lossy::Utf8Chunks as core::iter::traits::iterator::Iterator>::next
+     0.07%             3  vllm             tokenizers.abi3.so                               [.] alloc::fmt::format::format_inner
+     0.07%             3  vllm             tokenizers.abi3.so                               [.] core::hash::BuildHasher::hash_one
+     0.07%             3  vllm             tokenizers.abi3.so                               [.] core::ptr::drop_in_place<dary_heap::RebuildOnDrop<tokenizers::models::bpe::word::Merge,4_usize>>
+     0.07%             3  vllm             tokenizers.abi3.so                               [.] onig_is_in_code_range
+     0.07%             3  vllm             tokenizers.abi3.so                               [.] tokenizers::tokenizer::added_vocabulary::AddedVocabulary::is_special_token
+     0.07%             3  vllm             tokenizers.abi3.so                               [.] unicode_normalization_alignments::lookups::canonical_fully_decomposed
+     0.05%             2  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb395671477a0
+     0.05%             2  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb39567a9425c
+     0.05%             2  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb39567a985e0
+     0.05%             2  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x0000000000025770
+     0.05%             2  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x0000000000027d00
+     0.05%             2  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x000000000005b718
+     0.05%             2  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x0000000000092e90
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb39566cef1f0
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb39566cfcae0
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb39566cfcaf0
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb39566da6750
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb39566da6c50
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb3956702887c
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb39567048b30
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb39567145e40
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb395671b04b8
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb395671de3e4
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb395672266c0
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb395672e45c0
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb395672e60b0
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb395672f0f58
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb395678f4770
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb395678f4e80
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb3956791232c
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb3956791c9c8
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb3956791dc00
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb3956791fbd8
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb395679e48c8
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a08698
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a13b68
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a20d30
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb39567b30410
+     0.05%             2  vllm             [kernel.kallsyms]                                [k] 0xffffb39567bbad30
+     0.05%             2  vllm             [nf_conntrack]                                   [k] 0x000000000000f14c
+     0.05%             2  vllm             [nf_nat]                                         [k] 0x0000000000001880
+     0.05%             2  vllm             [vdso]                                           [.] 0x000000000000049c
+     0.05%             2  vllm             _asyncio.cpython-312-aarch64-linux-gnu.so        [.] FutureObj_finalize
+     0.05%             2  vllm             _asyncio.cpython-312-aarch64-linux-gnu.so        [.] _asyncio_Future___init__
+     0.05%             2  vllm             _asyncio.cpython-312-aarch64-linux-gnu.so        [.] future_new_iter
+     0.05%             2  vllm             _asyncio.cpython-312-aarch64-linux-gnu.so        [.] future_schedule_callbacks
+     0.05%             2  vllm             _core.cpython-312-aarch64-linux-gnu.so           [.] Decoder_decode
+     0.05%             2  vllm             _core.cpython-312-aarch64-linux-gnu.so           [.] ms_decode_custom
+     0.05%             2  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000098188
+     0.05%             2  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001b57cc
+     0.05%             2  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001c03e0
+     0.05%             2  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001ccc90
+     0.05%             2  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001cce14
+     0.05%             2  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001fa590
+     0.05%             2  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000021efd4
+     0.05%             2  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000230adc
+     0.05%             2  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000002401e0
+     0.05%             2  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000241db8
+     0.05%             2  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000025887c
+     0.05%             2  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000025c5ec
+     0.05%             2  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000002db3c0
+     0.05%             2  vllm             _zmq.abi3.so                                     [.] PyObject_GetAttr@plt
+     0.05%             2  vllm             _zmq.abi3.so                                     [.] 0x00000000000190a0
+     0.05%             2  vllm             _zmq.abi3.so                                     [.] 0x000000000001a7a8
+     0.05%             2  vllm             _zmq.abi3.so                                     [.] 0x0000000000026398
+     0.05%             2  vllm             _zmq.abi3.so                                     [.] 0x000000000002646c
+     0.05%             2  vllm             libc.so.6                                        [.] read
+     0.05%             2  vllm             libc.so.6                                        [.] 0x0000000000083e78
+     0.05%             2  vllm             libc.so.6                                        [.] 0x000000000008bbdc
+     0.05%             2  vllm             libc.so.6                                        [.] 0x000000000008bbec
+     0.05%             2  vllm             libc.so.6                                        [.] 0x000000000008d258
+     0.05%             2  vllm             libc.so.6                                        [.] 0x000000000008d310
+     0.05%             2  vllm             libc.so.6                                        [.] 0x000000000008df24
+     0.05%             2  vllm             libc.so.6                                        [.] 0x0000000000099a54
+     0.05%             2  vllm             libc.so.6                                        [.] 0x0000000000099ab4
+     0.05%             2  vllm             libc.so.6                                        [.] 0x000000000009aef4
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] PyArg_ParseTupleAndKeywords
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] PyContext_CopyCurrent
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] PyDict_Keys
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] PyErr_GivenExceptionMatches
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] PyErr_SetExcInfo
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] PyEval_SaveThread
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] PyException_GetTraceback
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] PyGILState_Ensure
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] PyIter_Send
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] PyLong_FromSsize_t
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] PyNumber_Float
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] PyNumber_Index
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] PyNumber_Long
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] PyObject_Call
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] PyObject_CallFinalizerFromDealloc
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] PyObject_GenericGetDict
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] PyObject_GetBuffer
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] PyObject_IS_GC@plt
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] PyObject_Malloc@plt
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] PyTraceBack_Here
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] PyTuple_Pack
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] _PyAsyncGenValueWrapperNew
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] _PyBuildSlice_ConsumeRefs
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] _PyBytes_FormatEx
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] _PyDict_SetItem_KnownHash
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] _PyErr_GetExcInfo
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] _PyEval_SliceIndex
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] _PyGen_SetStopIterationValue
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] _PyInterpreterState_GetConfig
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] _PyLong_New
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] _PyObject_GetDictPtr
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] _PySet_NextEntry
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] _PyThreadState_GetCurrent
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] _PyThreadState_UncheckedGet@plt
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] _PyTime_GetSystemClockWithInfo
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] _PyTraceBack_FromFrame
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] _PyUnicodeWriter_PrepareInternal
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] _PyUnicodeWriter_WriteStr
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] _PyUnicode_JoinArray
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] _Py_Dealloc@plt
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] _Py_IncRef
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] _Py_module_getattro
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] acquire_timed
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] ascii_decode
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] bytes_buffer_getbuffer
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] bytes_decode
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] cfunction_vectorcall_NOARGS
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] dict_get
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] dict_merge
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] dictiter_iternextkey
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] dictresize
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] do_raise
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] gen_dealloc
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] list_subscript
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] listiter_next
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] long_and
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] long_format_binary
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] method_dealloc
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] method_new
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] object_get_class
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] object_init
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] range_iter
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] sem_post@plt
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] sm_descr_get
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] subtype_dict
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] subtype_setdict
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] unicode_encode
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] unicode_startswith
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] vectorcall_maybe.constprop.0
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] vgetargs1_impl
+     0.05%             2  vllm             libpython3.12.so.1.0                             [.] visit_decref
+     0.05%             2  vllm             libzmq-97580724.so.5.2.5                         [.] zmq_getsockopt
+     0.05%             2  vllm             libzmq-97580724.so.5.2.5                         [.] zmq_msg_init
+     0.05%             2  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000003f6a8
+     0.05%             2  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000004e550
+     0.05%             2  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000004e960
+     0.05%             2  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000005e190
+     0.05%             2  vllm             libzmq-97580724.so.5.2.5                         [.] 0x0000000000072a6c
+     0.05%             2  vllm             libzmq-97580724.so.5.2.5                         [.] 0x00000000000741dc
+     0.05%             2  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000007422c
+     0.05%             2  vllm             libzmq-97580724.so.5.2.5                         [.] 0x00000000000743d0
+     0.05%             2  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __Pyx_MatchKeywordArg_str
+     0.05%             2  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_f_6uvloop_4loop_4Loop__exec_queued_writes
+     0.05%             2  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_f_6uvloop_4loop_7UVCheck_stop
+     0.05%             2  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_f_6uvloop_4loop_8UVStream__exec_write
+     0.05%             2  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_f_6uvloop_4loop_cb_idle_callback
+     0.05%             2  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_f_6uvloop_4loop_new_Handle
+     0.05%             2  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_pw_6uvloop_4loop_8UVStream_5write
+     0.05%             2  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] uv__hrtime
+     0.05%             2  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] uv__next_timeout
+     0.05%             2  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] uv_fileno
+     0.05%             2  vllm             tokenizers.abi3.so                               [.] <alloc::string::String as core::clone::Clone>::clone
+     0.05%             2  vllm             tokenizers.abi3.so                               [.] _RNvCsiGVaDesi5rv_7___rustc11___rdl_alloc
+     0.05%             2  vllm             tokenizers.abi3.so                               [.] _ZN89_$LT$tokenizers..decoders..PyDecoderWrapper$u20$as$u20$tokenizers..tokenizer..Decoder$GT$12decode_chain17h21bc540a9303462aE.llvm.4365091983265709932
+     0.05%             2  vllm             tokenizers.abi3.so                               [.] __aarch64_cas4_acq
+     0.05%             2  vllm             tokenizers.abi3.so                               [.] core::fmt::write
+     0.05%             2  vllm             tokenizers.abi3.so                               [.] tokenizers::tokenizer::normalizer::NormalizedString::transform_range
+     0.05%             2  vllm             tokenizers.abi3.so                               [.] tokenizers::tokenizer::pre_tokenizer::PreTokenizedString::split
+     0.05%             2  vllm             tokenizers.abi3.so                               [.] tokenizers::utils::onig::<impl tokenizers::tokenizer::pattern::Pattern for &onig::Regex>::find_matches
+     0.02%             1  AtraceMonitor    [kernel.kallsyms]                                [k] 0xffffb39566eb905c
+     0.02%             1  PlogFlush        [kernel.kallsyms]                                [k] 0xffffb39566eb905c
+     0.02%             1  PlogFlush        [kernel.kallsyms]                                [k] 0xffffb39566eba1fc
+     0.02%             1  PlogFlush        [kernel.kallsyms]                                [k] 0xffffb395670480a8
+     0.02%             1  PlogFlush        [kernel.kallsyms]                                [k] 0xffffb39567bb8714
+     0.02%             1  PlogFlush        [kernel.kallsyms]                                [k] 0xffffb39567bbf824
+     0.02%             1  PlogFlush        libunified_dlog.so                               [.] 0x000000000000a0d4
+     0.02%             1  WatchdogMonitor  [kernel.kallsyms]                                [k] 0xffffb39567b70ed0
+     0.02%             1  ZMQbg/IO/0       [kernel.kallsyms]                                [k] 0xffffb395672f4818
+     0.02%             1  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb39566cf1fb8
+     0.02%             1  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb39566cfcb08
+     0.02%             1  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb39566cfcb18
+     0.02%             1  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb39566dcdd6c
+     0.02%             1  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb39566e329e0
+     0.02%             1  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb39566ebacc4
+     0.02%             1  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb39567102940
+     0.02%             1  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb3956719a1d8
+     0.02%             1  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb395671de414
+     0.02%             1  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb395671de5d0
+     0.02%             1  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb39567224b54
+     0.02%             1  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb39567224f34
+     0.02%             1  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb39567226258
+     0.02%             1  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb395672e1dc8
+     0.02%             1  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb395672e6048
+     0.02%             1  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb39567a93414
+     0.02%             1  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb39567a95d20
+     0.02%             1  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb39567a98650
+     0.02%             1  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb39567a98d1c
+     0.02%             1  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb39567b6e398
+     0.02%             1  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb39567b70f8c
+     0.02%             1  ZMQbg/IO/1       [kernel.kallsyms]                                [k] 0xffffb39567bb8714
+     0.02%             1  ZMQbg/IO/1       libc.so.6                                        [.] 0x000000000007c3e0
+     0.02%             1  ZMQbg/IO/1       libc.so.6                                        [.] 0x000000000007c434
+     0.02%             1  ZMQbg/IO/1       libc.so.6                                        [.] 0x000000000007c44c
+     0.02%             1  ZMQbg/IO/1       libc.so.6                                        [.] 0x000000000007c464
+     0.02%             1  ZMQbg/IO/1       libc.so.6                                        [.] 0x000000000008df00
+     0.02%             1  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x00000000000243d8
+     0.02%             1  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x0000000000025728
+     0.02%             1  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x0000000000033dc0
+     0.02%             1  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x000000000003e2ec
+     0.02%             1  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x000000000003e320
+     0.02%             1  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x000000000003e3d4
+     0.02%             1  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x000000000003e428
+     0.02%             1  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x000000000003e42c
+     0.02%             1  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x0000000000046018
+     0.02%             1  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x0000000000046b24
+     0.02%             1  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x000000000004e01c
+     0.02%             1  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x000000000005dbe0
+     0.02%             1  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x000000000005df90
+     0.02%             1  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x000000000006f5f0
+     0.02%             1  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x0000000000083508
+     0.02%             1  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x0000000000083594
+     0.02%             1  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x0000000000083650
+     0.02%             1  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x0000000000085980
+     0.02%             1  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x0000000000092bb4
+     0.02%             1  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x0000000000092e20
+     0.02%             1  ZMQbg/IO/1       libzmq-97580724.so.5.2.5                         [.] 0x00000000000a383c
+     0.02%             1  vllm             [drv_pcie_host]                                  [k] 0x00000000000680a8
+     0.02%             1  vllm             [ip_set]                                         [k] 0x000000000000c470
+     0.02%             1  vllm             [ip_set]                                         [k] 0x000000000000c810
+     0.02%             1  vllm             [ip_set]                                         [k] 0x000000000000c820
+     0.02%             1  vllm             [ip_set]                                         [k] 0x000000000000d640
+     0.02%             1  vllm             [ip_set]                                         [k] 0x000000000000eb40
+     0.02%             1  vllm             [ip_set]                                         [k] 0x000000000000ebe8
+     0.02%             1  vllm             [ip_set]                                         [k] 0x000000000000ed20
+     0.02%             1  vllm             [ip_set]                                         [k] 0x000000000000ed8c
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566ceefd8
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566ceefe8
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566cef0dc
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566cf1f6c
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566cfc8a0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566cfc8b4
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566cfca40
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566cfcb04
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566cfcb18
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566d14ba0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566d18530
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566da6cdc
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566db6458
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566db6460
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566dcdcf0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566dcdd48
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566dcdd54
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566ded67c
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566e32754
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566eb20b8
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566eb42a8
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566eb8480
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566eb8fc0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566ebacac
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566ebacc4
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566ebae10
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566ebb060
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566ebb08c
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566ebb110
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566ed3e54
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566f15afc
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566f15b00
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566f15ce8
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39566f15cf4
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395670480a8
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567048340
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567048c68
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567048c80
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395670c1844
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395670d0c40
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb3956710295c
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567145bf0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567145c18
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567149c88
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395671753a0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb3956717687c
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567199fc0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb3956719a0cc
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb3956719a118
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395671ace14
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395671ace5c
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395671b03c0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395671b040c
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395671b04c0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395671b04f0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395671b05e4
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395671b0620
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395671ce998
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395671ce9bc
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395671ceae4
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395671ceaf8
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395671d00a0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395671d03a0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395671d0440
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395671d046c
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395671d0690
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395671d06c4
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395671d0714
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395671de3c4
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395671de52c
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567224b58
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567225aec
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567225ec4
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567226190
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb3956722715c
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567227168
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb3956722b340
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395672e1cf8
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395672e1cfc
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395672e1dc0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395672e1df8
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395672e45c4
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395672e45f0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395672e6068
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395672f0f10
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395672f2e94
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395672f2eb0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395672f47a0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395672f47e0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395673ac818
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395673bad60
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395674121d8
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567412248
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb3956774175c
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395678796d8
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395678796e8
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395678e5ac8
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395678e5bc0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395678ee664
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395678eea6c
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395678eea7c
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395678ef2e8
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395678f5788
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395678f5874
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395678f8af4
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395678f8b64
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567911640
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567912314
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb3956791c6c8
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb3956791c8e4
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb3956791cd48
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb3956791d720
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb3956791d734
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679205a8
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567921820
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567928448
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567945bc0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567977740
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567986980
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679c6728
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679cf530
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679cf540
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679d7544
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679d7558
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679db1c0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679db510
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679db530
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679dddd8
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679de070
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679de2c0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679de678
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679e4c5c
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679e4c80
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679e4cbc
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679e4d00
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679e4d58
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679e4d70
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679f0300
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679f0304
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679f0e38
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679f1280
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679f1460
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679f1778
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb395679fd8a0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a00140
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a001a4
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a001e0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a0045c
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a0167c
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a02440
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a02474
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a05780
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a062b0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a06640
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a06668
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a066c0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a07180
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a072d8
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a08d68
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a08d80
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a08f28
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a08f80
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a091d8
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a0d00c
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a13b94
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a15210
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a15884
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a16440
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a1c628
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a35ac0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567a8a9b0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567b30400
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567b6dd80
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567b6de28
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567b6de34
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567b6de44
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567b6de78
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567b6e300
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567b70fb0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567b70fc4
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567bb616c
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567bc0fa0
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567bc1ab4
+     0.02%             1  vllm             [kernel.kallsyms]                                [k] 0xffffb39567bc7e7c
+     0.02%             1  vllm             [nf_conntrack]                                   [k] 0x000000000000bb78
+     0.02%             1  vllm             [nf_conntrack]                                   [k] 0x000000000000c840
+     0.02%             1  vllm             [nf_conntrack]                                   [k] 0x000000000000d4b0
+     0.02%             1  vllm             [nf_conntrack]                                   [k] 0x000000000000d510
+     0.02%             1  vllm             [nf_nat]                                         [k] 0x0000000000001848
+     0.02%             1  vllm             [nf_nat]                                         [k] 0x00000000000018d8
+     0.02%             1  vllm             [nf_nat]                                         [k] 0x0000000000003720
+     0.02%             1  vllm             [nf_tables]                                      [k] 0x0000000000000194
+     0.02%             1  vllm             [nf_tables]                                      [k] 0x0000000000000200
+     0.02%             1  vllm             [nf_tables]                                      [k] 0x00000000000002ac
+     0.02%             1  vllm             [nf_tables]                                      [k] 0x00000000000003f4
+     0.02%             1  vllm             [nf_tables]                                      [k] 0x0000000000019220
+     0.02%             1  vllm             [nf_tables]                                      [k] 0x000000000001e598
+     0.02%             1  vllm             [nf_tables]                                      [k] 0x000000000001e5f0
+     0.02%             1  vllm             [nf_tables]                                      [k] 0x0000000000020e40
+     0.02%             1  vllm             [nf_tables]                                      [k] 0x0000000000025f90
+     0.02%             1  vllm             [nf_tables]                                      [k] 0x0000000000025f98
+     0.02%             1  vllm             [nf_tables]                                      [k] 0x0000000000025fa4
+     0.02%             1  vllm             [vdso]                                           [.] 0x00000000000004bc
+     0.02%             1  vllm             [vdso]                                           [.] 0x00000000000004cc
+     0.02%             1  vllm             _asyncio.cpython-312-aarch64-linux-gnu.so        [.] FutureIter_clear
+     0.02%             1  vllm             _asyncio.cpython-312-aarch64-linux-gnu.so        [.] FutureIter_iternext
+     0.02%             1  vllm             _asyncio.cpython-312-aarch64-linux-gnu.so        [.] FutureObj_dealloc
+     0.02%             1  vllm             _asyncio.cpython-312-aarch64-linux-gnu.so        [.] PyObject_GC_UnTrack@plt
+     0.02%             1  vllm             _asyncio.cpython-312-aarch64-linux-gnu.so        [.] PyObject_IsTrue@plt
+     0.02%             1  vllm             _asyncio.cpython-312-aarch64-linux-gnu.so        [.] _asyncio_Future_done
+     0.02%             1  vllm             _asyncio.cpython-312-aarch64-linux-gnu.so        [.] _asyncio_Future_set_result
+     0.02%             1  vllm             _asyncio.cpython-312-aarch64-linux-gnu.so        [.] future_init
+     0.02%             1  vllm             _core.cpython-312-aarch64-linux-gnu.so           [.] DataclassInfo_post_decode
+     0.02%             1  vllm             _core.cpython-312-aarch64-linux-gnu.so           [.] PyList_New@plt
+     0.02%             1  vllm             _core.cpython-312-aarch64-linux-gnu.so           [.] PyObject_HasAttr@plt
+     0.02%             1  vllm             _core.cpython-312-aarch64-linux-gnu.so           [.] mpack_decode_array
+     0.02%             1  vllm             _core.cpython-312-aarch64-linux-gnu.so           [.] mpack_decode_str
+     0.02%             1  vllm             _core.cpython-312-aarch64-linux-gnu.so           [.] ms_post_decode_uint64
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] bcmp@plt
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000003d540
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000045344
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000098094
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000009812c
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000009819c
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000000bb4d4
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000100550
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001ae860
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001ae8e4
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001aea14
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001b10f4
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001b1320
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001b14c0
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001b1658
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001b4ca0
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001b590c
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001baad0
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001baad8
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001bab40
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001bb208
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001bb2bc
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001bb2dc
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001bbd50
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001c0428
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001c0440
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001c07b8
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001c07cc
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001c07e8
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001c0de4
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001c1568
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001c157c
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001c1610
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001c8040
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001cbe94
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001cbec0
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001cbf44
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001cc240
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001ccbe0
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001ccca8
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001cccf0
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001ccd24
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001ccd38
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001ccda4
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001cd010
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001d0438
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001da5cc
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001de058
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001deb38
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001deb84
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001df554
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001fa2bc
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001fa7a0
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001fafa0
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000001ffb78
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000211184
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000002138c0
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000021655c
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000217d40
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000021a610
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000021afe0
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000021efac
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000021f3d8
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000021f430
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000224280
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000022ce10
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000022ce14
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000022cec0
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000022cf00
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000022cf0c
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000022dc90
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000230880
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000230940
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000230960
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000023097c
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000230ab4
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000230aec
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000230af0
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000023c4b8
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000023fd70
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000241e1c
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000002448d4
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000002451c0
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000246a84
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000246a88
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000254228
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000002545a4
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000254680
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000002546f8
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000258888
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000259b0c
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000025c5e0
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000025d40c
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000026043c
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000260858
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000026fed8
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000026feec
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000279cc0
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000279cc4
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000279dc0
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000027a014
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000027a10c
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x000000000027dcd8
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000280b44
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000280b4c
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x0000000000280bc4
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000002db230
+     0.02%             1  vllm             _pydantic_core.cpython-312-aarch64-linux-gnu.so  [.] 0x00000000002db240
+     0.02%             1  vllm             _zmq.abi3.so                                     [.] 0x00000000000170cc
+     0.02%             1  vllm             _zmq.abi3.so                                     [.] 0x000000000001713c
+     0.02%             1  vllm             _zmq.abi3.so                                     [.] 0x0000000000018ff8
+     0.02%             1  vllm             _zmq.abi3.so                                     [.] 0x000000000001910c
+     0.02%             1  vllm             _zmq.abi3.so                                     [.] 0x000000000001a7c8
+     0.02%             1  vllm             _zmq.abi3.so                                     [.] 0x000000000001b4cc
+     0.02%             1  vllm             _zmq.abi3.so                                     [.] 0x000000000001c7b0
+     0.02%             1  vllm             _zmq.abi3.so                                     [.] 0x000000000001cbf4
+     0.02%             1  vllm             _zmq.abi3.so                                     [.] 0x000000000001eb4c
+     0.02%             1  vllm             _zmq.abi3.so                                     [.] 0x000000000001eb58
+     0.02%             1  vllm             _zmq.abi3.so                                     [.] 0x000000000001eb70
+     0.02%             1  vllm             _zmq.abi3.so                                     [.] 0x000000000001ebbc
+     0.02%             1  vllm             _zmq.abi3.so                                     [.] 0x000000000001edbc
+     0.02%             1  vllm             _zmq.abi3.so                                     [.] 0x000000000001edf0
+     0.02%             1  vllm             _zmq.abi3.so                                     [.] 0x0000000000022564
+     0.02%             1  vllm             _zmq.abi3.so                                     [.] 0x0000000000026440
+     0.02%             1  vllm             _zmq.abi3.so                                     [.] 0x000000000002d3c4
+     0.02%             1  vllm             _zmq.abi3.so                                     [.] 0x000000000002d40c
+     0.02%             1  vllm             _zmq.abi3.so                                     [.] 0x000000000002e09c
+     0.02%             1  vllm             ld-linux-aarch64.so.1                            [.] 0x0000000000012804
+     0.02%             1  vllm             libc.so.6                                        [.] epoll_pwait
+     0.02%             1  vllm             libc.so.6                                        [.] strnlen
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000007c3b0
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000007c3b4
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000007c3c4
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000007c43c
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000007c458
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008bd60
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008be58
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008be7c
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008d1a4
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008d1bc
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008d1d0
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008d224
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008d22c
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008d238
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008d294
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008d3c0
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008dc84
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008dd74
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008dff0
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008e294
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008e2d0
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008e3d0
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008e458
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008e4a0
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008e4c8
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008e524
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008e630
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008e7fc
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008e824
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008e910
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000008eb34
+     0.02%             1  vllm             libc.so.6                                        [.] 0x0000000000099140
+     0.02%             1  vllm             libc.so.6                                        [.] 0x0000000000099a40
+     0.02%             1  vllm             libc.so.6                                        [.] 0x0000000000099a90
+     0.02%             1  vllm             libc.so.6                                        [.] 0x0000000000099aac
+     0.02%             1  vllm             libc.so.6                                        [.] 0x0000000000099ad0
+     0.02%             1  vllm             libc.so.6                                        [.] 0x0000000000099ad4
+     0.02%             1  vllm             libc.so.6                                        [.] 0x0000000000099afc
+     0.02%             1  vllm             libc.so.6                                        [.] 0x0000000000099b40
+     0.02%             1  vllm             libc.so.6                                        [.] 0x0000000000099b44
+     0.02%             1  vllm             libc.so.6                                        [.] 0x0000000000099b5c
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000009aec0
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000009aef0
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000009af1c
+     0.02%             1  vllm             libc.so.6                                        [.] 0x000000000009af5c
+     0.02%             1  vllm             libm.so.6                                        [.] scalbnf32x
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] AttributeError_dealloc
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] BaseException_dealloc
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] BaseException_init
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyArg_UnpackTuple
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyBuffer_Release
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyCFunction_GetFunction
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyCell_New
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyDict_GetItemWithError@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyDict_MergeFromSeq2
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyDict_Next
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyDict_Next@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyErr_CheckSignals
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyErr_GetRaisedException
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyErr_Restore
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyException_SetCause
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyException_SetContext@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyFloat_AsDouble
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyFloat_FromDouble@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyGILState_Release
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyGen_am_send
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyIter_Check
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyIter_Check@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyList_SetItem
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyLong_AsDouble
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyLong_AsLongAndOverflow@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyLong_AsSsize_t@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyLong_AsUnsignedLong
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyLong_FromLongLong
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyMapping_Check
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyMem_Malloc
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyMember_GetOne
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyMember_SetOne
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyNumber_InPlaceOr
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyNumber_Long@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyNumber_Or
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyNumber_Remainder
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyObject_CallNoArgs
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyObject_GC_UnTrack@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyObject_GenericSetAttr
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyObject_GetAttr@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyObject_Init
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyObject_IsInstance@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyObject_IsSubclass
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyObject_Realloc
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyObject_RichCompare@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyObject_Size
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PySet_Contains
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PySlice_AdjustIndices
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PySlice_Unpack
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyThread_acquire_lock_timed
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyThread_release_lock
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyThread_tss_get
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyTuple_GetItem
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyTuple_New@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyUnicode_RichCompare
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyUnicode_Substring
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyVectorcall_Call
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyVectorcall_Function
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyVectorcall_Function@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] PyVectorcall_NARGS
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] Py_GenericAlias
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] Py_LeaveRecursiveCall
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] StopIteration_dealloc
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] StopIteration_init
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyBytesWriter_Alloc
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyBytesWriter_Finish
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyBytesWriter_Init
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyBytesWriter_Prepare
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyBytes_Resize
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyCoro_GetAwaitableIter
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyDict_HasOnlyStringKeys
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyDict_SetItem_Take2
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyErr_ExceptionMatches
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyErr_Fetch
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyErr_GetRaisedException
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyErr_SetHandledException
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyErr_SetKeyError
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyEval_EvalFrameDefault@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyFrame_Copy
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyGen_FetchStopIterationValue
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyGen_SetStopIterationValue@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyLong_Sign
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyManagedBuffer_FromObject
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyMem_RawFree
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyMem_RawMalloc
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyNumber_Index
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyObject_Call_Prepend
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyObject_GC_New@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyObject_GC_NewVar@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyObject_GenericGetAttrWithDict@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyObject_GetMethod@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyObject_HasLen
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyObject_LookupSpecial@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyObject_RealIsSubclass
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyStack_AsDict
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyTime_AsMicroseconds
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyTime_FromMicrosecondsClamp
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyTime_FromSeconds
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyTrash_cond
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyTrash_end@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyTuple_FromArraySteal
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyType_AllocNoTrack
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyType_GetDict@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyUnicodeWriter_Finish
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyUnicode_FormatAdvancedWriter
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _PyUnicode_FromASCII
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _Py_CheckFunctionResult@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _Py_HashBytes
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _Py_NewReferenceNoTotal
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _Py_bytes_upper
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _Py_type_getattro_impl
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _Py_union_type_or
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] _deque_rotate
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] allocate_from_new_pool
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] async_gen_anext
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] async_gen_asend_dealloc
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] async_gen_asend_iternext
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] async_gen_wrapped_val_dealloc
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] build_indices_generic
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] build_string
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] bytes_hash
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] cell_dealloc
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] deque_append
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] deque_len
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] deque_popleft
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] dequeiter_dealloc
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] dequeiter_next
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] dict_iter
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] dict_new
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] dict_subscript
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] dict_vectorcall
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] do_super_lookup
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] enum_dealloc
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] float_add
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] list_slice
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] long_bool
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] long_richcompare
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] memory_dealloc
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] memory_richcompare
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] method_vectorcall
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] method_vectorcall_FASTCALL_KEYWORDS_METHOD
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] method_vectorcall_O
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] new_dict_with_shared_keys
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] object_new
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] object_richcompare
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] object_vacall
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] partial_call
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] partial_new
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] pthread_getspecific@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] pthread_mutex_unlock@plt
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] pysiphash
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] range_dealloc
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] set_clear_internal
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] set_dealloc
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] siphash13
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] slice_dealloc
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] slot_nb_or
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] slot_sq_contains
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] slot_tp_new
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] sre_ucs1_charset.constprop.0
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] sre_ucs1_count
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] stringlib_bytes_join
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] tailmatch
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] time_time
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] tp_new_wrapper
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] tuple_subtype_new
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] tupleiter_dealloc
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] tupleiter_next
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] type___instancecheck__
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] ucs2lib_utf8_encoder
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] unicode_encode_utf8
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] unicode_fromformat_write_str
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] unicode_length
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] unicode_lower
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] weakref___init__
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] weakref_richcompare
+     0.02%             1  vllm             libpython3.12.so.1.0                             [.] wrapperdescr_get
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] poll@plt
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] zmq_msg_size
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000003ce3c
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000003f400
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000003f600
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000003f858
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000003f918
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000003fa1c
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x0000000000045ee8
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x0000000000045ef0
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x0000000000046588
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x00000000000465cc
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x00000000000468d4
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x00000000000468dc
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000004d25c
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000004d48c
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000004d5c0
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000004dd5c
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000004de90
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000004dfcc
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000004e338
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000004e39c
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000004e950
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000004e9e0
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x0000000000053424
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x0000000000054910
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000005636c
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x0000000000056520
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000005a44c
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000005b2a8
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000005b3b0
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000005b9ac
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000005b9ec
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000005e0a8
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000005e4c0
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x0000000000072240
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x0000000000072284
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x0000000000072288
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000007235c
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x00000000000725e0
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x0000000000074200
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000007421c
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x0000000000074228
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x0000000000074290
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x00000000000744a4
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x0000000000077aa8
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x0000000000077ac0
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x0000000000078480
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000009f1dc
+     0.02%             1  vllm             libzmq-97580724.so.5.2.5                         [.] 0x000000000009f240
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] PyContext_Enter@plt
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] PyLong_FromUnsignedLong@plt
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_f_6uvloop_4loop_11TimerHandle__run
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_f_6uvloop_4loop_14UVSocketHandle__fileno
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_f_6uvloop_4loop_15UVBaseTransport__maybe_resume_protocol
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_f_6uvloop_4loop_4Loop__append_ready_handle
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_f_6uvloop_4loop_4Loop__call_soon
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_f_6uvloop_4loop_7UVCheck_start
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_f_6uvloop_4loop_8UVHandle__ensure_alive
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_f_6uvloop_4loop_8UVStream__get_write_buffer_size
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_f_6uvloop_4loop_8UVStream__try_write
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_f_6uvloop_4loop___ensure_handle_data
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_pw_6uvloop_4loop_11TimerHandle_9cancel
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_pw_6uvloop_4loop_4Loop_29get_debug
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_pw_6uvloop_4loop_4Loop_37create_future
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_pw_6uvloop_4loop_4Loop_39create_task
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] __pyx_tp_new_6uvloop_4loop_Handle
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] uv__backend_timeout
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] uv__getiovmax
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] uv__metrics_set_provider_entry_time@plt
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] uv__metrics_update_idle_time@plt
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] uv__poll_io
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] uv__run_check
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] uv__run_idle
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] uv__run_prepare
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] uv_idle_stop
+     0.02%             1  vllm             loop.cpython-312-aarch64-linux-gnu.so            [.] uv_timer_start
+     0.02%             1  vllm             parser.cpython-312-aarch64-linux-gnu.so          [.] llhttp__on_header_value
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] <&mut T as core::fmt::Display>::fmt
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] <alloc::vec::Vec<T,A> as alloc::vec::spec_extend::SpecExtend<T,I>>::spec_extend
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] <alloc::vec::Vec<T> as alloc::vec::spec_from_iter::SpecFromIter<T,I>>::from_iter
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] <alloc::vec::into_iter::IntoIter<T,A> as core::iter::traits::iterator::Iterator>::fold
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] <hashbrown::map::HashMap<K,V,S,A> as core::iter::traits::collect::Extend<(K,V)>>::extend
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] <pyo3::pycell::impl_::BorrowChecker as pyo3::pycell::impl_::PyClassBorrowChecker>::try_borrow
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] <pyo3::pycell::impl_::BorrowChecker as pyo3::pycell::impl_::PyClassBorrowChecker>::try_borrow_mut
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] <str as core::fmt::Display>::fmt
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] <tokenizers::decoders::DecoderWrapper as tokenizers::tokenizer::Decoder>::decode_chain
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] <tokenizers::models::PyModel as tokenizers::tokenizer::Model>::tokenize
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] <tokenizers::pre_tokenizers::byte_level::ByteLevel as tokenizers::tokenizer::Decoder>::decode_chain
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] PyTuple_Size@plt
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] _RNvCsiGVaDesi5rv_7___rustc14___rust_realloc
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] _RNvCsiGVaDesi5rv_7___rustc35___rust_no_alloc_shim_is_unstable_v2
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] _ZN10tokenizers9tokenizer10normalizer16NormalizedString15transform_range17hcb446993f3e5e7f2E.llvm.7673255331170069414
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] _ZN10tokenizers9tokenizer190_$LT$impl$u20$pyo3..impl_..pyclass..PyMethods$LT$tokenizers..tokenizer..PyAddedToken$GT$$u20$for$u20$pyo3..impl_..pyclass..PyClassImplCollector$LT$tokenizers..tokenizer..PyAddedToken$GT$$GT$10py_methods5ITEMS10trampoline17h60c54d0c621dd551E.llvm.9511245339874145604
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] _ZN5alloc7raw_vec20RawVecInner$LT$A$GT$11finish_grow17h794bb6a89c502c7fE.llvm.15234451801708460862
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] __aarch64_cas8_acq_rel
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] alloc::raw_vec::RawVec<T,A>::grow_one
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] alloc::str::join_generic_copy
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] core::fmt::Formatter::pad
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] core::iter::adapters::flatten::and_then_or_clear
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] core::ptr::drop_in_place$LT$core..iter..adapters..flatten..FlatMap$LT$alloc..vec..into_iter..IntoIter$LT$alloc..string..String$GT$$C$alloc..vec..Vec$LT$u8$GT$$C$$LT$tokenizers..pre_tokenizers..byte_level..ByteLevel$u20$as$u20$tokenizers..tokenizer..Decoder$GT$..decode_chain..$u7b$$u7b$closure$u7d$$u7d$$GT$$GT$::h6a759623eb29e7a7
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] mbc_enc_len
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] memcpy@plt
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] pyo3::conversions::std::string::<impl pyo3::conversion::IntoPyObject for alloc::string::String>::into_pyobject
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] pyo3::impl_::extract_argument::extract_argument
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] pyo3::internal::state::AttachGuard::assume
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] tokenizers::decoders::PyDecodeStream::__pymethod_step__
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] tokenizers::tokenizer::TokenizerImpl<M,N,PT,PP,D>::post_process
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] tokenizers::tokenizer::pre_tokenizer::PreTokenizedString::into_encoding
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] tokenizers::tokenizer::pre_tokenizer::PreTokenizedString::normalize
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] tokenizers::tokenizer::step_decode_stream
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] unicode_normalization_alignments::decompose::Decompositions<I>::push_back
+     0.02%             1  vllm             tokenizers.abi3.so                               [.] unicode_normalization_alignments::lookups::canonical_combining_class
+
+
+#
+# (Tip: Skip collecting build-id when recording: perf record -B)
+#

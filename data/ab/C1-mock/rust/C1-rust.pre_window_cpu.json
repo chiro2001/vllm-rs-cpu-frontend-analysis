@@ -1,0 +1,30 @@
+{
+ "wall_seconds": 8.128,
+ "window": {
+  "from": "2026-09-25T14:07:59+0800",
+  "to": "2026-09-25T14:08:07+0800"
+ },
+ "pids": {
+  "3838530": {
+   "comm": "vllm-rs",
+   "cpu_seconds": 8.02,
+   "cpu_percent_of_one_core": 98.68,
+   "threads_max": 11,
+   "threads_end": 11,
+   "rss_kb_end": 158624,
+   "utime_seconds": 2.01,
+   "stime_seconds": 6.01
+  },
+  "3838624": {
+   "comm": "vllm-mock-engin",
+   "cpu_seconds": 2.27,
+   "cpu_percent_of_one_core": 27.93,
+   "threads_max": 3,
+   "threads_end": 3,
+   "rss_kb_end": 6244,
+   "utime_seconds": 0.41,
+   "stime_seconds": 1.86
+  }
+ },
+ "cpu_seconds_total": 10.29
+}

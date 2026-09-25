@@ -1,0 +1,23 @@
+{
+ "taken_at": "2026-09-25T14:08:59+0800",
+ "epoch": 1790316539.2096674,
+ "wall": 1790316539.2096677,
+ "pids": {
+  "3841489": {
+   "missing": true
+  },
+  "3838530": {
+   "comm": "vllm-rs",
+   "state": "S",
+   "utime_ticks": 2118,
+   "stime_ticks": 3124,
+   "cutime_ticks": 0,
+   "cstime_ticks": 0,
+   "self_cpu_ticks": 5242,
+   "with_children_cpu_ticks": 5242,
+   "rss_kb": 212172,
+   "threads": 13,
+   "ticks_per_sec": 100
+  }
+ }
+}

@@ -1,0 +1,68 @@
+Loading tokenizer: REPO_HOME/models/Qwen3-0.6B
+Tokenizer: Local (vocab_size=151669)
+Tokenizer loaded successfully.
+Generating 512 random prompts...
+Generated 512 prompts in 2.45s
+Tokenizer verified in previous run (cached), skipping verification.
+Speculative decoding detected, will collect metrics.
+Starting main benchmark run...
+Traffic request rate: inf
+Burstiness factor: 1 (Poisson process)
+Maximum request concurrency: 1
+================= Serving Benchmark Result =================
+Successful requests:                     512       
+Failed requests:                         0         
+Maximum request concurrency:             1         
+Benchmark duration (s):                  1.50      
+Total input tokens:                      4192669   
+Total generated tokens:                  8192      
+Request throughput (req/s):              340.57    
+Output token throughput (tok/s):         5449.15   
+Peak output token throughput (tok/s):    6775.00   
+Peak concurrent requests:                381.00    
+Total token throughput (tok/s):          2794324.47
+--------------------Time to First Token---------------------
+Mean TTFT (ms):                          2.53      
+Median TTFT (ms):                        2.43      
+P99 TTFT (ms):                           4.86      
+P90 TTFT (ms):                           3.12      
+----------Time per Output Token (excl. 1st token)-----------
+Mean TPOT (ms):                          0.03      
+Median TPOT (ms):                        0.01      
+P99 TPOT (ms):                           0.17      
+P90 TPOT (ms):                           0.11      
+--------------------Inter-token Latency---------------------
+Mean ITL (ms):                           0.02      
+Median ITL (ms):                         0.00      
+P99 ITL (ms):                            0.35      
+P90 ITL (ms):                            0.01      
+---------------------End-to-end Latency---------------------
+Mean E2EL (ms):                          2.91      
+Median E2EL (ms):                        2.57      
+P99 E2EL (ms):                           5.70      
+P90 E2EL (ms):                           4.61      
+============================================================
+Warning: steady-state window is 1.5s (100.0% of run); may not be representative
+============ Steady-State Metrics =============
+Concurrency threshold:              >= 0.95 * 1 = 1
+Window:                             0.0s -> 1.5s  (1.5s)
+Observed peak concurrency:          1
+Requests started in window:         512 / 512 (100.0%)
+Requests completed in window:       511
+-----------------------------------------------
+Request throughput (req/s):         339.93
+Output token throughput (tok/s):    6064.16
+Input token throughput (tok/s):     2789052.09
+Total token throughput (tok/s):     2795116.24
+-----------------------------------------------
+Mean TTFT (ms):                     2.53
+Median TTFT (ms):                   2.43
+P99 TTFT (ms):                      4.86
+P90 TTFT (ms):                      3.12
+-----------------------------------------------
+Mean TPOT (ms):                     0.03
+Median TPOT (ms):                   0.01
+P90 TPOT (ms):                      0.11
+P99 TPOT (ms):                      0.17
+===============================================
+Results saved to REPO_HOME/projects/vllm/vllm-rs-wt/C-ab/runs/ab/rust/bench-result-C3-rust/C3-rust-infqps-concurrency1-Qwen3-0.6B-20260925-140826.json

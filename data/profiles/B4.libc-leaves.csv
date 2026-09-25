@@ -1,0 +1,61 @@
+dso,offset,symbol_from_perf,nearest_symbol,delta,identified_function,samples
+/usr/lib/libc.so.6,0x18cdd3,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19a33,libc:memmove/memcpy (AVX-512),1293
+/usr/lib/libc.so.6,0x18cedd,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19b3d,libc:memmove/memcpy (AVX-512),500
+/usr/lib/libc.so.6,0x18cdc0,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19a20,libc:memmove/memcpy (AVX-512),188
+/usr/lib/libc.so.6,0x18cdc4,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19a24,libc:memmove/memcpy (AVX-512),150
+/usr/lib/libc.so.6,0x18ce8b,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19aeb,libc:memmove/memcpy (AVX-512),127
+/usr/lib/libc.so.6,0x18cea0,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19b00,libc:memmove/memcpy (AVX-512),114
+/usr/lib/libc.so.6,0x1837a5,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x10405,libc:memcmp (AVX-512/evex),97
+/usr/lib/libc.so.6,0x18ce93,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19af3,libc:memmove/memcpy (AVX-512),97
+/usr/lib/libc.so.6,0x18cf3f,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19b9f,libc:memmove/memcpy (AVX-512),72
+/usr/lib/libc.so.6,0x1837ab,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x1040b,libc:memcmp (AVX-512/evex),69
+/usr/lib/libc.so.6,0x18cef4,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19b54,libc:memmove/memcpy (AVX-512),68
+/usr/lib/libc.so.6,0x18cea8,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19b08,libc:memmove/memcpy (AVX-512),68
+/usr/lib/libc.so.6,0x18379e,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x103fe,libc:memcmp (AVX-512/evex),67
+/usr/lib/libc.so.6,0x18ceb0,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19b10,libc:memmove/memcpy (AVX-512),66
+/usr/lib/libc.so.6,0x18ce99,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19af9,libc:memmove/memcpy (AVX-512),61
+/usr/lib/libc.so.6,0x18cefc,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19b5c,libc:memmove/memcpy (AVX-512),40
+/usr/lib/libc.so.6,0x183784,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x103e4,libc:memcmp (AVX-512/evex),39
+/usr/lib/libc.so.6,0x18ceed,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19b4d,libc:memmove/memcpy (AVX-512),35
+/usr/lib/libc.so.6,0x183780,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x103e0,libc:memcmp (AVX-512/evex),35
+/usr/lib/libc.so.6,0xa07f2,[unknown],sem_trywait@GLIBC_2.2.5,0x72,,34
+/usr/lib/libc.so.6,0x18ce77,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19ad7,libc:memmove/memcpy (AVX-512),31
+/usr/lib/libc.so.6,0x18cf2f,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19b8f,libc:memmove/memcpy (AVX-512),31
+/usr/lib/libc.so.6,0x18cf4f,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19baf,libc:memmove/memcpy (AVX-512),28
+/usr/lib/libc.so.6,0x1837b7,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x10417,libc:memcmp (AVX-512/evex),28
+/usr/lib/libc.so.6,0x18cf37,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19b97,libc:memmove/memcpy (AVX-512),27
+/usr/lib/libc.so.6,0x18ce44,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19aa4,libc:memmove/memcpy (AVX-512),25
+/usr/lib/libc.so.6,0x18cf21,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19b81,libc:memmove/memcpy (AVX-512),24
+/usr/lib/libc.so.6,0x18cdfe,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19a5e,libc:memmove/memcpy (AVX-512),24
+/usr/lib/libc.so.6,0x18cff6,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19c56,libc:memmove/memcpy (AVX-512),23
+/usr/lib/libc.so.6,0x18cee4,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19b44,libc:memmove/memcpy (AVX-512),23
+/usr/lib/libc.so.6,0x18cf0c,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19b6c,libc:memmove/memcpy (AVX-512),22
+/usr/lib/libc.so.6,0x18cf1a,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19b7a,libc:memmove/memcpy (AVX-512),21
+/usr/lib/libc.so.6,0x18cf04,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19b64,libc:memmove/memcpy (AVX-512),20
+/usr/lib/libc.so.6,0x18cfc6,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19c26,libc:memmove/memcpy (AVX-512),19
+/usr/lib/libc.so.6,0x18cdf9,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19a59,libc:memmove/memcpy (AVX-512),17
+/usr/lib/libc.so.6,0x18cffd,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19c5d,libc:memmove/memcpy (AVX-512),17
+/usr/lib/libc.so.6,0x18ce2c,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19a8c,libc:memmove/memcpy (AVX-512),17
+/usr/lib/libc.so.6,0x18cf8e,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19bee,libc:memmove/memcpy (AVX-512),17
+/usr/lib/libc.so.6,0x18cf14,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19b74,libc:memmove/memcpy (AVX-512),16
+/usr/lib/libc.so.6,0xe46d0,clock_gettime+0x0,clock_gettime@GLIBC_2.2.5,0x0,,15
+/usr/lib/libc.so.6,0x18cf47,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19ba7,libc:memmove/memcpy (AVX-512),15
+/usr/lib/libc.so.6,0x94820,[unknown],__libc_alloca_cutoff@@GLIBC_PRIVATE,0x100,,15
+/usr/lib/libc.so.6,0xe46e2,clock_gettime+0x12,clock_gettime@GLIBC_2.2.5,0x12,,15
+/usr/lib/libc.so.6,0x18cfd4,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19c34,libc:memmove/memcpy (AVX-512),14
+/usr/lib/libc.so.6,0x1837a9,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x10409,libc:memcmp (AVX-512/evex),14
+/usr/lib/libc.so.6,0x18d010,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19c70,libc:memmove/memcpy (AVX-512),14
+/usr/lib/libc.so.6,0x183798,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x103f8,libc:memcmp (AVX-512/evex),14
+/usr/lib/libc.so.6,0x102fab,__sched_yield+0xb,sched_yield@@GLIBC_2.2.5,0xb,,12
+/usr/lib/libc.so.6,0x18d09b,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19cfb,libc:memmove/memcpy (AVX-512),12
+/usr/lib/libc.so.6,0x18d0a1,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19d01,libc:memmove/memcpy (AVX-512),12
+/usr/lib/libc.so.6,0x18ce01,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19a61,libc:memmove/memcpy (AVX-512),11
+/usr/lib/libc.so.6,0x18ce13,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19a73,libc:memmove/memcpy (AVX-512),10
+/usr/lib/libc.so.6,0x18ce23,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19a83,libc:memmove/memcpy (AVX-512),10
+/usr/lib/libc.so.6,0x18cec7,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19b27,libc:memmove/memcpy (AVX-512),10
+/usr/lib/libc.so.6,0x18cf28,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19b88,libc:memmove/memcpy (AVX-512),9
+/usr/lib/libc.so.6,0x18ce33,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19a93,libc:memmove/memcpy (AVX-512),9
+/usr/lib/libc.so.6,0x18ce1d,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19a7d,libc:memmove/memcpy (AVX-512),9
+/usr/lib/libc.so.6,0x18ce7a,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19ada,libc:memmove/memcpy (AVX-512),9
+/usr/lib/libc.so.6,0x1837bd,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x1041d,libc:memcmp (AVX-512/evex),8
+/usr/lib/libc.so.6,0x18d094,[unknown],_dl_mcount_wrapper@GLIBC_2.2.5,0x19cf4,libc:memmove/memcpy (AVX-512),8

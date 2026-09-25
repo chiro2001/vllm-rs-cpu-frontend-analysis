@@ -1,0 +1,42 @@
+# tag,a3-A1-rust,total_cpu_ns,2123123121,source,REMOTE_HOST chip4 profiling（prof_point.sh）+ collapse_a3.sh
+rank,frame,self_ns,self_pct,inclusive_ns,inclusive_pct,segment,basis
+1,[[kernel.kallsyms]]_[k],637637637,30.033,13001000988,612.3527,X-kernel,code
+2,std::thread::local::LocalKey<T>::with,183183183,8.628,350350350,16.5017,X-tls,code
+3,tokio::runtime::scheduler::multi_thread::worker::Context::run,83083083,3.9132,1872872871,88.2131,X-runtime,heuristic
+4,[libc.so.6],59059059,2.7817,4303303299,202.6874,X-copy,code
+5,futures_util::stream::stream::StreamExt::poll_next_unpin,46046046,2.1688,429429429,20.2263,X-runtime,heuristic
+6,"rmp_serde::decode::Deserializer<R,C>::any_inner",32032032,1.5087,242242242,11.4097,P7,symbol
+7,mi_free,30030030,1.4144,30030030,1.4144,X-alloc,heuristic
+8,tokio::process::imp::orphan::OrphanQueueImpl<T>::reap_orphans,29029029,1.3673,33033033,1.5559,X-runtime,heuristic
+9,parking_lot::condvar::Condvar::wait_until_internal,28028028,1.3201,65065065,3.0646,X-runtime,heuristic
+10,tokio::runtime::scheduler::multi_thread::park::Parker::park,27027027,1.273,428428428,20.1792,X-runtime,heuristic
+11,[[vdso]]_[k],26026026,1.2258,26026026,1.2258,X-kernel,code
+12,[nf_tables.ko.xz],23023023,1.0844,57057057,2.6874,X-unclassified,none
+13,_ZN5tokio7runtime2io6driver6Driver4turn17h95ec952704d53a03E.llvm.12061638971258598240,21021021,0.9901,246246246,11.5983,X-unclassified,none
+14,tokio::runtime::scheduler::multi_thread::queue::Steal<T>::steal_into,20020020,0.943,20020020,0.943,X-runtime,heuristic
+15,tokio::runtime::scheduler::multi_thread::park::Unparker::unpark,20020020,0.943,20020020,0.943,X-runtime,heuristic
+16,tokio::runtime::io::scheduled_io::ScheduledIo::poll_readiness,20020020,0.943,21021021,0.9901,X-runtime,heuristic
+17,tokio::runtime::time::<impl tokio::runtime::time::handle::Handle>::process_at_time,19019019,0.8958,27027027,1.273,X-runtime,heuristic
+18,tokio::sync::mpsc::list::Tx<T>::push,18018018,0.8487,19019019,0.8958,X-runtime,heuristic
+19,epoll_pwait,17017017,0.8015,132132132,6.2235,X-kernel,code
+20,crossbeam_deque::deque::Stealer<T>::steal,16016016,0.7544,18018018,0.8487,X-park,heuristic
+21,"<asynk_strim::stream::AsynkStrim<F,Fut,Yieldr,Item> as futures_core::stream::Stream>::poll_next",15015015,0.7072,139139139,6.5535,X-runtime,heuristic
+22,_RNvNtNtCs6Hz1PecaLG4_4core3str8converts9from_utf8,15015015,0.7072,15015015,0.7072,X-str,heuristic
+23,tokio::runtime::context::scoped::Scoped<T>::with,14014014,0.6601,14014014,0.6601,X-runtime,heuristic
+24,__aarch64_cas8_acq_rel,13013013,0.6129,13013013,0.6129,X-unclassified,none
+25,futures_task::waker::wake_arc_raw,13013013,0.6129,81081081,3.819,X-unclassified,none
+26,_mi_page_malloc_zero,13013013,0.6129,13013013,0.6129,X-alloc,heuristic
+27,[perf-2000790.map]_[j],13013013,0.6129,13013013,0.6129,P4,code
+28,__aarch64_ldadd8_rel,12012012,0.5658,12012012,0.5658,X-unclassified,none
+29,parking_lot_core::parking_lot::lock_bucket_pair,12012012,0.5658,14014014,0.6601,X-runtime,heuristic
+30,"sharded_slab::pool::Pool<T,C>::get",12012012,0.5658,12012012,0.5658,X-log,heuristic
+31,asynk_strim::yielder::Yielder<Item>::yield_item::_{{closure}},11011011,0.5186,14014014,0.6601,X-runtime,heuristic
+32,mi_theap_malloc_aligned,11011011,0.5186,11011011,0.5186,X-alloc,heuristic
+33,serde_json::read::parse_unicode_escape,11011011,0.5186,12012012,0.5658,P2,symbol
+34,pcre2::bytes::Regex::find_at,11011011,0.5186,28028028,1.3201,P4,code
+35,vllm_engine_core_client::client::state::RequestRegistry::sender_for_output,11011011,0.5186,16016016,0.7544,P7,symbol
+36,[[ip_set]]_[k],10010010,0.4715,21021021,0.9901,X-kernel,code
+37,<S as futures_core::stream::TryStream>::try_poll_next,10010010,0.4715,82082082,3.8661,X-runtime,heuristic
+38,_ZN23vllm_engine_core_client6client3imp26run_output_dispatcher_loop28_$u7b$$u7b$closure$u7d$$u7d$17h939ef2bb4e760910E.llvm.8979963845522293737,10010010,0.4715,112112112,5.2805,P7,symbol
+39,rmp_serde::decode::any_num,10010010,0.4715,10010010,0.4715,P7,symbol
+40,pow,9009009,0.4243,18018018,0.8487,X-unknown,heuristic

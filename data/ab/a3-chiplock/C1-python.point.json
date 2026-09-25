@@ -1,0 +1,70 @@
+{
+ "run": "smoke-py",
+ "side": "python",
+ "tag": "C1",
+ "measured_at": "2026-09-25T14:43:56+0800",
+ "image": "quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler",
+ "chip": "4",
+ "port": "18301",
+ "load": {
+  "input_len": 1024,
+  "output_len": 128,
+  "num_prompts": 32,
+  "max_concurrency": 1,
+  "warmup": 2
+ },
+ "window": {
+  "start_epoch": 1790318565.9144027,
+  "end_epoch": 1790318605.9254773,
+  "seconds": 40.011
+ },
+ "cores": {
+  "server_cpuset": "160-199",
+  "client_cpuset": "200-201"
+ },
+ "pids": {
+  "frontend": 1296721,
+  "engine": 1301613
+ },
+ "frontend_cpu": {
+  "cpu_seconds": 1.49,
+  "utime_seconds": 1.33,
+  "stime_seconds": 0.16,
+  "threads_end": 51,
+  "rss_kb_end": 4637704
+ },
+ "engine_cpu": {
+  "cpu_seconds": 28.46,
+  "utime_seconds": 26.0,
+  "stime_seconds": 2.46
+ },
+ "e2e": {
+  "completed": 32,
+  "failed": 0,
+  "duration": 23.765229259966873,
+  "request_throughput": 1.346504998961016,
+  "output_throughput": 172.35263986701005,
+  "total_input_tokens": 33168,
+  "total_output_tokens": 4096,
+  "mean_ttft_ms": 96.41480186473927,
+  "p99_ttft_ms": 99.35560097568668,
+  "mean_tpot_ms": 5.087212052277159,
+  "p99_tpot_ms": 5.254718947167486,
+  "mean_itl_ms": 5.047400473642938,
+  "mean_e2el_ms": null,
+  "p99_e2el_ms": null,
+  "_file": "openai-chat-infqps-concurrency1-Qwen3.5-0.8B-20260925-063210.json"
+ },
+ "perf_file": "perf.txt",
+ "loadavg": [
+  "47.90",
+  "46.04",
+  "46.26"
+ ],
+ "normalized": {
+  "frontend_cpu_s_per_request": 0.046562,
+  "frontend_cpu_s_per_1k_input_tokens": 0.044923,
+  "frontend_cpu_s_per_1k_output_tokens": 0.36377,
+  "engine_cpu_s_per_request": 0.889375
+ }
+}

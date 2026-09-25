@@ -1,0 +1,32 @@
+{
+  "scope": "Rust 侧单臂（Python 侧无对照：tokenizer 项目已覆盖 Python 侧 tokenizer）",
+  "caveat": "fastokens 预分词在 ≥16 个 split 时走 rayon（线程数 = 绑定核数 ≤8）⇒ 多线程口径",
+  "points": {
+    "1k": {
+      "text_bytes": 5603,
+      "text_label": "render_1k",
+      "splits": 989,
+      "pretokenize_us": 50.564,
+      "build_pre_tokenized_us": 3.877,
+      "encode_full_us": 71.263,
+      "pretokenize_share_pct": 70.95,
+      "bpe_only_us": 20.699,
+      "pretokenize_allocs_per_op": 44.0,
+      "encode_allocs_per_op": 56.02,
+      "note": "pretokenize 含 normalizer + added-token 切分 + PCRE2 JIT 正则；bpe_only 是差值（推断）"
+    },
+    "8k": {
+      "text_bytes": 37388,
+      "text_label": "render_8k",
+      "splits": 6059,
+      "pretokenize_us": 311.209,
+      "build_pre_tokenized_us": 22.19,
+      "encode_full_us": 350.793,
+      "pretokenize_share_pct": 88.72,
+      "bpe_only_us": 39.584,
+      "pretokenize_allocs_per_op": 69.02,
+      "encode_allocs_per_op": 81.04,
+      "note": "pretokenize 含 normalizer + added-token 切分 + PCRE2 JIT 正则；bpe_only 是差值（推断）"
+    }
+  }
+}

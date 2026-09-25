@@ -1,0 +1,42 @@
+# tag,B4,total_cpu_ns,24050050026,source,run_matrix.sh: ISL~1043 OSL=128 c=64 stream=True tools=none
+rank,frame,self_ns,self_pct,inclusive_ns,inclusive_pct,segment,basis
+1,[libc.so.6],4057057053,16.8692,4124124120,17.1481,X-copy,code
+2,_mi_page_malloc_zero,1244244243,5.1736,1244244243,5.1736,X-alloc,heuristic
+3,futures_util::stream::stream::StreamExt::poll_next_unpin,910910910,3.7876,910910910,3.7876,X-runtime,heuristic
+4,[perf-3639361.map]_[j],808808808,3.363,808808808,3.363,P4,code
+5,std::thread::local::LocalKey<T>::with,783783783,3.259,783783783,3.259,X-tls,code
+6,"<core::iter::adapters::map::Map<I,F> as core::iter::traits::iterator::Iterator>::try_fold",780780780,3.2465,780780780,3.2465,X-rust,heuristic
+7,mi_free,682682682,2.8386,682682682,2.8386,X-alloc,heuristic
+8,vllm_tokenizer::byte_level_decode::decode_byte_level,590590590,2.4557,659659659,2.7429,P8,symbol
+9,"rmp_serde::decode::Deserializer<R,C>::any_inner",476476476,1.9812,480480480,1.9978,P7,symbol
+10,<S as futures_core::stream::TryStream>::try_poll_next,398398398,1.6565,398398398,1.6565,X-runtime,heuristic
+11,serde_core::ser::SerializeMap::serialize_entry,395395395,1.6441,396396396,1.6482,P10,symbol
+12,serde_json::ser::format_escaped_str_contents,332332332,1.3818,332332332,1.3818,P10,symbol
+13,"<asynk_strim::stream::AsynkStrim<F,Fut,Yieldr,Item> as futures_core::stream::Stream>::poll_next",327327327,1.361,327327327,1.361,X-runtime,heuristic
+14,[[vdso]]_[k],323323323,1.3444,323323323,1.3444,X-kernel,code
+15,mi_theap_malloc_aligned,322322322,1.3402,322322322,1.3402,X-alloc,heuristic
+16,pcre2::bytes::Regex::find_at,287287287,1.1945,289289289,1.2029,P4,code
+17,core::hash::BuildHasher::hash_one,285285285,1.1862,285285285,1.1862,X-hash,heuristic
+18,rmp::encode::uint::write_uint,273273273,1.1363,273273273,1.1363,P6,symbol
+19,mi_theap_umalloc,227227227,0.9448,227227227,0.9448,X-alloc,heuristic
+20,vllm_engine_core_client::client::imp::run_output_dispatcher_loop::{{closure}},212212212,0.8824,212212212,0.8824,P7,symbol
+21,"<http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame",189189189,0.7866,452452452,1.8813,P1,symbol
+22,asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}},168168168,0.6992,1441441440,5.9935,X-runtime,heuristic
+23,_mi_page_free_collect,162162162,0.6743,162162162,0.6743,X-alloc,heuristic
+24,<tracing_futures::Instrumented<T> as futures_core::stream::Stream>::poll_next,156156156,0.6493,156156156,0.6493,X-runtime,heuristic
+25,"sharded_slab::pool::Pool<T,C>::get",155155155,0.6451,155155155,0.6451,X-log,heuristic
+26,core::str::converts::from_utf8,153153153,0.6368,153153153,0.6368,X-str,heuristic
+27,<&mut A as serde_core::de::SeqAccess>::next_element,152152152,0.6326,152152152,0.6326,X-serde,heuristic
+28,_mi_theap_realloc_zero,149149149,0.6202,149149149,0.6202,X-alloc,heuristic
+29,_mi_malloc_generic,146146146,0.6077,146146146,0.6077,X-alloc,heuristic
+30,_mi_theap_malloc_zero,144144144,0.5994,144144144,0.5994,X-alloc,heuristic
+31,pcre2_match_8,131131131,0.5452,131131131,0.5452,P4,code
+32,alloc::raw_vec::RawVecInner<A>::finish_grow,128128128,0.5328,128128128,0.5328,X-alloc,heuristic
+33,pcre2_jit_match_8,120120120,0.4995,905905905,3.7668,P4,code
+34,mi_malloc_aligned,115115115,0.4786,115115115,0.4786,X-alloc,heuristic
+35,tokio::sync::mpsc::list::Rx<T>::pop,113113113,0.4703,113113113,0.4703,X-runtime,heuristic
+36,<serde_core::de::impls::<impl serde_core::de::Deserialize for alloc::vec::Vec<T>>::deserialize::VecVisitor<T> as serde_core::de::Visitor>::visit_seq,113113113,0.4703,113113113,0.4703,X-serde,heuristic
+37,vllm_parser::reasoning::delimited::DelimitedReasoningParser::push,108108108,0.4495,108108108,0.4495,P9,symbol
+38,minijinja::vm::Vm::eval_impl,108108108,0.4495,129129129,0.5369,P3,symbol
+39,<core::hash::sip::Hasher<S> as core::hash::Hasher>::write,104104104,0.4329,104104104,0.4329,X-hash,heuristic
+40,<vllm_llm::output::GenerateOutputStream as futures_core::stream::Stream>::poll_next,93093093,0.3871,93093093,0.3871,X-runtime,heuristic

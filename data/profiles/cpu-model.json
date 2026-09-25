@@ -1,0 +1,249 @@
+{
+ "basis": "前端 CPU = utime+stime（不含子进程），harness/common/procstat.sh；before 取在预热后/窗口前、after 在窗口后",
+ "unit": "ns / 请求",
+ "fit_points": [
+  {
+   "tag": "B1n",
+   "isl": 1043.0,
+   "osl": 128,
+   "c": 1,
+   "req": 11918,
+   "tot_ns": 1686524.584661856,
+   "ut_ns": 823124.685349891,
+   "st_ns": 863399.899311965
+  },
+  {
+   "tag": "B2",
+   "isl": 8211.0,
+   "osl": 16,
+   "c": 1,
+   "req": 16422,
+   "tot_ns": 1237364.5110218,
+   "ut_ns": 880526.1234928755,
+   "st_ns": 356838.3875289246
+  },
+  {
+   "tag": "B3",
+   "isl": 1043.0,
+   "osl": 512,
+   "c": 1,
+   "req": 4367,
+   "tot_ns": 5266773.528738264,
+   "ut_ns": 2475383.5585069843,
+   "st_ns": 2791389.9702312797
+  }
+ ],
+ "measurements": {
+  "B1n": {
+   "tot_ns": 1686524.6,
+   "ut_ns": 823124.7,
+   "st_ns": 863399.9
+  },
+  "B2": {
+   "tot_ns": 1237364.5,
+   "ut_ns": 880526.1,
+   "st_ns": 356838.4
+  },
+  "B3": {
+   "tot_ns": 5266773.5,
+   "ut_ns": 2475383.6,
+   "st_ns": 2791390.0
+  },
+  "B1": {
+   "tot_ns": 1828556.0,
+   "ut_ns": 925509.9,
+   "st_ns": 903046.1
+  },
+  "B4": {
+   "tot_ns": 1095879.0,
+   "ut_ns": 638635.8,
+   "st_ns": 457243.2
+  }
+ },
+ "models": {
+  "tot": {
+   "C_ns": 406519.6,
+   "per_isl_token_ns": 83.0189,
+   "per_osl_token_ns": 9323.565,
+   "validate": {
+    "tag": "B1",
+    "observed_ns": 1828556.0,
+    "predicted_ns": 1701301.9,
+    "error_pct": -6.96
+   },
+   "extra": {
+    "B4": {
+     "observed_ns": 1095879.0,
+     "predicted_ns": 1686524.6,
+     "shrink_pct": 35.0,
+     "note": "高并发点：ISL=1k OSL=128 c=64，SSE"
+    }
+   }
+  },
+  "ut": {
+   "C_ns": 193897.9,
+   "per_isl_token_ns": 75.2386,
+   "per_osl_token_ns": 4302.7575,
+   "validate": {
+    "tag": "B1",
+    "observed_ns": 925509.9,
+    "predicted_ns": 836517.2,
+    "error_pct": -9.62
+   },
+   "extra": {
+    "B4": {
+     "observed_ns": 638635.8,
+     "predicted_ns": 823124.7,
+     "shrink_pct": 22.4,
+     "note": "高并发点：ISL=1k OSL=128 c=64，SSE"
+    }
+   }
+  },
+  "st": {
+   "C_ns": 212621.7,
+   "per_isl_token_ns": 7.7803,
+   "per_osl_token_ns": 5020.8075,
+   "validate": {
+    "tag": "B1",
+    "observed_ns": 903046.1,
+    "predicted_ns": 864784.8,
+    "error_pct": -4.24
+   },
+   "extra": {
+    "B4": {
+     "observed_ns": 457243.2,
+     "predicted_ns": 863399.9,
+     "shrink_pct": 47.0,
+     "note": "高并发点：ISL=1k OSL=128 c=64，SSE"
+    }
+   }
+  }
+ },
+ "ols": {
+  "points": [
+   "B1",
+   "B1n",
+   "B2",
+   "B3",
+   "B5"
+  ],
+  "n": 5,
+  "tot": {
+   "C_ns": 536376.7,
+   "per_isl_token_ns": 67.9035,
+   "per_osl_token_ns": 9101.9824,
+   "r2": 0.998949,
+   "residuals": [
+    {
+     "tag": "B1",
+     "observed_ns": 1828556.0,
+     "predicted_ns": 1784340.6,
+     "error_pct": -2.42
+    },
+    {
+     "tag": "B1n",
+     "observed_ns": 1686524.6,
+     "predicted_ns": 1772253.8,
+     "error_pct": 5.08
+    },
+    {
+     "tag": "B2",
+     "observed_ns": 1237364.5,
+     "predicted_ns": 1239563.9,
+     "error_pct": 0.18
+    },
+    {
+     "tag": "B3",
+     "observed_ns": 5266773.5,
+     "predicted_ns": 5267415.0,
+     "error_pct": 0.01
+    },
+    {
+     "tag": "B5",
+     "observed_ns": 1828695.3,
+     "predicted_ns": 1784340.6,
+     "error_pct": -2.43
+    }
+   ],
+   "max_abs_error_pct": 5.08
+  },
+  "ut": {
+   "C_ns": 291869.9,
+   "per_isl_token_ns": 63.8346,
+   "per_osl_token_ns": 4135.5822,
+   "r2": 0.996762,
+   "residuals": [
+    {
+     "tag": "B1",
+     "observed_ns": 925509.9,
+     "predicted_ns": 899166.5,
+     "error_pct": -2.85
+    },
+    {
+     "tag": "B1n",
+     "observed_ns": 823124.7,
+     "predicted_ns": 887804.0,
+     "error_pct": 7.86
+    },
+    {
+     "tag": "B2",
+     "observed_ns": 880526.1,
+     "predicted_ns": 882185.5,
+     "error_pct": 0.19
+    },
+    {
+     "tag": "B3",
+     "observed_ns": 2475383.6,
+     "predicted_ns": 2475867.5,
+     "error_pct": 0.02
+    },
+    {
+     "tag": "B5",
+     "observed_ns": 939645.8,
+     "predicted_ns": 899166.5,
+     "error_pct": -4.31
+    }
+   ],
+   "max_abs_error_pct": 7.86
+  },
+  "st": {
+   "C_ns": 244506.8,
+   "per_isl_token_ns": 4.0688,
+   "per_osl_token_ns": 4966.4002,
+   "r2": 0.99978,
+   "residuals": [
+    {
+     "tag": "B1",
+     "observed_ns": 903046.1,
+     "predicted_ns": 885174.1,
+     "error_pct": -1.98
+    },
+    {
+     "tag": "B1n",
+     "observed_ns": 863399.9,
+     "predicted_ns": 884449.8,
+     "error_pct": 2.44
+    },
+    {
+     "tag": "B2",
+     "observed_ns": 356838.4,
+     "predicted_ns": 357378.4,
+     "error_pct": 0.15
+    },
+    {
+     "tag": "B3",
+     "observed_ns": 2791390.0,
+     "predicted_ns": 2791547.5,
+     "error_pct": 0.01
+    },
+    {
+     "tag": "B5",
+     "observed_ns": 889049.5,
+     "predicted_ns": 885174.1,
+     "error_pct": -0.44
+    }
+   ],
+   "max_abs_error_pct": 2.44
+  }
+ }
+}

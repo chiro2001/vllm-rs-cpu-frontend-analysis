@@ -1,0 +1,13 @@
+# started on Fri Sep 25 14:54:29 2026
+
+
+ Performance counter stats for process id '1478893':
+
+        81,910,143      instructions:u                   #    0.74  insn per cycle            
+       110,642,226      cycles:u                                                              
+        16,716,567      branches:u                                                            
+         1,132,311      branch-misses:u                  #    6.77% of all branches           
+         1,451,761      cache-misses:u                                                        
+
+      24.718116700 seconds time elapsed
+

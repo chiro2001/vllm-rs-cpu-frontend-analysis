@@ -1,0 +1,31 @@
+{
+ "wall_seconds": 20.019,
+ "window": {
+  "from": "2026-09-25T13:46:08+0800",
+  "to": "2026-09-25T13:46:28+0800"
+ },
+ "pids": {
+  "3731987": {
+   "comm": "vllm-rs",
+   "cpu_seconds": 15.24,
+   "cpu_percent_of_one_core": 76.13,
+   "threads_max": 11,
+   "threads_end": 11,
+   "rss_kb_end": 141692,
+   "utime_seconds": 9.68,
+   "stime_seconds": 5.56
+  },
+  "3764042": {
+   "comm": "python3",
+   "cpu_seconds": 8.56,
+   "cpu_percent_of_one_core": 42.76,
+   "threads_max": 1,
+   "threads_end": 1,
+   "rss_kb_end": 54224,
+   "utime_seconds": 6.47,
+   "stime_seconds": 2.09
+  }
+ },
+ "cpu_seconds_total": 23.8,
+ "_provenance": "由 runs/b-chunk32（mock engine --output-token-chunk-size 32）单点采集；命名修复见 harness/profile/cpu_windows.sh --tag-suffix"
+}

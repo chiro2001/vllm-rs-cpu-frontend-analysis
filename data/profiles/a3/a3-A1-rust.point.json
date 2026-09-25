@@ -1,0 +1,106 @@
+{
+ "run": "b-t3",
+ "side": "rust",
+ "tag": "A1",
+ "measured_at": "2026-09-25T16:14:29+0800",
+ "image": "quay.nju.edu.cn/ascend/vllm-ascend:v0.26.0rc1-a3-openeuler",
+ "chip": "4",
+ "port": "18300",
+ "vllm_rs_bin_sha256_16": "cae05321227ed3c7",
+ "load": {
+  "input_len": 1024,
+  "output_len": 128,
+  "num_prompts": 192,
+  "max_concurrency": 1,
+  "warmup": 4
+ },
+ "window": {
+  "start_epoch": 1790323909.8125272,
+  "end_epoch": 1790324061.365907,
+  "seconds": 151.553
+ },
+ "cores": {
+  "server_cpuset": "160-199",
+  "client_cpuset": "200-201"
+ },
+ "pids": {
+  "frontend": 2000790,
+  "engine": 2000789
+ },
+ "perf_record": {
+  "event": "cpu-clock",
+  "freq_hz": 999,
+  "call_graph": "fp",
+  "target": "frontend 宿主 pid（容器内进程）",
+  "perf_data_kept": true,
+  "script_gz": "perf-script.txt.gz"
+ },
+ "container_cpu_buckets": {
+  "frontend": 1.83,
+  "engine": 161.13,
+  "other": 0.02
+ },
+ "container_cpu_detail": {
+  "1997366": {
+   "comm": "vllm",
+   "cpu_seconds": 0.02,
+   "utime_seconds": 0.01,
+   "stime_seconds": 0.01,
+   "bucket": "other"
+  },
+  "2000788": {
+   "comm": "python3",
+   "cpu_seconds": 0,
+   "utime_seconds": 0.0,
+   "stime_seconds": 0.0,
+   "bucket": "other"
+  },
+  "2000789": {
+   "comm": "VLLM::EngineCor",
+   "cpu_seconds": 161.13,
+   "utime_seconds": 147.37,
+   "stime_seconds": 13.76,
+   "bucket": "engine"
+  },
+  "2000790": {
+   "comm": "vllm-rs",
+   "cpu_seconds": 1.83,
+   "utime_seconds": 1.04,
+   "stime_seconds": 0.79,
+   "bucket": "frontend"
+  }
+ },
+ "e2e": {
+  "completed": 192,
+  "failed": 0,
+  "duration": 133.71411017002538,
+  "request_throughput": 1.435899320990587,
+  "output_throughput": 183.79511308679514,
+  "total_input_tokens": 190282,
+  "total_output_tokens": 24576,
+  "mean_ttft_ms": 84.870759533563,
+  "p99_ttft_ms": 89.58394986810163,
+  "mean_tpot_ms": 4.814142685803425,
+  "p99_tpot_ms": 5.000706689302099,
+  "mean_itl_ms": 4.766789112737921,
+  "mean_e2el_ms": null,
+  "_file": "openai-chat-infqps-concurrency1-Qwen3.5-0.8B-20260925-081420.json"
+ },
+ "loadavg": [
+  "51.89",
+  "49.36",
+  "48.47"
+ ],
+ "frontend_cpu": {
+  "cpu_seconds": 1.83,
+  "utime_seconds": 1.04,
+  "stime_seconds": 0.79
+ },
+ "normalized": {
+  "frontend_cpu_s_per_request": 0.009531,
+  "frontend_cpu_s_per_1k_input_tokens": 0.009617,
+  "frontend_cpu_s_per_1k_output_tokens": 0.074463,
+  "frontend_cpu_over_window": 0.0137,
+  "engine_cpu_over_window": 1.205
+ }
+}

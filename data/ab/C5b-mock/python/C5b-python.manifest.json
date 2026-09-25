@@ -1,0 +1,54 @@
+{
+ "generated_at": "2026-09-25T14:12:33+0800",
+ "host": "LOCAL_HOST",
+ "machine": "x86_64",
+ "nproc": 12,
+ "loadavg_at_start": [
+  "3.08",
+  "3.19",
+  "2.77"
+ ],
+ "mem_available_gib": 14.8,
+ "artifacts": {
+  "bench_bin": {
+   "path": "REPO_HOME/.cache/vllm-rs-bench/target/release/vllm-bench",
+   "sha256": "94233fabbb16ddfd6539afbc50c577d77eaba708615c60767efafca4ab0e4c07",
+   "size": 19472624
+  },
+  "summary": {
+   "path": "REPO_HOME/projects/vllm/vllm-rs-wt/C-ab/data/ab/C5b-mock/python/C5b-python.summary.json",
+   "sha256": "7f7782f1018a04aa2a456f50eb2f3db5813155b3f3109be01ebf7f8d94c3f5e2",
+   "size": 3081
+  }
+ },
+ "fields": {
+  "point": "C5b",
+  "side": "python",
+  "tag": "C5b-python",
+  "kind": "mock",
+  "vllm_commit": "568afb3a13806beb53bb2e6bd518269357b237c0",
+  "vllm_version": "0.26.0+cpu",
+  "container_image": "local/vllm-cpu:0.26.0-ab-20260925",
+  "model": "/models/Qwen3-0.6B",
+  "base_url": "http://127.0.0.1:8300",
+  "dataset": "random",
+  "backend": "openai-chat",
+  "random_input_len": "1024",
+  "random_output_len": "128",
+  "max_concurrency": "8",
+  "num_prompts": "4096",
+  "warmup_prompts": "64",
+  "fe_cores": "4-7",
+  "eng_cores": "8-11",
+  "client_cores": "0-3",
+  "fe_cores_effective": "4",
+  "eng_cores_effective": "4",
+  "client_cores_effective": "4",
+  "frontend_bin_kind": "python",
+  "rust_frontend_sha256": "e5743edb1ddbe2a660214e67c8c83dfd9d627a08bf42712c242d3638783e8bc7",
+  "loadavg": "3.08 3.19 2.77",
+  "mem_available_gib": "14.8",
+  "perf_events": "instructions:u,cycles:u,cache-misses:u,branches:u",
+  "window_convention": "client_start+2s..client_exit"
+ }
+}

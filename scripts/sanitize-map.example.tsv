@@ -1,0 +1,35 @@
+# 净化映射表模板 —— 复制到仓库根目录的 .sanitize-map.tsv 后填入**你的**真实值。
+#
+#   cp scripts/sanitize-map.example.tsv .sanitize-map.tsv
+#   $EDITOR .sanitize-map.tsv
+#   bash scripts/sanitize_for_publish.sh --check     # 先看命中数（安全，不改文件）
+#   bash scripts/sanitize_for_publish.sh --apply
+#
+# 格式：原值 <TAB> 占位符 <TAB> 说明
+# 顺序无关：脚本按「原值长度降序」处理，避免子串互相吃掉。
+# 提示：占位符用 ASCII 大写+下划线，避免在 shell 里被当成重定向或变量。
+#
+# ⚠️ .sanitize-map.tsv 已被 .gitignore 排除，不随仓库分发；
+#    仓库里只有本模板，真实值只存在于本地。
+#
+# 本项目特有的注意事项：
+#   * 本项目是「观测分析」，文档里会大量引用**绝对路径**（源码树、模型目录、制品目录）。
+#     路径里通常含**用户名**，必须逐条替换，否则会把本机账号名带出去。
+#   * 内部分析项目目录名（源码树所在处、前两个项目的目录）也要处理。
+#   * **不要替换掉上游本身的标识**：上游项目名、`vllm-rs`、`vllm-bench`、
+#     `vllm-mock-engine`、模型名、上游 commit 都必须原样保留，否则别人无法复现。
+#
+# ⚠️ 下面这些是**通用假例**，不是任何真实环境的值。请整行替换成你自己的。
+#
+# 示例（把下面几行换成你的实际值）：
+/home/SOMEUSER/	REPO_HOME	本地工作区绝对路径前缀（含本地用户名）
+SOMEUSER	INTERNAL_USER	内部账号/用户名（出现在 /home/<id>/ 等路径里）
+local-hostname	LOCAL_HOST	本地开发机主机名
+remote-host	REMOTE_HOST	远端机器名
+remote-hostname	REMOTE_HOSTNAME	远端 hostname 输出
+internal-project	UPSTREAM_PROJECT	上游源码所在的内部分析项目目录名
+previous-project	PREV_PROJECT	前一个项目的目录名
+prev-project-wt	PREV_PROJECT_WT	上一个项目的工作树目录名
+prev-project-pub	PREV_PROJECT_PUB	上一个项目的发布导出目录名
+internal.example.com	INTERNAL_HOST	内部主机名
+publisher@example.com	PUBLISHER_EMAIL	发布者邮箱（若出现在 manifest/commit 里）

@@ -1,0 +1,115 @@
+{
+ "pid": "3838530",
+ "wall_seconds": 6.299,
+ "window": {
+  "from": "2026-09-25T14:08:52+0800",
+  "to": "2026-09-25T14:08:59+0800"
+ },
+ "cpu_seconds_total": 7.49,
+ "threads": [
+  {
+   "tid": 3838540,
+   "comm": "tokio-rt-worker",
+   "state_end": "S",
+   "utime_seconds": 0.81,
+   "stime_seconds": 0.69,
+   "cpu_seconds": 1.5
+  },
+  {
+   "tid": 3838541,
+   "comm": "tokio-rt-worker",
+   "state_end": "S",
+   "utime_seconds": 0.75,
+   "stime_seconds": 0.7,
+   "cpu_seconds": 1.45
+  },
+  {
+   "tid": 3838767,
+   "comm": "vllm-request",
+   "state_end": "S",
+   "utime_seconds": 0.25,
+   "stime_seconds": 0.68,
+   "cpu_seconds": 0.93
+  },
+  {
+   "tid": 3838768,
+   "comm": "vllm-request",
+   "state_end": "S",
+   "utime_seconds": 0.25,
+   "stime_seconds": 0.65,
+   "cpu_seconds": 0.9
+  },
+  {
+   "tid": 3838765,
+   "comm": "vllm-request",
+   "state_end": "S",
+   "utime_seconds": 0.3,
+   "stime_seconds": 0.28,
+   "cpu_seconds": 0.58
+  },
+  {
+   "tid": 3838766,
+   "comm": "vllm-request",
+   "state_end": "S",
+   "utime_seconds": 0.3,
+   "stime_seconds": 0.27,
+   "cpu_seconds": 0.57
+  },
+  {
+   "tid": 3838633,
+   "comm": "vllm-zmq-0",
+   "state_end": "S",
+   "utime_seconds": 0.11,
+   "stime_seconds": 0.32,
+   "cpu_seconds": 0.43
+  },
+  {
+   "tid": 3838630,
+   "comm": "vllm-zmq-0",
+   "state_end": "S",
+   "utime_seconds": 0.11,
+   "stime_seconds": 0.31,
+   "cpu_seconds": 0.42
+  },
+  {
+   "tid": 3838631,
+   "comm": "vllm-zmq-0",
+   "state_end": "S",
+   "utime_seconds": 0.12,
+   "stime_seconds": 0.26,
+   "cpu_seconds": 0.38
+  },
+  {
+   "tid": 3838632,
+   "comm": "vllm-zmq-0",
+   "state_end": "S",
+   "utime_seconds": 0.09,
+   "stime_seconds": 0.24,
+   "cpu_seconds": 0.33
+  },
+  {
+   "tid": 3838530,
+   "comm": "vllm-rs",
+   "state_end": "S",
+   "utime_seconds": 0.0,
+   "stime_seconds": 0.0,
+   "cpu_seconds": 0.0
+  },
+  {
+   "tid": 3839895,
+   "comm": "vllm-request",
+   "state_end": "S",
+   "utime_seconds": 0.0,
+   "stime_seconds": 0.0,
+   "cpu_seconds": 0.0
+  },
+  {
+   "tid": 3839896,
+   "comm": "vllm-request",
+   "state_end": "S",
+   "utime_seconds": 0.0,
+   "stime_seconds": 0.0,
+   "cpu_seconds": 0.0
+  }
+ ]
+}

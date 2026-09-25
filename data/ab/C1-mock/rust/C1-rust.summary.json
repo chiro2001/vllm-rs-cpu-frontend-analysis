@@ -1,0 +1,93 @@
+{
+ "point": "C1",
+ "side": "rust",
+ "generated_at": "2026-09-25T14:08:08+0800",
+ "end_to_end": {
+  "completed": 2000,
+  "failed": 0,
+  "duration": 5.704155761,
+  "request_throughput": 350.62156150682995,
+  "output_throughput": 44879.55987287423,
+  "total_token_throughput": 403185.51883246866,
+  "input_throughput": 358305.9589595944,
+  "mean_ttft_ms": 1.8553243619999964,
+  "median_ttft_ms": 1.5605580000000001,
+  "p99_ttft_ms": 4.840017529999999,
+  "mean_tpot_ms": 0.00768016150393702,
+  "median_tpot_ms": 0.006534515748031497,
+  "p99_tpot_ms": 0.031853779133858263,
+  "mean_e2el_ms": 2.8307048730000037,
+  "median_e2el_ms": 2.535196,
+  "p99_e2el_ms": 7.103026619999998,
+  "total_input_tokens": 2043833,
+  "total_output_tokens": 256000,
+  "max_concurrency": 1
+ },
+ "windows": {
+  "frontend": {
+   "host_pid": 3838530,
+   "window_seconds": 7.106,
+   "utime_seconds": 2.01,
+   "stime_seconds": 6.01,
+   "threads_max": 11,
+   "rss_kb_end": 158624,
+   "cpu_seconds": 8.02,
+   "cpu_s_per_request": 0.00401,
+   "cpu_s_per_1k_input_tokens": 0.003924,
+   "cpu_s_per_1k_output_tokens": 0.031328
+  },
+  "engine": {
+   "host_pid": 3838624,
+   "window_seconds": 7.106,
+   "utime_seconds": 0.41,
+   "stime_seconds": 1.86,
+   "threads_max": 3,
+   "rss_kb_end": 6244,
+   "cpu_seconds": 2.27,
+   "cpu_s_per_request": 0.001135,
+   "cpu_s_per_1k_input_tokens": 0.001111,
+   "cpu_s_per_1k_output_tokens": 0.008867
+  },
+  "client": {
+   "window_seconds": 7.105,
+   "cpu_seconds": 0
+  }
+ },
+ "frontend_cpu_prep_window": {
+  "window_seconds": 8.128,
+  "cpu_seconds": 8.02,
+  "note": "窗口 = [客户端启动前, 负载结束]，比 win 窗口多包含 vllm-bench 生成 prompt 的空闲期"
+ },
+ "perf_stat": {
+  "frontend": {
+   "ipc": null,
+   "counters": {
+    "instructions:u": 9853845812.0,
+    "cycles:u": 9721916233.0,
+    "cache-misses:u": 128442677.0,
+    "branches:u": 1755886497.0
+   }
+  },
+  "engine": {
+   "ipc": null,
+   "counters": {
+    "instructions:u": 3001161826.0,
+    "cycles:u": 2242775729.0,
+    "cache-misses:u": 15788052.0,
+    "branches:u": 577116854.0
+   }
+  }
+ },
+ "role_pids": {
+  "frontend": 3838530,
+  "supervisor": null,
+  "engine": 3838624,
+  "worker": null
+ },
+ "notes": {
+  "frontend_cpu_source": "/proc/<host_pid>/stat 的 utime+stime 增量（不含子进程）",
+  "engine_worker_cpu": "引擎进程单独记，绝不并入前端",
+  "client_cpu": "压测客户端自身，绝不并入服务端",
+  "window_convention": "窗口=[客户端启动后2s, 客户端退出]；pre 窗口=[客户端启动前, 负载结束]"
+ }
+}

@@ -1,0 +1,3 @@
+lang,seg,point,op,input_label,input_bytes,tokens,iterations,samples,wall_s,mean_us,p50_us,p90_us,p99_us,min_us,max_us,stdev_us,ops_per_sec,bytes_per_op,allocs_per_op,alloc_bytes_per_op,notes
+python,p3_template,8k,jinja2_render,8k,37371,37388,683468,400000,30.000,43.962,41.156,50.264,79.468,39.474,279.170,8.077,22782.1,37388.0,,,编译一次后每请求 render（上下文是上面的 dict 组装，一并计入）
+python,meta,8k,clock_overhead,empty-loop,0,0,36440872,107496,3.005,0.084,0.080,0.091,0.171,0.069,14.738,0.099,12127139.9,0.0,,,perf_counter_ns 的单次开销（比较 <1µs 的操作前先看这行）

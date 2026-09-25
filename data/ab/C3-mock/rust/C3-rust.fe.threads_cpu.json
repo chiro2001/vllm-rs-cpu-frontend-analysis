@@ -1,0 +1,115 @@
+{
+ "pid": "3838530",
+ "wall_seconds": 4.154,
+ "window": {
+  "from": "2026-09-25T14:08:21+0800",
+  "to": "2026-09-25T14:08:26+0800"
+ },
+ "cpu_seconds_total": 2.75,
+ "threads": [
+  {
+   "tid": 3838768,
+   "comm": "vllm-request",
+   "state_end": "S",
+   "utime_seconds": 0.21,
+   "stime_seconds": 0.3,
+   "cpu_seconds": 0.51
+  },
+  {
+   "tid": 3838767,
+   "comm": "vllm-request",
+   "state_end": "S",
+   "utime_seconds": 0.21,
+   "stime_seconds": 0.26,
+   "cpu_seconds": 0.47
+  },
+  {
+   "tid": 3839896,
+   "comm": "vllm-request",
+   "state_end": "S",
+   "utime_seconds": 0.06,
+   "stime_seconds": 0.29,
+   "cpu_seconds": 0.35
+  },
+  {
+   "tid": 3839895,
+   "comm": "vllm-request",
+   "state_end": "S",
+   "utime_seconds": 0.07,
+   "stime_seconds": 0.27,
+   "cpu_seconds": 0.34
+  },
+  {
+   "tid": 3838541,
+   "comm": "tokio-rt-worker",
+   "state_end": "S",
+   "utime_seconds": 0.06,
+   "stime_seconds": 0.16,
+   "cpu_seconds": 0.22
+  },
+  {
+   "tid": 3838540,
+   "comm": "tokio-rt-worker",
+   "state_end": "S",
+   "utime_seconds": 0.06,
+   "stime_seconds": 0.15,
+   "cpu_seconds": 0.21
+  },
+  {
+   "tid": 3838765,
+   "comm": "vllm-request",
+   "state_end": "S",
+   "utime_seconds": 0.09,
+   "stime_seconds": 0.11,
+   "cpu_seconds": 0.2
+  },
+  {
+   "tid": 3838766,
+   "comm": "vllm-request",
+   "state_end": "S",
+   "utime_seconds": 0.08,
+   "stime_seconds": 0.11,
+   "cpu_seconds": 0.19
+  },
+  {
+   "tid": 3838633,
+   "comm": "vllm-zmq-0",
+   "state_end": "S",
+   "utime_seconds": 0.01,
+   "stime_seconds": 0.1,
+   "cpu_seconds": 0.11
+  },
+  {
+   "tid": 3838631,
+   "comm": "vllm-zmq-0",
+   "state_end": "S",
+   "utime_seconds": 0.01,
+   "stime_seconds": 0.08,
+   "cpu_seconds": 0.09
+  },
+  {
+   "tid": 3838632,
+   "comm": "vllm-zmq-0",
+   "state_end": "S",
+   "utime_seconds": 0.01,
+   "stime_seconds": 0.05,
+   "cpu_seconds": 0.06
+  },
+  {
+   "tid": 3838530,
+   "comm": "vllm-rs",
+   "state_end": "S",
+   "utime_seconds": 0.0,
+   "stime_seconds": 0.0,
+   "cpu_seconds": 0.0
+  },
+  {
+   "tid": 3838630,
+   "comm": "vllm-zmq-0",
+   "state_end": "S",
+   "utime_seconds": 0.0,
+   "stime_seconds": 0.0,
+   "cpu_seconds": 0.0
+  }
+ ]
+}

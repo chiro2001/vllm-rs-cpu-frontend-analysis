@@ -1,0 +1,148 @@
+{
+ "model": "CPU = r*W + a*N + b*Tin + c*Tout",
+ "n_samples": 24,
+ "rust": {
+  "frontend_cpu": {
+   "idle_cpu_s_per_s": 0.005724,
+   "idle_pct_of_one_core": 0.5724,
+   "per_request_s": 0.0,
+   "per_1k_input_tokens_s": 0.001532,
+   "per_1k_output_tokens_s": 0.026404,
+   "per_input_token_ns": 1532.33,
+   "per_output_token_us": 26.404,
+   "r2": 0.95028,
+   "residuals_s": [
+    -0.071,
+    0.0214,
+    -0.0457,
+    -0.2186,
+    -0.0152,
+    0.0168,
+    0.0038,
+    -0.0209,
+    0.0005,
+    0.1217,
+    0.031,
+    -0.0058
+   ],
+   "n_points": 12,
+   "method": "two_point(M32,M128)；负系数已钳为0: per_request",
+   "clamped_negative": [
+    "per_request"
+   ]
+  },
+  "engine_cpu": {
+   "idle_cpu_s_per_s": 0.0,
+   "idle_pct_of_one_core": 0.0,
+   "per_request_s": 0.849208,
+   "per_1k_input_tokens_s": 0.0,
+   "per_1k_output_tokens_s": 0.0,
+   "per_input_token_ns": 0.0,
+   "per_output_token_us": 0.0,
+   "r2": -4.56327,
+   "residuals_s": [
+    -1.3147,
+    -0.1747,
+    -0.4347,
+    -198.0272,
+    -5.1973,
+    37.4727,
+    -42.5593,
+    -43.0093,
+    4.8027,
+    -0.5886,
+    -0.2147,
+    -42.1293
+   ],
+   "n_points": 12,
+   "method": "two_point(M32,M128)；引擎只报边际值（不做 token 拆分）",
+   "clamped_negative": []
+  },
+  "points": [
+   "ab-C1r1-rust",
+   "ab-C1r2-rust",
+   "ab-C1r3-rust",
+   "ab-C2-rust",
+   "ab-C3-rust",
+   "ab-C4-rust",
+   "ab-C5n-rust",
+   "ab-C5w-rust",
+   "ab-I8k-rust",
+   "ab-M128-rust",
+   "ab-M32-rust",
+   "ab-S16-rust"
+  ]
+ },
+ "python": {
+  "frontend_cpu": {
+   "idle_cpu_s_per_s": 0.009001,
+   "idle_pct_of_one_core": 0.9001,
+   "per_request_s": 0.0,
+   "per_1k_input_tokens_s": 0.006104,
+   "per_1k_output_tokens_s": 0.180996,
+   "per_input_token_ns": 6104.258,
+   "per_output_token_us": 180.996,
+   "r2": 0.22103,
+   "residuals_s": [
+    0.1801,
+    0.1532,
+    0.1854,
+    -3.9345,
+    -0.2035,
+    0.5359,
+    -0.8274,
+    -0.8585,
+    -0.1033,
+    1.0674,
+    0.2668,
+    -0.0105
+   ],
+   "n_points": 12,
+   "method": "two_point(M32,M128)；负系数已钳为0: per_request",
+   "clamped_negative": [
+    "per_request"
+   ]
+  },
+  "engine_cpu": {
+   "idle_cpu_s_per_s": 0.009629,
+   "idle_pct_of_one_core": 0.9629,
+   "per_request_s": 0.838946,
+   "per_1k_input_tokens_s": 0.0,
+   "per_1k_output_tokens_s": 0.0,
+   "per_input_token_ns": 0.0,
+   "per_output_token_us": 0.0,
+   "r2": -4.47435,
+   "residuals_s": [
+    -0.1765,
+    0.5762,
+    0.1084,
+    -195.956,
+    -4.4147,
+    35.1811,
+    -43.1784,
+    -43.0095,
+    5.9045,
+    -0.0,
+    -0.0,
+    -42.0996
+   ],
+   "n_points": 12,
+   "method": "two_point(M32,M128)；引擎只报边际值（不做 token 拆分）",
+   "clamped_negative": []
+  },
+  "points": [
+   "ab-C1r1-python",
+   "ab-C1r2-python",
+   "ab-C1r3-python",
+   "ab-C2-python",
+   "ab-C3-python",
+   "ab-C4-python",
+   "ab-C5n-python",
+   "ab-C5w-python",
+   "ab-I8k-python",
+   "ab-M128-python",
+   "ab-M32-python",
+   "ab-S16-python"
+  ]
+ }
+}

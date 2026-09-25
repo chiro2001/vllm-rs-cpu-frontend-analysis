@@ -1,0 +1,33 @@
+{
+ "taken_at": "2026-09-25T14:09:42+0800",
+ "window_seconds_requested": 3600.0,
+ "window_seconds_wall": 55.089,
+ "stopped_by": "stop-file",
+ "events": "instructions:u,cycles:u,cache-misses:u,branches:u",
+ "sudo": true,
+ "perf_version": "perf version 7.1.6-1",
+ "pids": {
+  "3842411": {
+   "label": "frontend",
+   "counters": {
+    "instructions:u": 579009373498.0,
+    "cycles:u": 300550174527.0,
+    "cache-misses:u": 1488678161.0,
+    "branches:u": 105213718101.0
+   },
+   "window_seconds": null,
+   "exit_code": 130
+  },
+  "3842979": {
+   "label": "engine",
+   "counters": {
+    "instructions:u": 10880374377.0,
+    "cycles:u": 7973442851.0,
+    "cache-misses:u": 51836692.0,
+    "branches:u": 2096155045.0
+   },
+   "window_seconds": null,
+   "exit_code": 130
+  }
+ }
+}

@@ -1,0 +1,46 @@
+{
+ "taken_at": "2026-09-25T14:07:59+0800",
+ "window_seconds_requested": 3600.0,
+ "window_seconds_wall": 8.244,
+ "stopped_by": "stop-file",
+ "events": "instructions:u,cycles:u,cache-misses:u,branches:u",
+ "sudo": true,
+ "perf_version": "perf version 7.1.6-1",
+ "pids": {
+  "3838530": {
+   "label": "frontend",
+   "counters": {
+    "instructions:u": 9853845812.0,
+    "instructions": 9853845812.0,
+    "cycles:u": 9721916233.0,
+    "cycles": 9721916233.0,
+    "cache-misses:u": 128442677.0,
+    "cache-misses": 128442677.0,
+    "branches:u": 1755886497.0,
+    "branches": 1755886497.0
+   },
+   "window_seconds": 8.244,
+   "exit_code": 130,
+   "counters_source": "data/ab/C1-mock/rust/perf-raw/perf.3838530.txt",
+   "ipc": 1.0136
+  },
+  "3838624": {
+   "label": "engine",
+   "counters": {
+    "instructions:u": 3001161826.0,
+    "instructions": 3001161826.0,
+    "cycles:u": 2242775729.0,
+    "cycles": 2242775729.0,
+    "cache-misses:u": 15788052.0,
+    "cache-misses": 15788052.0,
+    "branches:u": 577116854.0,
+    "branches": 577116854.0
+   },
+   "window_seconds": 8.244,
+   "exit_code": 130,
+   "counters_source": "data/ab/C1-mock/rust/perf-raw/perf.3838624.txt",
+   "ipc": 1.3381
+  }
+ },
+ "reparsed_at": "2026-09-25T14:12:34+0800"
+}

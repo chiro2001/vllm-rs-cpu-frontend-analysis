@@ -1,0 +1,6 @@
+lang,seg,point,op,input_label,input_bytes,tokens,iterations,samples,wall_s,mean_us,p50_us,p90_us,p99_us,min_us,max_us,stdev_us,ops_per_sec,bytes_per_op,allocs_per_op,alloc_bytes_per_op,notes
+python,p6_msgpack,1k,msgspec_encode,1k,3535,1024,2059580,400000,30.008,3.374,3.175,3.375,6.162,3.026,80.078,0.907,68633.5,3535.0,,,msgspec.msgpack + array_like + omit_defaults（vLLM 前端真实路径）
+python,p7_msgpack,1k,msgspec_decode_python_payload,1k,3535,1024,567356,400000,30.008,13.043,12.393,14.107,22.672,11.151,149.058,2.456,18906.6,3535.0,,,解码 msgspec 自己编码的稀疏字节
+python,p7_msgpack,1k,msgspec_decode_rust_payload,1k,3528,3528,629532,400000,30.008,12.952,12.383,13.255,21.270,11.221,251.037,2.235,20978.6,3528.0,,,解码 Rust rmp-serde 的全量 map 字节（engine core 侧真实收包路径）
+python,p6_msgpack,1k,msgpack_packb,1k,3729,0,310880,310880,30.008,23.472,22.461,25.687,36.738,21.960,122.588,3.300,10359.8,3729.0,,,通用 C 扩展 msgpack（纯基线，vLLM 不用它）；输入是 20 元素 list
+python,meta,1k,clock_overhead,empty-loop,0,0,31202808,90182,3.001,0.103,0.100,0.120,0.201,0.070,10.099,0.101,10396398.7,0.0,,,perf_counter_ns 的单次开销（比较 <1µs 的操作前先看这行）

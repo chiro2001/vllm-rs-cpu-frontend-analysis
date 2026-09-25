@@ -1,0 +1,4 @@
+lang,seg,point,op,input_label,input_bytes,tokens,iterations,samples,wall_s,mean_us,p50_us,p90_us,p99_us,min_us,max_us,stdev_us,ops_per_sec,bytes_per_op,allocs_per_op,alloc_bytes_per_op,notes
+python,p2_json,1k,json.loads,1k,5326,1,1197812,400000,30.002,12.158,11.621,11.982,21.669,11.311,140.661,2.238,39924.0,5326.0,,,无类型解析，标准库 C 加速 json（vLLM 侧另有 pydantic/msgspec 校验层，未测）
+python,p2_json,1k,orjson.loads,1k,5326,1,3344540,400000,30.002,4.628,4.458,4.549,7.955,4.347,89.297,0.971,111476.1,5326.0,,,Rust 实现的 Python JSON 解析器：Python 侧上界（非 vLLM 依赖，参考用）
+python,meta,1k,clock_overhead,empty-loop,0,0,35264712,101922,3.003,0.085,0.080,0.101,0.160,0.069,14.898,0.103,11743824.2,0.0,,,perf_counter_ns 的单次开销（比较 <1µs 的操作前先看这行）

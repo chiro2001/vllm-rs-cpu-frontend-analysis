@@ -1,0 +1,86 @@
+{
+ "taken_at": "2026-09-25T14:08:36+0800",
+ "epoch": 1790316516.3445635,
+ "pid": "3838530",
+ "ticks_per_sec": 100,
+ "threads": {
+  "3838530": {
+   "comm": "vllm-rs",
+   "state": "S",
+   "utime_ticks": 44,
+   "stime_ticks": 13
+  },
+  "3838540": {
+   "comm": "tokio-rt-worker",
+   "state": "S",
+   "utime_ticks": 278,
+   "stime_ticks": 307
+  },
+  "3838541": {
+   "comm": "tokio-rt-worker",
+   "state": "S",
+   "utime_ticks": 267,
+   "stime_ticks": 323
+  },
+  "3838630": {
+   "comm": "vllm-zmq-0",
+   "state": "S",
+   "utime_ticks": 25,
+   "stime_ticks": 68
+  },
+  "3838631": {
+   "comm": "vllm-zmq-0",
+   "state": "S",
+   "utime_ticks": 46,
+   "stime_ticks": 164
+  },
+  "3838632": {
+   "comm": "vllm-zmq-0",
+   "state": "S",
+   "utime_ticks": 48,
+   "stime_ticks": 168
+  },
+  "3838633": {
+   "comm": "vllm-zmq-0",
+   "state": "S",
+   "utime_ticks": 42,
+   "stime_ticks": 118
+  },
+  "3838765": {
+   "comm": "vllm-request",
+   "state": "S",
+   "utime_ticks": 114,
+   "stime_ticks": 92
+  },
+  "3838766": {
+   "comm": "vllm-request",
+   "state": "S",
+   "utime_ticks": 117,
+   "stime_ticks": 91
+  },
+  "3838767": {
+   "comm": "vllm-request",
+   "state": "S",
+   "utime_ticks": 107,
+   "stime_ticks": 219
+  },
+  "3838768": {
+   "comm": "vllm-request",
+   "state": "S",
+   "utime_ticks": 85,
+   "stime_ticks": 218
+  },
+  "3839895": {
+   "comm": "vllm-request",
+   "state": "S",
+   "utime_ticks": 7,
+   "stime_ticks": 27
+  },
+  "3839896": {
+   "comm": "vllm-request",
+   "state": "S",
+   "utime_ticks": 6,
+   "stime_ticks": 29
+  }
+ }
+}

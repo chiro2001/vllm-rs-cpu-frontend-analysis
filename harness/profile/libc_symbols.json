@@ -1,0 +1,40 @@
+{
+  "_doc": [
+    "glibc 里**没有导出名字**的热点实现：这些函数是 IFUNC 解析出来的局部实现（.symtab 已剥离），",
+    "perf 只能报 `[libc.so.6]`。这里登记「文件内偏移区间 → 函数名 + 识别依据」，",
+    "由 sym_offset.py --libc-symbols 用来给叶子帧标注函数名。",
+    "区间来自 objdump 反汇编时找到的函数入口（endbr64）；语义来自指令形状 + 内核/glibc 惯例。",
+    "库：/usr/lib/libc.so.6（glibc 2.39，x86-64，带 AVX-512 路径）。"
+  ],
+  "ranges": [
+    {
+      "file": "libc.so.6",
+      "start": "0x18cd70",
+      "end": "0x18d108",
+      "name": "libc:memmove/memcpy (AVX-512)",
+      "confidence": "high",
+      "evidence": [
+        "0x18cdc0 入口：mov %rdi,%rax; cmp $0x40,%rdx; jb 小尺寸分支; vmovdqu64 (%rsi),%zmm16",
+        "0x18cd70 / 0x18cd90 两处前置 `cmp %rdx,%rcx; jb __chk_fail` = __memcpy_chk/__memmove_chk 的 fortify 检查，落下来进 0x18cdc0",
+        "小尺寸分支 0x18ce10 按 32/16/8/4/1 分级搬移；尾部 movzwl 0x2(%rsi,%rdx,1) 是重叠处理",
+        "样本最多的地址 0x18cdd3 = 大尺寸分支的第一条 64 字节 load"
+        ,"0x18d060-0x18d0ad 是**向后拷贝**路径（重叠区）：vmovdqu64 连续 4×64 字节 load + add $-0x100 + 循环，属同一实现"
+      ],
+      "caveat": "memmove 与 memcpy 共用同一实现入口，二者不可区分"
+    },
+    {
+      "file": "libc.so.6",
+      "start": "0x183780",
+      "end": "0x1837c0",
+      "name": "libc:memcmp (AVX-512/evex)",
+      "confidence": "high",
+      "evidence": [
+        "0x183780 入口：endbr64",
+        "0x183798: vmovdqu8 (%rsi),%ymm18{%k2}{z} + 0x18379e: vpcmpnequb (%rdi),%ymm18,%k1{%k2} —— 两个缓冲区逐字节比较",
+        "0x1837a5: kmovd %k1,%eax；0x1837ab: jne；0x1837b0: bsf；0x1837bb: sub %ecx,%eax —— 返回首个不同字节之差（memcmp 语义）",
+        "0x18378f: bzhi %edx,%eax,%eax —— 按长度掩码 ⇒ 是**有长度上界**的比较 ⇒ memcmp（strcmp 不需要长度掩码）"
+      ],
+      "caveat": "同族还有 32 字节变体（0x1837c0 起），归入同一名字"
+    }
+  ]
+}

@@ -1,0 +1,1556 @@
+# To display the perf.data header info, please use --header/--header-only options.
+#
+#
+# Total Lost Samples: 0
+#
+# Samples: 2K of event 'cpu-clock'
+# Event count (approx.): 2123123121
+#
+# Overhead       Samples  Command          Shared Object      Symbol                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+# ........  ............  ...............  .................  ...................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................................
+#
+     5.42%           115  vllm-request     vllm-rs            [.] std::thread::local::LocalKey<T>::with
+            |
+            ---std::thread::local::LocalKey<T>::with
+               std::thread::local::LocalKey<T>::with
+               |          
+               |--3.77%--core::ops::function::impls::<impl core::ops::function::FnMut<A> for &F>::call_mut
+               |          <alloc::vec::Vec<T,A> as alloc::vec::spec_extend::SpecExtend<T,I>>::spec_extend
+               |          rayon::iter::plumbing::bridge_producer_consumer::helper
+               |          |          
+               |          |--2.03%--_ZN10rayon_core4join12join_context28_$u7b$$u7b$closure$u7d$$u7d$17he3ccd568d28b4a48E.llvm.9496317675671398634
+               |          |          rayon::iter::plumbing::bridge_producer_consumer::helper
+               |          |          |          
+               |          |          |--1.18%--<rayon_core::job::StackJob<L,F,R> as rayon_core::job::Job>::execute
+               |          |          |          rayon_core::registry::WorkerThread::wait_until_cold
+               |          |          |          |          
+               |          |          |          |--0.61%--rayon_core::registry::ThreadBuilder::run
+               |          |          |          |          std::sys::backtrace::__rust_begin_short_backtrace
+               |          |          |          |          core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::h23b1a44a6e7cb0c5
+               |          |          |          |          _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+               |          |          |          |          0xffff805af8d4
+               |          |          |          |          0xffff80617dcc
+               |          |          |          |          
+               |          |          |           --0.57%--_ZN10rayon_core4join12join_context28_$u7b$$u7b$closure$u7d$$u7d$17he3ccd568d28b4a48E.llvm.9496317675671398634
+               |          |          |                     rayon::iter::plumbing::bridge_producer_consumer::helper
+               |          |          |          
+               |          |           --0.85%--_ZN10rayon_core4join12join_context28_$u7b$$u7b$closure$u7d$$u7d$17he3ccd568d28b4a48E.llvm.9496317675671398634
+               |          |                     rayon::iter::plumbing::bridge_producer_consumer::helper
+               |          |                     |          
+               |          |                      --0.71%--_ZN10rayon_core4join12join_context28_$u7b$$u7b$closure$u7d$$u7d$17he3ccd568d28b4a48E.llvm.9496317675671398634
+               |          |                                rayon::iter::plumbing::bridge_producer_consumer::helper
+               |          |                                rayon::iter::from_par_iter::<impl rayon::iter::FromParallelIterator<T> for alloc::vec::Vec<T>>::from_par_iter
+               |          |                                rayon::result::<impl rayon::iter::FromParallelIterator<core::result::Result<T,E>> for core::result::Result<C,E>>::from_par_iter
+               |          |                                rayon_core::thread_pool::ThreadPool::install::_$u7b$$u7b$closure$u7d$$u7d$::h9bacc75b2647c44c
+               |          |                                <rayon_core::job::StackJob<L,F,R> as rayon_core::job::Job>::execute
+               |          |                                rayon_core::registry::WorkerThread::wait_until_cold
+               |          |          
+               |           --1.70%--<rayon_core::job::StackJob<L,F,R> as rayon_core::job::Job>::execute
+               |                     rayon_core::registry::WorkerThread::wait_until_cold
+               |                     |          
+               |                     |--0.94%--_ZN10rayon_core4join12join_context28_$u7b$$u7b$closure$u7d$$u7d$17he3ccd568d28b4a48E.llvm.9496317675671398634
+               |                     |          rayon::iter::plumbing::bridge_producer_consumer::helper
+               |                     |          
+               |                      --0.75%--rayon_core::registry::ThreadBuilder::run
+               |                                std::sys::backtrace::__rust_begin_short_backtrace
+               |                                core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::h23b1a44a6e7cb0c5
+               |                                _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+               |                                0xffff805af8d4
+               |                                0xffff80617dcc
+               |          
+                --1.65%--fastokens::pre_tokenized::PreTokenizedString::tokenize_batched
+                          fastokens::Tokenizer::encode_with_special_tokens
+                          <vllm_tokenizer::hf::HuggingFaceTokenizer as vllm_tokenizer::Tokenizer>::encode
+                          vllm_server::routes::tokenize::tokenize_completion
+                          _ZN80_$LT$F$u20$as$u20$axum..handler..Handler$LT$$LP$M$C$T1$C$T2$C$T3$RP$$C$S$GT$$GT$4call28_$u7b$$u7b$closure$u7d$$u7d$17h73da7d0f7fa126d3E.llvm.14932681629194275609
+                          <axum::util::MapIntoResponseFuture<F> as core::future::future::Future>::poll
+                          <tower::util::oneshot::Oneshot<S,Req> as core::future::future::Future>::poll
+                          _ZN91_$LT$axum..routing..route..RouteFuture$LT$E$GT$$u20$as$u20$core..future..future..Future$GT$4poll17hea045dc61c2ed53cE.llvm.6855875762362495359
+                          <axum::util::MapIntoResponseFuture<F> as core::future::future::Future>::poll
+                          <tower::util::oneshot::Oneshot<S,Req> as core::future::future::Future>::poll
+                          _ZN91_$LT$axum..routing..route..RouteFuture$LT$E$GT$$u20$as$u20$core..future..future..Future$GT$4poll17hea045dc61c2ed53cE.llvm.9540130986602423285
+                          tokio::runtime::task::core::Core<T,S>::poll
+                          tokio::runtime::task::harness::Harness<T,S>::poll
+                          tokio::runtime::scheduler::multi_thread::worker::Context::run_task
+                          tokio::runtime::scheduler::multi_thread::worker::Context::run
+                          tokio::runtime::context::scoped::Scoped<T>::set
+                          tokio::runtime::context::runtime::enter_runtime
+                          tokio::runtime::scheduler::multi_thread::worker::run
+                          tokio::runtime::task::core::Core<T,S>::poll
+                          tokio::runtime::task::harness::Harness<T,S>::poll
+                          tokio::runtime::blocking::pool::Inner::run
+                          std::sys::backtrace::__rust_begin_short_backtrace
+                          core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+                          _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+                          0xffff805af8d4
+                          0xffff80617dcc
+
+     3.21%            68  vllm-request     vllm-rs            [.] std::thread::local::LocalKey<T>::with
+            |
+            ---std::thread::local::LocalKey<T>::with
+               |          
+                --3.11%--core::ops::function::impls::<impl core::ops::function::FnMut<A> for &F>::call_mut
+                          <alloc::vec::Vec<T,A> as alloc::vec::spec_extend::SpecExtend<T,I>>::spec_extend
+                          rayon::iter::plumbing::bridge_producer_consumer::helper
+                          |          
+                          |--1.70%--<rayon_core::job::StackJob<L,F,R> as rayon_core::job::Job>::execute
+                          |          rayon_core::registry::WorkerThread::wait_until_cold
+                          |          |          
+                          |           --1.27%--rayon_core::registry::ThreadBuilder::run
+                          |                     std::sys::backtrace::__rust_begin_short_backtrace
+                          |                     core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::h23b1a44a6e7cb0c5
+                          |                     _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+                          |                     0xffff805af8d4
+                          |                     0xffff80617dcc
+                          |          
+                           --1.37%--_ZN10rayon_core4join12join_context28_$u7b$$u7b$closure$u7d$$u7d$17he3ccd568d28b4a48E.llvm.9496317675671398634
+                                     rayon::iter::plumbing::bridge_producer_consumer::helper
+                                     |          
+                                     |--0.80%--<rayon_core::job::StackJob<L,F,R> as rayon_core::job::Job>::execute
+                                     |          rayon_core::registry::WorkerThread::wait_until_cold
+                                     |          |          
+                                     |           --0.71%--rayon_core::registry::ThreadBuilder::run
+                                     |                     std::sys::backtrace::__rust_begin_short_backtrace
+                                     |                     core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::h23b1a44a6e7cb0c5
+                                     |                     _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+                                     |                     0xffff805af8d4
+                                     |                     0xffff80617dcc
+                                     |          
+                                      --0.57%--_ZN10rayon_core4join12join_context28_$u7b$$u7b$closure$u7d$$u7d$17he3ccd568d28b4a48E.llvm.9496317675671398634
+                                                rayon::iter::plumbing::bridge_producer_consumer::helper
+
+     2.45%            52  tokio-rt-worker  vllm-rs            [.] tokio::runtime::scheduler::multi_thread::worker::Context::run
+            |
+            ---tokio::runtime::scheduler::multi_thread::worker::Context::run
+               tokio::runtime::context::scoped::Scoped<T>::set
+               tokio::runtime::context::runtime::enter_runtime
+               tokio::runtime::scheduler::multi_thread::worker::run
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::blocking::pool::Inner::run
+               std::sys::backtrace::__rust_begin_short_backtrace
+               core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+               _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+               0xffff805af8d4
+               0xffff80617dcc
+
+     1.65%            35  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566e3274c
+            |
+            ---0xffffb39566e3274c
+               0xffffb39566e32a00
+               0xffffb395678ebbb8
+               0xffffb39567a01594
+               0xffffb39567a01b2c
+               0xffffb39567a01eec
+               0xffffb39567a135c4
+               0xffffb39567a16498
+               0xffffb395679d7dec
+               0xffffb395679d8090
+               0xffffb395679d8148
+               0xffffb395679d7b38
+               0xffffb395679d824c
+               0xffffb39567920164
+               0xffffb395679201f0
+               0xffffb395679204fc
+               0xffffb395679211c8
+               0xffffb39567921720
+               0xffffb39567921840
+               0xffffb39566da6cc8
+               0xffffb39566ce04e4
+               0xffffb39566ce8080
+               0xffffb39566ce7c40
+               0xffffb39566ce815c
+               0xffffb39566da6798
+               0xffffb39566da7024
+               0xffffb3956791d654
+               0xffffb395679db598
+               0xffffb395679ddf78
+               0xffffb395679de0ac
+               0xffffb395679de1fc
+               0xffffb395679de7ec
+               0xffffb395679dec0c
+               0xffffb39567a092a4
+               0xffffb39567a0a918
+               0xffffb39567a0af8c
+               0xffffb395679f0380
+               0xffffb395679f1660
+               0xffffb395679f17b8
+               0xffffb39567a35b0c
+               0xffffb395678e5b14
+               0xffffb395678e5c24
+               0xffffb395671ad104
+               0xffffb395671ae85c
+               0xffffb395671aeaf4
+               0xffffb395671aeb60
+               0xffffb39566cfc8a0
+               0xffffb39566cfca40
+               0xffffb39566cfcb28
+               0xffffb39567bb8724
+               0xffffb39567bb8d18
+               0xffffb39566ce1e38
+               writev
+               tokio::runtime::io::registration::Registration::poll_io
+               hyper::proto::h1::conn::Conn<I,B,T>::poll_flush
+               hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_catch
+               <hyper_util::server::graceful::GracefulConnectionFuture<C,F> as core::future::future::Future>::poll
+               _ZN11vllm_server17serve_connections28_$u7b$$u7b$closure$u7d$$u7d$28_$u7b$$u7b$closure$u7d$$u7d$17h70eafa0e8716dcc3E.llvm.8979963845522293737
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::scheduler::multi_thread::worker::Context::run_task
+               tokio::runtime::scheduler::multi_thread::worker::Context::run
+               tokio::runtime::context::scoped::Scoped<T>::set
+               tokio::runtime::context::runtime::enter_runtime
+               tokio::runtime::scheduler::multi_thread::worker::run
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::blocking::pool::Inner::run
+               std::sys::backtrace::__rust_begin_short_backtrace
+               core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+               _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+               0xffff805af8d4
+               0xffff80617dcc
+
+     1.37%            29  vllm-zmq-0       vllm-rs            [.] tokio::runtime::scheduler::multi_thread::worker::Context::run
+            |
+            ---tokio::runtime::scheduler::multi_thread::worker::Context::run
+               tokio::runtime::context::scoped::Scoped<T>::set
+               tokio::runtime::context::runtime::enter_runtime
+               tokio::runtime::scheduler::multi_thread::worker::run
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::blocking::pool::Inner::run
+               std::sys::backtrace::__rust_begin_short_backtrace
+               core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+               _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+               0xffff805af8d4
+               0xffff80617dcc
+
+     1.23%            26  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb3956722b7ec
+            |
+            ---0xffffb3956722b7ec
+               0xffffb395671b0100
+               0xffffb395671b0568
+               0xffffb395671b062c
+               0xffffb39566cfc8a0
+               0xffffb39566cfca40
+               0xffffb39566cfcb28
+               0xffffb39567bb8724
+               0xffffb39567bb8d18
+               0xffffb39566ce1e38
+               write
+               _ZN3mio3sys4unix5waker5Waker4wake17h6b1915604122c3c9E.llvm.15092636645773576561
+               tokio::runtime::driver::IoHandle::unpark
+               tokio::runtime::scheduler::multi_thread::worker::<impl tokio::runtime::scheduler::multi_thread::handle::Handle>::notify_parked_local
+               tokio::runtime::scheduler::multi_thread::worker::Context::run_task
+               tokio::runtime::scheduler::multi_thread::worker::Context::run
+               tokio::runtime::context::scoped::Scoped<T>::set
+               tokio::runtime::context::runtime::enter_runtime
+               tokio::runtime::scheduler::multi_thread::worker::run
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::blocking::pool::Inner::run
+               std::sys::backtrace::__rust_begin_short_backtrace
+               core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+               _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+               0xffff805af8d4
+               0xffff80617dcc
+
+     1.18%            25  tokio-rt-worker  vllm-rs            [.] mi_free
+            |
+            ---mi_free
+               |          
+                --0.52%--<S as futures_core::stream::TryStream>::try_poll_next
+                          <futures_util::stream::try_stream::MapErr<St,F> as futures_core::stream::Stream>::poll_next
+                          futures_util::stream::stream::StreamExt::poll_next_unpin
+                          <asynk_strim::stream::AsynkStrim<F,Fut,Yieldr,Item> as futures_core::stream::Stream>::poll_next
+                          futures_util::stream::stream::StreamExt::poll_next_unpin
+                          <tracing_futures::Instrumented<T> as futures_core::stream::Stream>::poll_next
+                          <http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame
+                          <http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame
+                          <tower_http::trace::body::ResponseBody<B,C,OnBodyChunkT,OnEosT,OnFailureT> as http_body::Body>::poll_frame
+                          <http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame
+                          hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_write
+                          hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_catch
+                          <hyper_util::server::graceful::GracefulConnectionFuture<C,F> as core::future::future::Future>::poll
+                          _ZN11vllm_server17serve_connections28_$u7b$$u7b$closure$u7d$$u7d$28_$u7b$$u7b$closure$u7d$$u7d$17h70eafa0e8716dcc3E.llvm.8979963845522293737
+                          tokio::runtime::task::core::Core<T,S>::poll
+                          tokio::runtime::task::harness::Harness<T,S>::poll
+                          tokio::runtime::scheduler::multi_thread::worker::Context::run_task
+                          tokio::runtime::scheduler::multi_thread::worker::Context::run
+                          tokio::runtime::context::scoped::Scoped<T>::set
+                          tokio::runtime::context::runtime::enter_runtime
+                          tokio::runtime::scheduler::multi_thread::worker::run
+                          tokio::runtime::task::core::Core<T,S>::poll
+                          tokio::runtime::task::harness::Harness<T,S>::poll
+                          tokio::runtime::blocking::pool::Inner::run
+                          std::sys::backtrace::__rust_begin_short_backtrace
+                          core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+                          _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+                          0xffff805af8d4
+                          0xffff80617dcc
+
+     0.99%            21  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb3956722b7ec
+            |
+            ---0xffffb3956722b7ec
+               0xffffb395671b0100
+               0xffffb395671b0568
+               0xffffb395671b062c
+               0xffffb39566cfc8a0
+               0xffffb39566cfca40
+               0xffffb39566cfcb28
+               0xffffb39567bb8724
+               0xffffb39567bb8d18
+               0xffffb39566ce1e38
+               write
+               _ZN3mio3sys4unix5waker5Waker4wake17h6b1915604122c3c9E.llvm.15092636645773576561
+               tokio::runtime::driver::IoHandle::unpark
+               tokio::runtime::scheduler::multi_thread::worker::<impl tokio::runtime::scheduler::multi_thread::handle::Handle>::notify_parked_local
+               tokio::runtime::scheduler::multi_thread::worker::Context::run_task
+               tokio::runtime::scheduler::multi_thread::worker::Context::run
+               tokio::runtime::context::scoped::Scoped<T>::set
+               tokio::runtime::context::runtime::enter_runtime
+               tokio::runtime::scheduler::multi_thread::worker::run
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::blocking::pool::Inner::run
+               std::sys::backtrace::__rust_begin_short_backtrace
+               core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+               _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+               0xffff805af8d4
+               0xffff80617dcc
+
+     0.94%            20  vllm-zmq-0       vllm-rs            [.] parking_lot::condvar::Condvar::wait_until_internal
+            |
+            ---parking_lot::condvar::Condvar::wait_until_internal
+               _ZN5tokio7runtime9scheduler12multi_thread4park5Inner12park_condvar17h80cd09aff79d9fb4E.llvm.14257304173437880849
+               tokio::runtime::scheduler::multi_thread::park::Parker::park
+               tokio::runtime::scheduler::multi_thread::worker::Context::park_internal
+               tokio::runtime::scheduler::multi_thread::worker::Context::run
+               tokio::runtime::context::scoped::Scoped<T>::set
+               tokio::runtime::context::runtime::enter_runtime
+               tokio::runtime::scheduler::multi_thread::worker::run
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::blocking::pool::Inner::run
+               std::sys::backtrace::__rust_begin_short_backtrace
+               core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+               _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+               0xffff805af8d4
+               0xffff80617dcc
+
+     0.85%            18  tokio-rt-worker  vllm-rs            [.] _ZN5tokio7runtime2io6driver6Driver4turn17h95ec952704d53a03E.llvm.12061638971258598240
+            |
+            ---_ZN5tokio7runtime2io6driver6Driver4turn17h95ec952704d53a03E.llvm.12061638971258598240
+               _ZN5tokio7runtime4time6Driver13park_internal17h45f3480202431fceE.llvm.14257304173437880849
+               tokio::runtime::scheduler::multi_thread::park::Parker::park
+               tokio::runtime::scheduler::multi_thread::worker::Context::park_internal
+               tokio::runtime::scheduler::multi_thread::worker::Context::run
+               tokio::runtime::context::scoped::Scoped<T>::set
+               tokio::runtime::context::runtime::enter_runtime
+               tokio::runtime::scheduler::multi_thread::worker::run
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::blocking::pool::Inner::run
+               std::sys::backtrace::__rust_begin_short_backtrace
+               core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+               _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+               0xffff805af8d4
+               0xffff80617dcc
+
+     0.85%            18  vllm-request     [kernel.kallsyms]  [k] 0xffffb39567bbf380
+            |
+            ---0xffffb39567bbf380
+               0xffffb39567bbf830
+               0xffffb39566e19430
+               0xffffb39566e194e8
+               0xffffb39566cfc8a0
+               0xffffb39566cfca40
+               0xffffb39566cfcb28
+               0xffffb39567bb8724
+               0xffffb39567bb8d18
+               0xffffb39566ce1e38
+               __sched_yield
+               rayon_core::registry::WorkerThread::wait_until_cold
+               |          
+                --0.57%--rayon_core::registry::ThreadBuilder::run
+                          std::sys::backtrace::__rust_begin_short_backtrace
+                          core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::h23b1a44a6e7cb0c5
+                          _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+                          0xffff805af8d4
+                          0xffff80617dcc
+
+     0.85%            18  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566ded67c
+            |
+            ---0xffffb39566ded67c
+               0xffffb39566dedcd8
+               0xffffb39566ed84d0
+               0xffffb39566ed4c44
+               0xffffb39566ed4d90
+               0xffffb39566cfc8a0
+               0xffffb39566cfca40
+               0xffffb39566cfcb28
+               0xffffb39567bb8724
+               0xffffb39567bb8d18
+               0xffffb39566ce1e38
+               syscall
+               parking_lot::condvar::Condvar::notify_one_slow
+               |          
+                --0.75%--tokio::runtime::context::with_scheduler
+                          tokio::runtime::task::raw::schedule
+                          tokio::runtime::task::waker::wake_by_val
+                          _ZN23vllm_engine_core_client6client3imp26run_output_dispatcher_loop28_$u7b$$u7b$closure$u7d$$u7d$17h939ef2bb4e760910E.llvm.8979963845522293737
+                          tokio::runtime::task::core::Core<T,S>::poll
+                          tokio::runtime::task::harness::Harness<T,S>::poll
+                          tokio::runtime::scheduler::multi_thread::worker::Context::run_task
+                          tokio::runtime::scheduler::multi_thread::worker::Context::run
+                          tokio::runtime::context::scoped::Scoped<T>::set
+                          tokio::runtime::context::runtime::enter_runtime
+                          tokio::runtime::scheduler::multi_thread::worker::run
+                          tokio::runtime::task::core::Core<T,S>::poll
+                          tokio::runtime::task::harness::Harness<T,S>::poll
+                          tokio::runtime::blocking::pool::Inner::run
+                          std::sys::backtrace::__rust_begin_short_backtrace
+                          core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+                          _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+                          0xffff805af8d4
+                          0xffff80617dcc
+
+     0.85%            18  vllm-zmq-0       vllm-rs            [.] tokio::process::imp::orphan::OrphanQueueImpl<T>::reap_orphans
+            |
+            ---tokio::process::imp::orphan::OrphanQueueImpl<T>::reap_orphans
+               _ZN5tokio7runtime4time6Driver13park_internal17h45f3480202431fceE.llvm.14257304173437880849
+               tokio::runtime::scheduler::multi_thread::park::Parker::park
+               tokio::runtime::scheduler::multi_thread::worker::Context::park_internal
+               tokio::runtime::scheduler::multi_thread::worker::Context::run
+               tokio::runtime::context::scoped::Scoped<T>::set
+               tokio::runtime::context::runtime::enter_runtime
+               tokio::runtime::scheduler::multi_thread::worker::run
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::blocking::pool::Inner::run
+               std::sys::backtrace::__rust_begin_short_backtrace
+               core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+               _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+               0xffff805af8d4
+               0xffff80617dcc
+
+     0.80%            17  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566ded67c
+            |
+            ---0xffffb39566ded67c
+               0xffffb39566dedcd8
+               0xffffb39566ed84d0
+               0xffffb39566ed4c44
+               0xffffb39566ed4d90
+               0xffffb39566cfc8a0
+               0xffffb39566cfca40
+               0xffffb39566cfcb28
+               0xffffb39567bb8724
+               0xffffb39567bb8d18
+               0xffffb39566ce1e38
+               syscall
+               parking_lot::condvar::Condvar::notify_one_slow
+               |          
+                --0.66%--tokio::runtime::context::with_scheduler
+                          tokio::runtime::task::raw::schedule
+                          futures_task::waker::wake_arc_raw
+                          tokio::runtime::io::scheduled_io::ScheduledIo::wake
+                          _ZN5tokio7runtime2io6driver6Driver4turn17h95ec952704d53a03E.llvm.12061638971258598240
+                          _ZN5tokio7runtime4time6Driver13park_internal17h45f3480202431fceE.llvm.14257304173437880849
+                          tokio::runtime::scheduler::multi_thread::park::Parker::park
+                          tokio::runtime::scheduler::multi_thread::worker::Context::park_internal
+                          tokio::runtime::scheduler::multi_thread::worker::Context::run
+                          tokio::runtime::context::scoped::Scoped<T>::set
+                          tokio::runtime::context::runtime::enter_runtime
+                          tokio::runtime::scheduler::multi_thread::worker::run
+                          tokio::runtime::task::core::Core<T,S>::poll
+                          tokio::runtime::task::harness::Harness<T,S>::poll
+                          tokio::runtime::blocking::pool::Inner::run
+                          std::sys::backtrace::__rust_begin_short_backtrace
+                          core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+                          _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+                          0xffff805af8d4
+                          0xffff80617dcc
+
+     0.80%            17  tokio-rt-worker  vllm-rs            [.] tokio::runtime::time::<impl tokio::runtime::time::handle::Handle>::process_at_time
+            |
+            ---tokio::runtime::time::<impl tokio::runtime::time::handle::Handle>::process_at_time
+               tokio::runtime::scheduler::multi_thread::park::Parker::park
+               tokio::runtime::scheduler::multi_thread::worker::Context::park_internal
+               tokio::runtime::scheduler::multi_thread::worker::Context::run
+               tokio::runtime::context::scoped::Scoped<T>::set
+               tokio::runtime::context::runtime::enter_runtime
+               tokio::runtime::scheduler::multi_thread::worker::run
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::blocking::pool::Inner::run
+               std::sys::backtrace::__rust_begin_short_backtrace
+               core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+               _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+               0xffff805af8d4
+               0xffff80617dcc
+
+     0.80%            17  vllm-zmq-0       vllm-rs            [.] futures_util::stream::stream::StreamExt::poll_next_unpin
+            |
+            ---futures_util::stream::stream::StreamExt::poll_next_unpin
+               _ZN63_$LT$zeromq..pull..PullSocket$u20$as$u20$zeromq..SocketRecv$GT$4recv28_$u7b$$u7b$closure$u7d$$u7d$17h0acfd25f4a6d11a8E.llvm.15162728713765982798
+               _ZN23vllm_engine_core_client9transport15run_output_loop28_$u7b$$u7b$closure$u7d$$u7d$17h97632d4bcc171bbaE.llvm.8979963845522293737
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::scheduler::multi_thread::worker::Context::run_task
+               tokio::runtime::scheduler::multi_thread::worker::Context::run
+               tokio::runtime::context::scoped::Scoped<T>::set
+               tokio::runtime::context::runtime::enter_runtime
+               tokio::runtime::scheduler::multi_thread::worker::run
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::blocking::pool::Inner::run
+               std::sys::backtrace::__rust_begin_short_backtrace
+               core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+               _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+               0xffff805af8d4
+               0xffff80617dcc
+
+     0.75%            16  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567bb8714
+            |
+            ---0xffffb39567bb8714
+               0xffffb39567bb8d18
+               0xffffb39566ce1e38
+
+     0.75%            16  tokio-rt-worker  vllm-rs            [.] futures_util::stream::stream::StreamExt::poll_next_unpin
+            |
+            ---futures_util::stream::stream::StreamExt::poll_next_unpin
+               <asynk_strim::stream::AsynkStrim<F,Fut,Yieldr,Item> as futures_core::stream::Stream>::poll_next
+               futures_util::stream::stream::StreamExt::poll_next_unpin
+               <tracing_futures::Instrumented<T> as futures_core::stream::Stream>::poll_next
+               <http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame
+               <http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame
+               <tower_http::trace::body::ResponseBody<B,C,OnBodyChunkT,OnEosT,OnFailureT> as http_body::Body>::poll_frame
+               <http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame
+               hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_write
+               hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_catch
+               <hyper_util::server::graceful::GracefulConnectionFuture<C,F> as core::future::future::Future>::poll
+               _ZN11vllm_server17serve_connections28_$u7b$$u7b$closure$u7d$$u7d$28_$u7b$$u7b$closure$u7d$$u7d$17h70eafa0e8716dcc3E.llvm.8979963845522293737
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::scheduler::multi_thread::worker::Context::run_task
+               tokio::runtime::scheduler::multi_thread::worker::Context::run
+               tokio::runtime::context::scoped::Scoped<T>::set
+               tokio::runtime::context::runtime::enter_runtime
+               tokio::runtime::scheduler::multi_thread::worker::run
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::blocking::pool::Inner::run
+               std::sys::backtrace::__rust_begin_short_backtrace
+               core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+               _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+               0xffff805af8d4
+               0xffff80617dcc
+
+     0.75%            16  tokio-rt-worker  vllm-rs            [.] tokio::runtime::scheduler::multi_thread::queue::Steal<T>::steal_into
+            |
+            ---tokio::runtime::scheduler::multi_thread::queue::Steal<T>::steal_into
+               tokio::runtime::scheduler::multi_thread::worker::Context::run
+               tokio::runtime::context::scoped::Scoped<T>::set
+               tokio::runtime::context::runtime::enter_runtime
+               tokio::runtime::scheduler::multi_thread::worker::run
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::blocking::pool::Inner::run
+               std::sys::backtrace::__rust_begin_short_backtrace
+               core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+               _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+               0xffff805af8d4
+               0xffff80617dcc
+
+     0.75%            16  vllm-request     vllm-rs            [.] crossbeam_deque::deque::Stealer<T>::steal
+            |
+            ---crossbeam_deque::deque::Stealer<T>::steal
+               rayon_core::registry::WorkerThread::wait_until_cold
+               |          
+                --0.57%--rayon_core::registry::ThreadBuilder::run
+                          std::sys::backtrace::__rust_begin_short_backtrace
+                          core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::h23b1a44a6e7cb0c5
+                          _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+                          0xffff805af8d4
+                          0xffff80617dcc
+
+     0.71%            15  tokio-rt-worker  vllm-rs            [.] <asynk_strim::stream::AsynkStrim<F,Fut,Yieldr,Item> as futures_core::stream::Stream>::poll_next
+            |
+            ---<asynk_strim::stream::AsynkStrim<F,Fut,Yieldr,Item> as futures_core::stream::Stream>::poll_next
+               futures_util::stream::stream::StreamExt::poll_next_unpin
+               <tracing_futures::Instrumented<T> as futures_core::stream::Stream>::poll_next
+               <http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame
+               <http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame
+               <tower_http::trace::body::ResponseBody<B,C,OnBodyChunkT,OnEosT,OnFailureT> as http_body::Body>::poll_frame
+               <http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame
+               hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_write
+               hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_catch
+               <hyper_util::server::graceful::GracefulConnectionFuture<C,F> as core::future::future::Future>::poll
+               _ZN11vllm_server17serve_connections28_$u7b$$u7b$closure$u7d$$u7d$28_$u7b$$u7b$closure$u7d$$u7d$17h70eafa0e8716dcc3E.llvm.8979963845522293737
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::scheduler::multi_thread::worker::Context::run_task
+               tokio::runtime::scheduler::multi_thread::worker::Context::run
+               tokio::runtime::context::scoped::Scoped<T>::set
+               tokio::runtime::context::runtime::enter_runtime
+               tokio::runtime::scheduler::multi_thread::worker::run
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::blocking::pool::Inner::run
+               std::sys::backtrace::__rust_begin_short_backtrace
+               core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+               _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+               0xffff805af8d4
+               0xffff80617dcc
+
+     0.71%            15  vllm-zmq-0       vllm-rs            [.] tokio::runtime::scheduler::multi_thread::park::Parker::park
+            |
+            ---tokio::runtime::scheduler::multi_thread::park::Parker::park
+               tokio::runtime::scheduler::multi_thread::worker::Context::park_internal
+               tokio::runtime::scheduler::multi_thread::worker::Context::run
+               tokio::runtime::context::scoped::Scoped<T>::set
+               tokio::runtime::context::runtime::enter_runtime
+               tokio::runtime::scheduler::multi_thread::worker::run
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::blocking::pool::Inner::run
+               std::sys::backtrace::__rust_begin_short_backtrace
+               core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+               _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+               0xffff805af8d4
+               0xffff80617dcc
+
+     0.61%            13  tokio-rt-worker  vllm-rs            [.] futures_task::waker::wake_arc_raw
+            |
+            ---futures_task::waker::wake_arc_raw
+               tokio::runtime::io::scheduled_io::ScheduledIo::wake
+               _ZN5tokio7runtime2io6driver6Driver4turn17h95ec952704d53a03E.llvm.12061638971258598240
+               _ZN5tokio7runtime4time6Driver13park_internal17h45f3480202431fceE.llvm.14257304173437880849
+               tokio::runtime::scheduler::multi_thread::park::Parker::park
+               tokio::runtime::scheduler::multi_thread::worker::Context::park_internal
+               tokio::runtime::scheduler::multi_thread::worker::Context::run
+               tokio::runtime::context::scoped::Scoped<T>::set
+               tokio::runtime::context::runtime::enter_runtime
+               tokio::runtime::scheduler::multi_thread::worker::run
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::blocking::pool::Inner::run
+               std::sys::backtrace::__rust_begin_short_backtrace
+               core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+               _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+               0xffff805af8d4
+               0xffff80617dcc
+
+     0.61%            13  tokio-rt-worker  vllm-rs            [.] futures_util::stream::stream::StreamExt::poll_next_unpin
+            |
+            ---futures_util::stream::stream::StreamExt::poll_next_unpin
+               <tracing_futures::Instrumented<T> as futures_core::stream::Stream>::poll_next
+               <http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame
+               <http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame
+               <tower_http::trace::body::ResponseBody<B,C,OnBodyChunkT,OnEosT,OnFailureT> as http_body::Body>::poll_frame
+               <http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame
+               hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_write
+               hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_catch
+               <hyper_util::server::graceful::GracefulConnectionFuture<C,F> as core::future::future::Future>::poll
+               _ZN11vllm_server17serve_connections28_$u7b$$u7b$closure$u7d$$u7d$28_$u7b$$u7b$closure$u7d$$u7d$17h70eafa0e8716dcc3E.llvm.8979963845522293737
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::scheduler::multi_thread::worker::Context::run_task
+               tokio::runtime::scheduler::multi_thread::worker::Context::run
+               tokio::runtime::context::scoped::Scoped<T>::set
+               tokio::runtime::context::runtime::enter_runtime
+               tokio::runtime::scheduler::multi_thread::worker::run
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::blocking::pool::Inner::run
+               std::sys::backtrace::__rust_begin_short_backtrace
+               core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+               _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+               0xffff805af8d4
+               0xffff80617dcc
+
+     0.57%            12  tokio-rt-worker  vllm-rs            [.] sharded_slab::pool::Pool<T,C>::get
+            |
+            ---sharded_slab::pool::Pool<T,C>::get
+               tracing_subscriber::layer::context::Context<S>::if_enabled_for
+
+     0.57%            12  tokio-rt-worker  vllm-rs            [.] tokio::runtime::scheduler::multi_thread::park::Parker::park
+            |
+            ---tokio::runtime::scheduler::multi_thread::park::Parker::park
+               tokio::runtime::scheduler::multi_thread::worker::Context::park_internal
+               tokio::runtime::scheduler::multi_thread::worker::Context::run
+               tokio::runtime::context::scoped::Scoped<T>::set
+               tokio::runtime::context::runtime::enter_runtime
+               tokio::runtime::scheduler::multi_thread::worker::run
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::blocking::pool::Inner::run
+               std::sys::backtrace::__rust_begin_short_backtrace
+               core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+               _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+               0xffff805af8d4
+               0xffff80617dcc
+
+     0.57%            12  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39567bb8714
+            |
+            ---0xffffb39567bb8714
+               0xffffb39567bb8d18
+               0xffffb39566ce1e38
+
+     0.57%            12  vllm-zmq-0       vllm-rs            [.] _RNvNtNtCs6Hz1PecaLG4_4core3str8converts9from_utf8
+            |
+            ---_RNvNtNtCs6Hz1PecaLG4_4core3str8converts9from_utf8
+
+     0.57%            12  vllm-zmq-0       vllm-rs            [.] rmp_serde::decode::Deserializer<R,C>::any_inner
+            |
+            ---rmp_serde::decode::Deserializer<R,C>::any_inner
+               rmp_serde::decode::Deserializer<R,C>::any_inner
+               <&mut rmp_serde::decode::Deserializer<R,C> as serde_core::de::Deserializer>::deserialize_option
+               rmp_serde::decode::Deserializer<R,C>::any_inner
+               <vllm_engine_core_client::protocol::output::EngineCoreOutputs as serde_core::de::Deserialize>::deserialize
+               vllm_engine_core_client::protocol::decode_msgpack
+               vllm_engine_core_client::protocol::output::decode_engine_core_outputs
+               _ZN23vllm_engine_core_client9transport15run_output_loop28_$u7b$$u7b$closure$u7d$$u7d$17h97632d4bcc171bbaE.llvm.8979963845522293737
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::scheduler::multi_thread::worker::Context::run_task
+               tokio::runtime::scheduler::multi_thread::worker::Context::run
+               tokio::runtime::context::scoped::Scoped<T>::set
+               tokio::runtime::context::runtime::enter_runtime
+               tokio::runtime::scheduler::multi_thread::worker::run
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::blocking::pool::Inner::run
+               std::sys::backtrace::__rust_begin_short_backtrace
+               core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+               _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+               0xffff805af8d4
+               0xffff80617dcc
+
+     0.57%            12  vllm-zmq-0       vllm-rs            [.] tokio::sync::mpsc::list::Tx<T>::push
+            |
+            ---tokio::sync::mpsc::list::Tx<T>::push
+               _ZN23vllm_engine_core_client6client3imp26run_output_dispatcher_loop28_$u7b$$u7b$closure$u7d$$u7d$17h939ef2bb4e760910E.llvm.8979963845522293737
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::scheduler::multi_thread::worker::Context::run_task
+               tokio::runtime::scheduler::multi_thread::worker::Context::run
+               tokio::runtime::context::scoped::Scoped<T>::set
+               tokio::runtime::context::runtime::enter_runtime
+               tokio::runtime::scheduler::multi_thread::worker::run
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::blocking::pool::Inner::run
+               std::sys::backtrace::__rust_begin_short_backtrace
+               core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+               _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+               0xffff805af8d4
+               0xffff80617dcc
+
+     0.52%            11  tokio-rt-worker  vllm-rs            [.] tokio::process::imp::orphan::OrphanQueueImpl<T>::reap_orphans
+            |
+            ---tokio::process::imp::orphan::OrphanQueueImpl<T>::reap_orphans
+               _ZN5tokio7runtime4time6Driver13park_internal17h45f3480202431fceE.llvm.14257304173437880849
+               tokio::runtime::scheduler::multi_thread::park::Parker::park
+               tokio::runtime::scheduler::multi_thread::worker::Context::park_internal
+               tokio::runtime::scheduler::multi_thread::worker::Context::run
+               tokio::runtime::context::scoped::Scoped<T>::set
+               tokio::runtime::context::runtime::enter_runtime
+               tokio::runtime::scheduler::multi_thread::worker::run
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::blocking::pool::Inner::run
+               std::sys::backtrace::__rust_begin_short_backtrace
+               core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+               _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+               0xffff805af8d4
+               0xffff80617dcc
+
+     0.52%            11  tokio-rt-worker  vllm-rs            [.] tokio::runtime::io::scheduled_io::ScheduledIo::poll_readiness
+            |
+            ---tokio::runtime::io::scheduled_io::ScheduledIo::poll_readiness
+               tokio::runtime::io::registration::Registration::poll_ready
+
+     0.52%            11  vllm-request     vllm-rs            [.] pcre2::bytes::Regex::find_at
+            |
+            ---pcre2::bytes::Regex::find_at
+               fastokens::pre_tokenizers::split::find_matches_pcre2
+               fastokens::pre_tokenizers::split::Split::pre_tokenize
+               fastokens::Tokenizer::encode_with_special_tokens
+               <vllm_tokenizer::hf::HuggingFaceTokenizer as vllm_tokenizer::Tokenizer>::encode
+
+     0.52%            11  vllm-request     vllm-rs            [.] serde_json::read::parse_unicode_escape
+            |
+            ---serde_json::read::parse_unicode_escape
+               <serde_json::read::SliceRead as serde_json::read::Read>::parse_str
+               serde_core::de::Deserializer::__deserialize_content_v1
+               <serde_path_to_error::de::TrackedSeed<X> as serde_core::de::DeserializeSeed>::deserialize
+               <serde::private::de::content::ContentVisitor as serde_core::de::Visitor>::visit_map
+               serde_core::de::Deserializer::__deserialize_content_v1
+
+     0.52%            11  vllm-zmq-0       libc.so.6          [.] 0x000000000009af78
+            |
+            ---0xffff805caf78
+               <asynchronous_codec::framed_read::FramedRead<T,D> as futures_core::stream::Stream>::poll_next
+               futures_util::stream::stream::StreamExt::poll_next_unpin
+               _ZN63_$LT$zeromq..pull..PullSocket$u20$as$u20$zeromq..SocketRecv$GT$4recv28_$u7b$$u7b$closure$u7d$$u7d$17h0acfd25f4a6d11a8E.llvm.15162728713765982798
+               _ZN23vllm_engine_core_client9transport15run_output_loop28_$u7b$$u7b$closure$u7d$$u7d$17h97632d4bcc171bbaE.llvm.8979963845522293737
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::scheduler::multi_thread::worker::Context::run_task
+               tokio::runtime::scheduler::multi_thread::worker::Context::run
+               tokio::runtime::context::scoped::Scoped<T>::set
+               tokio::runtime::context::runtime::enter_runtime
+               tokio::runtime::scheduler::multi_thread::worker::run
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::blocking::pool::Inner::run
+               std::sys::backtrace::__rust_begin_short_backtrace
+               core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+               _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+               0xffff805af8d4
+               0xffff80617dcc
+
+     0.52%            11  vllm-zmq-0       vllm-rs            [.] tokio::runtime::scheduler::multi_thread::park::Unparker::unpark
+            |
+            ---tokio::runtime::scheduler::multi_thread::park::Unparker::unpark
+
+     0.52%            11  vllm-zmq-0       vllm-rs            [.] vllm_engine_core_client::client::state::RequestRegistry::sender_for_output
+            |
+            ---vllm_engine_core_client::client::state::RequestRegistry::sender_for_output
+               _ZN23vllm_engine_core_client6client3imp26run_output_dispatcher_loop28_$u7b$$u7b$closure$u7d$$u7d$17h939ef2bb4e760910E.llvm.8979963845522293737
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::scheduler::multi_thread::worker::Context::run_task
+               tokio::runtime::scheduler::multi_thread::worker::Context::run
+               tokio::runtime::context::scoped::Scoped<T>::set
+               tokio::runtime::context::runtime::enter_runtime
+               tokio::runtime::scheduler::multi_thread::worker::run
+               tokio::runtime::task::core::Core<T,S>::poll
+               tokio::runtime::task::harness::Harness<T,S>::poll
+               tokio::runtime::blocking::pool::Inner::run
+               std::sys::backtrace::__rust_begin_short_backtrace
+               core::ops::function::FnOnce::call_once$u7b$$u7b$vtable.shim$u7d$$u7d$::hba11f26493658fc9
+               _RNvNvMs0_NtNtNtCshxTglP3SOjd_3std3sys6thread4unixNtB7_6Thread3new12thread_start.llvm.14253910252949651887
+               0xffff805af8d4
+               0xffff80617dcc
+
+     0.47%            10  tokio-rt-worker  vllm-rs            [.] <S as futures_core::stream::TryStream>::try_poll_next
+     0.47%            10  tokio-rt-worker  vllm-rs            [.] __aarch64_cas8_acq_rel
+     0.47%            10  vllm-zmq-0       vllm-rs            [.] _ZN23vllm_engine_core_client6client3imp26run_output_dispatcher_loop28_$u7b$$u7b$closure$u7d$$u7d$17h939ef2bb4e760910E.llvm.8979963845522293737
+     0.47%            10  vllm-zmq-0       vllm-rs            [.] rmp_serde::decode::Deserializer<R,C>::any_inner
+     0.42%             9  tokio-rt-worker  [vdso]             [.] 0x00000000000004bc
+     0.42%             9  tokio-rt-worker  vllm-rs            [.] _mi_page_malloc_zero
+     0.42%             9  tokio-rt-worker  vllm-rs            [.] tokio::runtime::context::scoped::Scoped<T>::with
+     0.42%             9  tokio-rt-worker  vllm-rs            [.] tokio::runtime::scheduler::multi_thread::park::Unparker::unpark
+     0.42%             9  vllm-zmq-0       libc.so.6          [.] epoll_pwait
+     0.42%             9  vllm-zmq-0       vllm-rs            [.] tokio::runtime::io::scheduled_io::ScheduledIo::poll_readiness
+     0.38%             8  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566cef1f0
+     0.38%             8  tokio-rt-worker  libc.so.6          [.] epoll_pwait
+     0.38%             8  tokio-rt-worker  vllm-rs            [.] <tower_http::trace::body::ResponseBody<B,C,OnBodyChunkT,OnEosT,OnFailureT> as http_body::Body>::poll_frame
+     0.38%             8  tokio-rt-worker  vllm-rs            [.] __aarch64_ldadd8_rel
+     0.38%             8  tokio-rt-worker  vllm-rs            [.] hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_catch
+     0.38%             8  tokio-rt-worker  vllm-rs            [.] parking_lot::condvar::Condvar::wait_until_internal
+     0.38%             8  vllm-request     vllm-rs            [.] fastokens::models::bpe::SharedCache::insert
+     0.33%             7  tokio-rt-worker  libc.so.6          [.] 0x000000000007c464
+     0.33%             7  vllm-request     [kernel.kallsyms]  [k] 0xffffb39567b6dca4
+     0.33%             7  vllm-zmq-0       vllm-rs            [.] _ZN5bytes5bytes12shared_clone17h6211a51665470814E.llvm.13429861298910670050
+     0.28%             6  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566eb711c
+     0.28%             6  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566eb905c
+     0.28%             6  tokio-rt-worker  libm.so.6          [.] pow
+     0.28%             6  tokio-rt-worker  vllm-rs            [.] <alloc::collections::vec_deque::iter::Iter<T> as core::iter::traits::iterator::Iterator>::fold
+     0.28%             6  tokio-rt-worker  vllm-rs            [.] <core::iter::adapters::map::Map<I,F> as core::iter::traits::iterator::Iterator>::try_fold
+     0.28%             6  tokio-rt-worker  vllm-rs            [.] asynk_strim::yielder::Yielder$LT$Item$GT$::yield_item::_$u7b$$u7b$closure$u7d$$u7d$::h542ce3c4092efe21
+     0.28%             6  tokio-rt-worker  vllm-rs            [.] mi_theap_malloc_aligned
+     0.28%             6  tokio-rt-worker  vllm-rs            [.] parking_lot_core::parking_lot::lock_bucket_pair
+     0.28%             6  vllm-request     vllm-rs            [.] serde_json::read::parse_escape
+     0.28%             6  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566e3274c
+     0.28%             6  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395678ee174
+     0.28%             6  vllm-zmq-0       vllm-rs            [.] <vllm_engine_core_client::protocol::stats::_::<impl serde_core::de::Deserialize for vllm_engine_core_client::protocol::stats::SchedulerStats>::deserialize::__FieldVisitor as serde_core::de::Visitor>::visit_str
+     0.28%             6  vllm-zmq-0       vllm-rs            [.] _ZN5bytes5bytes11shared_drop17ha92c85bd723a26dcE.llvm.13429861298910670050
+     0.28%             6  vllm-zmq-0       vllm-rs            [.] parking_lot_core::parking_lot::lock_bucket_pair
+     0.28%             6  vllm-zmq-0       vllm-rs            [.] tokio::runtime::scheduler::multi_thread::worker::<impl tokio::runtime::scheduler::multi_thread::handle::Handle>::notify_parked_local
+     0.28%             6  vllm-zmq-0       vllm-rs            [.] tokio::runtime::task::state::State::transition_to_notified_by_val
+     0.28%             6  vllm-zmq-0       vllm-rs            [.] tokio::sync::mpsc::list::Tx<T>::push
+     0.28%             6  vllm-zmq-0       vllm-rs            [.] vllm_engine_core_client::metrics::SchedulerStatsRecorder::record
+     0.24%             5  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566ebacac
+     0.24%             5  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567226258
+     0.24%             5  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395678ee640
+     0.24%             5  tokio-rt-worker  vllm-rs            [.] <tracing_futures::Instrumented<T> as futures_core::stream::Stream>::poll_next
+     0.24%             5  tokio-rt-worker  vllm-rs            [.] _ZN5tokio4sync6notify15NotifiedProject13poll_notified17hcae362417e688b47E.llvm.2532638128115361334
+     0.24%             5  tokio-rt-worker  vllm-rs            [.] asynk_strim::try_yielder::TryYielder$LT$Ok$C$Error$GT$::yield_ok::_$u7b$$u7b$closure$u7d$$u7d$::ha003c1b08deb69df
+     0.24%             5  tokio-rt-worker  vllm-rs            [.] asynk_strim::yielder::Yielder$LT$Item$GT$::yield_item::_$u7b$$u7b$closure$u7d$$u7d$::h56b5336cc14a1897
+     0.24%             5  tokio-rt-worker  vllm-rs            [.] axum::response::sse::EventDataWriter::write_buf
+     0.24%             5  tokio-rt-worker  vllm-rs            [.] mi_theap_umalloc
+     0.24%             5  tokio-rt-worker  vllm-rs            [.] tokio::runtime::scheduler::multi_thread::worker::Context::park_internal
+     0.24%             5  tokio-rt-worker  vllm-rs            [.] tokio::runtime::time::wheel::level::Level::next_expiration
+     0.24%             5  vllm-request     libc.so.6          [.] 0x0000000000099a98
+     0.24%             5  vllm-zmq-0       vllm-rs            [.] _ZN5tokio7runtime9scheduler12multi_thread4park5Inner12park_condvar17h80cd09aff79d9fb4E.llvm.14257304173437880849
+     0.24%             5  vllm-zmq-0       vllm-rs            [.] __aarch64_cas1_acq
+     0.24%             5  vllm-zmq-0       vllm-rs            [.] tokio::runtime::context::scoped::Scoped<T>::with
+     0.19%             4  tokio-rt-worker  [ip_set]           [k] 0x000000000000ebe4
+     0.19%             4  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566da6750
+     0.19%             4  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395671de3f0
+     0.19%             4  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679e4d70
+     0.19%             4  tokio-rt-worker  [vdso]             [.] 0x000000000000049c
+     0.19%             4  tokio-rt-worker  [vdso]             [.] 0x00000000000004cc
+     0.19%             4  tokio-rt-worker  vllm-rs            [.] <tracing_subscriber::registry::sharded::Registry as tracing_core::subscriber::Subscriber>::enter
+     0.19%             4  tokio-rt-worker  vllm-rs            [.] <vllm_engine_core_client::client::stream::EngineCoreOutputStream as futures_core::stream::Stream>::poll_next
+     0.19%             4  tokio-rt-worker  vllm-rs            [.] tokio::runtime::io::scheduled_io::ScheduledIo::wake
+     0.19%             4  tokio-rt-worker  vllm-rs            [.] tracing_subscriber::layer::context::Context<S>::if_enabled_for
+     0.19%             4  vllm-request     [JIT] tid 2000790  [.] 0x0000ffff7c051ac4
+     0.19%             4  vllm-request     [kernel.kallsyms]  [k] 0xffffb39567bb8714
+     0.19%             4  vllm-request     vllm-rs            [.] <alloc::collections::binary_heap::RebuildOnDrop<T,A> as core::ops::drop::Drop>::drop
+     0.19%             4  vllm-request     vllm-rs            [.] _ZN10rayon_core5sleep5Sleep20wake_specific_thread17hdf3cd10e86f14ef1E.llvm.11479307091292592357
+     0.19%             4  vllm-request     vllm-rs            [.] hashbrown::raw::RawTable<T,A>::reserve_rehash
+     0.19%             4  vllm-request     vllm-rs            [.] mi_theap_malloc_aligned
+     0.19%             4  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566ed3e54
+     0.19%             4  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566ed8420
+     0.19%             4  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39567a9425c
+     0.19%             4  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39567a98650
+     0.19%             4  vllm-zmq-0       libc.so.6          [.] syscall
+     0.19%             4  vllm-zmq-0       vllm-rs            [.] _RNvXs2_NtNtCshxTglP3SOjd_3std4hash6randomNtB5_13DefaultHasherNtNtCs6Hz1PecaLG4_4core4hash6Hasher5write.llvm.5096713215285924350
+     0.19%             4  vllm-zmq-0       vllm-rs            [.] _ZN23vllm_engine_core_client9transport15run_output_loop28_$u7b$$u7b$closure$u7d$$u7d$17h97632d4bcc171bbaE.llvm.8979963845522293737
+     0.19%             4  vllm-zmq-0       vllm-rs            [.] _ZN5tokio4sync15batch_semaphore9Semaphore18add_permits_locked17h8576aea0bfbb8a2aE.llvm.752773398934348717
+     0.19%             4  vllm-zmq-0       vllm-rs            [.] _ZN5tokio7runtime4time5wheel5Wheel15next_expiration17h256dc5bfc8385efcE.llvm.12061638971258598240
+     0.19%             4  vllm-zmq-0       vllm-rs            [.] rmp_serde::decode::Deserializer<R,C>::any_inner
+     0.19%             4  vllm-zmq-0       vllm-rs            [.] tokio::runtime::scheduler::multi_thread::queue::Steal<T>::steal_into
+     0.19%             4  vllm-zmq-0       vllm-rs            [.] tokio::sync::mpsc::bounded::Sender$LT$T$GT$::send::_$u7b$$u7b$closure$u7d$$u7d$::ha4699627d3a4c61e
+     0.14%             3  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566cf1f6c
+     0.14%             3  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566cf1fb8
+     0.14%             3  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566da6c50
+     0.14%             3  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566ed8420
+     0.14%             3  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566ed8458
+     0.14%             3  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566f15ce8
+     0.14%             3  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395671de414
+     0.14%             3  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395678ef2e8
+     0.14%             3  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395678f4770
+     0.14%             3  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395678f8af4
+     0.14%             3  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567913964
+     0.14%             3  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a0d00c
+     0.14%             3  tokio-rt-worker  [nf_tables]        [k] 0x00000000000001e4
+     0.14%             3  tokio-rt-worker  [nf_tables]        [k] 0x00000000000002d0
+     0.14%             3  tokio-rt-worker  libc.so.6          [.] 0x0000000000099a40
+     0.14%             3  tokio-rt-worker  vllm-rs            [.] <alloc::vec::Vec<T> as alloc::vec::spec_from_iter::SpecFromIter<T,I>>::from_iter
+     0.14%             3  tokio-rt-worker  vllm-rs            [.] <hyper_util::server::graceful::GracefulConnectionFuture<C,F> as core::future::future::Future>::poll
+     0.14%             3  tokio-rt-worker  vllm-rs            [.] <tracing_subscriber::registry::sharded::Registry as tracing_core::subscriber::Subscriber>::exit
+     0.14%             3  tokio-rt-worker  vllm-rs            [.] _RNvNvMsa_NtCs6Hz1PecaLG4_4core3fmtNtB7_9Formatter12pad_integral12write_prefix
+     0.14%             3  tokio-rt-worker  vllm-rs            [.] _ZN5alloc7raw_vec20RawVecInner$LT$A$GT$11finish_grow17hfc9dd3e0d51a42e4E.llvm.17954619702910336574
+     0.14%             3  tokio-rt-worker  vllm-rs            [.] _ZN5tokio7runtime9scheduler12multi_thread4park5Inner12park_condvar17h80cd09aff79d9fb4E.llvm.14257304173437880849
+     0.14%             3  tokio-rt-worker  vllm-rs            [.] __aarch64_cas1_acq
+     0.14%             3  tokio-rt-worker  vllm-rs            [.] bytes::bytes_mut::BytesMut::reserve_inner
+     0.14%             3  tokio-rt-worker  vllm-rs            [.] core::hash::BuildHasher::hash_one
+     0.14%             3  tokio-rt-worker  vllm-rs            [.] hashbrown::map::HashMap<K,V,S,A>::contains_key
+     0.14%             3  tokio-rt-worker  vllm-rs            [.] hyper::proto::h1::conn::Conn<I,B,T>::poll_flush
+     0.14%             3  tokio-rt-worker  vllm-rs            [.] hyper::proto::h1::dispatch::Dispatcher<D,Bs,I,T>::poll_write
+     0.14%             3  tokio-rt-worker  vllm-rs            [.] serde_core::ser::SerializeMap::serialize_entry
+     0.14%             3  tokio-rt-worker  vllm-rs            [.] tokio::net::tcp::stream::TcpStream::poll_read_priv
+     0.14%             3  tokio-rt-worker  vllm-rs            [.] tokio::runtime::task::harness::Harness<T,S>::poll
+     0.14%             3  tokio-rt-worker  vllm-rs            [.] tokio::sync::mpsc::list::Rx<T>::pop
+     0.14%             3  tokio-rt-worker  vllm-rs            [.] vllm_server::routes::openai::chat_completions::block_delta_chunk
+     0.14%             3  tokio-rt-worker  vllm-rs            [.] vllm_server::routes::openai::chat_completions::types::_::<impl serde_core::ser::Serialize for vllm_server::routes::openai::chat_completions::types::ChatMessageDelta>::serialize
+     0.14%             3  tokio-rt-worker  vllm-rs            [.] vllm_tokenizer::byte_level_decode::decode_byte_level
+     0.14%             3  vllm-request     [JIT] tid 2000790  [.] 0x0000ffff7c051ae0
+     0.14%             3  vllm-request     [kernel.kallsyms]  [k] 0xffffb39566e1942c
+     0.14%             3  vllm-request     vllm-rs            [.] fastokens::models::bpe::FlatCache::new
+     0.14%             3  vllm-request     vllm-rs            [.] icu_normalizer::ComposingNormalizerBorrowed::normalize
+     0.14%             3  vllm-request     vllm-rs            [.] mi_free
+     0.14%             3  vllm-request     vllm-rs            [.] pcre2::pool::inner::Pool<T,F>::get_slow
+     0.14%             3  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566ed8300
+     0.14%             3  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566ed8304
+     0.14%             3  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395671477a0
+     0.14%             3  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb3956719a1d8
+     0.14%             3  vllm-zmq-0       [vdso]             [.] 0x00000000000004bc
+     0.14%             3  vllm-zmq-0       libc.so.6          [.] recv
+     0.14%             3  vllm-zmq-0       libm.so.6          [.] pow
+     0.14%             3  vllm-zmq-0       vllm-rs            [.] <tokio::io::split::ReadHalf<T> as tokio::io::async_read::AsyncRead>::poll_read
+     0.14%             3  vllm-zmq-0       vllm-rs            [.] _ZN5tokio7runtime2io6driver6Driver4turn17h95ec952704d53a03E.llvm.12061638971258598240
+     0.14%             3  vllm-zmq-0       vllm-rs            [.] _ZN63_$LT$zeromq..pull..PullSocket$u20$as$u20$zeromq..SocketRecv$GT$4recv28_$u7b$$u7b$closure$u7d$$u7d$17h0acfd25f4a6d11a8E.llvm.15162728713765982798
+     0.14%             3  vllm-zmq-0       vllm-rs            [.] __aarch64_cas8_acq_rel
+     0.14%             3  vllm-zmq-0       vllm-rs            [.] __aarch64_ldadd8_rel
+     0.14%             3  vllm-zmq-0       vllm-rs            [.] _mi_page_free_collect
+     0.14%             3  vllm-zmq-0       vllm-rs            [.] alloc::collections::binary_heap::BinaryHeap<T,A>::pop
+     0.14%             3  vllm-zmq-0       vllm-rs            [.] bytes::bytes_mut::shared_v_drop
+     0.14%             3  vllm-zmq-0       vllm-rs            [.] hashbrown::map::HashMap<K,V,S,A>::insert
+     0.14%             3  vllm-zmq-0       vllm-rs            [.] rmp_serde::decode::any_num
+     0.14%             3  vllm-zmq-0       vllm-rs            [.] serde::private::de::flat_map_take_entry
+     0.14%             3  vllm-zmq-0       vllm-rs            [.] serde_core::de::impls::<impl serde_core::de::Deserialize for core::option::Option<T>>::deserialize
+     0.14%             3  vllm-zmq-0       vllm-rs            [.] tokio::io::poll_evented::PollEvented<E>::poll_read
+     0.14%             3  vllm-zmq-0       vllm-rs            [.] tokio::runtime::scheduler::multi_thread::worker::Context::run_task
+     0.14%             3  vllm-zmq-0       vllm-rs            [.] tokio::runtime::task::core::Core<T,S>::poll
+     0.14%             3  vllm-zmq-0       vllm-rs            [.] vllm_engine_core_client::client::state::RequestRegistry::apply_scheduler_stats
+     0.14%             3  vllm-zmq-0       vllm-rs            [.] vllm_engine_core_client::protocol::output::decode_engine_core_outputs
+     0.09%             2  tokio-rt-worker  [drv_pcie_host]    [k] 0x0000000000068130
+     0.09%             2  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566de0280
+     0.09%             2  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566eb8480
+     0.09%             2  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566ed3e38
+     0.09%             2  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567048b68
+     0.09%             2  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567048b74
+     0.09%             2  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395671b1b48
+     0.09%             2  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395671de3e4
+     0.09%             2  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567224f30
+     0.09%             2  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395673bad64
+     0.09%             2  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb3956792196c
+     0.09%             2  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb3956792197c
+     0.09%             2  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679d81f0
+     0.09%             2  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679e4cbc
+     0.09%             2  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679f0e38
+     0.09%             2  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a001a4
+     0.09%             2  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a0167c
+     0.09%             2  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a06668
+     0.09%             2  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a0c758
+     0.09%             2  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a0f3f0
+     0.09%             2  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a16440
+     0.09%             2  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567b6df00
+     0.09%             2  tokio-rt-worker  [nf_tables]        [k] 0x0000000000000300
+     0.09%             2  tokio-rt-worker  libc.so.6          [.] clock_gettime
+     0.09%             2  tokio-rt-worker  libc.so.6          [.] syscall
+     0.09%             2  tokio-rt-worker  libc.so.6          [.] write
+     0.09%             2  tokio-rt-worker  libc.so.6          [.] 0x000000000007c44c
+     0.09%             2  tokio-rt-worker  libc.so.6          [.] 0x0000000000099b5c
+     0.09%             2  tokio-rt-worker  libc.so.6          [.] 0x0000000000099b6c
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] <http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] <http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] <hyper::proto::h1::role::Server as hyper::proto::h1::Http1Transaction>::parse
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] <vllm_llm::output::GenerateOutputStream as futures_core::stream::Stream>::poll_next
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] <vllm_tokenizer::incremental::DecodeStream<T> as vllm_tokenizer::incremental::IncrementalDecoder>::next_chunk
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] <vllm_tokenizer::incremental::DecodeStream<T> as vllm_tokenizer::incremental::IncrementalDecoder>::push_token
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] _RNvXs8_NtNtCs6Hz1PecaLG4_4core3fmt3numjNtB7_8UpperHex3fmt
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] _ZN10serde_json3ser27format_escaped_str_contents17h86cca9ac348044b7E.llvm.7245456146564023844
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] _ZN11vllm_server17serve_connections28_$u7b$$u7b$closure$u7d$$u7d$28_$u7b$$u7b$closure$u7d$$u7d$17h70eafa0e8716dcc3E.llvm.8979963845522293737
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] _ZN4core3ptr1307drop_in_place$LT$tower..util..map_future..MapFuture$LT$axum..util..MapIntoResponse$LT$tower..util..map_err..MapErr$LT$axum..middleware..from_fn..FromFn$LT$vllm_server..middleware..load..track_server_load$C$alloc..sync..Arc$LT$vllm_server..state..AppState$GT$$C$axum..routing..route..Route$C$$LP$axum..extract..state..State$LT$alloc..sync..Arc$LT$vllm_server..state..AppState$GT$$GT$$C$http..request..Request$LT$axum_core..body..Body$GT$$RP$$GT$$C$$LT$core..convert..Infallible$u20$as$u20$core..convert..Into$LT$core..convert..Infallible$GT$$GT$..into$GT$$GT$$C$tower..util..boxed_clone_sync..BoxCloneSyncService$LT$http..request..Request$LT$axum_core..body..Body$GT$$C$http..response..Response$LT$axum_core..body..Body$GT$$C$core..convert..Infallible$GT$..new$LT$axum..util..MapIntoResponse$LT$tower..util..map_err..MapErr$LT$axum..middleware..from_fn..FromFn$LT$vllm_server..middleware..load..track_server_load$C$alloc..sync..Arc$LT$vllm_server..state..AppState$GT$$C$axum..routing..route..Route$C$$LP$axum..extract..state..State$LT$alloc..sync..Arc$LT$vllm_server..state..AppState$GT$$GT$$C$http..request..Request$LT$axum_core..body..Body$GT$$RP$$GT$$C$$LT$core..convert..Infallible$u20$as$u20$core..convert..Into$LT$core..convert..Infallible$GT$$GT$..into$GT$$GT$$GT$..$u7b$$u7b$closure$u7d$$u7d$$GT$$GT$17h894b01a7b6ff02e8E
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] _ZN5bytes5bytes12shared_clone17h6211a51665470814E.llvm.13429861298910670050
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] _ZN5hyper5proto2h12io21Buffered$LT$T$C$B$GT$17poll_read_from_io17hf59d8a6f030fb3efE.llvm.4762538680082138183
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] _ZN5tokio7runtime6signal6Driver7process17h79dd1bfe7145d978E.llvm.1642776823996806792
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] __aarch64_cas8_acq
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] __aarch64_ldset8_acq_rel
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] _mi_malloc_generic
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] asynk_strim::waker::waker_clone
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] mi_realloc_aligned
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] mi_theap_malloc_zero_aligned_at_generic
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] parking_lot::condvar::Condvar::notify_one_slow
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] serde_core::ser::SerializeMap::serialize_entry
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] serde_core::ser::SerializeMap::serialize_entry
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] tokio::runtime::io::registration::Registration::poll_ready
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] tokio::runtime::scheduler::multi_thread::stats::Stats::end_processing_scheduled_tasks
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] tokio::runtime::task::waker::drop_waker
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] tokio::runtime::task::waker::wake_by_ref
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] vllm_llm::request_metrics::RequestMetricsTracker::observe_output
+     0.09%             2  tokio-rt-worker  vllm-rs            [.] vllm_server::routes::openai::chat_completions::types::_::<impl serde_core::ser::Serialize for vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamChoice>::serialize
+     0.09%             2  vllm-request     [kernel.kallsyms]  [k] 0xffffb39566cfcb18
+     0.09%             2  vllm-request     [kernel.kallsyms]  [k] 0xffffb39566ded67c
+     0.09%             2  vllm-request     [kernel.kallsyms]  [k] 0xffffb39566ebacac
+     0.09%             2  vllm-request     [kernel.kallsyms]  [k] 0xffffb39566ed8458
+     0.09%             2  vllm-request     [kernel.kallsyms]  [k] 0xffffb39567062f50
+     0.09%             2  vllm-request     libc.so.6          [.] __memcmpeq
+     0.09%             2  vllm-request     libc.so.6          [.] __sched_yield
+     0.09%             2  vllm-request     vllm-rs            [.] <minijinja::value::Value as core::clone::Clone>::clone
+     0.09%             2  vllm-request     vllm-rs            [.] <rayon_core::job::StackJob<L,F,R> as rayon_core::job::Job>::execute
+     0.09%             2  vllm-request     vllm-rs            [.] _RNvNtNtCs6Hz1PecaLG4_4core3str8converts9from_utf8
+     0.09%             2  vllm-request     vllm-rs            [.] _mi_page_malloc_zero
+     0.09%             2  vllm-request     vllm-rs            [.] core::ptr::drop_in_place<alloc::collections::btree::node::Handle<alloc::collections::btree::node::NodeRef<alloc::collections::btree::node::marker::Dying,K,V,NodeType>,alloc::collections::btree::node::marker::KV>::drop_key_val::Dropper<minijinja::value::Value>>
+     0.09%             2  vllm-request     vllm-rs            [.] crossbeam_epoch::internal::Global::try_advance
+     0.09%             2  vllm-request     vllm-rs            [.] mi_theap_umalloc
+     0.09%             2  vllm-request     vllm-rs            [.] prometheus_client::metrics::family::Family<S,M,C>::get_or_create_owned
+     0.09%             2  vllm-request     vllm-rs            [.] rayon_core::registry::WorkerThread::wait_until_cold
+     0.09%             2  vllm-request     vllm-rs            [.] serde_json::read::SliceRead::skip_to_escape
+     0.09%             2  vllm-request     vllm-rs            [.] tokio::runtime::scheduler::multi_thread::worker::Context::run
+     0.09%             2  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566cef1f0
+     0.09%             2  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566de0280
+     0.09%             2  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566ebacbc
+     0.09%             2  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566ed3da8
+     0.09%             2  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566ed3e38
+     0.09%             2  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566ed8458
+     0.09%             2  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395671de414
+     0.09%             2  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39567b6e484
+     0.09%             2  vllm-zmq-0       [vdso]             [.] 0x000000000000049c
+     0.09%             2  vllm-zmq-0       libc.so.6          [.] __memcmpeq
+     0.09%             2  vllm-zmq-0       libc.so.6          [.] 0x000000000007c3d0
+     0.09%             2  vllm-zmq-0       libc.so.6          [.] 0x000000000007c43c
+     0.09%             2  vllm-zmq-0       libc.so.6          [.] 0x000000000007c464
+     0.09%             2  vllm-zmq-0       libc.so.6          [.] 0x0000000000099b44
+     0.09%             2  vllm-zmq-0       vllm-rs            [.] <&mut A as serde_core::de::SeqAccess>::next_element
+     0.09%             2  vllm-zmq-0       vllm-rs            [.] <&mut A as serde_core::de::SeqAccess>::next_element
+     0.09%             2  vllm-zmq-0       vllm-rs            [.] <serde_core::de::impls::<impl serde_core::de::Deserialize for alloc::vec::Vec<T>>::deserialize::VecVisitor<T> as serde_core::de::Visitor>::visit_seq
+     0.09%             2  vllm-zmq-0       vllm-rs            [.] <vllm_engine_core_client::protocol::output::EngineCoreOutputs as serde_core::de::Deserialize>::deserialize
+     0.09%             2  vllm-zmq-0       vllm-rs            [.] __aarch64_ldadd8_relax
+     0.09%             2  vllm-zmq-0       vllm-rs            [.] _mi_page_malloc_zero
+     0.09%             2  vllm-zmq-0       vllm-rs            [.] core::hash::BuildHasher::hash_one
+     0.09%             2  vllm-zmq-0       vllm-rs            [.] mi_free
+     0.09%             2  vllm-zmq-0       vllm-rs            [.] parking_lot::condvar::Condvar::notify_one_slow
+     0.09%             2  vllm-zmq-0       vllm-rs            [.] rmp_serde::decode::Deserializer<R,C>::any_inner
+     0.09%             2  vllm-zmq-0       vllm-rs            [.] rmp_serde::decode::Deserializer<R,C>::any_inner
+     0.09%             2  vllm-zmq-0       vllm-rs            [.] rmp_serde::decode::any_num
+     0.09%             2  vllm-zmq-0       vllm-rs            [.] rmp_serde::decode::any_num
+     0.09%             2  vllm-zmq-0       vllm-rs            [.] rmp_serde::decode::any_num
+     0.09%             2  vllm-zmq-0       vllm-rs            [.] serde_core::de::Deserializer::__deserialize_content_v1
+     0.09%             2  vllm-zmq-0       vllm-rs            [.] serde_core::de::MapAccess::next_value
+     0.09%             2  vllm-zmq-0       vllm-rs            [.] serde_core::de::impls::<impl serde_core::de::Deserialize for core::option::Option<T>>::deserialize
+     0.09%             2  vllm-zmq-0       vllm-rs            [.] tokio::runtime::task::harness::Harness<T,S>::poll
+     0.09%             2  vllm-zmq-0       vllm-rs            [.] tokio::runtime::task::waker::clone_waker
+     0.09%             2  vllm-zmq-0       vllm-rs            [.] tokio::runtime::time::<impl tokio::runtime::time::handle::Handle>::process_at_time
+     0.09%             2  vllm-zmq-0       vllm-rs            [.] tokio::sync::mpsc::chan::Rx<T,S>::recv
+     0.09%             2  vllm-zmq-0       vllm-rs            [.] vllm_engine_core_client::protocol::decode_msgpack
+     0.05%             1  tokio-rt-worker  [drv_pcie_host]    [k] 0x00000000000680a8
+     0.05%             1  tokio-rt-worker  [drv_pcie_host]    [k] 0x00000000000680c8
+     0.05%             1  tokio-rt-worker  [ip_set]           [k] 0x000000000000eb38
+     0.05%             1  tokio-rt-worker  [ip_set]           [k] 0x000000000000eb50
+     0.05%             1  tokio-rt-worker  [ip_set]           [k] 0x000000000000eb98
+     0.05%             1  tokio-rt-worker  [ip_set]           [k] 0x000000000000ebd8
+     0.05%             1  tokio-rt-worker  [ip_set]           [k] 0x000000000000ec90
+     0.05%             1  tokio-rt-worker  [ip_set]           [k] 0x000000000000ef10
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566cef110
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566cef120
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566cef124
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566cef160
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566cef204
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566cf1fd8
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566cfc8a0
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566cfc99c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566cfc9d0
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566cfcb18
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566cfcb2c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566de6e6c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566e0a99c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566e0cdc0
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566e32754
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566e48748
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566eb6f60
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566eb9078
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566ebacc4
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566ebae14
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566ebae34
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566ebb06c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566ebb0ac
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566ed2e08
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566ed3054
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566ed3da8
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566ed3e54
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566ed4bdc
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566ed8300
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566ed8304
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566ed8400
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566ed8408
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566ed8434
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566ed8bf0
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39566f15aec
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567048318
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567048320
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567048330
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567048394
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567048b80
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb3956709eb84
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395670f6a18
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567102964
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567102980
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567145c18
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567145c84
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567145e40
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567145e54
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567147d14
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395671753a0
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb3956719a150
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb3956719a1d8
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb3956719a288
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395671aeadc
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395671b0028
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395671b0160
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395671b016c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395671b0608
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395671bd8a0
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395671cee38
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb3956722613c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395672261ec
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb3956722625c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567226274
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567226390
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567226590
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567226628
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb3956722669c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395672266c0
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb3956722718c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395672271b4
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395672e45a0
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395672e60b0
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395672e83b8
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395672ea4ac
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395672edd44
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395672eeaa4
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395672f0f10
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395672fe17c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395673bad60
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395674117b4
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb3956741608c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567416dc0
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567416e4c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395674174f4
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567417570
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb3956741e970
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395678e3a14
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395678e5c34
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395678e7c6c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395678ebb70
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395678ed7b0
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395678ed7dc
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395678f4140
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395678f4180
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395678f4188
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395678f426c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395678f4774
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395678f8764
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395678f9b58
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb3956791232c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679137d4
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679137e0
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567915ec8
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567916020
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb3956791ca80
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb3956791d200
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb3956791d244
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb3956791d4bc
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb3956791e040
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb3956791edc8
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb3956791ef34
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb3956791f058
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb3956791f060
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679205a8
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567921760
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567921820
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567928448
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567945bd0
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567977740
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679c673c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679c6750
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679cf4b8
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679d71b8
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679d7de0
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679d7f70
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679db3e0
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679de280
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679e4d58
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679edc28
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679f01c0
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679f0218
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679f042c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679f0bc0
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679f0c94
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679f127c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679f1480
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679f2140
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679f7568
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679f75a8
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679f794c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679f8dc8
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679fc1a0
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb395679fd8c8
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a0020c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a01cac
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a01e54
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a02474
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a060b8
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a06178
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a062f8
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a07174
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a08698
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a08f94
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a0a118
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a0aaac
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a0aab4
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a0d0a4
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a0f3d4
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a102c0
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a13544
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a1527c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a15884
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a16414
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a1c634
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a1c694
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a1c71c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a35a2c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a35acc
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a65dbc
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a8a9b0
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567a93428
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567b30400
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567b30410
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567b6de44
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567b6de68
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567b70b2c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567b70f10
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567b70f50
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567b70f8c
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567ba5474
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567ba89d4
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567baa070
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567bbefa0
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567bbefb4
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567bbf7ec
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567bc0fa8
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567bc7e60
+     0.05%             1  tokio-rt-worker  [kernel.kallsyms]  [k] 0xffffb39567bc7ed8
+     0.05%             1  tokio-rt-worker  [nf_conntrack]     [k] 0x00000000000047d0
+     0.05%             1  tokio-rt-worker  [nf_conntrack]     [k] 0x00000000000049a8
+     0.05%             1  tokio-rt-worker  [nf_conntrack]     [k] 0x000000000000a55c
+     0.05%             1  tokio-rt-worker  [nf_conntrack]     [k] 0x000000000000a8a0
+     0.05%             1  tokio-rt-worker  [nf_conntrack]     [k] 0x000000000000b140
+     0.05%             1  tokio-rt-worker  [nf_conntrack]     [k] 0x000000000000baec
+     0.05%             1  tokio-rt-worker  [nf_conntrack]     [k] 0x000000000000c7d8
+     0.05%             1  tokio-rt-worker  [nf_conntrack]     [k] 0x000000000000d608
+     0.05%             1  tokio-rt-worker  [nf_nat]           [k] 0x0000000000001948
+     0.05%             1  tokio-rt-worker  [nf_nat]           [k] 0x0000000000001990
+     0.05%             1  tokio-rt-worker  [nf_nat]           [k] 0x0000000000001b70
+     0.05%             1  tokio-rt-worker  [nf_nat]           [k] 0x00000000000036d0
+     0.05%             1  tokio-rt-worker  [nf_nat]           [k] 0x00000000000036fc
+     0.05%             1  tokio-rt-worker  [nf_tables]        [k] 0x000000000000014c
+     0.05%             1  tokio-rt-worker  [nf_tables]        [k] 0x00000000000001e8
+     0.05%             1  tokio-rt-worker  [nf_tables]        [k] 0x00000000000001f0
+     0.05%             1  tokio-rt-worker  [nf_tables]        [k] 0x00000000000001f8
+     0.05%             1  tokio-rt-worker  [nf_tables]        [k] 0x0000000000000254
+     0.05%             1  tokio-rt-worker  [nf_tables]        [k] 0x0000000000000258
+     0.05%             1  tokio-rt-worker  [nf_tables]        [k] 0x000000000000027c
+     0.05%             1  tokio-rt-worker  [nf_tables]        [k] 0x0000000000000288
+     0.05%             1  tokio-rt-worker  [nf_tables]        [k] 0x0000000000000338
+     0.05%             1  tokio-rt-worker  [nf_tables]        [k] 0x0000000000000404
+     0.05%             1  tokio-rt-worker  [nf_tables]        [k] 0x000000000000040c
+     0.05%             1  tokio-rt-worker  [nf_tables]        [k] 0x000000000001e598
+     0.05%             1  tokio-rt-worker  [nf_tables]        [k] 0x0000000000020bfc
+     0.05%             1  tokio-rt-worker  [nf_tables]        [k] 0x0000000000025f90
+     0.05%             1  tokio-rt-worker  [nf_tables]        [k] 0x0000000000025fa4
+     0.05%             1  tokio-rt-worker  [vdso]             [.] 0x0000000000000470
+     0.05%             1  tokio-rt-worker  [vdso]             [.] 0x0000000000000498
+     0.05%             1  tokio-rt-worker  libc.so.6          [.] writev
+     0.05%             1  tokio-rt-worker  libc.so.6          [.] 0x000000000007c3b0
+     0.05%             1  tokio-rt-worker  libc.so.6          [.] 0x000000000007c3c0
+     0.05%             1  tokio-rt-worker  libc.so.6          [.] 0x000000000007c3d0
+     0.05%             1  tokio-rt-worker  libc.so.6          [.] 0x000000000007c3e0
+     0.05%             1  tokio-rt-worker  libc.so.6          [.] 0x000000000007c434
+     0.05%             1  tokio-rt-worker  libc.so.6          [.] 0x000000000007c43c
+     0.05%             1  tokio-rt-worker  libc.so.6          [.] 0x0000000000099b28
+     0.05%             1  tokio-rt-worker  libc.so.6          [.] 0x0000000000099b30
+     0.05%             1  tokio-rt-worker  libc.so.6          [.] 0x0000000000099b48
+     0.05%             1  tokio-rt-worker  libc.so.6          [.] 0x0000000000099b74
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] <T as tower::util::boxed_clone_sync::CloneService<R>>::clone_box
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] <httpdate::date::HttpDate as core::fmt::Display>::fmt
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] <hyper::proto::h1::encode::ChunkSize as core::fmt::Write>::write_str
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] <tokio::task::coop::Coop<F> as core::future::future::Future>::poll
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] <tracing_subscriber::fmt::fmt_layer::Layer<S,N,E,W> as tracing_subscriber::layer::Layer<S>>::on_enter
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] <vllm_parser::unified::combined::CombinedParser as vllm_parser::unified::UnifiedParser>::parse_into
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] <vllm_tokenizer::hf::HuggingFaceTokenizer as vllm_tokenizer::Tokenizer>::decode
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _RNvMNtCshxTglP3SOjd_3std4timeNtB2_7Instant7elapsed
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _RNvMNtNtNtNtCshxTglP3SOjd_3std3sys3pal4unix4timeNtB2_8Timespec12sub_timespec.llvm.14253910252949651887
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _RNvMNtNtNtNtCshxTglP3SOjd_3std3sys3pal4unix4timeNtB2_8Timespec3now.llvm.14253910252949651887
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _RNvNtCs6Hz1PecaLG4_4core3fmt5write
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _RNvNtNtCs6Hz1PecaLG4_4core3str8converts9from_utf8
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _ZN113_$LT$tracing_subscriber..layer..layered..Layered$LT$L$C$S$GT$$u20$as$u20$tracing_core..subscriber..Subscriber$GT$4exit17h3053b40572aa3cd5E.llvm.13318926930133434510
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _ZN113_$LT$tracing_subscriber..layer..layered..Layered$LT$L$C$S$GT$$u20$as$u20$tracing_core..subscriber..Subscriber$GT$5enter17he7656d6b4d251560E.llvm.13318926930133434510
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _ZN168_$LT$axum..middleware..from_fn..FromFn$LT$F$C$S$C$I$C$$LP$T1$C$$RP$$GT$$u20$as$u20$tower_service..Service$LT$http..request..Request$LT$axum_core..body..Body$GT$$GT$$GT$4call28_$u7b$$u7b$closure$u7d$$u7d$17h0abb9c8b9a854266E.llvm.16718019931081794654
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _ZN170_$LT$axum..middleware..from_fn..FromFn$LT$F$C$S$C$I$C$$LP$T1$C$T2$RP$$GT$$u20$as$u20$tower_service..Service$LT$http..request..Request$LT$axum_core..body..Body$GT$$GT$$GT$4call28_$u7b$$u7b$closure$u7d$$u7d$17h227b2cc62d668aeeE.llvm.16718019931081794654
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _ZN4core3ops8function6FnOnce9call_once17hcfb9f035c07338dcE.llvm.8353397336183790104
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _ZN4core3ptr181drop_in_place$LT$http_body_util..combinators..map_err..MapErr$LT$vllm_server..middleware..load..LoadTrackedBody$C$axum_core..error..Error..new$LT$axum_core..error..Error$GT$$GT$$GT$17ha738a0506aa2eb15E.llvm.10554424052490278646
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _ZN4core3ptr303drop_in_place$LT$tower..util..oneshot..State$LT$tower..util..boxed_clone_sync..BoxCloneSyncService$LT$http..request..Request$LT$axum_core..body..Body$GT$$C$http..response..Response$LT$axum_core..body..Body$GT$$C$core..convert..Infallible$GT$$C$http..request..Request$LT$axum_core..body..Body$GT$$GT$$GT$17h4864af5dc70a777aE.llvm.6855875762362495359
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _ZN5alloc11collections5btree3map25IntoIter$LT$K$C$V$C$A$GT$10dying_next17h88d14da63cacaf6fE.llvm.558592946799670996
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _ZN5hyper5proto2h12io17WriteBuf$LT$B$GT$6buffer17hf1ebaf33b0cb7d9cE.llvm.4762538680082138183
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _ZN5tokio7runtime4time5wheel5Wheel15next_expiration17h256dc5bfc8385efcE.llvm.12061638971258598240
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _ZN5tokio7runtime4time6Driver13park_internal17h45f3480202431fceE.llvm.14257304173437880849
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _ZN72_$LT$core..pin..Pin$LT$P$GT$$u20$as$u20$futures_core..stream..Stream$GT$9poll_next17he67f589ace845efdE.llvm.6855875762362495359
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _ZN91_$LT$serde_json..ser..Compound$LT$W$C$F$GT$$u20$as$u20$serde_core..ser..SerializeStruct$GT$15serialize_field17h1ef29bec984ddccbE.llvm.10355601373519206229
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _ZN9vllm_chat6output10structured20StructuredEventState20close_open_tool_call17hd66f50e877152238E.llvm.16603814893826932484
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] __aarch64_cas1_rel
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _mi_bin_size
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _mi_page_free_collect
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _mi_page_retire
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _mi_subproc_heap_main
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _mi_theap_malloc_zero
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] _mi_theap_realloc_zero
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] alloc::raw_vec::RawVec<T,A>::grow_one
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] alloc::raw_vec::RawVec<T,A>::grow_one
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] alloc::raw_vec::RawVecInner<A>::reserve::do_reserve_and_handle
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] alloc::sync::Arc<T,A>::drop_slow
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] alloc::vec::Vec<T,A>::extend_from_slice
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] core::ptr::drop_in_place$LT$asynk_strim..try_yielder..TryYielder$LT$axum..response..sse..Event$C$core..convert..Infallible$GT$..yield_ok..$u7b$$u7b$closure$u7d$$u7d$$GT$::h5f8343f1a18f8cee
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] core::ptr::drop_in_place<vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse>
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] hyper::proto::h1::conn::Conn<I,B,T>::maybe_notify
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] hyper::proto::h1::conn::Conn<I,B,T>::write_body
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] hyper::proto::h1::conn::State::try_keep_alive
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] pow@plt
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] serde_core::ser::SerializeMap::serialize_entry
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] serde_core::ser::SerializeMap::serialize_entry
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] tokio::runtime::driver::IoHandle::unpark
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] tokio::runtime::scheduler::multi_thread::worker::<impl tokio::runtime::scheduler::multi_thread::handle::Handle>::notify_parked_local
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] vllm_chat::output::default::unified::UnifiedParserState::process_parser_output
+     0.05%             1  tokio-rt-worker  vllm-rs            [.] vllm_server::routes::openai::chat_completions::types::_::<impl serde_core::ser::Serialize for vllm_server::routes::openai::chat_completions::types::ChatCompletionStreamResponse>::serialize
+     0.05%             1  vllm-request     [JIT] tid 2000790  [.] 0x0000ffff7c0519ac
+     0.05%             1  vllm-request     [JIT] tid 2000790  [.] 0x0000ffff7c051aa8
+     0.05%             1  vllm-request     [JIT] tid 2000790  [.] 0x0000ffff7c051ae4
+     0.05%             1  vllm-request     [JIT] tid 2000790  [.] 0x0000ffff7c051b04
+     0.05%             1  vllm-request     [JIT] tid 2000790  [.] 0x0000ffff7c0523c4
+     0.05%             1  vllm-request     [JIT] tid 2000790  [.] 0x0000ffff7c0523d4
+     0.05%             1  vllm-request     [kernel.kallsyms]  [k] 0xffffb39566cef024
+     0.05%             1  vllm-request     [kernel.kallsyms]  [k] 0xffffb39566cef12c
+     0.05%             1  vllm-request     [kernel.kallsyms]  [k] 0xffffb39566cfcb00
+     0.05%             1  vllm-request     [kernel.kallsyms]  [k] 0xffffb39566cfcb04
+     0.05%             1  vllm-request     [kernel.kallsyms]  [k] 0xffffb39566ed3040
+     0.05%             1  vllm-request     [kernel.kallsyms]  [k] 0xffffb39566ed4d98
+     0.05%             1  vllm-request     [kernel.kallsyms]  [k] 0xffffb39566ed8304
+     0.05%             1  vllm-request     [kernel.kallsyms]  [k] 0xffffb39566ed8980
+     0.05%             1  vllm-request     [kernel.kallsyms]  [k] 0xffffb39566ef332c
+     0.05%             1  vllm-request     [kernel.kallsyms]  [k] 0xffffb395670480a8
+     0.05%             1  vllm-request     [kernel.kallsyms]  [k] 0xffffb395670daa5c
+     0.05%             1  vllm-request     [kernel.kallsyms]  [k] 0xffffb395670daa64
+     0.05%             1  vllm-request     [kernel.kallsyms]  [k] 0xffffb395670db1dc
+     0.05%             1  vllm-request     [kernel.kallsyms]  [k] 0xffffb395670f3cf0
+     0.05%             1  vllm-request     [kernel.kallsyms]  [k] 0xffffb395670f563c
+     0.05%             1  vllm-request     [kernel.kallsyms]  [k] 0xffffb39567130b14
+     0.05%             1  vllm-request     [kernel.kallsyms]  [k] 0xffffb3956717853c
+     0.05%             1  vllm-request     [kernel.kallsyms]  [k] 0xffffb395671de584
+     0.05%             1  vllm-request     [kernel.kallsyms]  [k] 0xffffb3956722b7ec
+     0.05%             1  vllm-request     [kernel.kallsyms]  [k] 0xffffb39567bbef50
+     0.05%             1  vllm-request     [kernel.kallsyms]  [k] 0xffffb39567bbf2d8
+     0.05%             1  vllm-request     [kernel.kallsyms]  [k] 0xffffb39567bbf7f0
+     0.05%             1  vllm-request     libc.so.6          [.] syscall
+     0.05%             1  vllm-request     libc.so.6          [.] 0x0000000000099a68
+     0.05%             1  vllm-request     libc.so.6          [.] 0x0000000000099a90
+     0.05%             1  vllm-request     libc.so.6          [.] 0x0000000000099b5c
+     0.05%             1  vllm-request     vllm-rs            [.] <&mut serde_json::de::Deserializer<R> as serde_core::de::Deserializer>::deserialize_struct
+     0.05%             1  vllm-request     vllm-rs            [.] <alloc::vec::Vec<T> as alloc::vec::spec_from_iter::SpecFromIter<T,I>>::from_iter
+     0.05%             1  vllm-request     vllm-rs            [.] <minijinja::value::Value as minijinja::value::argtypes::ArgType>::from_value
+     0.05%             1  vllm-request     vllm-rs            [.] <serde_path_to_error::de::CaptureKey<X> as serde_core::de::DeserializeSeed>::deserialize
+     0.05%             1  vllm-request     vllm-rs            [.] <serde_path_to_error::de::TrackedSeed<X> as serde_core::de::DeserializeSeed>::deserialize
+     0.05%             1  vllm-request     vllm-rs            [.] _RNvXsh_NtCs6Hz1PecaLG4_4core3fmteNtB5_5Debug3fmt
+     0.05%             1  vllm-request     vllm-rs            [.] _ZN104_$LT$tracing_subscriber..registry..sharded..Registry$u20$as$u20$tracing_core..subscriber..Subscriber$GT$8new_span17h2b881652480166d6E.llvm.13318926930133434510
+     0.05%             1  vllm-request     vllm-rs            [.] _ZN4core3ptr44drop_in_place$LT$minijinja..value..Value$GT$17h2e84f986607cd758E.llvm.1930608508037849201
+     0.05%             1  vllm-request     vllm-rs            [.] _ZN4core3ptr67drop_in_place$LT$axum..extract..matched_path..MatchedNestedPath$GT$17h3bacc16ef64cc3e6E.llvm.11312048258306279531
+     0.05%             1  vllm-request     vllm-rs            [.] _ZN5tokio7runtime4task4list19OwnedTasks$LT$S$GT$10bind_inner17h2d94b49fb0c424bdE.llvm.6855875762362495359
+     0.05%             1  vllm-request     vllm-rs            [.] __aarch64_cas4_acq
+     0.05%             1  vllm-request     vllm-rs            [.] __aarch64_cas8_acq
+     0.05%             1  vllm-request     vllm-rs            [.] __aarch64_ldadd8_rel
+     0.05%             1  vllm-request     vllm-rs            [.] __aarch64_swp4_rel
+     0.05%             1  vllm-request     vllm-rs            [.] __aarch64_swp8_acq_rel
+     0.05%             1  vllm-request     vllm-rs            [.] _mi_bin_size
+     0.05%             1  vllm-request     vllm-rs            [.] _mi_bitmap_forall_setc_ranges
+     0.05%             1  vllm-request     vllm-rs            [.] _mi_page_free_collect
+     0.05%             1  vllm-request     vllm-rs            [.] alloc::raw_vec::RawVec<T,A>::grow_one
+     0.05%             1  vllm-request     vllm-rs            [.] alloc::sync::Arc<T,A>::drop_slow
+     0.05%             1  vllm-request     vllm-rs            [.] core::ops::function::FnOnce::call_once
+     0.05%             1  vllm-request     vllm-rs            [.] fastokens::added_tokens::AddedTokens::split
+     0.05%             1  vllm-request     vllm-rs            [.] fastokens::pre_tokenizers::split::Split::pre_tokenize
+     0.05%             1  vllm-request     vllm-rs            [.] fastokens::pre_tokenizers::split::matches_to_segments
+     0.05%             1  vllm-request     vllm-rs            [.] http::header::map::HeaderMap<T>::get2
+     0.05%             1  vllm-request     vllm-rs            [.] icu_normalizer::Decomposition<I>::gather_and_sort_combining
+     0.05%             1  vllm-request     vllm-rs            [.] mi_bbitmap_setN
+     0.05%             1  vllm-request     vllm-rs            [.] mi_bbitmap_try_find_and_clear
+     0.05%             1  vllm-request     vllm-rs            [.] mi_bin
+     0.05%             1  vllm-request     vllm-rs            [.] mi_option_get
+     0.05%             1  vllm-request     vllm-rs            [.] mi_theap_malloc_zero_aligned_at_generic
+     0.05%             1  vllm-request     vllm-rs            [.] minijinja::vm::Vm::eval_impl
+     0.05%             1  vllm-request     vllm-rs            [.] rayon_core::registry::in_worker
+     0.05%             1  vllm-request     vllm-rs            [.] vllm_server::routes::openai::chat_completions::chat_completions::_$u7b$$u7b$closure$u7d$$u7d$::h12e9a15e45d579d5
+     0.05%             1  vllm-rs          [kernel.kallsyms]  [k] 0xffffb39567b6dca4
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566ce9680
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566ce96e8
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566cf1f6c
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566cfcb04
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566cfcb18
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566de6e6c
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566ded6a0
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566e0ce74
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566e32754
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566ebacc4
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566ed2808
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566ed4c00
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566ed4ce4
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566ed4d98
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566ed82d8
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566ed8380
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566ed8408
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566ed84ac
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566ed8c0c
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566ed8d50
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566ed8dfc
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566f15ae0
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39566f15b00
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb3956704839c
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395670fbc28
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395671029b0
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb3956719a050
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395671b0124
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395671b1b48
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395671de3b8
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395671de3f0
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395671de52c
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395671de588
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39567224f30
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395672e6048
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395672e8388
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395672f2f40
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb3956741208c
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395678e50e0
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395678e7c18
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395678e7c6c
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395678e7cb0
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395678ee138
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395678f3100
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395678f3154
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395678f3158
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395678f48c8
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395678f8b54
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb395678fac74
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39567a98690
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39567a988b0
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39567a98a50
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39567a98f18
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39567b6de34
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39567b6e4a0
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39567b70f44
+     0.05%             1  vllm-zmq-0       [kernel.kallsyms]  [k] 0xffffb39567bc1ab4
+     0.05%             1  vllm-zmq-0       [vdso]             [.] 0x0000000000000498
+     0.05%             1  vllm-zmq-0       [vdso]             [.] 0x000000000000051c
+     0.05%             1  vllm-zmq-0       libc.so.6          [.] clock_gettime
+     0.05%             1  vllm-zmq-0       libc.so.6          [.] 0x000000000007c3b0
+     0.05%             1  vllm-zmq-0       libc.so.6          [.] 0x000000000007c434
+     0.05%             1  vllm-zmq-0       libc.so.6          [.] 0x000000000007c44c
+     0.05%             1  vllm-zmq-0       libc.so.6          [.] 0x0000000000099b68
+     0.05%             1  vllm-zmq-0       libc.so.6          [.] 0x000000000009af10
+     0.05%             1  vllm-zmq-0       libc.so.6          [.] 0x000000000009af38
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] <&mut A as serde_core::de::SeqAccess>::next_element
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] <&mut A as serde_core::de::SeqAccess>::next_element
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] <&mut A as serde_core::de::SeqAccess>::next_element
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] <asynchronous_codec::framed_read::FramedRead<T,D> as futures_core::stream::Stream>::poll_next
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] <serde_core::de::impls::<impl serde_core::de::Deserialize for alloc::vec::Vec<T>>::deserialize::VecVisitor<T> as serde_core::de::Visitor>::visit_seq
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] <serde_core::de::impls::<impl serde_core::de::Deserialize for alloc::vec::Vec<T>>::deserialize::VecVisitor<T> as serde_core::de::Visitor>::visit_seq
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] <serde_core::de::impls::StringVisitor as serde_core::de::Visitor>::visit_str
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] <tokio_util::compat::Compat<T> as futures_io::if_std::AsyncRead>::poll_read
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] <vllm_engine_core_client::protocol::output::EngineCoreOutputs as core::convert::TryFrom<vllm_engine_core_client::protocol::output::WireEngineCoreOutputs>>::try_from
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] _RNvMNtNtNtNtCshxTglP3SOjd_3std3sys3pal4unix4timeNtB2_8Timespec3now.llvm.14253910252949651887
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] _ZN4core3ptr111drop_in_place$LT$core..option..Option$LT$vllm_engine_core_client..protocol..logprobs..MaybeWireLogprobs$GT$$GT$17hcafbfb0a4a92e40fE.llvm.4762538680082138183
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] _ZN4core3ptr118drop_in_place$LT$$LT$zeromq..pull..PullSocket$u20$as$u20$zeromq..SocketRecv$GT$..recv..$u7b$$u7b$closure$u7d$$u7d$$GT$17hd694481abb6eb994E.llvm.15162728713765982798
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] _ZN5alloc7raw_vec20RawVecInner$LT$A$GT$11finish_grow17hd53e5a7646f983d5E.llvm.8720191731849134107
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] _ZN5tokio7runtime6signal6Driver7process17h79dd1bfe7145d978E.llvm.1642776823996806792
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] _ZN71_$LT$core..hash..sip..Hasher$LT$S$GT$$u20$as$u20$core..hash..Hasher$GT$5write17h2795e5f66d9c4164E.llvm.13373244627721377827
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] __aarch64_cas8_acq
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] __floatuntidf
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] _mi_malloc_generic
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] alloc::sync::Arc<T,A>::drop_slow
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] bytes::bytes_mut::BytesMut::split_to
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] futures_task::waker::clone_arc_raw
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] mi_bin
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] mi_good_size
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] mi_theap_malloc_aligned
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] mi_theap_malloc_zero_aligned_at_generic
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] recv@plt
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] rmp_serde::decode::Deserializer<R,C>::any_inner
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] rmp_serde::decode::Deserializer<R,C>::any_inner
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] rmp_serde::decode::any_num
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] serde_core::de::impls::<impl serde_core::de::Deserialize for core::option::Option<T>>::deserialize
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] tokio::runtime::driver::IoHandle::unpark
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] tokio::runtime::io::registration::Registration::poll_ready
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] tokio::runtime::scheduler::multi_thread::queue::Local<T>::push_back
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] tokio::runtime::task::harness::Harness<T,S>::poll
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] tokio::runtime::task::waker::wake_by_val
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] tokio::sync::mpsc::list::Rx<T>::pop
+     0.05%             1  vllm-zmq-0       vllm-rs            [.] vllm_engine_core_client::metrics::LoraInfoExporter::update
+
+
+#
+# (Tip: To show context switches in perf report sample context add --switch-events to perf record.)
+#

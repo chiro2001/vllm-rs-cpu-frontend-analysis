@@ -1,0 +1,7 @@
+lang,seg,point,op,input_label,input_bytes,tokens,iterations,samples,wall_s,mean_us,p50_us,p90_us,p99_us,min_us,max_us,stdev_us,ops_per_sec,bytes_per_op,allocs_per_op,alloc_bytes_per_op,notes
+python,p10_serialize,osl128,json.dumps_response,nonstream_body,855,0,1774800,400000,30.009,4.624,4.358,4.629,8.065,4.027,62.075,1.163,59141.9,855.0,,,"标准库 json.dumps(separators=(',',':'))，对应 Rust 侧 serde_json_response"
+python,p10_serialize,osl128,json.dumps_sse_frame,finish_chunk,162,0,3249856,400000,30.009,2.453,2.314,2.465,4.118,2.144,57.747,0.698,108295.4,170.0,,,单个 SSE 帧（json.dumps + `data: ...\n\n` 组帧，不写 socket）
+python,p10_sse,osl128,stream_request_local,osl_129_chunks,23834,129,23664,23664,30.009,328.585,317.160,356.032,532.210,294.228,642.226,43.463,788.6,23834.0,,,一次完整流式请求的 129 帧序列化+组帧（内存缓冲，不含 socket 写）
+python,p10_serialize,osl128,orjson.dumps_response,nonstream_body,855,0,17180064,400000,30.009,0.381,0.351,0.420,0.692,0.300,28.173,0.253,572493.5,855.0,,,Rust 实现的 Python JSON 序列化器：Python 侧上界（非 vLLM 依赖）
+python,p10_sse,osl128,asyncio_write_frame_tcp,finish_chunk,162,0,758940,54210,30.012,39.309,38.771,60.683,85.870,11.371,153.205,16.987,25288.0,170.0,,,一个 SSE 帧写 loopback TCP（asyncio write+drain，含事件循环调度）
+python,meta,osl128,clock_overhead,empty-loop,0,0,36119712,84988,3.009,0.085,0.080,0.101,0.171,0.069,12.282,0.083,12005296.9,0.0,,,perf_counter_ns 的单次开销（比较 <1µs 的操作前先看这行）

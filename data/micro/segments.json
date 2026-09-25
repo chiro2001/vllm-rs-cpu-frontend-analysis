@@ -1,0 +1,542 @@
+{
+  "caveats": [
+    "微基准加总口径：各段 p50 相加，不等于 vllm-rs 进程的总 CPU（无 HTTP/调度/系统调用上下文切换等）",
+    "Rust 与 Python 的对照只在同一行 `op` 上成立：两侧跑同一份 fixture 字节、同样的预热/采样纪律",
+    "P4/P8（分词与增量解码）不在本表：D5 引用 tokenizer 项目的既有结论，未重测",
+    "p3_template 的 Rust 侧另有 context_build（serde 结构 → minijinja Value），Python 侧没有对应的独立段（dict 直接可用），因此对 P3 的公平口径是 `rust context_build+render` vs `python render`",
+    "osl128 点的 p10_stream_request_us 是「整流序列化+组帧」与「n×单帧 socket 写」两段实测值相加 ⇒ 标推断；两侧的 socket 写机制不同（Rust 阻塞 write_all vs Python asyncio write+drain）",
+    "D6（fastokens 预分词）是 D5 的补充、不是替代：tokenizer 项目测的是 BPE/编码路径，D6 单独量 PCRE2 JIT 正则那一段。**D6 是多线程口径**（fastokens 的 Split 在 ≥16 个 split 时走 rayon，线程数=绑定核数），不能与 D1–D4 的单线程数字直接相加"
+  ],
+  "points": {
+    "1k": {
+      "ops": {
+        "p2_json": {
+          "note": "都是「无类型解析」：serde_json::Value ↔ json.loads（主口径）",
+          "rust": {
+            "op": "serde_json::Value",
+            "p50_us": 6.502,
+            "mean_us": 6.657,
+            "p99_us": 10.42,
+            "input_bytes": 5326,
+            "bytes_per_op": 5326.0
+          },
+          "python": {
+            "op": "json.loads",
+            "p50_us": 11.621,
+            "mean_us": 12.158,
+            "p99_us": 21.669,
+            "input_bytes": 5326,
+            "bytes_per_op": 5326.0
+          },
+          "rust_over_python": 0.5595
+        },
+        "p3_template": {
+          "note": "同一份模板 + 同一份 messages/tools；Rust 侧另有 context_build 一段（见明细）",
+          "rust": {
+            "op": "minijinja_render",
+            "p50_us": 12.934,
+            "mean_us": 13.208,
+            "p99_us": 19.627,
+            "input_bytes": 5326,
+            "bytes_per_op": 5603.0
+          },
+          "python": {
+            "op": "jinja2_render",
+            "p50_us": 25.066,
+            "mean_us": 26.246,
+            "p99_us": 45.224,
+            "input_bytes": 5326,
+            "bytes_per_op": 5603.0
+          },
+          "rust_over_python": 0.516
+        },
+        "p6_msgpack": {
+          "note": "同字段取值的 EngineCoreRequest（数组式 20 元素）",
+          "rust": {
+            "op": "rmp_serde_encode",
+            "p50_us": 4.137,
+            "mean_us": 4.245,
+            "p99_us": 6.531,
+            "input_bytes": 3528,
+            "bytes_per_op": 3528.0
+          },
+          "python": {
+            "op": "msgspec_encode",
+            "p50_us": 3.175,
+            "mean_us": 3.374,
+            "p99_us": 6.162,
+            "input_bytes": 3535,
+            "bytes_per_op": 3535.0
+          },
+          "rust_over_python": 1.303
+        },
+        "p7_msgpack": {
+          "note": "同一份输入字节：Rust rmp-serde 编出来的 payload",
+          "rust": {
+            "op": "rmp_serde_decode_rust_payload",
+            "p50_us": 5.019,
+            "mean_us": 5.145,
+            "p99_us": 8.085,
+            "input_bytes": 3528,
+            "bytes_per_op": 3528.0
+          },
+          "python": {
+            "op": "msgspec_decode_rust_payload",
+            "p50_us": 12.383,
+            "mean_us": 12.952,
+            "p99_us": 21.27,
+            "input_bytes": 3528,
+            "bytes_per_op": 3528.0
+          },
+          "rust_over_python": 0.4053
+        },
+        "p10_serialize": {
+          "note": "同一份响应对象；两侧产出字节 sha256 必须一致（checks.json）",
+          "rust": {
+            "op": "serde_json_response",
+            "p50_us": 0.541,
+            "mean_us": 0.579,
+            "p99_us": 1.092,
+            "input_bytes": 855,
+            "bytes_per_op": 855.0
+          },
+          "python": {
+            "op": "json.dumps_response",
+            "p50_us": 4.358,
+            "mean_us": 4.624,
+            "p99_us": 8.065,
+            "input_bytes": 855,
+            "bytes_per_op": 855.0
+          },
+          "rust_over_python": 0.1241
+        },
+        "p10_sse_frame": {
+          "note": "单帧序列化 + `data: ...\\n\\n` 组帧，不写 socket",
+          "rust": {
+            "op": "serde_json_sse_frame",
+            "p50_us": 0.18,
+            "mean_us": 0.186,
+            "p99_us": 0.321,
+            "input_bytes": 162,
+            "bytes_per_op": 170.0
+          },
+          "python": {
+            "op": "json.dumps_sse_frame",
+            "p50_us": 2.314,
+            "mean_us": 2.453,
+            "p99_us": 4.118,
+            "input_bytes": 162,
+            "bytes_per_op": 170.0
+          },
+          "rust_over_python": 0.0778
+        },
+        "p10_sse_write": {
+          "note": "⚠️ 机制不同：Rust 是阻塞 write_all，Python 是 asyncio write+drain",
+          "rust": {
+            "op": "write_frame_tcp",
+            "p50_us": 3.277,
+            "mean_us": 3.646,
+            "p99_us": 7.865,
+            "input_bytes": 162,
+            "bytes_per_op": 170.0
+          },
+          "python": {
+            "op": "asyncio_write_frame_tcp",
+            "p50_us": 38.771,
+            "mean_us": 39.309,
+            "p99_us": 85.87,
+            "input_bytes": 162,
+            "bytes_per_op": 170.0
+          },
+          "rust_over_python": 0.0845
+        },
+        "p10_stream": {
+          "note": "129 帧序列化+组帧写内存缓冲（不含 socket 写）",
+          "rust": {
+            "op": "stream_request_local",
+            "p50_us": 23.263,
+            "mean_us": 24.857,
+            "p99_us": 40.315,
+            "input_bytes": 23834,
+            "bytes_per_op": 23834.0
+          },
+          "python": {
+            "op": "stream_request_local",
+            "p50_us": 317.16,
+            "mean_us": 328.585,
+            "p99_us": 532.21,
+            "input_bytes": 23834,
+            "bytes_per_op": 23834.0
+          },
+          "rust_over_python": 0.0733
+        }
+      },
+      "segment_p50_us": {
+        "rust": {
+          "segments": {
+            "p2_json": 6.502,
+            "p3_template": 14.888,
+            "p6_msgpack": 4.137,
+            "p7_msgpack": 5.019
+          },
+          "measured_total_us": 30.546,
+          "scope": "P2+P3+P6+P7（与 ISL 相关的四段）",
+          "share_pct": {
+            "p2_json": 21.29,
+            "p3_template": 48.74,
+            "p6_msgpack": 13.54,
+            "p7_msgpack": 16.43
+          }
+        },
+        "python": {
+          "segments": {
+            "p2_json": 11.621,
+            "p3_template": 25.066,
+            "p6_msgpack": 3.175,
+            "p7_msgpack": 12.383
+          },
+          "measured_total_us": 52.245,
+          "scope": "P2+P3+P6+P7（与 ISL 相关的四段）",
+          "share_pct": {
+            "p2_json": 22.24,
+            "p3_template": 47.98,
+            "p6_msgpack": 6.08,
+            "p7_msgpack": 23.7
+          }
+        }
+      }
+    },
+    "8k": {
+      "ops": {
+        "p2_json": {
+          "note": "都是「无类型解析」：serde_json::Value ↔ json.loads（主口径）",
+          "rust": {
+            "op": "serde_json::Value",
+            "p50_us": 19.226,
+            "mean_us": 20.073,
+            "p99_us": 33.303,
+            "input_bytes": 37371,
+            "bytes_per_op": 37371.0
+          },
+          "python": {
+            "op": "json.loads",
+            "p50_us": 53.199,
+            "mean_us": 56.257,
+            "p99_us": 99.616,
+            "input_bytes": 37371,
+            "bytes_per_op": 37371.0
+          },
+          "rust_over_python": 0.3614
+        },
+        "p3_template": {
+          "note": "同一份模板 + 同一份 messages/tools；Rust 侧另有 context_build 一段（见明细）",
+          "rust": {
+            "op": "minijinja_render",
+            "p50_us": 16.902,
+            "mean_us": 17.735,
+            "p99_us": 30.646,
+            "input_bytes": 37371,
+            "bytes_per_op": 37388.0
+          },
+          "python": {
+            "op": "jinja2_render",
+            "p50_us": 41.156,
+            "mean_us": 43.962,
+            "p99_us": 79.468,
+            "input_bytes": 37371,
+            "bytes_per_op": 37388.0
+          },
+          "rust_over_python": 0.4107
+        },
+        "p6_msgpack": {
+          "note": "同字段取值的 EngineCoreRequest（数组式 20 元素）",
+          "rust": {
+            "op": "rmp_serde_encode",
+            "p50_us": 31.017,
+            "mean_us": 31.983,
+            "p99_us": 46.155,
+            "input_bytes": 26523,
+            "bytes_per_op": 26523.0
+          },
+          "python": {
+            "op": "msgspec_encode",
+            "p50_us": 20.679,
+            "mean_us": 22.47,
+            "p99_us": 41.478,
+            "input_bytes": 26530,
+            "bytes_per_op": 26530.0
+          },
+          "rust_over_python": 1.4999
+        },
+        "p7_msgpack": {
+          "note": "同一份输入字节：Rust rmp-serde 编出来的 payload",
+          "rust": {
+            "op": "rmp_serde_decode_rust_payload",
+            "p50_us": 38.571,
+            "mean_us": 39.797,
+            "p99_us": 56.535,
+            "input_bytes": 26523,
+            "bytes_per_op": 26523.0
+          },
+          "python": {
+            "op": "msgspec_decode_rust_payload",
+            "p50_us": 95.739,
+            "mean_us": 101.356,
+            "p99_us": 157.804,
+            "input_bytes": 26523,
+            "bytes_per_op": 26523.0
+          },
+          "rust_over_python": 0.4029
+        },
+        "p10_serialize": {
+          "note": "同一份响应对象；两侧产出字节 sha256 必须一致（checks.json）",
+          "rust": {
+            "op": "serde_json_response",
+            "p50_us": 0.541,
+            "mean_us": 0.579,
+            "p99_us": 1.092,
+            "input_bytes": 855,
+            "bytes_per_op": 855.0
+          },
+          "python": {
+            "op": "json.dumps_response",
+            "p50_us": 4.358,
+            "mean_us": 4.624,
+            "p99_us": 8.065,
+            "input_bytes": 855,
+            "bytes_per_op": 855.0
+          },
+          "rust_over_python": 0.1241
+        },
+        "p10_sse_frame": {
+          "note": "单帧序列化 + `data: ...\\n\\n` 组帧，不写 socket",
+          "rust": {
+            "op": "serde_json_sse_frame",
+            "p50_us": 0.18,
+            "mean_us": 0.186,
+            "p99_us": 0.321,
+            "input_bytes": 162,
+            "bytes_per_op": 170.0
+          },
+          "python": {
+            "op": "json.dumps_sse_frame",
+            "p50_us": 2.314,
+            "mean_us": 2.453,
+            "p99_us": 4.118,
+            "input_bytes": 162,
+            "bytes_per_op": 170.0
+          },
+          "rust_over_python": 0.0778
+        },
+        "p10_sse_write": {
+          "note": "⚠️ 机制不同：Rust 是阻塞 write_all，Python 是 asyncio write+drain",
+          "rust": {
+            "op": "write_frame_tcp",
+            "p50_us": 3.277,
+            "mean_us": 3.646,
+            "p99_us": 7.865,
+            "input_bytes": 162,
+            "bytes_per_op": 170.0
+          },
+          "python": {
+            "op": "asyncio_write_frame_tcp",
+            "p50_us": 38.771,
+            "mean_us": 39.309,
+            "p99_us": 85.87,
+            "input_bytes": 162,
+            "bytes_per_op": 170.0
+          },
+          "rust_over_python": 0.0845
+        },
+        "p10_stream": {
+          "note": "129 帧序列化+组帧写内存缓冲（不含 socket 写）",
+          "rust": {
+            "op": "stream_request_local",
+            "p50_us": 23.263,
+            "mean_us": 24.857,
+            "p99_us": 40.315,
+            "input_bytes": 23834,
+            "bytes_per_op": 23834.0
+          },
+          "python": {
+            "op": "stream_request_local",
+            "p50_us": 317.16,
+            "mean_us": 328.585,
+            "p99_us": 532.21,
+            "input_bytes": 23834,
+            "bytes_per_op": 23834.0
+          },
+          "rust_over_python": 0.0733
+        }
+      },
+      "segment_p50_us": {
+        "rust": {
+          "segments": {
+            "p2_json": 19.226,
+            "p3_template": 19.446,
+            "p6_msgpack": 31.017,
+            "p7_msgpack": 38.571
+          },
+          "measured_total_us": 108.26,
+          "scope": "P2+P3+P6+P7（与 ISL 相关的四段）",
+          "share_pct": {
+            "p2_json": 17.76,
+            "p3_template": 17.96,
+            "p6_msgpack": 28.65,
+            "p7_msgpack": 35.63
+          }
+        },
+        "python": {
+          "segments": {
+            "p2_json": 53.199,
+            "p3_template": 41.156,
+            "p6_msgpack": 20.679,
+            "p7_msgpack": 95.739
+          },
+          "measured_total_us": 210.773,
+          "scope": "P2+P3+P6+P7（与 ISL 相关的四段）",
+          "share_pct": {
+            "p2_json": 25.24,
+            "p3_template": 19.53,
+            "p6_msgpack": 9.81,
+            "p7_msgpack": 45.42
+          }
+        }
+      }
+    },
+    "osl128": {
+      "ops": {
+        "p2_json": {
+          "note": "都是「无类型解析」：serde_json::Value ↔ json.loads（主口径）"
+        },
+        "p3_template": {
+          "note": "同一份模板 + 同一份 messages/tools；Rust 侧另有 context_build 一段（见明细）"
+        },
+        "p6_msgpack": {
+          "note": "同字段取值的 EngineCoreRequest（数组式 20 元素）"
+        },
+        "p7_msgpack": {
+          "note": "同一份输入字节：Rust rmp-serde 编出来的 payload"
+        },
+        "p10_serialize": {
+          "note": "同一份响应对象；两侧产出字节 sha256 必须一致（checks.json）",
+          "rust": {
+            "op": "serde_json_response",
+            "p50_us": 0.541,
+            "mean_us": 0.579,
+            "p99_us": 1.092,
+            "input_bytes": 855,
+            "bytes_per_op": 855.0
+          },
+          "python": {
+            "op": "json.dumps_response",
+            "p50_us": 4.358,
+            "mean_us": 4.624,
+            "p99_us": 8.065,
+            "input_bytes": 855,
+            "bytes_per_op": 855.0
+          },
+          "rust_over_python": 0.1241
+        },
+        "p10_sse_frame": {
+          "note": "单帧序列化 + `data: ...\\n\\n` 组帧，不写 socket",
+          "rust": {
+            "op": "serde_json_sse_frame",
+            "p50_us": 0.18,
+            "mean_us": 0.186,
+            "p99_us": 0.321,
+            "input_bytes": 162,
+            "bytes_per_op": 170.0
+          },
+          "python": {
+            "op": "json.dumps_sse_frame",
+            "p50_us": 2.314,
+            "mean_us": 2.453,
+            "p99_us": 4.118,
+            "input_bytes": 162,
+            "bytes_per_op": 170.0
+          },
+          "rust_over_python": 0.0778
+        },
+        "p10_sse_write": {
+          "note": "⚠️ 机制不同：Rust 是阻塞 write_all，Python 是 asyncio write+drain",
+          "rust": {
+            "op": "write_frame_tcp",
+            "p50_us": 3.277,
+            "mean_us": 3.646,
+            "p99_us": 7.865,
+            "input_bytes": 162,
+            "bytes_per_op": 170.0
+          },
+          "python": {
+            "op": "asyncio_write_frame_tcp",
+            "p50_us": 38.771,
+            "mean_us": 39.309,
+            "p99_us": 85.87,
+            "input_bytes": 162,
+            "bytes_per_op": 170.0
+          },
+          "rust_over_python": 0.0845
+        },
+        "p10_stream": {
+          "note": "129 帧序列化+组帧写内存缓冲（不含 socket 写）",
+          "rust": {
+            "op": "stream_request_local",
+            "p50_us": 23.263,
+            "mean_us": 24.857,
+            "p99_us": 40.315,
+            "input_bytes": 23834,
+            "bytes_per_op": 23834.0
+          },
+          "python": {
+            "op": "stream_request_local",
+            "p50_us": 317.16,
+            "mean_us": 328.585,
+            "p99_us": 532.21,
+            "input_bytes": 23834,
+            "bytes_per_op": 23834.0
+          },
+          "rust_over_python": 0.0733
+        }
+      },
+      "segment_p50_us": {
+        "rust": {
+          "segments": {
+            "p10_serialize": 0.541,
+            "p10_sse_frame": 0.18
+          },
+          "measured_total_us": 0.721,
+          "scope": "P2+P3+P6+P7+P10序列化+单帧组帧（响应侧）",
+          "share_pct": {
+            "p10_serialize": 75.03,
+            "p10_sse_frame": 24.97
+          }
+        },
+        "python": {
+          "segments": {},
+          "measured_total_us": 0,
+          "scope": "P2+P3+P6+P7+P10序列化+单帧组帧（响应侧）",
+          "share_pct": {}
+        }
+      },
+      "derived": {
+        "rust": {
+          "stream_frames": 129,
+          "stream_serialize_frame_us": 23.263,
+          "write_frame_us": 3.277,
+          "write_total_us": 422.733,
+          "p10_stream_request_us": 445.996,
+          "note": "整流序列化+组帧 + n×单帧 socket 写；两段都是实测，相加是「推断」"
+        },
+        "python": {
+          "stream_frames": 129,
+          "stream_serialize_frame_us": 317.16,
+          "write_frame_us": 38.771,
+          "write_total_us": 5001.459,
+          "p10_stream_request_us": 5318.619,
+          "note": "整流序列化+组帧 + n×单帧 socket 写；两段都是实测，相加是「推断」"
+        }
+      }
+    }
+  }
+}

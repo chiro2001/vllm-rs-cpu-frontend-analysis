@@ -1,0 +1,42 @@
+# tag,B3,total_cpu_ns,16633633617,source,run_matrix.sh: ISL~1043 OSL=512 c=1 stream=True tools=none
+rank,frame,self_ns,self_pct,inclusive_ns,inclusive_pct,segment,basis
+1,[libc.so.6],3200200197,19.2393,3283283280,19.7388,X-copy,code
+2,futures_util::stream::stream::StreamExt::poll_next_unpin,782782782,4.706,782782782,4.706,X-runtime,heuristic
+3,_mi_page_malloc_zero,657657657,3.9538,657657657,3.9538,X-alloc,heuristic
+4,"<core::iter::adapters::map::Map<I,F> as core::iter::traits::iterator::Iterator>::try_fold",567567567,3.4122,567567567,3.4122,X-rust,heuristic
+5,"rmp_serde::decode::Deserializer<R,C>::any_inner",546546546,3.2858,547547547,3.2918,P7,symbol
+6,vllm_tokenizer::byte_level_decode::decode_byte_level,483483483,2.9067,532532532,3.2015,P8,symbol
+7,mi_free,449449449,2.7021,449449449,2.7021,X-alloc,heuristic
+8,serde_core::ser::SerializeMap::serialize_entry,349349349,2.1003,349349349,2.1003,P10,symbol
+9,<S as futures_core::stream::TryStream>::try_poll_next,320320320,1.9257,320320320,1.9257,X-runtime,heuristic
+10,std::thread::local::LocalKey<T>::with,292292292,1.7572,292292292,1.7572,X-tls,code
+11,serde_json::ser::format_escaped_str_contents,284284284,1.7091,284284284,1.7091,P10,symbol
+12,[[vdso]]_[k],240240240,1.4443,240240240,1.4443,X-kernel,code
+13,"<asynk_strim::stream::AsynkStrim<F,Fut,Yieldr,Item> as futures_core::stream::Stream>::poll_next",239239239,1.4383,239239239,1.4383,X-runtime,heuristic
+14,mi_theap_malloc_aligned,239239239,1.4383,239239239,1.4383,X-alloc,heuristic
+15,core::hash::BuildHasher::hash_one,233233233,1.4022,233233233,1.4022,X-hash,heuristic
+16,vllm_engine_core_client::client::imp::run_output_dispatcher_loop::{{closure}},190190190,1.1434,190190190,1.1434,P7,symbol
+17,<&mut A as serde_core::de::SeqAccess>::next_element,162162162,0.9749,162162162,0.9749,X-serde,heuristic
+18,"<http_body_util::combinators::map_err::MapErr<B,F> as http_body::Body>::poll_frame",145145145,0.8726,349349349,2.1003,P1,symbol
+19,mi_theap_umalloc,145145145,0.8726,145145145,0.8726,X-alloc,heuristic
+20,asynk_strim::yielder::Yielder<Item>::yield_item::{{closure}},141141141,0.8485,1209209208,7.2697,X-runtime,heuristic
+21,[perf-3639361.map]_[j],135135135,0.8124,135135135,0.8124,P4,code
+22,<serde_core::de::impls::<impl serde_core::de::Deserialize for alloc::vec::Vec<T>>::deserialize::VecVisitor<T> as serde_core::de::Visitor>::visit_seq,123123123,0.7402,123123123,0.7402,X-serde,heuristic
+23,<tracing_futures::Instrumented<T> as futures_core::stream::Stream>::poll_next,119119119,0.7161,119119119,0.7161,X-runtime,heuristic
+24,tokio::sync::mpsc::bounded::Sender<T>::send::{{closure}},119119119,0.7161,119119119,0.7161,X-runtime,heuristic
+25,"sharded_slab::pool::Pool<T,C>::get",109109109,0.656,109109109,0.656,X-log,heuristic
+26,tokio::sync::mpsc::list::Rx<T>::pop,108108108,0.6499,108108108,0.6499,X-runtime,heuristic
+27,_mi_theap_realloc_zero,106106106,0.6379,106106106,0.6379,X-alloc,heuristic
+28,_mi_theap_malloc_zero,103103103,0.6198,103103103,0.6198,X-alloc,heuristic
+29,core::str::converts::from_utf8,100100100,0.6018,100100100,0.6018,X-str,heuristic
+30,vllm_engine_core_client::transport::run_output_loop::{{closure}},98098098,0.5898,98098098,0.5898,P7,symbol
+31,_mi_malloc_generic,97097097,0.5837,98098098,0.5898,X-alloc,heuristic
+32,serde_core::de::impls::<impl serde_core::de::Deserialize for core::option::Option<T>>::deserialize,95095095,0.5717,95095095,0.5717,X-serde,heuristic
+33,mi_malloc_aligned,94094094,0.5657,94094094,0.5657,X-alloc,heuristic
+34,vllm_parser::reasoning::delimited::DelimitedReasoningParser::push,93093093,0.5597,93093093,0.5597,P9,symbol
+35,alloc::raw_vec::RawVecInner<A>::finish_grow,89089089,0.5356,89089089,0.5356,X-alloc,heuristic
+36,tokio::sync::mpsc::list::Tx<T>::push,87087087,0.5236,87087087,0.5236,X-runtime,heuristic
+37,<std::hash::random::DefaultHasher as core::hash::Hasher>::write,78078078,0.4694,78078078,0.4694,X-hash,heuristic
+38,<zeromq::codec::zmq_codec::ZmqCodec as asynchronous_codec::decoder::Decoder>::decode,78078078,0.4694,78078078,0.4694,P7,symbol
+39,<core::hash::sip::Hasher<S> as core::hash::Hasher>::write,72072072,0.4333,72072072,0.4333,X-hash,heuristic
+40,"<asynchronous_codec::framed_read::FramedRead<T,D> as futures_core::stream::Stream>::poll_next",72072072,0.4333,72072072,0.4333,P7,symbol

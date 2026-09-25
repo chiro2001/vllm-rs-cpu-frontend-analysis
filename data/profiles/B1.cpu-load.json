@@ -1,0 +1,77 @@
+{
+ "generated_at": "2026-09-25T13:47:17+0800",
+ "base_url": "http://127.0.0.1:8199",
+ "path": "/v1/chat/completions",
+ "concurrency": 1,
+ "num_requests_requested": 0,
+ "duration_requested_s": 20.0,
+ "stream": true,
+ "input_len_target": 1024,
+ "output_len_target": 128,
+ "tools": "weather",
+ "warmup": 3,
+ "window": {
+  "open_epoch": 1790315217.652225,
+  "open_monotonic": 1426320.930966039,
+  "close_monotonic": 1426340.93134403,
+  "wall_seconds": 20.0004,
+  "ok_before_first_request_s": 1.3e-05
+ },
+ "requests_issued_in_window": 11129,
+ "requests_completed_in_window": 11129,
+ "requests_failed_in_window": 0,
+ "window_exhausted_num_requests": false,
+ "throughput_req_s": 556.439,
+ "throughput_out_tok_s": 71224.3,
+ "completion_tokens_total": 1424512,
+ "prompt_tokens_total": 13588509,
+ "prompt_tokens_mean": 1221.0,
+ "client_cpu_seconds": 14.6366,
+ "client_cpu_percent_of_one_core": 73.18,
+ "client_cpu_seconds_window_only": 14.6296,
+ "frontend_cpu_seconds": 20.35,
+ "frontend_utime_seconds": 10.3,
+ "frontend_stime_seconds": 10.05,
+ "client_cpu_seconds_procstat": 14.63,
+ "procstat": {
+  "basis": "utime+stime（不含子进程 cutime/cstime）",
+  "script": "REPO_HOME/projects/vllm/vllm-rs-wt/B-profile/harness/common/procstat.sh",
+  "window": "预热之后 / 窗口之前取 before；窗口结束之后取 after",
+  "pids_sampled": [
+   "3765611",
+   "3765906"
+  ],
+  "snapshot_before": "data/profiles/procstat-snapshots/B1.before.json",
+  "snapshot_after": "data/profiles/procstat-snapshots/B1.after.json",
+  "frontend_pid": "3765611",
+  "diff_out": "data/profiles/B1.frontend-cpu.json",
+  "note": "frontend_cpu_seconds 与 client_cpu_* 是两个进程的两个数，绝不相加"
+ },
+ "latency_ms": {
+  "p50": 1.756,
+  "p90": 2.133,
+  "p99": 2.902,
+  "mean": 1.788
+ },
+ "ttft_ms": {
+  "p50": 0.57,
+  "p99": 1.248
+ },
+ "failures": [],
+ "normalized": {
+  "_units": "秒 / 请求、秒 / 千 token；CPU 为 utime+stime",
+  "frontend_cpu_s_per_request": 0.001828556,
+  "frontend_cpu_s_per_1k_input_tokens": 0.001497589,
+  "frontend_cpu_s_per_1k_output_tokens": 0.014285594,
+  "client_cpu_s_per_request": 0.001314548,
+  "client_cpu_s_per_1k_input_tokens": 0.001076616,
+  "client_cpu_s_per_1k_output_tokens": 0.010269903,
+  "frontend_cpu_s_per_window_s": 1.01748077
+ },
+ "body": {
+  "body_bytes": 4460,
+  "body_sha256": "1b92723af2f8fe405effcac6abd3e14a35e8913182f380a6de6dead3a7d9c061",
+  "body_source": "REPO_HOME/projects/vllm/vllm-rs-wt/B-profile/runs/b-cpu2/bodies/B1.body.json"
+ },
+ "note": "必采项④基线：chat+tools ISL=1k OSL=128 c=1，SSE 流式，窗口内无任何 perf"
+}

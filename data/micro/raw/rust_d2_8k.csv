@@ -1,0 +1,4 @@
+lang,seg,point,op,input_label,input_bytes,tokens,iterations,samples,wall_s,mean_us,p50_us,p90_us,p99_us,min_us,max_us,stdev_us,ops_per_sec,bytes_per_op,allocs_per_op,alloc_bytes_per_op,notes
+rust,p3_template,8k,context_build,8k,37371,36186,5914728,400000,30.001,2.613,2.544,2.645,3.777,2.354,90.188,0.580,197150.3,3.0,90.00,42837.00,ChatRequest → 模板上下文（messages/tools → minijinja Value），上游每请求一次; allocs/op=45000.0 alloc_bytes/op=21418500 reallocs/op=0.0; 计数分配器：每次操作的堆分配（realloc 增长按增量记）
+rust,p3_template,8k,minijinja_render,8k,37371,37388,825660,400000,30.001,17.735,16.902,18.625,30.646,16.111,128.940,3.007,27521.0,37388.0,248.00,349262.00,编译一次后每请求 render（HF tojson + pycompat）; allocs/op=49600.0 alloc_bytes/op=69852400 reallocs/op=2600.0; 计数分配器：每次操作的堆分配（realloc 增长按增量记）
+rust,meta,8k,clock_overhead,empty-loop,0,0,1986892416,200000,3.000,0.021,0.020,0.030,0.030,0.019,8.015,0.028,662291065.2,0.0,,,Instant::now()+elapsed 的单次开销（比较 <1µs 的操作前先看这行）

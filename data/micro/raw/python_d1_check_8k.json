@@ -1,0 +1,1 @@
+{"messages": 1, "first_role": "user", "content_bytes": 36186, "tools": 2, "first_tool": "get_current_weather", "max_tokens": 128, "stream": false}
